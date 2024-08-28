@@ -18,7 +18,7 @@ Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N"
 # caesar
 Plaintext = input("Please enter the plaintext in upper case: ")
 while Plaintext.isupper() == False:
-  print("Invalid plaintext")
+  st.text("Invalid plaintext")
   Plaintext = input("Please enter the plaintext in upper case: ")
 
 Key = input("Input your own key (1) or a random key (2)? ")
