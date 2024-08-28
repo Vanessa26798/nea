@@ -1,9 +1,7 @@
 import streamlit as st
 
 st.title("ENCRYPTION TEACHING TOOL")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+st.write("Select the encryption method that you would like to discover more about")
 
 
 title = st.text_input("Movie title", "Life of Brian")
