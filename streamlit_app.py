@@ -26,7 +26,7 @@ st.write("Select the encryption method that you would like to discover more abou
 
 st.button("Caesar cipher", disabled=False)
 st.info('Uses ...', icon="ℹ️")
-if st.button("Caesar cipher") == True:
+if st.button("Caesar cipher", disabled=True):
     print("C")
     
 
