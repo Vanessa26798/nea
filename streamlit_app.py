@@ -30,7 +30,7 @@ st.write("Select the encryption method that you would like to discover more abou
 
 st.info('Uses ...', icon="ℹ️")
 if st.button("Caesar cipher"):
-     st.page_link("http://www.google.com")
+     st.page_link("page2")
 
 
 # if st.button("Caesar cipher"):
