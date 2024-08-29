@@ -15,7 +15,7 @@ with col1:
     st.header("Caesar cipher")
     st.info('Uses ...')
 if st.button("Caesar cipher"):
-     st.page_link("nea/page2")
+     st.page_link("http://www.google.com")
 
 with col2:
     st.header("Vernam cipher")
