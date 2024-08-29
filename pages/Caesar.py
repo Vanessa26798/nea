@@ -13,7 +13,7 @@ with tab1:
 with tab2:
     st.header("Encryt a plaintext")
     
-    Plaintext = st.text_input("Please enter the plaintext in upper case: ")
+    Plaintext = st.text_input("Please enter the plaintext in upper case: ", value="")
     if Plaintext.isupper() == False:
       st.write("Invalid plaintext")
     
@@ -24,7 +24,7 @@ with tab2:
     elif Input == "2": 
         Key = random.randrange(1, 26)
         st.write("The key is ", Key)
-    elif Input != 1 and Input != 2 and Input != "": 
+    elif Input != 1 and Input != 2: 
         st.write("Invalid input.")
     if Plaintext.isupper() == True and Key.isdigit() == True:
        Key = int(Key)
