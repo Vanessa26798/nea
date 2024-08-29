@@ -22,4 +22,5 @@ with tab1:
 with tab2:
     st.header("Vernam Encryption")
     st.write("tesing")
+    st.info('This is a purely informational message', icon="ℹ️")
 
