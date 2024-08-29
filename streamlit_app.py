@@ -24,8 +24,12 @@ st.write("Select the encryption method that you would like to discover more abou
 #     st.write("tesing")
      
 
-st.button("Caesar cipher")
+
 st.info('Uses ...', icon="ℹ️")
+if st.button("Caesar cipher"):
+     st.page_link("page2")
+
+
 # if st.button("Caesar cipher"):
 #     st.write("C")
     
