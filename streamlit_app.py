@@ -12,7 +12,7 @@ elif Input == "2":
   Key = random.randrange(1, 26)
   st.write("The key is ", Key)
 while Input != 1 and Input != 2: 
-  Input = st.text_input("Invalid choice.", "")
+  st.write("Invalid input.")
 
 
 # Key = input("Input your own key (1) or a random key (2)? ")
