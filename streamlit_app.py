@@ -25,11 +25,9 @@ st.write("Select the encryption method that you would like to discover more abou
     
 st.info('Uses ...', icon="ℹ️") 
 
-st.button("Click me")
-if st.button("Say hello"):
-    st.write("Why hello there")
-else:
-    st.write("Goodbye")
+st.button("Caesar cipher")
+st.button("Vernam Cipher")
+    
 
 
 # def page2():
