@@ -32,7 +32,7 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.header("Caesar cipher")
-     st.info('Uses ...', icon="ℹ️")
+    st.info('Uses ...', icon="ℹ️")
 # if st.button("Caesar cipher"):
 #      st.page_link("pages/page2")
 
