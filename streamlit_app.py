@@ -25,7 +25,7 @@ st.write("Select the encryption method that you would like to discover more abou
     
 st.info('Uses ...', icon="ℹ️") 
 
-st.button("Reset", type="primary")
+st.button("Click me")
 if st.button("Say hello"):
     st.write("Why hello there")
 else:
