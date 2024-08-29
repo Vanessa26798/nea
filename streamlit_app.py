@@ -15,7 +15,8 @@ with col1:
     st.header("Caesar cipher")
     st.info('Uses ...')
 if st.button("Caesar cipher"):
-     page2.py.run()
+     st.page_link("nea/page2.py", label="Home", icon="🏠")
+     # page2.py.run()
 
 # def page2():
 #     st.title("Second page")
