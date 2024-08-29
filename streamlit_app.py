@@ -31,10 +31,10 @@ if st.button("Caesar cipher"):
     
 
 
-st.button("Vernam Cipher")
-st.info('Uses ...', icon="ℹ️")
-if st.button("Vernam Cipher"):
-    print("V")
+# st.button("Vernam Cipher")
+# st.info('Uses ...', icon="ℹ️")
+# if st.button("Vernam Cipher"):
+#     print("V")
 
 
 # def page2():
