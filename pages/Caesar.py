@@ -19,10 +19,10 @@ with tab2:
     
     Input = st.text_input("Input your own key (1) or a random key (2)? ", value="")
     if Input == "1":
-        Key = int(st.text_input("Please enter the key: ", value=""))
+        Key = st.text_input("Please enter the key: ", value="")
         st.write("The key is ", Key)
     elif Input == "2": 
-        Key = int(random.randrange(1, 26))
+        Key = random.randrange(1, 26)
         st.write("The key is ", Key)
     elif Input != 1 and Input != 2: 
         st.write("Invalid input.")
