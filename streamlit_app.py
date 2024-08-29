@@ -24,6 +24,14 @@ st.write("Select the encryption method that you would like to discover more abou
 #     st.write("tesing")
     
 st.info('Uses ...', icon="ℹ️") 
+
+st.button("Reset", type="primary")
+if st.button("Say hello"):
+    st.write("Why hello there")
+else:
+    st.write("Goodbye")
+
+
 def page2():
  st.title("Second page")
  pg = st.navigation([
