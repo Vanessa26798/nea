@@ -5,7 +5,7 @@ st.title("ENCRYPTION TEACHING TOOL")
 st.write("Select the encryption method that you would like to discover more about")
 
 
-tab1, tab2, tab3 = st.tabs(["Caesar Encryption", "Vernam Encryption"])
+tab1, tab2 = st.tabs(["Caesar Encryption", "Vernam Encryption"])
 
 with tab1:
     st.header("Caesar Encryption")
