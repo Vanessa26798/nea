@@ -22,5 +22,14 @@ with tab1:
 with tab2:
     st.header("Vernam Encryption")
     st.write("tesing")
-    st.info('This is a purely informational message', icon="ℹ️")
+    
+    st.info('Uses ...', icon="ℹ️") 
+    def page2():
+    st.title("Second page")
+
+pg = st.navigation([
+    st.Page("page1.py", title="First page", icon="🔥"),
+    st.Page(page2, title="Second page", icon=":material/favorite:"),
+])
+pg.run()
 
