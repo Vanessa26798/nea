@@ -11,7 +11,7 @@ if Input == "1":
 elif Input == "2":  
   Key = random.randrange(1, 26)
   st.write("The key is ", Key)
-while Input != 1 and Input != 2: 
+elif Input != 1 and Input != 2: 
   st.write("Invalid input.")
 
 
