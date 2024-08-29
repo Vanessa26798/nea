@@ -33,8 +33,8 @@ col1, col2 = st.columns(2)
 with col1:
     st.header("Caesar cipher")
     st.info('Uses ...')
-# if st.button("Caesar cipher"):
-#      st.page_link("pages/page2")
+if st.button("Caesar cipher"):
+     st.page_link("pages/page2")
 
 
 with col2:
