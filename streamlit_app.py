@@ -26,15 +26,15 @@ st.write("Select the encryption method that you would like to discover more abou
 
 st.button("Caesar cipher", disabled=False)
 st.info('Uses ...', icon="ℹ️")
-# if st.button("Caesar cipher"):
-#     print("C")
+if st.button("Caesar cipher"):
+    print("C")
     
 
 
 st.button("Vernam Cipher", disabled=False)
 st.info('Uses ...', icon="ℹ️")
-# if st.button("Vernam Cipher"):
-#     print("V")
+if st.button("Vernam Cipher"):
+    print("V")
 
 
 # def page2():
