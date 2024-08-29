@@ -14,8 +14,7 @@ col1, col2 = st.columns(2)
 with col1:
     st.header("Caesar cipher")
     st.info('Uses ...')
-if st.button("Caesar cipher"):
-     st.page_link("page2.py", label="Home", icon="🏠")
+    st.page_link("pages/Caesar.py", label="Click me")
      # page2.py.run()
 
 # def page2():
