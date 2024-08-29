@@ -15,7 +15,7 @@ with col1:
     st.header("Caesar cipher")
     st.info('Uses ...')
     st.page_link("pages/Caesar.py", label="Click me")
-    showSidebarNavigation = false
+st.showSidebarNavigation = false
      # page2.py.run()
 
 # def page2():
