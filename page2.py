@@ -1,8 +1,6 @@
 import streamlit as st
 
-st.write("hi")
-
-
+st.page_link("https://encryption-teaching-tool.streamlit.app/", label="Home page")
 
 tab1, tab2 = st.tabs(["Caesar Encryption", "Vernam Encryption"])
 
