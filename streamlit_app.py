@@ -25,7 +25,7 @@ with tab2:
     
     st.info('Uses ...', icon="ℹ️") 
     def page2():
-    st.title("Second page")
+        st.title("Second page")
 
 pg = st.navigation([
     st.Page("page1.py", title="First page", icon="🔥"),
