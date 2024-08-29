@@ -15,22 +15,11 @@ with col1:
     st.header("Caesar cipher")
     st.info('Uses ...')
     st.page_link("pages/Caesar.py", label="Click me")
-     # page2.py.run()
-
-# def page2():
-#     st.title("Second page")
-
-# pg = st.navigation([
-#     st.Page("page1.py", title="First page", icon="🔥"),
-#     st.Page(page2, title="Second page", icon=":material/favorite:"),
-# ])
-# pg.run()
-
-
 
 with col2:
     st.header("Vernam cipher")
     st.info('Uses ...')
+    st.page_link("pages/Vernam.py", label="Click me")
 
 
 
