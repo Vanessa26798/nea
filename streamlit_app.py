@@ -28,9 +28,27 @@ st.write("Select the encryption method that you would like to discover more abou
      
 
 
-st.info('Uses ...', icon="ℹ️")
-if st.button("Caesar cipher"):
-     st.page_link("pages/page2")
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.header("A cat")
+    st.image("https://static.streamlit.io/examples/cat.jpg")
+
+with col2:
+    st.header("A dog")
+    st.image("https://static.streamlit.io/examples/dog.jpg")
+
+with col3:
+    st.header("An owl")
+    st.image("https://static.streamlit.io/examples/owl.jpg")
+
+
+
+
+
+# st.info('Uses ...', icon="ℹ️")
+# if st.button("Caesar cipher"):
+#      st.page_link("pages/page2")
 
 
 # if st.button("Caesar cipher"):
@@ -38,8 +56,8 @@ if st.button("Caesar cipher"):
     
 
 
-st.button("Vernam Cipher")
-st.info('Uses ...', icon="ℹ️")
+# st.button("Vernam Cipher")
+# st.info('Uses ...', icon="ℹ️")
 # if st.button("Vernam Cipher"):
 #     st.write("V")
 
