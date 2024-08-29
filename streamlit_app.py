@@ -22,12 +22,19 @@ st.write("Select the encryption method that you would like to discover more abou
 # with tab2:
 #     st.header("Vernam Encryption")
 #     st.write("tesing")
-    
-st.info('Uses ...', icon="ℹ️") 
+     
 
-st.button("Caesar cipher")
-st.button("Vernam Cipher")
+st.button("Click me")
+st.info('Uses ...', icon="ℹ️")
+if st.button("Caesar cipher"):
+    print("C")
     
+
+
+st.button("Click me")
+st.info('Uses ...', icon="ℹ️")
+if st.button("Vernam Cipher"):
+    print("V")
 
 
 # def page2():
