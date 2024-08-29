@@ -21,9 +21,32 @@ with tab2:
         st.write("The key is ", Key)
     elif Input != 1 and Input != 2 and Input != "": 
         st.write("Invalid input.")
+    if Plaintext.isupper() == True and Key.isdigit() == True:
+       Key = int(Key)
+       Ciphertext = []
+       for x in Plaintext:
+         Letter = int(Alphabet.index(x))
+         Letter += Key
+         if Letter >= 26: 
+           Letter -= 26
+           Letter = Alphabet[Letter]
+           Ciphertext.append(Letter) 
+           st.write("The ciphertext is ", *Ciphertext)
+    Occurence = {}
+    for x in Plaintext:
+      Total_occurence = len(Plaintext)
+      Count = Plaintext.count(x)
+      Character_occurence = round(Count/ Total_occurence * 100)
+      Occurence[x] = Character_occurence, '%'
+    st.write(Occurence)
+
+
+
+
+
 with tab3:
     st.header("Decrypt a ciphertext")
-    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
+
 with tab4: 
     st.header("Weakness")
 
