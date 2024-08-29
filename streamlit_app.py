@@ -5,5 +5,22 @@ st.write("Select the encryption method that you would like to discover more abou
 
 
 Input = st.text_input("Input your own key (1) or a random key (2)? ", "")
-if Input == "1": 
-  st.write("The current movie title is", title)
+if Input == "1":
+  Key = st.text_input("Please enter the key: ", "")
+elif Input == "2":  
+  Key = random.randrange(1, 26)
+  st.write("The key is ", Key)
+
+
+
+# Key = input("Input your own key (1) or a random key (2)? ")
+# if Key == "1":
+#   Key = input("Please enter the key: ")
+#   while Key.isdigit() == False:
+#    print("Invalid key")
+#    Key = input("Please enter the key: ")
+# elif Key == "2": 
+#   Key = random.randrange(1, 26)
+#   print(Key)
+# while Key != 1 and Key != 2: 
+#   Key = input("input your own key (1) or a random key (2)")
