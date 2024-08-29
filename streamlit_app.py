@@ -23,7 +23,7 @@ st.write("Select the encryption method that you would like to discover more abou
 #     st.header("Vernam Encryption")
 #     st.write("tesing")
     
-    st.info('Uses ...', icon="ℹ️") 
+st.info('Uses ...', icon="ℹ️") 
     def page2():
         st.title("Second page")
         pg = st.navigation([
