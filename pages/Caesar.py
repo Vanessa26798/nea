@@ -23,6 +23,7 @@ with tab2:
         st.write("The key is ", Key)
     elif Input == "2": 
         Key = random.randrange(1, 26)
+        Key = int(Key)
         st.write("The key is ", Key)
     elif Input != 1 and Input != 2: 
         st.write("Invalid input.")
