@@ -34,7 +34,7 @@ with col1:
     st.header("Caesar cipher")
     st.info('Uses ...')
 if st.button("Caesar cipher"):
-     st.page_link("pages/page2")
+     st.page_link("nea/page2")
 
 
 with col2:
