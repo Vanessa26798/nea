@@ -15,7 +15,17 @@ with col1:
     st.header("Caesar cipher")
     st.info('Uses ...')
 if st.button("Caesar cipher"):
-     st.page_link("http://www.google.com", label="Google", icon="🌎")
+     page2.py.run()
+
+# def page2():
+#     st.title("Second page")
+
+# pg = st.navigation([
+#     st.Page("page1.py", title="First page", icon="🔥"),
+#     st.Page(page2, title="Second page", icon=":material/favorite:"),
+# ])
+# pg.run()
+
 
 
 with col2:
