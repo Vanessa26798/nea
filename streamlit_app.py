@@ -24,14 +24,14 @@ st.write("Select the encryption method that you would like to discover more abou
 #     st.write("tesing")
      
 
-st.button("Caesar cipher", disabled=False)
+st.button("Caesar cipher")
 st.info('Uses ...', icon="ℹ️")
-if st.button("Caesar cipher", disabled=True):
-    print("C")
+# if st.button("Caesar cipher", disabled=True):
+#     print("C")
     
 
 
-st.button("Vernam Cipher", disabled=False)
+st.button("Vernam Cipher")
 st.info('Uses ...', icon="ℹ️")
 # if st.button("Vernam Cipher"):
 #     print("V")
