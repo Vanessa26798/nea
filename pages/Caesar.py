@@ -28,7 +28,7 @@ with tab2:
         Key = random.randrange(1, 26)
         Key = int(Key)
         st.write("The key is ", Key)
-    elif Input != 1 and Input != 2: 
+    elif Input != 1 and Input != 2 and Input != "": 
         st.write("Invalid input.")
     if Plaintext.isupper() == True:
        Ciphertext = []
