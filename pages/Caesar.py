@@ -39,7 +39,7 @@ with tab2:
            Letter -= 26
            Letter = Alphabet[Letter]
            Ciphertext.append(Letter) 
-        st.write("The ciphertext is ")
+       st.write("The ciphertext is ")
 
 
     # Occurence = {}
