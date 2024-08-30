@@ -42,7 +42,7 @@ with tab2:
                  Letter_index -= 26
              Letter = Alphabet[Letter_index]
              Ciphertext.append(Letter) 
-       st.write("The ciphertext is "
+       st.write("The ciphertext is ")
        st.write(*Ciphertext, end="")
 
 
