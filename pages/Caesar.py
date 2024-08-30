@@ -40,6 +40,9 @@ with tab2:
            Letter = Alphabet[Letter]
            Ciphertext.append(Letter) 
         st.write("The ciphertext is ", *Ciphertext)
+
+
+
     # Occurence = {}
     # for x in Plaintext:
     #   Total_occurence = len(Plaintext)
