@@ -1,6 +1,5 @@
 import streamlit as st
 import random
-Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
 
 
@@ -32,6 +31,7 @@ with tab2:
     if Plaintext.isupper() == True and Key.isdigit() == True:
        Key = int(Key)
        Ciphertext = []
+       Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
        for x in Plaintext:
          Letter = int(Alphabet.index(x))
          Letter += Key
