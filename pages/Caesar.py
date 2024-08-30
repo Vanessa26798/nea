@@ -22,25 +22,27 @@ with tab2:
     if Input == "1":
         Key = st.text_input("Please enter the key: ", value="")
         if Key.isdigit() == True:
-            Key = int(Key)
             st.write("The key is ", Key)
     elif Input == "2": 
         Key = random.randrange(1, 26)
-        Key = int(Key)
         st.write("The key is ", Key)
     elif Input != 1 and Input != 2 and Input != "": 
         st.write("Invalid input.")
     if Plaintext.isupper() == True:
        Ciphertext = []
        Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+       Key = int(Key)
        for x in Plaintext:
          Letter_index = int(Alphabet.index(x))
-         Letter_index += Key
-         if Letter_index >= 26: 
-           Letter_index -= 26
-           Letter = Alphabet[Letter_index]
-           Ciphertext.append(Letter) 
-       st.write("The ciphertext is ", *Ciphertext)
+         st.write(Letter_index)
+
+           
+       #   Letter_index += Key
+       #   if Letter_index >= 26: 
+       #     Letter_index -= 26
+       #     Letter = Alphabet[Letter_index]
+       #     Ciphertext.append(Letter) 
+       # st.write("The ciphertext is ", *Ciphertext)
 
 
     # Occurence = {}
