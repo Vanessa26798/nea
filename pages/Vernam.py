@@ -5,7 +5,7 @@ import random
 st.header("Vernam Encryption")
 
 
-tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Weakness"])
+tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Strengths"])
 
 with tab1:
     st.header("History")
@@ -63,4 +63,4 @@ with tab3:
     st.header("Decrypt a ciphertext")
 
 with tab4: 
-    st.header("Weakness")
+    st.header("Strengths")
