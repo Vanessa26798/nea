@@ -30,7 +30,7 @@ with tab2:
         st.write("The key is ", Key)
     elif Choice != 1 and Choice != 2 and Choice != "": 
         st.error('Invalid input.', icon="🚨")
-    if Plaintext.isupper() == True and Key.isdigit() == True:
+    if Plaintext.isupper() == True and Key.isdigit() == True and Key != "":
        Ciphertext = []
        Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
        for x in Plaintext:
