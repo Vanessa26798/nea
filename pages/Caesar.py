@@ -21,15 +21,16 @@ with tab2:
     Input = st.text_input("Input your own key (1) or a random key (2)? ", value="")
     if Input == "1":
         Key = st.text_input("Please enter the key: ", value="")
-        Key = int(Key)
-        st.write("The key is ", Key)
+        if Key.isdigit() == True:
+            Key = int(Key)
+            st.write("The key is ", Key)
     elif Input == "2": 
         Key = random.randrange(1, 26)
         Key = int(Key)
         st.write("The key is ", Key)
     elif Input != 1 and Input != 2: 
         st.write("Invalid input.")
-    if Plaintext.isupper() == True and Key.isdigit() == True:
+    if Plaintext.isupper() == True:
        Ciphertext = []
        Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
        for x in Plaintext:
