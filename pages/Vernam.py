@@ -1,3 +1,7 @@
+import streamlit as st
+import random
+
+
 st.header("Vernam Encryption")
 
 
