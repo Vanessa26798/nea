@@ -34,15 +34,12 @@ with tab2:
        Key = int(Key)
        for x in Plaintext:
          Letter_index = int(Alphabet.index(x))
-         st.write(Letter_index)
-
-           
-       #   Letter_index += Key
-       #   if Letter_index >= 26: 
-       #     Letter_index -= 26
-       #     Letter = Alphabet[Letter_index]
-       #     Ciphertext.append(Letter) 
-       # st.write("The ciphertext is ", *Ciphertext)
+         Letter_index += Key
+         if Letter_index >= 26: 
+           Letter_index -= 26
+         Letter = Alphabet[Letter_index]
+         Ciphertext.append(Letter) 
+       st.write("The ciphertext is ", *Ciphertext)
 
 
     # Occurence = {}
