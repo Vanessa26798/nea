@@ -35,8 +35,8 @@ with tab2:
        for x in Plaintext:
          Letter = int(Alphabet.index(x))
          Letter += Key
-         if Key >= 26: 
-           Letter - 26 = Letter
+         if Letter >= 26: 
+           Letter -= 26
            Letter = Alphabet[Letter]
            Ciphertext.append(Letter) 
        st.write("The ciphertext is ")
