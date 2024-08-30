@@ -33,7 +33,7 @@ with tab2:
        Ciphertext = []
        Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
        for x in Plaintext:
-         Letter = Alphabet.index(x)
+         Letter = int(Alphabet.index(x))
          Letter += Key
          if Key >= 26: 
            Letter - 26 = Letter
