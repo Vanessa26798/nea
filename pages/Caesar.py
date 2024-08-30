@@ -42,9 +42,10 @@ with tab2:
              Letter_index += Key
              if Key >= 26: 
                  Letter_index = Letter_index - 26
-             Letter = Alphabet[Letter_index]
-             Ciphertext.append(Letter) 
-       st.write("The ciphertext is ", *Ciphertext)
+                 st.write(Letter_index)
+       #       Letter = Alphabet[Letter_index]
+       #       Ciphertext.append(Letter) 
+       # st.write("The ciphertext is ", *Ciphertext)
 
 
     # Occurence = {}
