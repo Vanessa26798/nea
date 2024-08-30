@@ -28,7 +28,7 @@ with tab2:
         st.write("The key is ", Key)
     elif Input != 1 and Input != 2 and Input != "": 
         st.write("Invalid input.")
-    if Plaintext.isupper() == True and Key != "":
+    if Plaintext.isupper() == True and Input != "":
        Ciphertext = []
        Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
        Key = int(Key)
@@ -42,7 +42,7 @@ with tab2:
                  Letter_index -= 26
              Letter = Alphabet[Letter_index]
              Ciphertext.append(Letter) 
-       st.write("The ciphertext is ", *Ciphertext, end = "a")
+       st.write("The ciphertext is ", Ciphertext)
 
 
     # Occurence = {}
