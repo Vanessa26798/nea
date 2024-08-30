@@ -65,6 +65,6 @@ with tab3:
     st.header("Decrypt a ciphertext")
 
 with tab4: 
-    st.header("Weakness")
+    st.header("Limitations")
 
 
