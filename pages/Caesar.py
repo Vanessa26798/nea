@@ -40,13 +40,13 @@ with tab2:
            Letter = Alphabet[Letter]
            Ciphertext.append(Letter) 
            st.write("The ciphertext is ", *Ciphertext)
-    Occurence = {}
-    for x in Plaintext:
-      Total_occurence = len(Plaintext)
-      Count = Plaintext.count(x)
-      Character_occurence = round(Count/ Total_occurence * 100)
-      Occurence[x] = Character_occurence, '%'
-    st.write(Occurence)
+    # Occurence = {}
+    # for x in Plaintext:
+    #   Total_occurence = len(Plaintext)
+    #   Count = Plaintext.count(x)
+    #   Character_occurence = round(Count/ Total_occurence * 100)
+    #   Occurence[x] = Character_occurence, '%'
+    # st.write(Occurence)
 
 
 
