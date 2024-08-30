@@ -2,7 +2,7 @@ import streamlit as st
 import random
 
 
-st.header("Vernam Encryption")
+st.header("Vernam cipher")
 
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Strengths"])
