@@ -15,7 +15,7 @@ with tab2:
     st.header("Encryt a plaintext")
     
     Plaintext = st.text_input("Please enter the plaintext in upper case: ", value="")
-    if Plaintext.isupper() == False:
+    if Plaintext.isupper() == False and Plaintext != "": 
       st.write("Invalid plaintext")
     
     Input = st.text_input("Input your own key (1) or a random key (2)? ", value="")
