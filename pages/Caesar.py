@@ -18,15 +18,17 @@ with tab2:
     if Plaintext.isupper() == False and Plaintext != "": 
       st.error('Invalid plaintext.', icon="🚨")
     
-    Input = st.text_input("Input your own key (1) or a random key (2)? ", value="")
-    if Input == "1":
+    Choice = st.text_input("Input your own key (1) or a random key (2)? ", value="")
+    if Choice == "1":
         Key = st.text_input("Please enter the key: ", value="")
         if Key.isdigit() == True:
             st.write("The key is ", Key)
-    elif Input == "2": 
+        else: 
+            st.error('Invalid input.', icon="🚨")
+    elif Choice == "2": 
         Key = random.randrange(1, 26)
         st.write("The key is ", Key)
-    elif Input != 1 and Input != 2 and Input != "": 
+    elif Choice != 1 and Choice != 2 and Choice != "": 
         st.error('Invalid input.', icon="🚨")
     if Plaintext.isupper() == True:
        Ciphertext = []
