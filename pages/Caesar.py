@@ -27,7 +27,7 @@ with tab2:
         Key = random.randrange(1, 26)
         st.write("The key is ", Key)
     elif Input != 1 and Input != 2 and Input != "": 
-        st.write("Invalid input.")
+        st.error('Invalid input.', icon="🚨")
     if Plaintext.isupper() == True:
        Ciphertext = []
        Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
