@@ -6,7 +6,7 @@ import random
 st.header("Caesar Encryption")
 
 
-tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Limitation"])
+tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Limitations"])
 
 with tab1:
     st.header("History")
