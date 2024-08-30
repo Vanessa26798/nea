@@ -33,13 +33,16 @@ with tab2:
        Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
        Key = int(Key)
        for x in Plaintext:
-         Letter_index = int(Alphabet.index(x))
-         Letter_index += Key
-         if Letter_index >= 26: 
-           Letter_index -= 26
-         Letter = Alphabet[Letter_index]
-         Ciphertext.append(Letter) 
-       st.write("The ciphertext is ", *Ciphertext, end = "")
+         if x == " ":
+             Ciphertext.append(Letter)
+         else: 
+             Letter_index = int(Alphabet.index(x))
+             Letter_index += Key
+             if Letter_index >= 26: 
+                 Letter_index -= 26
+             Letter = Alphabet[Letter_index]
+             Ciphertext.append(Letter) 
+       st.write("The ciphertext is ", *Ciphertext, end = "a")
 
 
     # Occurence = {}
