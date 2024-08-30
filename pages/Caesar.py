@@ -40,8 +40,8 @@ with tab2:
              Key = int(Key)
              Letter_index = int(Alphabet.index(x))
              Letter_index += Key
-             if Letter_index >= 26: 
-                 Letter_index -= 26
+             if Key >= 26: 
+                 Letter_index = Letter_index - 26
                  Letter = Alphabet[Letter_index]
              Ciphertext.append(Letter) 
        st.write("The ciphertext is ", *Ciphertext)
