@@ -15,7 +15,8 @@ with tab2:
     st.header("Encryt a plaintext")
 
     Correct_Plaintext_Range = False
-    Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")    
+    Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
+    Plaintext = Plaintext.upper()
     for x in Plaintext: 
         if (x in Alphabet or x == " ") and Plaintext[0] != " ":
             Plaintext_in_Alphabet = True
@@ -41,14 +42,18 @@ with tab2:
     if Correct_Plaintext_Length == True and Plaintext != "":
         Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
         if Encrypt_Choice == "1":
-            Encrypt_Key = st.text_input("Please enter the key for encryption: ", value="")
+            Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
             if Encrypt_Key.isdigit() == True:
                 Encrypt_Key = int(Encrypt_Key)
-                st.write("The key is ", Encrypt_Key)
-                Correct_Encrypt_Key = True
+                if Encrypt_Key < 1 or Encrypt_Key > 25: 
+                    st.error('Invalid input.', icon="🚨")
+                    Correct_Encrypt_Key = False
+                elif Encrypt_Key >= 1 and Encrypt_Key <= 25: 
+                    st.write("The key is ", Encrypt_Key)
+                    Correct_Encrypt_Key = True
             elif Encrypt_Key.isdigit() == False and Encrypt_Key != "": 
                 st.error('Invalid input.', icon="🚨")
-                Correct_Encrypt_Key = True
+                Correct_Encrypt_Key = False
         elif Encrypt_Choice == "2": 
             Encrypt_Key = random.randrange(1, 26)
             Encrypt_Key = int(Encrypt_Key)
@@ -79,6 +84,7 @@ with tab3:
 
     Correct_Ciphertext_Range = False
     Ciphertext = st.text_input("Please enter the ciphertext in upper case, within 10-30 characters: ", value="")    
+    Ciphertext = Ciphertext.upper()
     for x in Ciphertext: 
         if (x in Alphabet or x == " ") and Ciphertext[0] != " ":
             Ciphertext_in_Alphabet = True
@@ -104,14 +110,20 @@ with tab3:
     if Correct_Ciphertext_Length == True and Ciphertext != "":
         Decrypt_Choice = st.text_input("Input your own key for decryption (1) or generate a random key (2)? ", value="")
         if Decrypt_Choice == "1":
-            Decrypt_Key = st.text_input("Please enter the key for decryption: ", value="")
+            Decrypt_Key = st.text_input("Please enter the key for decryption, within 1-25: ", value="")
             if Decrypt_Key.isdigit() == True:
                 Decrypt_Key = int(Decrypt_Key)  
+                if Decrypt_Key < 1 or Decrypt_Key > 25: 
+                    st.error('Invalid input.', icon="🚨")
+                    Correct_Encrypt_Key = False
+                elif Encrypt_Key >= 1 and Encrypt_Key <= 25: 
+                    st.write("The key is ", Encrypt_Key)
+                    Correct_Encrypt_Key = True
                 st.write("The key is ", Decrypt_Key)
                 Correct_Decrypt_Key = True
             elif Decrypt_Key.isdigit() == False and Decrypt_Key != "": 
                 st.error('Invalid input.', icon="🚨")
-                Correct_Decrypt_Key = True
+                Correct_Decrypt_Key = False
         elif Decrypt_Choice == "2": 
             Decrypt_Key = random.randrange(1, 26)
             Decrypt_Key = int(Decrypt_Key)            
