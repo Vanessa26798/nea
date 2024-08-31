@@ -117,7 +117,7 @@ with tab3:
                     Correct_Decrypt_Key = False
                 elif Decrypt_Key >= 1 and Decrypt_Key <= 25: 
                     st.write("The key is ", Decrypt_Key)
-                    Correct_Dencrypt_Key = True
+                    Correct_Decrypt_Key = True
             elif Decrypt_Key.isdigit() == False and Decrypt_Key != "": 
                 st.error('Invalid input.', icon="🚨")
                 Correct_Decrypt_Key = False
