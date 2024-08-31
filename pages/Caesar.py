@@ -49,10 +49,10 @@ with tab2:
          if x == " ":
              Ciphertext.append(Letter)
          else: 
-             Key = int(Key)
              Letter_index = int(Alphabet.index(x))
+             Letter_index += 1
              Letter_index += Key
-             if Key >= 26: 
+             if Letter_index >= 26: 
                  Letter_index = Letter_index - 26
                  st.write(Letter_index)
              Letter = Alphabet[Letter_index]
