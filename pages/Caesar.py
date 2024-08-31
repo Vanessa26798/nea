@@ -102,24 +102,24 @@ with tab3:
 
     Correct_Decrypt_Key = False
     if Correct_Ciphertext_Length == True and Ciphertext != "":
-            Dencrypt_Choice = st.text_input("Input your own key for dencryption (1) or generate a random key (2)? ", value="")
-    if Decrypt_Choice == "1":
-        Decrypt_Key = st.text_input("Please enter the key: ", value="")
-        if Decrypt_Key.isdigit() == True:
+        Dencrypt_Choice = st.text_input("Input your own key for dencryption (1) or generate a random key (2)? ", value="")
+        if Decrypt_Choice == "1":
+            Decrypt_Key = st.text_input("Please enter the key: ", value="")
+            if Decrypt_Key.isdigit() == True:
+                st.write("The key is ", Decrypt_Key)
+                Decrypt_Key = int(Decrypt_Key)
+                Correct_Decrypt_Key = True
+            elif Decrypt_Key.isdigit() == False and Decrypt_Key != "": 
+                st.error('Invalid input.', icon="🚨")
+                Correct_Decrypt_Key = True
+        elif Decrypt_Choice == "2": 
+            Decrypt_Key = random.randrange(1, 26)
             st.write("The key is ", Decrypt_Key)
             Decrypt_Key = int(Decrypt_Key)
             Correct_Decrypt_Key = True
-        elif Decrypt_Key.isdigit() == False and Decrypt_Key != "": 
+        elif Decrypt_Choice != 1 and Decrypt_Choice != 2 and Decrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
-            Correct_Decrypt_Key = True
-    elif Decrypt_Choice == "2": 
-        Decrypt_Key = random.randrange(1, 26)
-        st.write("The key is ", Decrypt_Key)
-        Decrypt_Key = int(Decrypt_Key)
-        Correct_Decrypt_Key = True
-    elif Decrypt_Choice != 1 and Decrypt_Choice != 2 and Decrypt_Choice != "": 
-        st.error('Invalid input.', icon="🚨")
-        Correct_Decrypt_Key = False
+            Correct_Decrypt_Key = False
 
     if Correct_Ciphertext_Range == True and Correct_Decrypt_Key == True and Correct_Ciphertext_Length == True:
        Plaintext = ["The plaintext is "]
