@@ -23,8 +23,11 @@ with tab2:
         Key = st.text_input("Please enter the key: ", value="")
         if Key.isdigit() == True or Key == "":
             st.write("The key is ", Key)
+            if Key.isdigit() == True:
+                Key = int(Key)
         else: 
             st.error('Invalid input.', icon="🚨")
+            Key.isdigit = False
     elif Choice == "2": 
         Key = random.randrange(1, 26)
         st.write("The key is ", Key)
@@ -33,6 +36,7 @@ with tab2:
         Key.isdigit = False
     if Plaintext.isupper() == True and Key.isdigit() == True:
         caesar_encrption()
+        
     def caesar_encrption():
        Ciphertext = []
        Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
