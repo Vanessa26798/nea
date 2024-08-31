@@ -45,7 +45,7 @@ with tab2:
 
 
 
-            Key = st.slider("PLease the value of key for encryption: ", 1, 25, value="")
+            Key = st.slider("Please the value of key for encryption: ", 1, 25, 1)
             Correct_Encrypt_Key = True
             st.write("I'm ", age, "years old")
 
