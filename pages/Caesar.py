@@ -19,7 +19,7 @@ with tab2:
         st.error('Invalid plaintext.', icon="🚨")
         Correct_Plaintext = False
     elif Plaintext.isupper() == True or Plaintext == " ":
-        Correct_plaintext = True
+        Correct_Plaintext = True
     
     Choice = st.text_input("Input your own key (1) or a random key (2)? ", value="")
     if Choice == "1":
