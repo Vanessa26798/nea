@@ -43,25 +43,21 @@ with tab2:
         Correct_Key = False
 
     if Correct_Plaintext == True and Correct_Key == True:
-        st.write("HAHA")
-    #     caesar_encrption()
-        
-    # def caesar_encrption():
-    #    Ciphertext = []
-    #    Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-    #    for x in Plaintext:
-    #      if x == " ":
-    #          Ciphertext.append(Letter)
-    #      else: 
-    #          Key = int(Key)
-    #          Letter_index = int(Alphabet.index(x))
-    #          Letter_index += Key
-    #          if Key >= 26: 
-    #              Letter_index = Letter_index - 26
-    #              st.write(Letter_index)
-    #          Letter = Alphabet[Letter_index]
-    #          Ciphertext.append(Letter) 
-    #    st.write("The ciphertext is ", *Ciphertext)
+       Ciphertext = []
+       Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+       for x in Plaintext:
+         if x == " ":
+             Ciphertext.append(Letter)
+         else: 
+             Key = int(Key)
+             Letter_index = int(Alphabet.index(x))
+             Letter_index += Key
+             if Key >= 26: 
+                 Letter_index = Letter_index - 26
+                 st.write(Letter_index)
+             Letter = Alphabet[Letter_index]
+             Ciphertext.append(Letter) 
+       st.write("The ciphertext is ", *Ciphertext)
 
 
 
