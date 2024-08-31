@@ -38,7 +38,8 @@ with tab2:
             Correct_Length = True
 
     Correct_Encrypt_Key = False
-    Encrypt_Choice = st.text_input("Input your own key (1) or a random key (2)? ", value="")
+    if Correct_Plaintext_Length = True:
+        Encrypt_Choice = st.text_input("Input your own key (1) or a random key (2)? ", value="")
     if Encrypt_Choice == "1":
         Encrypt_Key = st.text_input("Please enter the key: ", value="")
         if Encrypt_Key.isdigit() == True:
@@ -100,7 +101,8 @@ with tab3:
             Correct_Ciphertext_Length = True
 
     Correct_Decrypt_Key = False
-    Decrypt_Choice = st.text_input("Input your own key (1) or a random key (2)? ", value="")
+    if Correct_Ciphertext_Length = True:
+        Decrypt_Choice = st.text_input("Input your own key (1) or generate a random key (2)? ", value="")
     if Decrypt_Choice == "1":
         Decrypt_Key = st.text_input("Please enter the key: ", value="")
         if Decrypt_Key.isdigit() == True:
