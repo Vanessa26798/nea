@@ -31,12 +31,11 @@ with tab2:
     elif Choice != 1 and Choice != 2 and Choice != "": 
         st.error('Invalid input.', icon="🚨")
         Key.isdigit = False
-        
-   encryption()
+    if Plaintext.isupper() == True and Key.isdigit() == True:
+        encryption()
 
 
    def encrption():
-    if Plaintext.isupper() == True and Key.isdigit() == True:
        Ciphertext = []
        Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
        for x in Plaintext:
