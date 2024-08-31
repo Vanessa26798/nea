@@ -138,13 +138,14 @@ with tab3:
              Plaintext.append(x)
          else: 
              Letter_index = int(Alphabet.index(x))
-             Letter_index += 1
-             Letter_index -= Decrypt_Key
-             while Letter_index >= 25: 
-                 Letter_index -= 25
-             Letter = Alphabet[Letter_index]
-             Plaintext.append(Letter)
-       st.write("".join(Plaintext))
+             st.write(Letter_index)
+             # Letter_index += 1
+             # Letter_index -= Decrypt_Key
+             # while Letter_index >= 25: 
+             #     Letter_index -= 25
+             # Letter = Alphabet[Letter_index]
+             # Plaintext.append(Letter)
+             # st.write("".join(Plaintext))
 
 
 
