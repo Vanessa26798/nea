@@ -13,13 +13,31 @@ with tab1:
 
 with tab2:
     st.header("Encryt a plaintext")
-    
-    Plaintext = st.text_input("Please enter the plaintext in upper case, between 10-30 characters: ", value="")
-    if Plaintext.isupper() == False and Plaintext != " ": 
-      st.error('Invalid plaintext.', icon="🚨")
-    else:
-        Key = random.sample()
-        st.write("The key is ", )
+
+    Correct_Plaintext_Range = False
+    Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
+    Plaintext = Plaintext.upper()
+    for x in Plaintext: 
+        if (x in Alphabet or x == " ") and Plaintext[0] != " ":
+            Plaintext_in_Alphabet = True
+        else:
+            Plaintext_in_Alphabet = False
+        
+        if Plaintext_in_Alphabet == False and Plaintext != "":
+            st.error('Invalid plaintext.', icon="🚨")
+            Correct_Plaintext_Range = False
+            break
+        elif Plaintext_in_Alphabet == True or Plaintext == " ":
+            Correct_Plaintext_Range = True
+
+    Correct_Plaintext_Length = False
+    if Correct_Plaintext_Range == True:
+        if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
+            st.error('Plaintext out of range.', icon="🚨")
+            Correct_Plaintext_Length = False
+        elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
+            Correct_Plaintext_Length = True
+
 
 
 # key < length? 
@@ -59,6 +77,36 @@ with tab2:
 
 with tab3:
     st.header("Decrypt a ciphertext")
+
+    Correct_Ciphertext_Range = False
+    Ciphertext = st.text_input("Please enter the ciphertext in upper case, within 10-30 characters: ", value="")    
+    Ciphertext = Ciphertext.upper()
+    for x in Ciphertext: 
+        if (x in Alphabet or x == " ") and Ciphertext[0] != " ":
+            Ciphertext_in_Alphabet = True
+        else:
+            Ciphertext_in_Alphabet = False
+        
+        if Ciphertext_in_Alphabet == False and Ciphertext != "":
+            st.error('Invalid ciphertext.', icon="🚨")
+            Correct_Ciphertext_Range = False
+            break
+        elif Ciphertext_in_Alphabet == True or Ciphertext == " ":
+            Correct_Ciphertext_Range = True
+
+    Correct_Ciphertext_Length = False
+    if Correct_Ciphertext_Range == True:
+        if (len(Ciphertext) < 10 or len(Ciphertext) > 30) and Ciphertext != "": 
+            st.error('Ciphertext out of range.', icon="🚨")
+            Correct_Ciphertext_Length = False
+        elif len(Ciphertext) >= 10 and len(Ciphertext) <= 30 and len(Ciphertext) != 0 and Ciphertext != "":
+            Correct_Ciphertext_Length = True
+
+
+
+
+
+
 
 with tab4: 
     st.header("Strengths")
