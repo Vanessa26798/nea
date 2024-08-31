@@ -49,7 +49,7 @@ with tab2:
         Correct_Key = False
 
     if Correct_Plaintext == True and Correct_Key == True:
-       Ciphertext = []
+       Ciphertext = ["The ciphertext is "]
        Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
        for x in Plaintext:
          if x == " ":
@@ -62,8 +62,7 @@ with tab2:
                  Letter_index = Letter_index - 26
              Letter = Alphabet[Letter_index]
              Ciphertext.append(Letter)
-       st.write(*Ciphertext, end="")
-       # st.write("The ciphertext is ", *Ciphertext)
+       st.write(*Ciphertext, end="12")
 
 
 with tab3:
