@@ -56,8 +56,7 @@ with tab2:
                  Letter_index = Letter_index - 26
              Letter = Alphabet[Letter_index]
              Ciphertext.append(Letter)
-       for x in Ciphertext.split(","):
-       st.write("The ciphertext is ", *Ciphertext)
+       st.write("The ciphertext is ", *Ciphertext, sep='')
 
 
 
