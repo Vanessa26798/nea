@@ -94,7 +94,7 @@ with tab3:
             st.error('Invalid ciphertext.', icon="🚨")
             Correct_Ciphertext_Range = False
             break
-        elif Plaintext_in_Alphabet == True or Ciphertext == " ":
+        elif Ciphertext_in_Alphabet == True or Ciphertext == " ":
             Correct_Ciphertext_Range = True
 
     Correct_Ciphertext_Length = False
