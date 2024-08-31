@@ -21,13 +21,12 @@ with tab2:
     Choice = st.text_input("Input your own key (1) or a random key (2)? ", value="")
     if Choice == "1":
         Key = st.text_input("Please enter the key: ", value="")
-        if Key.isdigit() == True or Key == "":
+        if Key.isdigit() == True:
             st.write("The key is ", Key)
-            if Key.isdigit() == True:
-                Key = int(Key)
+            Key = int(Key)
         else: 
             st.error('Invalid input.', icon="🚨")
-            Key.isdigit = False
+            Key.isdigit() = False
     elif Choice == "2": 
         Key = random.randrange(1, 26)
         st.write("The key is ", Key)
