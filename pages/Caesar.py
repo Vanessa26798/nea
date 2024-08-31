@@ -72,8 +72,6 @@ with tab2:
              Letter_index = int(Alphabet.index(x))
              Letter_index += 1
              Letter_index += Encrypt_Key
-             while Letter_index >= 26: 
-                 Letter_index -= 26
              Letter = Alphabet[Letter_index]
              Ciphertext.append(Letter)
        st.write("".join(Ciphertext))
@@ -115,10 +113,10 @@ with tab3:
                 Decrypt_Key = int(Decrypt_Key)  
                 if Decrypt_Key < 1 or Decrypt_Key > 25: 
                     st.error('Invalid input.', icon="🚨")
-                    Correct_Encrypt_Key = False
+                    Correct_Decrypt_Key = False
                 elif Encrypt_Key >= 1 and Encrypt_Key <= 25: 
                     st.write("The key is ", Encrypt_Key)
-                    Correct_Encrypt_Key = True
+                    Correct_Dencrypt_Key = True
                 st.write("The key is ", Decrypt_Key)
                 Correct_Decrypt_Key = True
             elif Decrypt_Key.isdigit() == False and Decrypt_Key != "": 
@@ -142,8 +140,6 @@ with tab3:
              Letter_index = int(Alphabet.index(x))
              Letter_index += 1
              Letter_index -= Decrypt_Key
-             while Letter_index < 0: 
-                 Letter_index += 26
              Letter = Alphabet[Letter_index]
              Plaintext.append(Letter)
        st.write("".join(Plaintext))
