@@ -63,7 +63,7 @@ with tab2:
             st.error('Invalid input.', icon="🚨")
             Correct_Encrypt_Key = False
 
-    age = st.slider("How old are you?", 1, 25, value=None)
+    age = st.slider("How old are you?", 1, 25, value=0)
     st.write("I'm ", age, "years old")
 
     if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
