@@ -106,16 +106,16 @@ with tab3:
         if Decrypt_Choice == "1":
             Decrypt_Key = st.text_input("Please enter the key for decryption: ", value="")
             if Decrypt_Key.isdigit() == True:
+                Decrypt_Key = int(Decrypt_Key)  
                 st.write("The key is ", Decrypt_Key)
-                Decrypt_Key = int(Decrypt_Key)
                 Correct_Decrypt_Key = True
             elif Decrypt_Key.isdigit() == False and Decrypt_Key != "": 
                 st.error('Invalid input.', icon="🚨")
                 Correct_Decrypt_Key = True
         elif Decrypt_Choice == "2": 
             Decrypt_Key = random.randrange(1, 26)
+            Decrypt_Key = int(Decrypt_Key)            
             st.write("The key is ", Decrypt_Key)
-            Decrypt_Key = int(Decrypt_Key)
             Correct_Decrypt_Key = True
         elif Decrypt_Choice != 1 and Decrypt_Choice != 2 and Decrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
