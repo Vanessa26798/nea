@@ -32,10 +32,10 @@ with tab2:
         st.error('Invalid input.', icon="🚨")
         Key.isdigit = False
     if Plaintext.isupper() == True and Key.isdigit() == True:
-        encryption()
+        caesar_encrption()
 
 
-   def encrption():
+   def caesar_encrption():
        Ciphertext = []
        Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
        for x in Plaintext:
