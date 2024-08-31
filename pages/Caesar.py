@@ -13,14 +13,16 @@ with tab1:
 
 with tab2:
     st.header("Encryt a plaintext")
-    
+
+    Correct_Plaintext = False
     Plaintext = st.text_input("Please enter the plaintext in upper case, between 10-30 characters: ", value="")
     if Plaintext.isupper() == False and Plaintext != "": 
         st.error('Invalid plaintext.', icon="🚨")
         Correct_Plaintext = False
     elif Plaintext.isupper() == True or Plaintext == " ":
         Correct_Plaintext = True
-    
+
+    Correct_Key = True
     Choice = st.text_input("Input your own key (1) or a random key (2)? ", value="")
     if Choice == "1":
         Key = st.text_input("Please enter the key: ", value="")
