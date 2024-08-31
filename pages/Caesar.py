@@ -15,7 +15,7 @@ with tab2:
     st.header("Encryt a plaintext")
 
     Correct_Plaintext_Range = False
-    Plaintext = st.text_input("Please enter the plaintext in upper case, between 10-30 characters: ", value="")    
+    Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")    
     for x in Plaintext: 
         if (x in Alphabet or x == " ") and Plaintext[0] != " ":
             Plaintext_in_Alphabet = True
@@ -34,7 +34,7 @@ with tab2:
         if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
             st.error('Plaintext out of range.', icon="🚨")
             Correct_Plaintext_Length = False
-        elif len(Plaintext) > 10 and len(Plaintext) < 30 and len(Plaintext) != 0 and Plaintext != "":
+        elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
             Correct_Plaintext_Length = True
 
     Correct_Encrypt_Key = False                
@@ -78,7 +78,7 @@ with tab3:
     st.header("Decrypt a ciphertext")
 
     Correct_Ciphertext_Range = False
-    Ciphertext = st.text_input("Please enter the ciphertext in upper case, between 10-30 characters: ", value="")    
+    Ciphertext = st.text_input("Please enter the ciphertext in upper case, within 10-30 characters: ", value="")    
     for x in Ciphertext: 
         if (x in Alphabet or x == " ") and Ciphertext[0] != " ":
             Ciphertext_in_Alphabet = True
@@ -97,7 +97,7 @@ with tab3:
         if (len(Ciphertext) < 10 or len(Ciphertext) > 30) and Ciphertext != "": 
             st.error('Ciphertext out of range.', icon="🚨")
             Correct_Ciphertext_Length = False
-        elif len(Ciphertext) > 10 and len(Ciphertext) < 30 and len(Ciphertext) != 0 and Ciphertext != "":
+        elif len(Ciphertext) >= 10 and len(Ciphertext) <= 30 and len(Ciphertext) != 0 and Ciphertext != "":
             Correct_Ciphertext_Length = True
 
     Correct_Decrypt_Key = False
