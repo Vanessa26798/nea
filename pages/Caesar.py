@@ -42,6 +42,16 @@ with tab2:
     if Correct_Plaintext_Length == True and Plaintext != "":
         Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
         if Encrypt_Choice == "1":
+
+
+
+            Key = st.slider("PLease the value of key for encryption: ", 1, 25, value="")
+            Correct_Encrypt_Key = True
+            st.write("I'm ", age, "years old")
+
+
+
+            
     #         Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
     #         if Encrypt_Key.isdigit() == True:
     #             Encrypt_Key = int(Encrypt_Key)
@@ -63,12 +73,6 @@ with tab2:
     #         st.error('Invalid input.', icon="🚨")
     #         Correct_Encrypt_Key = False
 
-
-
-
-        Key = st.slider("PLease the value of key for encryption: ", 1, 25, value="")
-        Correct_Encrypt_Key = True
-        st.write("I'm ", age, "years old")
 
 
 
