@@ -6,7 +6,7 @@ import random
 st.header("Caesar cipher")
 
 
-tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Limitations"])
+tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Weakness"])
 
 with tab1:
     st.header("History")
@@ -14,7 +14,7 @@ with tab1:
 with tab2:
     st.header("Encryt a plaintext")
     
-    Plaintext = st.text_input("Please enter the plaintext in upper case: ", value="")
+    Plaintext = st.text_input("Please enter the plaintext in upper case, between 10-30 characters: ", value="")
     if Plaintext.isupper() == False and Plaintext != "": 
       st.error('Invalid plaintext.', icon="🚨")
     
@@ -31,7 +31,7 @@ with tab2:
     elif Choice != 1 and Choice != 2 and Choice != "": 
         st.error('Invalid input.', icon="🚨")
         Key.isdigit = False
-    if Plaintext.isupper() == True and Key.isdigit() == True:
+    elif Plaintext.isupper() == True and Key.isdigit() == True:
        Ciphertext = []
        Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
        for x in Plaintext:
@@ -49,6 +49,19 @@ with tab2:
        st.write("The ciphertext is ", *Ciphertext)
 
 
+
+with tab3:
+    st.header("Decrypt a ciphertext")
+
+
+
+
+
+
+with tab4: 
+    st.header("Weakness")
+
+
     # Occurence = {}
     # for x in Plaintext:
     #   Total_occurence = len(Plaintext)
@@ -58,13 +71,5 @@ with tab2:
     # st.write(Occurence)
 
 
-
-
-
-with tab3:
-    st.header("Decrypt a ciphertext")
-
-with tab4: 
-    st.header("Limitations")
 
 
