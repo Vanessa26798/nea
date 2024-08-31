@@ -37,8 +37,9 @@ with tab2:
         elif len(Plaintext) > 10 and len(Plaintext) < 30 and len(Plaintext) != 0 and Plaintext != "":
             Correct_Length = True
 
-    Correct_Encrypt_Key = False        
-    Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
+    Correct_Encrypt_Key = False                
+    if Correct_Plaintext_Length == True and Plaintext != "":
+        Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
     if Encrypt_Choice == "1":
         Encrypt_Key = st.text_input("Please enter the key: ", value="")
         if Encrypt_Key.isdigit() == True:
@@ -100,7 +101,8 @@ with tab3:
             Correct_Ciphertext_Length = True
 
     Correct_Decrypt_Key = False
-    Dencrypt_Choice = st.text_input("Input your own key for dencryption (1) or generate a random key (2)? ", value="")
+        if Correct_Ciphertext_Length == True and Ciphertext != "":
+            Dencrypt_Choice = st.text_input("Input your own key for dencryption (1) or generate a random key (2)? ", value="")
     if Decrypt_Choice == "1":
         Decrypt_Key = st.text_input("Please enter the key: ", value="")
         if Decrypt_Key.isdigit() == True:
