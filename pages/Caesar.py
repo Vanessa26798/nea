@@ -1,7 +1,7 @@
 import streamlit as st
 import random
 
-
+Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
 st.header("Caesar cipher")
 
@@ -16,10 +16,10 @@ with tab2:
 
     Correct_Plaintext = False
     Plaintext = st.text_input("Please enter the plaintext in upper case, between 10-30 characters: ", value="")
-    if Plaintext.isupper() == False and Plaintext != "":
+    if Plaintext in Alphabet and Plaintext != "":
         st.error('Invalid plaintext.', icon="🚨")
         Correct_Plaintext = False
-    elif Plaintext.isupper() == True or Plaintext == " ":
+    elif Plaintext Not in Alphabet or Plaintext == " ":
         Correct_Plaintext = True
 
     Correct_Range = False
@@ -51,7 +51,7 @@ with tab2:
 
     if Correct_Plaintext == True and Correct_Key == True and Correct_Range == True:
        Ciphertext = ["The ciphertext is "]
-       Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+
        for x in Plaintext:
          if x == " ":
              Ciphertext.append(Letter)
