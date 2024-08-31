@@ -137,7 +137,6 @@ with tab3:
              Plaintext.append(x)
          else: 
              Letter_index = int(Alphabet.index(x))
-             st.write(Letter_index)
              Letter_index -= Decrypt_Key
              while Letter_index >= 25: 
                  Letter_index -= 25
