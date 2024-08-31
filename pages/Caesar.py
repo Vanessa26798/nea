@@ -16,11 +16,11 @@ with tab2:
 
     Correct_Plaintext = False
     Plaintext = st.text_input("Please enter the plaintext in upper case, between 10-30 characters: ", value="")
-    Plaintext_in_Alphabet = Plaintext in Alphabet
-    if Plaintext_in_Alphabet == False and Plaintext != "":
+    x = Plaintext in Alphabet
+    if x == False and Plaintext != "":
         st.error('Invalid plaintext.', icon="🚨")
         Correct_Plaintext = False
-    elif Plaintext_in_Alphabet == True or Plaintext == " ":
+    elif x == True or Plaintext == " ":
         Correct_Plaintext = True
 
     Correct_Range = False
