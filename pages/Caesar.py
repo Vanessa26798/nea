@@ -101,7 +101,7 @@ with tab3:
             Correct_Ciphertext_Length = True
 
     Correct_Decrypt_Key = False
-        if Correct_Ciphertext_Length == True and Ciphertext != "":
+    if Correct_Ciphertext_Length == True and Ciphertext != "":
             Dencrypt_Choice = st.text_input("Input your own key for dencryption (1) or generate a random key (2)? ", value="")
     if Decrypt_Choice == "1":
         Decrypt_Key = st.text_input("Please enter the key: ", value="")
