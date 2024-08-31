@@ -32,7 +32,7 @@ with tab2:
         st.error('Invalid input.', icon="🚨")
         Key.isdigit = False
         
-   encryption() 
+   encryption()
 
 
    def encrption():
