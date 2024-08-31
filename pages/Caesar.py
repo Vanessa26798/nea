@@ -27,12 +27,12 @@ with tab2:
         else: 
             st.error('Invalid input.', icon="🚨")
             Key.isdigit() == False
-    elif Choice == "2": 
-        Key = random.randrange(1, 26)
-        st.write("The key is ", Key)
-    elif Choice != 1 and Choice != 2 and Choice != "": 
-        st.error('Invalid input.', icon="🚨")
-        Key.isdigit = False
+    # elif Choice == "2": 
+    #     Key = random.randrange(1, 26)
+    #     st.write("The key is ", Key)
+    # elif Choice != 1 and Choice != 2 and Choice != "": 
+    #     st.error('Invalid input.', icon="🚨")
+    #     Key.isdigit = False
     if Plaintext.isupper() == True and Key.isdigit() == True:
         caesar_encrption()
         
