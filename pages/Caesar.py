@@ -16,7 +16,10 @@ with tab2:
     
     Plaintext = st.text_input("Please enter the plaintext in upper case, between 10-30 characters: ", value="")
     if Plaintext.isupper() == False and Plaintext != "": 
-      st.error('Invalid plaintext.', icon="🚨")
+        st.error('Invalid plaintext.', icon="🚨")
+        Correct_Plaintext == False
+    elif Plaintext.isupper() == True or Plaintext == " ":
+        Correct_plaintext == True
     
     Choice = st.text_input("Input your own key (1) or a random key (2)? ", value="")
     if Choice == "1":
@@ -24,16 +27,21 @@ with tab2:
         if Key.isdigit() == True:
             st.write("The key is ", Key)
             Key = int(Key)
+            Correct_Key = True
         elif Key.isdigit() == False and Key != "": 
             st.error('Invalid input.', icon="🚨")
+            Correct_Key = True
     elif Choice == "2": 
         Key = random.randrange(1, 26)
         st.write("The key is ", Key)
         Key = int(Key)
+        Correct_Key = True
     elif Choice != 1 and Choice != 2 and Choice != "": 
         st.error('Invalid input.', icon="🚨")
-    #     Key.isdigit = False
-    # if Plaintext.isupper() == True and Key.isdigit() == True:
+        Correct_Key = False
+
+    if Correct_Plaintext == True and Correct_Key == True:
+        st.write("HAHA")
     #     caesar_encrption()
         
     # def caesar_encrption():
