@@ -61,7 +61,7 @@ with tab2:
        Ciphertext = ["The ciphertext is "]
        for x in Plaintext:
          if x == " ":
-             Ciphertext.append(Letter)
+             Ciphertext.append(x)
          else: 
              Letter_index = int(Alphabet.index(x))
              Letter_index += 1
