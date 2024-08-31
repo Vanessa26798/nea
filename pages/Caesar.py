@@ -26,10 +26,10 @@ with tab2:
             Key = int(Key)
         elif Key.isdigit() == False and Key != "": 
             st.error('Invalid input.', icon="🚨")
-
-    # elif Choice == "2": 
-    #     Key = random.randrange(1, 26)
-    #     st.write("The key is ", Key)
+    elif Choice == "2": 
+        Key = random.randrange(1, 26)
+        st.write("The key is ", Key)
+        Key = int(Key)
     # elif Choice != 1 and Choice != 2 and Choice != "": 
     #     st.error('Invalid input.', icon="🚨")
     #     Key.isdigit = False
