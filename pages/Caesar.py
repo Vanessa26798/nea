@@ -63,7 +63,7 @@ with tab2:
              Letter = Alphabet[Letter_index]
              Ciphertext.append(Letter)
        Yourlist = "".join(Ciphertext)
-       st.write(Ciphertext)
+       st.write(Yourlist)
 
 
 with tab3:
