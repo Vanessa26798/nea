@@ -42,42 +42,26 @@ with tab2:
     if Correct_Plaintext_Length == True and Plaintext != "":
         Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
         if Encrypt_Choice == "1":
-
-
-
-            Encrypt_Key = st.slider("Please the value of key for encryption: ", 1, 25, 1)
+            Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
+            if Encrypt_Key.isdigit() == True:
+                Encrypt_Key = int(Encrypt_Key)
+                if Encrypt_Key < 1 or Encrypt_Key > 25: 
+                    st.error('Invalid input.', icon="🚨")
+                    Correct_Encrypt_Key = False
+                elif Encrypt_Key >= 1 and Encrypt_Key <= 25: 
+                    st.write("The key is ", Encrypt_Key)
+                    Correct_Encrypt_Key = True
+            elif Encrypt_Key.isdigit() == False and Encrypt_Key != "": 
+                st.error('Invalid input.', icon="🚨")
+                Correct_Encrypt_Key = False
+        elif Encrypt_Choice == "2": 
+            Encrypt_Key = random.randrange(1, 26)
+            Encrypt_Key = int(Encrypt_Key)
+            st.write("The key is ", Encrypt_Key)
             Correct_Encrypt_Key = True
-            st.write("I'm ", Encrypt_Key, "years old")
-
-
-
-            
-    #         Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
-    #         if Encrypt_Key.isdigit() == True:
-    #             Encrypt_Key = int(Encrypt_Key)
-    #             if Encrypt_Key < 1 or Encrypt_Key > 25: 
-    #                 st.error('Invalid input.', icon="🚨")
-    #                 Correct_Encrypt_Key = False
-    #             elif Encrypt_Key >= 1 and Encrypt_Key <= 25: 
-    #                 st.write("The key is ", Encrypt_Key)
-    #                 Correct_Encrypt_Key = True
-    #         elif Encrypt_Key.isdigit() == False and Encrypt_Key != "": 
-    #             st.error('Invalid input.', icon="🚨")
-    #             Correct_Encrypt_Key = False
-    #     elif Encrypt_Choice == "2": 
-    #         Encrypt_Key = random.randrange(1, 26)
-    #         Encrypt_Key = int(Encrypt_Key)
-    #         st.write("The key is ", Encrypt_Key)
-    #         Correct_Encrypt_Key = True
-    #     elif Encrypt_Choice != 1 and Encrypt_Choice != 2 and Encrypt_Choice != "": 
-    #         st.error('Invalid input.', icon="🚨")
-    #         Correct_Encrypt_Key = False
-
-
-
-
-
-    
+        elif Encrypt_Choice != 1 and Encrypt_Choice != 2 and Encrypt_Choice != "": 
+            st.error('Invalid input.', icon="🚨")
+            Correct_Encrypt_Key = False
 
     if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
        Ciphertext = ["The ciphertext is "]
