@@ -22,7 +22,7 @@ with tab2:
     elif Plaintext.isupper() == True or Plaintext == " ":
         Correct_Plaintext = True
     
-    if len(Plaintext) < 10 or len(Plaintext) > 30: 
+    if len(Plaintext) < 10 or len(Plaintext) > 30 and Plaintext != "": 
         st.error('Plaintext out of range.', icon="🚨")
         Correct_Plaintext = False
     else:
