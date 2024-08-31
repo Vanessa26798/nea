@@ -143,7 +143,7 @@ with tab3:
                  Letter_index -= 25
              Letter = Alphabet[Letter_index]
              Plaintext.append(Letter)
-             st.write("".join(Plaintext))
+      st.write("".join(Plaintext))
 
 
 
