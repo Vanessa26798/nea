@@ -19,8 +19,8 @@ with tab2:
     if Plaintext in Alphabet and Plaintext != "":
         st.error('Invalid plaintext.', icon="🚨")
         Correct_Plaintext = False
-    elif Plaintext Not in Alphabet or Plaintext == " ":
-        Correct_Plaintext = True
+    # elif Plaintext == " ":
+    #     Correct_Plaintext = True
 
     Correct_Range = False
     if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
