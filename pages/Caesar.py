@@ -26,7 +26,7 @@ with tab2:
             Key = int(Key)
         else: 
             st.error('Invalid input.', icon="🚨")
-            Key.isdigit() = False
+            Key.isdigit() == False
     elif Choice == "2": 
         Key = random.randrange(1, 26)
         st.write("The key is ", Key)
