@@ -70,8 +70,8 @@ with tab2:
              Ciphertext.append(x)
          else: 
              Letter_index = int(Alphabet.index(x))
+             Letter_index += 1
              st.write(Letter_index)
-       #       Letter_index += 1
        #       Letter_index += Encrypt_Key
        #       while Letter_index >= 25: 
        #           Letter_index -= 25
