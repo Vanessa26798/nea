@@ -22,7 +22,7 @@ with tab2:
     elif Plaintext.isupper() == True or Plaintext == " ":
         Correct_Plaintext = True
 
-    Correct_Key = True
+    Correct_Key = False
     Choice = st.text_input("Input your own key (1) or a random key (2)? ", value="")
     if Choice == "1":
         Key = st.text_input("Please enter the key: ", value="")
