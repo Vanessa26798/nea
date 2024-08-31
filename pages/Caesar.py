@@ -33,9 +33,9 @@ with tab2:
     if Correct_Plaintext_Range == True:
         if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
             st.error('Plaintext out of range.', icon="🚨")
-            Correct_Length = False
+            Correct_Plaintext_Length = False
         elif len(Plaintext) > 10 and len(Plaintext) < 30 and len(Plaintext) != 0 and Plaintext != "":
-            Correct_Length = True
+            Correct_Plaintext_Length = True
 
     Correct_Encrypt_Key = False                
     if Correct_Plaintext_Length == True and Plaintext != "":
