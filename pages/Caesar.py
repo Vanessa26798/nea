@@ -24,7 +24,7 @@ with tab2:
         if Key.isdigit() == True:
             st.write("The key is ", Key)
             Key = int(Key)
-        elif Key.isdigit() == False or Key != "": 
+        elif Key != "": 
             st.error('Invalid input.', icon="🚨")
 
     # elif Choice == "2": 
