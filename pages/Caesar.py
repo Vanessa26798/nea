@@ -119,8 +119,6 @@ with tab3:
                 elif Encrypt_Key >= 1 and Encrypt_Key <= 25: 
                     st.write("The key is ", Encrypt_Key)
                     Correct_Dencrypt_Key = True
-                st.write("The key is ", Decrypt_Key)
-                Correct_Decrypt_Key = True
             elif Decrypt_Key.isdigit() == False and Decrypt_Key != "": 
                 st.error('Invalid input.', icon="🚨")
                 Correct_Decrypt_Key = False
@@ -146,7 +144,7 @@ with tab3:
                  Letter_index -= 25
              Letter = Alphabet[Letter_index]
              Plaintext.append(Letter)
-       # st.write("".join(Plaintext))
+       st.write("".join(Plaintext))
 
 
 
