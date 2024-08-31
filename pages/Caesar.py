@@ -21,12 +21,13 @@ with tab2:
         Correct_Plaintext = False
     elif Plaintext.isupper() == True or Plaintext == " ":
         Correct_Plaintext = True
-    
+
+    Correct_Range = False
     if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
         st.error('Plaintext out of range.', icon="🚨")
-        Correct_Plaintext = False
+        Correct_Range = False
     elif len(Plaintext) > 10 and len(Plaintext) < 30 and len(Plaintext) != 0 and Plaintext != "":
-        Correct_Plaintext = True
+        Correct_Range = True
 
     Correct_Key = False
     Choice = st.text_input("Input your own key (1) or a random key (2)? ", value="")
@@ -48,7 +49,7 @@ with tab2:
         st.error('Invalid input.', icon="🚨")
         Correct_Key = False
 
-    if Correct_Plaintext == True and Correct_Key == True:
+    if Correct_Plaintext == True and Correct_Key == True and Correct_Range == True:
        Ciphertext = ["The ciphertext is "]
        Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
        for x in Plaintext:
