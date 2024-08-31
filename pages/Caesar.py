@@ -70,13 +70,14 @@ with tab2:
              Ciphertext.append(x)
          else: 
              Letter_index = int(Alphabet.index(x))
-             Letter_index += 1
-             Letter_index += Encrypt_Key
-             while Letter_index >= 25: 
-                 Letter_index -= 25
-             Letter = Alphabet[Letter_index]
-             Ciphertext.append(Letter)
-       st.write("".join(Ciphertext))
+             st.write(Letter_index)
+       #       Letter_index += 1
+       #       Letter_index += Encrypt_Key
+       #       while Letter_index >= 25: 
+       #           Letter_index -= 25
+       #       Letter = Alphabet[Letter_index]
+       #       Ciphertext.append(Letter)
+       # st.write("".join(Ciphertext))
 
 
 with tab3:
