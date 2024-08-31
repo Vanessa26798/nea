@@ -66,7 +66,7 @@ with tab2:
          else: 
              Letter_index = int(Alphabet.index(x))
              Letter_index += 1
-             Letter_index += Key
+             Letter_index += Encrypt_Key
              if Letter_index >= 26: 
                  Letter_index -= 26
              Letter = Alphabet[Letter_index]
@@ -90,7 +90,7 @@ with tab3:
             Correct_Ciphertext_Range = False
             break
         elif Plaintext_in_Alphabet == True or Ciphertext == " ":
-            Correct_Plaintext_Range = True
+            Correct_Ciphertext_Range = True
 
     Correct_Ciphertext_Length = False
     if Correct_Ciphertext_Range == True:
@@ -129,7 +129,7 @@ with tab3:
          else: 
              Letter_index = int(Alphabet.index(x))
              Letter_index += 1
-             Letter_index -= Key
+             Letter_index -= Decrypt_Key
              if Letter_index < 0: 
                  Letter_index += 26
              Letter = Alphabet[Letter_index]
