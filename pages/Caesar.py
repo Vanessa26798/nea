@@ -59,7 +59,6 @@ with tab2:
 
     if Correct_Plaintext == True and Correct_Key == True and Correct_Length == True:
        Ciphertext = ["The ciphertext is "]
-
        for x in Plaintext:
          if x == " ":
              Ciphertext.append(Letter)
@@ -71,7 +70,7 @@ with tab2:
                  Letter_index = Letter_index - 26
              Letter = Alphabet[Letter_index]
              Ciphertext.append(Letter)
-         st.write(*Ciphertext)
+        st.write(Ciphertext)
     # st.write("".join(Ciphertext))
 
 
