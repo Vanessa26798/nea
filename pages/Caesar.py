@@ -16,7 +16,7 @@ with tab2:
 
     Correct_Plaintext = False
     Plaintext = st.text_input("Please enter the plaintext in upper case, between 10-30 characters: ", value="")
-    if Plaintext.isupper() == False and Plaintext != "": 
+    if Plaintext.isupper() == False and Plaintext != "" and 10 < len(Plaintext) < 30: 
         st.error('Invalid plaintext.', icon="🚨")
         Correct_Plaintext = False
     elif Plaintext.isupper() == True or Plaintext == " ":
@@ -55,7 +55,8 @@ with tab2:
              if Letter_index >= 26: 
                  Letter_index = Letter_index - 26
              Letter = Alphabet[Letter_index]
-             Ciphertext.append(Letter) 
+             Ciphertext.append(Letter)
+       for x in Ciphertext.split(","):
        st.write("The ciphertext is ", *Ciphertext)
 
 
