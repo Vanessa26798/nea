@@ -17,9 +17,9 @@ with tab2:
     Plaintext = st.text_input("Please enter the plaintext in upper case, between 10-30 characters: ", value="")
     if Plaintext.isupper() == False and Plaintext != "": 
         st.error('Invalid plaintext.', icon="🚨")
-        Correct_Plaintext == False
+        Correct_Plaintext = False
     elif Plaintext.isupper() == True or Plaintext == " ":
-        Correct_plaintext == True
+        Correct_plaintext = True
     
     Choice = st.text_input("Input your own key (1) or a random key (2)? ", value="")
     if Choice == "1":
