@@ -61,9 +61,8 @@ with tab2:
              if Letter_index >= 26: 
                  Letter_index = Letter_index - 26
              Letter = Alphabet[Letter_index]
-             Ciphertext.append(Letter)
-       Ciphertext.replace(" ", "")        
-       st.write("The ciphertext is ", *Ciphertext, sep='')
+             Ciphertext.append(Letter)   
+       st.write("The ciphertext is ", *Ciphertext).replace(" ", "") 
 
 
 with tab3:
