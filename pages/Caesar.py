@@ -63,6 +63,9 @@ with tab2:
             st.error('Invalid input.', icon="🚨")
             Correct_Encrypt_Key = False
 
+    age = st.slider("How old are you?", 0, 130, 25)
+    st.write("I'm ", age, "years old")
+
     if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
        Ciphertext = ["The ciphertext is "]
        for x in Plaintext:
