@@ -6,7 +6,7 @@ Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N"
 st.header("Caesar cipher")
 
 
-tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Weakness"])
+tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
 
 with tab1:
     st.header("History")
@@ -148,7 +148,7 @@ with tab3:
 
 
 with tab4: 
-    st.header("Weakness")
+    st.header("Level of security")
 
 
     # Occurence = {}
