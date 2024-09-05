@@ -149,6 +149,7 @@ with tab3:
 
 with tab4: 
     st.header("Level of security")
+    st.write("res\")
 
     # import pandas as pd
     # import streamlit_pandas as sp
@@ -172,7 +173,7 @@ with tab4:
     # st.header("Original DataFrame")
     # st.write(df)
 
-    st.header("Result DataFrame")
+    
     st.write(res)
 
 
