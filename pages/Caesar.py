@@ -151,16 +151,32 @@ with tab4:
     st.header("Level of security")
 
     import pandas as pd
-    df = pd.DataFrame(
-        [
-       {"command": "st.selectbox", "rating": 4, "is_widget": True},
-       {"command": "st.balloons", "rating": 5, "is_widget": False},
-       {"command": "st.time_input", "rating": 3, "is_widget": True},
-       ]
-    )
-    edited_df = st.data_editor(df)
+    import streamlit_pandas as sp
 
-    favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
+    @st.cache_data
+    def load_data():
+        df = pd.read_csv(file)
+        return df
+
+    file = "../data/titanic.csv"
+    df = load_data()
+    create_data = {"Name": "text",
+                    "Sex": "multiselect",
+                    "Embarked": "multiselect",
+                    "Ticket": "text",
+                    "Pclass": "multiselect"}
+
+    all_widgets = sp.create_widgets(df, create_data, ignore_columns=["PassengerId"])
+    res = sp.filter_df(df, all_widgets)
+    st.title("Streamlit AutoPandas")
+    st.header("Original DataFrame")
+    st.write(df)
+
+    st.header("Result DataFrame")
+    st.write(res)
+
+
+    
    
     # Occurence = {}
     # for x in Plaintext:
