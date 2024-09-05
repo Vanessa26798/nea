@@ -173,8 +173,6 @@ with tab4:
     # st.header("Original DataFrame")
     # st.write(df)
 
-    
-    st.write(res)
 
 
     
