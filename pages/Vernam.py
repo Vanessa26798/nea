@@ -6,7 +6,7 @@ Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N"
 st.header("Vernam cipher")
 
 
-tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Strengths"])
+tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
 
 with tab1:
     st.header("History")
@@ -109,4 +109,4 @@ with tab3:
 
 
 with tab4: 
-    st.header("Strengths")
+    st.header("Level of security")
