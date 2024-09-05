@@ -150,6 +150,7 @@ with tab3:
 with tab4: 
     st.header("Level of security")
 
+    import pandas as pd
     df = pd.DataFrame(
         [
        {"command": "st.selectbox", "rating": 4, "is_widget": True},
@@ -160,8 +161,7 @@ with tab4:
     edited_df = st.data_editor(df)
 
     favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
-    st.markdown(f"Your favorite command is **{favorite_command}** 🎈")
-
+   
     # Occurence = {}
     # for x in Plaintext:
     #   Total_occurence = len(Plaintext)
