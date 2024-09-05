@@ -150,17 +150,18 @@ with tab3:
 with tab4: 
     st.header("Level of security")
 
-    import streamlit as st
-    import pandas as pd
-    import numpy as np
+    # import streamlit as st
+    # import pandas as pd
+    # import numpy as np
 
-    chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+    # chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
 
     st.bar_chart(chart_data)
+    df = pd.DataFrame(
+    np.random.randn(10, 5), columns=("col %d" % i for i in range(5))
+    )
 
-
-
-
+    st.table(df)
 
 
     # Occurence = {}
