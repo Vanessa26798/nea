@@ -148,8 +148,7 @@ with tab3:
 
 with tab4: 
     st.header("Level of security")
-    st.wrtie("hi")
-
+    
 
     # import pandas as pd
     # import streamlit_pandas as sp
