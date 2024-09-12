@@ -162,7 +162,7 @@ with tab4:
 
     
 
-    df = pd.DataFrame(np.random.randn(10, 5), columns(x for x in Plaintext))
+    df = pd.DataFrame(np.random.randn(10, 5), columns = (x for x in Plaintext))
     st.table(df)
 
     chart_data = pd.DataFrame({"Letter": col0, "Occurance": col1})
