@@ -152,7 +152,8 @@ with tab4:
     st.header("Level of security")
     Plaintext = "AABCDE"
     Occurance = []
-    df = pd.DataFrame(np.random.randn(10, 5))
+    my_table = pd.DataFrame(np.random.randn(10, 5))
+    st.table(my_table)
     for x in Plaintext:
       Total_occurance = len(Plaintext)
       Count = Plaintext.count(x)
@@ -161,7 +162,6 @@ with tab4:
       df2 = pd.DataFrame(np.random.randn(50, 20), columns=("col %d" % i for i in range(20)))
       my_table.add_rows(df2)
 
-      st.table(df)
 
     chart_data = pd.DataFrame({"Letter": col0, "Occurance": col1})
     #   Occurance.append(Character_occurance)
