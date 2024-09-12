@@ -150,8 +150,8 @@ with tab4:
     st.header("Level of security")
     
     
-   
-    Occurence = {}
+   Plaintext = "ABCDE"
+    Occurence = []
     for x in Plaintext:
       Total_occurence = len(Plaintext)
       Count = Plaintext.count(x)
