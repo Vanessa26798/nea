@@ -157,8 +157,7 @@ with tab4:
       Count = Plaintext.count(x)
       Character_occurance = round(Count/ Total_occurance * 100)
 
-    df = pd.DataFrame(columns=("col %d" % i for i in range(5)))
-
+    df = pd.DataFrame(np.random.randn(11, 5), columns=("col %d" % i for i in range(5)))
     st.table(df)
 
     chart_data = pd.DataFrame({"Letter": col0, "Occurance": col1})
