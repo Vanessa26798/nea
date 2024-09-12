@@ -157,13 +157,8 @@ with tab4:
       Count = Plaintext.count(x)
       Character_occurance = round(Count/ Total_occurance * 100)
       Occurance.append(Character_occurance)
-
-    length = len(Occurance)
-
-    
-
-    df = pd.DataFrame(np.random.randn(10, 5), columns = x for x in Plaintext)
-    st.table(df)
+      df = pd.DataFrame(np.random.randn(10, 5), columns = x)
+      st.table(df)
 
     chart_data = pd.DataFrame({"Letter": col0, "Occurance": col1})
     #   Occurance.append(Character_occurance)
