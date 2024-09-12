@@ -151,18 +151,18 @@ with tab3:
 with tab4: 
     # st.header("Level of security")
     # Plaintext = "AABCDE"
-    # Occurence = []
+    # Occurance = []
     # for x in Plaintext:
-    #   Total_occurence = len(Plaintext)
+    #   Total_occurance = len(Plaintext)
     #   Count = Plaintext.count(x)
-    #   Character_occurence = round(Count/ Total_occurence * 100)
-    #   Occurence.append(Character_occurence)
-    # st.write(Occurence)
+    #   Character_occurance = round(Count/ Total_occurance * 100)
+    #   Occurance.append(Character_occurance)
+    # st.write(Occurance)
 
 
 
 
-    # Occurence = pd.DataFrame(np.random.randn(10, 5), columns=("col %d" % i for i in range(5)))
+    # Occurance = pd.DataFrame(np.random.randn(10, 5), columns=("col %d" % i for i in range(5)))
 
     # st.table(Occurance)
 
@@ -171,39 +171,14 @@ with tab4:
 
     chart_data = pd.DataFrame(
         {
-        "col1": list(range(20)),
-        "col2": np.random.randn(20),
+        "Letter": 0,
+        "Occurance": np.random.randn(20),
         }
         )
 
     st.bar_chart(
         chart_data,
-        x="col1", y="col2", horizontal=True)
-
-    
-
-
-    # import pandas as pd
-    # import streamlit_pandas as sp
-
-    # @st.cache_data
-    # def load_data():
-    #     df = pd.read_csv(file)
-    #     return df
-
-    # file = "../data/titanic.csv"
-    # df = load_data()
-    # create_data = {"Name": "text",
-    #                 "Sex": "multiselect",
-    #                 "Embarked": "multiselect",
-    #                 "Ticket": "text",
-    #                 "Pclass": "multiselect"}
-
-    # all_widgets = sp.create_widgets(df, create_data, ignore_columns=["PassengerId"])
-    # res = sp.filter_df(df, all_widgets)
-    # st.title("Streamlit AutoPandas")
-    # st.header("Original DataFrame")
-    # st.write(df)
+        x="Letter", y="Occurance", horizontal=True)
 
 
 
