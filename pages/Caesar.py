@@ -156,10 +156,16 @@ with tab4:
       Total_occurance = len(Plaintext)
       Count = Plaintext.count(x)
       Character_occurance = round(Count/ Total_occurance * 100)
-      x = x
+
+    df = pd.DataFrame(
+        np.random.randn(10, 5), columns=("col %d" % i for i in range(5))
+    )
+
+    st.table(df)
+      import data from df  
       chart_data = pd.DataFrame(
-        {"Letter": x,
-        "Occurance": Character_occurance}
+        {"Letter": col0,
+        "Occurance": col1}
         )
     #   Occurance.append(Character_occurance)
     # st.write(Occurance)
