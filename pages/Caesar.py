@@ -154,8 +154,8 @@ with tab4:
     Occurance = []
     my_table = pd.DataFrame(np.random.randn(10, 5))
     st.table(my_table)
-    df2 = pd.DataFrame(np.random.randn(50, 20), columns=("col %d" % i for i in range(20)))
-    my_table.add_rows(df2)
+    # df2 = pd.DataFrame(np.random.randn(50, 20), columns=("col %d" % i for i in range(20)))
+    # my_table.add_rows(df2)
     for x in Plaintext:
       Total_occurance = len(Plaintext)
       Count = Plaintext.count(x)
