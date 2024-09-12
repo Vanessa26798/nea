@@ -173,13 +173,12 @@ with tab4:
         {
         "col1": list(range(20)),
         "col2": np.random.randn(20),
-        "col3": np.random.randn(20),
         }
         )
 
     st.bar_chart(
         chart_data,
-        x="variety", y="yield", color="site", horizontal=True)
+        x="col1", y="col2", horizontal=True)
 
     
 
