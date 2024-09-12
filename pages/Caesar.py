@@ -167,7 +167,8 @@ with tab4:
     # st.table(Occurance)
     
     Occurence = pd.DataFrame(np.random.randn(20, 3))
-    st.bar_chart(Occurence)
+    st.bar_chart(Occurence, x="year", y="yield", color="site", stack=False)
+
     
 
 
