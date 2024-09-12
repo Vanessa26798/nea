@@ -165,9 +165,23 @@ with tab4:
     # Occurence = pd.DataFrame(np.random.randn(10, 5), columns=("col %d" % i for i in range(5)))
 
     # st.table(Occurance)
-    
-    Occurence = pd.DataFrame(np.random.randn(20, 3))
-    st.bar_chart(Occurence, x="year", y="yield")
+
+
+
+
+    chart_data = pd.DataFrame(
+        {
+        "col1": list(range(20)),
+        "col2": np.random.randn(20),
+        "col3": np.random.randn(20),
+        }
+        )
+
+    st.bar_chart(
+        chart_data,
+        x="col1",
+        y=["col2", "col3"],
+        color=["#FF0000", "#0000FF"])
 
     
 
