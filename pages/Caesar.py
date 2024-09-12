@@ -166,8 +166,8 @@ with tab4:
 
     # st.table(Occurance)
     
-    chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
-    st.bar_chart(chart_data)
+    Occurence = pd.DataFrame(np.random.randn(20, 3))
+    st.bar_chart(Occurence)
     
 
 
