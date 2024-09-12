@@ -147,18 +147,28 @@ with tab3:
 
 
 with tab4: 
-    st.header("Level of security")
-    Plaintext = "AABCDE"
-    Occurence = []
-    for x in Plaintext:
-      Total_occurence = len(Plaintext)
-      Count = Plaintext.count(x)
-      Character_occurence = round(Count/ Total_occurence * 100)
-      Occurence.append(Character_occurence, "%")
-      # Occurence.append("%")
-    st.write(Occurence)
+    # st.header("Level of security")
+    # Plaintext = "AABCDE"
+    # Occurence = []
+    # for x in Plaintext:
+    #   Total_occurence = len(Plaintext)
+    #   Count = Plaintext.count(x)
+    #   Character_occurence = round(Count/ Total_occurence * 100)
+    #   Occurence.append(Character_occurence)
+    # st.write(Occurence)
 
-    
+    import streamlit as st
+    import pandas as pd
+    import numpy as np
+
+    df = pd.DataFrame(
+    np.random.randn(10, 5), columns=("col %d" % i for i in range(5))
+    )
+
+    st.table(df)
+
+
+
 
     # import pandas as pd
     # import streamlit_pandas as sp
