@@ -162,7 +162,7 @@ with tab4:
     )
 
     st.table(df)
-    import data from df  
+    import df
     chart_data = pd.DataFrame({"Letter": col0, "Occurance": col1})
     #   Occurance.append(Character_occurance)
     # st.write(Occurance)
