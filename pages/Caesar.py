@@ -154,7 +154,7 @@ with tab4:
       Total_occurence = len(Plaintext)
       Count = Plaintext.count(x)
       Character_occurence = round(Count/ Total_occurence * 100)
-      Occurence[x] = Character_occurence, '%
+      Occurence[x] = Character_occurence, "%"
     st.write(Occurence)
 
     
