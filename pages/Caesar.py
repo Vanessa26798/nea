@@ -179,9 +179,7 @@ with tab4:
 
     st.bar_chart(
         chart_data,
-        x="col1",
-        y=["col2", "col3"],
-        color=["#FF0000", "#0000FF"], horizontal=True)
+        x="variety", y="yield", color="site", horizontal=True)
 
     
 
