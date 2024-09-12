@@ -1,5 +1,7 @@
 import streamlit as st
 import random
+import pandas as pd
+import numpy as np
 
 Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
@@ -157,17 +159,16 @@ with tab4:
     #   Occurence.append(Character_occurence)
     # st.write(Occurence)
 
-    import streamlit as st
-    import pandas as pd
-    import numpy as np
-
-    df = pd.DataFrame(
-    np.random.randn(10, 5), columns=("col %d" % i for i in range(5))
-    )
-
-    st.table(df)
 
 
+
+    # Occurence = pd.DataFrame(np.random.randn(10, 5), columns=("col %d" % i for i in range(5)))
+
+    # st.table(Occurance)
+    
+    chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+    st.bar_chart(chart_data)
+    
 
 
     # import pandas as pd
