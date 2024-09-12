@@ -152,7 +152,7 @@ with tab4:
     st.header("Level of security")
     Plaintext = "AABCDE"
     Occurance = []
-    my_table = pd.DataFrame(np.random.randn(10, 5))
+    my_table = pd.DataFrame(np.randn(10, 5))
     st.table(my_table)
     # df2 = pd.DataFrame(np.random.randn(10, 5))
     # my_table.add_rows(df2)
