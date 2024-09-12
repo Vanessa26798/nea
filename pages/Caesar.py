@@ -149,36 +149,22 @@ with tab3:
 
 
 with tab4: 
-    # st.header("Level of security")
-    # Plaintext = "AABCDE"
-    # Occurance = []
-    # for x in Plaintext:
-    #   Total_occurance = len(Plaintext)
-    #   Count = Plaintext.count(x)
-    #   Character_occurance = round(Count/ Total_occurance * 100)
+    st.header("Level of security")
+    Plaintext = "AABCDE"
+    Occurance = []
+    for x in Plaintext:
+      Total_occurance = len(Plaintext)
+      Count = Plaintext.count(x)
+      Character_occurance = round(Count/ Total_occurance * 100)
+      chart_data = pd.DataFrame(
+        {"Letter": x,
+        "Occurance": Character_occurance}
+        )
     #   Occurance.append(Character_occurance)
     # st.write(Occurance)
 
 
-
-
-    # Occurance = pd.DataFrame(np.random.randn(10, 5), columns=("col %d" % i for i in range(5)))
-
-    # st.table(Occurance)
-
-
-
-
-    chart_data = pd.DataFrame(
-        {
-        "Letter": 0,
-        "Occurance": np.random.randn(20),
-        }
-        )
-
-    st.bar_chart(
-        chart_data,
-        x="Letter", y="Occurance", horizontal=True)
+    st.bar_chart(chart_data, x = "Letter", y = "Occurance", horizontal = True)
 
 
 
