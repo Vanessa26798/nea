@@ -181,7 +181,7 @@ with tab4:
         chart_data,
         x="col1",
         y=["col2", "col3"],
-        color=["#FF0000", "#0000FF"])
+        color=["#FF0000", "#0000FF"], horizontal=True)
 
     
 
