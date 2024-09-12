@@ -160,7 +160,9 @@ with tab4:
 
     length = len(Occurance)
 
-    df = pd.DataFrame(np.length, columns=("col %d" % i for i in range(5)))
+    
+
+    df = pd.DataFrame(np.random.randn(10, 5), columns=("col %d" % i for i in range(5)))
     st.table(df)
 
     chart_data = pd.DataFrame({"Letter": col0, "Occurance": col1})
