@@ -150,26 +150,26 @@ with tab3:
 
 with tab4: 
     st.header("Level of security")
-    Plaintext = "AABCDE"
-    Occurance = []
-    my_table = pd.DataFrame(np.randn(10, 5))
-    st.table(my_table)
-    # df2 = pd.DataFrame(np.random.randn(10, 5))
-    # my_table.add_rows(df2)
-    for x in Plaintext:
-      Total_occurance = len(Plaintext)
-      Count = Plaintext.count(x)
-      Character_occurance = round(Count/ Total_occurance * 100)
-      Occurance.append(Character_occurance)
+    # Plaintext = "AABCDE"
+    # Occurance = []
+    # my_table = pd.DataFrame(np.randn(10, 5))
+    # st.table(my_table)
+    # # df2 = pd.DataFrame(np.random.randn(10, 5))
+    # # my_table.add_rows(df2)
+    # for x in Plaintext:
+    #   Total_occurance = len(Plaintext)
+    #   Count = Plaintext.count(x)
+    #   Character_occurance = round(Count/ Total_occurance * 100)
+    #   Occurance.append(Character_occurance)
     
 
 
-    chart_data = pd.DataFrame({"Letter": col0, "Occurance": col1})
-    #   Occurance.append(Character_occurance)
-    # st.write(Occurance)
+    # chart_data = pd.DataFrame({"Letter": col0, "Occurance": col1})
+    # #   Occurance.append(Character_occurance)
+    # # st.write(Occurance)
 
 
-    st.bar_chart(chart_data, x = "Letter", y = "Occurance", horizontal = True)
+    # st.bar_chart(chart_data, x = "Letter", y = "Occurance", horizontal = True)
 
 
 
