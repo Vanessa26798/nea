@@ -163,10 +163,8 @@ with tab4:
           Occurance.append(Character_occurance)
           if Character.index(x) > 0:
               last_Character = Character.index(x) - 1
-              st.write(Occurance[last_Character])
-              st.write(Occurance[Character.index(x)])
-              # if Occurance[last_Character] > Occurance[Character.index(x)]:
-                  # st.write(last_Character)
+              if int(Occurance[last_Character]) > int(Occurance[Character.index(x)]):
+                  st.write(last_Character)
 
     chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
     st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
