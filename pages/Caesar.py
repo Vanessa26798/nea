@@ -172,17 +172,24 @@ with tab4:
 
     
     chart_data = pd.DataFrame({"Character": Character, "hi": Highest_Occurance_Character, "Occurance": Occurance})
-    for x in Character:
-        if x == Highest_Occurance_Character: 
-            hi=["#FF0000"]
-        else: 
-            hi=["#0000FF"]
-
-    st.bar_chart(chart_data, x = "Character", y = ["Occurance", "hi"], horizontal=True, color=hi)
+    st.bar_chart(chart_data, x = "Character", y = ["Occurance", "hi"], horizontal=True, color=["#FF0000", "#0000FF"])
 
 
 
+# chart_data = pd.DataFrame(
+#     {
+#         "col1": list(range(20)),
+#         "col2": np.random.randn(20),
+#         "col3": np.random.randn(20),
+#     }
+# )
 
+# st.bar_chart(
+#     chart_data,
+#     x="col1",
+#     y=["col2", "col3"],
+#     color=["#FF0000", "#0000FF"],  # Optional
+# )
 
 
 
