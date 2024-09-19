@@ -157,9 +157,10 @@ with tab4:
       Total_occurance = len(Plaintext)
       Count = Plaintext.count(x)
       Character_occurance = round(Count/ Total_occurance * 100)
-      if x not in Occurance:
+      if x not in Character:
           Character.append(x)
           Occurance.append(Character_occurance)
+    st.write(Character)
     st.write(Occurance)
     # chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
     # st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal = True)
