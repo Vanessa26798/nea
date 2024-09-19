@@ -160,8 +160,10 @@ with tab4:
       if x not in Character:
           Character.append(x)
           Occurance.append(Character_occurance)
-          if x != Character[x-1]:
-              st.write("hi")
+          last_Character = int(Character[x]) - 1
+          st.write(last_Character)
+          # if x != Character[x-1]:
+          #     st.write("hi")
     chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
     st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
 
