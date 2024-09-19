@@ -158,7 +158,7 @@ with tab4:
       Total_occurance = len(Plaintext)
       Count = Plaintext.count(x)
       Character_occurance = round(Count/ Total_occurance * 100)
-      if x not in Character and Chracter.index > 0:
+      if x not in Character and Character.index > 0:
           Character.append(x)
           Occurance.append(Character_occurance)
           last_Character = Character.index(x) - 1
