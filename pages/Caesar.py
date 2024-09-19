@@ -172,7 +172,7 @@ with tab4:
 
     
     chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
-    st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True, color=["#FF0000"])
+    st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True, if Character == Highest_Occurance_Character: color=["#FF0000"])
 
 
 
