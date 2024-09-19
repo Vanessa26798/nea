@@ -162,8 +162,8 @@ with tab4:
           Occurance.append(Character_occurance)
     st.write(Character)
     st.write(Occurance)
-    # chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
-    # st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal = True)
+    chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
+    st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal = True)
 
 
 
