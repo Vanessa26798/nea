@@ -162,7 +162,7 @@ with tab4:
           Occurance.append(Character_occurance)
           if x != Character[x-1]:
               st.write("hi")
-    chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance, color="#FF0000"})
+    chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
     st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
 
 
