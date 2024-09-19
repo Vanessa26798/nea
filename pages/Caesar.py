@@ -162,10 +162,19 @@ with tab4:
           Character.append(x)
           Occurance.append(Character_occurance)
           if Character.index(x) > 0:
-              last_Character = Character.index(x) - 1
-              if int(Occurance[last_Character]) > int(Occurance[Character.index(x)]):
-                  st.write(last_Character)
+              Last_Character_Index = Character.index(x) - 1
+              if int(Occurance[Last_Character_Index]) > int(Occurance[Character.index(x)]):
+                  Highest_Occurance_Character = Character[Last_Character_Index]
+                  Highest_Occurance = Occurance[Last_Character_Index]
+              elif int(Occurance[Last_Character_Index]) < int(Occurance[Character.index(x)]):
+                  Highest_Occurance_Character = Character[x]
+                  Highest_Occurance = Occurance[x]
+              st.write(Highest_Occurance_Character)
+              st.write(Highest_Occurance)
 
+
+
+    
     chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
     st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
 
