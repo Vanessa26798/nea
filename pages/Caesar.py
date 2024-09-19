@@ -151,6 +151,7 @@ with tab3:
 with tab4: 
     st.header("Level of security")
     Plaintext = "AABCDE"
+    st.write("The plaintext is " + Plaintext)
     Character = []
     Occurance = []
     for x in Plaintext:
@@ -160,8 +161,6 @@ with tab4:
       if x not in Character:
           Character.append(x)
           Occurance.append(Character_occurance)
-    st.write(Character)
-    st.write(Occurance)
     chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
     st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
 
