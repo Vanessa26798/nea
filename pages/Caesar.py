@@ -169,14 +169,10 @@ with tab4:
               elif int(Occurance[Last_Character_Index]) < int(Occurance[Character.index(x)]):
                   Highest_Occurance_Character = Character[x]
                   Highest_Occurance = Occurance[x]
-              st.write(Highest_Occurance_Character)
-              st.write(Highest_Occurance)
-
-
 
     
     chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
-    st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
+    st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True, color=["#FF0000"])
 
 
 
