@@ -1,7 +1,6 @@
 import streamlit as st
 import random
-import pandas as pd
-import numpy as np
+
 
 Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
@@ -161,8 +160,10 @@ with tab4:
       if x not in Character:
           Character.append(x)
           Occurance.append(Character_occurance)
-    chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
-    st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
+          if x != Character[x-1]:
+              st.write("hi")
+    chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance, color=["#FF0000"]})
+    st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True, )
 
 
 
