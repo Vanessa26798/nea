@@ -161,7 +161,7 @@ with tab4:
       if x not in Character:
           Character.append(x)
           Occurance.append(Character_occurance)
-          if Character.index > 0:
+          if Character.index(x) > 0:
               last_Character = Character.index(x) - 1
               st.write(last_Character)
 
