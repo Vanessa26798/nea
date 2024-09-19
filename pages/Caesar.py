@@ -163,7 +163,7 @@ with tab4:
     st.write(Character)
     st.write(Occurance)
     chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
-    st.bar_chart(chart_data, y = "Character", x = "Occurance")
+    st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
 
 
 
