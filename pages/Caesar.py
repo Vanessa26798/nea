@@ -171,12 +171,14 @@ with tab4:
                   Highest_Occurance = Occurance[x]
 
     
-    chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
+    chart_data = pd.DataFrame({"Character": Character, "hi": Highest_Occurance_Character, "Occurance": Occurance})
     for x in Character:
         if x == Highest_Occurance_Character: 
-            st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True, color=["#FF0000"])
-        else:
-            st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
+            hi=["#FF0000"]
+        else: 
+            hi=["#0000FF"]
+
+    st.bar_chart(chart_data, x = "Character", y = ["Occurance", "hi"], horizontal=True, color=hi)
 
 
 
