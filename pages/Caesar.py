@@ -161,8 +161,8 @@ with tab4:
       if x not in Character:
           Character.append(x)
           Occurance.append(Character_occurance)
-          # last_Character = int(Character[x]) - 1
-          st.write(x)
+          last_Character = Character.index(x) - 1
+          st.write(last_Character)
           # if x != Character[x-1]:
           #     st.write("hi")
     chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
