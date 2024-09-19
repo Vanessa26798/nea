@@ -160,8 +160,9 @@ with tab4:
       Total_occurance = len(Plaintext)
       Count = Plaintext.count(x)
       Character_occurance = round(Count/ Total_occurance * 100)
-      Occurance.append(x)
-      Occurance.append(Character_occurance)
+      if x not in Occurance:
+          Occurance.append(x)
+          Occurance.append(Character_occurance)
     st.write(Occurance)
 
 
