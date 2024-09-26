@@ -169,11 +169,6 @@ with tab4:
               elif int(Occurance[Last_Character_Index]) < int(Occurance[Character.index(x)]):
                   Highest_Occurance_Character = Character[x]
                   Highest_Occurance = Occurance[x]
-    Occurance.pop(Occurance.index(Highest_Occurance))
-    Highest_Occurance = [Highest_Occurance]
-
-    st.write(Occurance)
-    st.write(Highest_Occurance)
 
     
     chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
