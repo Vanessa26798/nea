@@ -174,6 +174,8 @@ with tab4:
     chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
     st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
 
+    st.write("The character with the highest occurance is: " + Highest_Occurance_Chracter)
+
 
 
 
