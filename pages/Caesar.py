@@ -170,8 +170,9 @@ with tab4:
                   Highest_Occurance_Character = Character[x]
                   Highest_Occurance = Occurance[x]
     st.write(Highest_Occurance)
+    st.write(Occurance)
     Occurance = Occurance.remove(Highest_Occurance)
-
+    st.write(Occurance)
 
     
     chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
