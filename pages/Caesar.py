@@ -169,9 +169,10 @@ with tab4:
               elif int(Occurance[Last_Character_Index]) < int(Occurance[Character.index(x)]):
                   Highest_Occurance_Character = Character[x]
                   Highest_Occurance = Occurance[x]
-    st.write(Highest_Occurance)
+    A = Highest_Occurance
+    st.write(A)
     st.write(Occurance)
-    Occurance = Occurance.remove(Highest_Occurance)
+    Occurance = Occurance.remove(A)
     st.write(Occurance)
 
     
