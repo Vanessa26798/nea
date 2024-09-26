@@ -170,7 +170,7 @@ with tab4:
                   Highest_Occurance_Character = Character[x]
                   Highest_Occurance = Occurance[x]
     
-    Occurance = Occurance.pop(Highest_Occurance)
+    Occurance = Occurance.remove(Highest_Occurance)
     st.write(Occurance)
 
     
