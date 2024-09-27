@@ -16,7 +16,7 @@ with tab1:
 
 
     st.image("https://cdn.britannica.com/17/193717-050-030D75E3/Julius-Caesar-statue-Rome-Italy.jpg?w=300", caption="Bronze sculpture of Julius Caesar in Rome")
-    st.page_link("http://www.google.com", label="Image credit")
+    st.page_link("https://www.britannica.com/biography/Julius-Caesar-Roman-ruler", label="Image credit")
 
 
 
