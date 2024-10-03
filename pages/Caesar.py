@@ -13,7 +13,7 @@ tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a c
 with tab1:
     st.header("History")
 
-
+    
 
     st.image("https://cdn.britannica.com/17/193717-050-030D75E3/Julius-Caesar-statue-Rome-Italy.jpg?w=300", caption="Bronze sculpture of Julius Caesar in Rome")
     st.page_link("https://www.britannica.com/biography/Julius-Caesar-Roman-ruler", label="Image credit")
