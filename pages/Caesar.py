@@ -16,7 +16,7 @@ with tab1:
 
 with col1:
     st.image("https://cdn.britannica.com/17/193717-050-030D75E3/Julius-Caesar-statue-Rome-Italy.jpg?w=300", caption="Bronze sculpture of Julius Caesar in Rome")
-    st.page_link("https://www.britannica.com/biography/Julius-Caesar-Roman-ruler", label="Image credit")
+    # st.page_link("https://www.britannica.com/biography/Julius-Caesar-Roman-ruler", label="Image credit")
 
 with col2:
     st.write("The Caesar Cipher is one of the oldest cryptographic algorithms. It is named after Julius Caesar who initially used it to protect his encrypted messages.")
