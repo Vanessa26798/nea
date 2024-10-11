@@ -119,3 +119,9 @@ with tab3:
 
 with tab4: 
     st.header("Level of security")
+    st.write("Theoratically, Vernam cipher offers perfect security due to...")
+
+
+
+
+
