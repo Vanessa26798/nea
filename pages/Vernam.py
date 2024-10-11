@@ -17,7 +17,7 @@ with col1:
 
 
 with col2:
-    st.write("Vernam cipher, also known as one-time pad, is invented by Gilbert S. Vernam, an engineer for the American Telephone & Telegraph Company (AT&T), in 1917. ")
+    st.write("Vernam cipher, also known as one-time pad, is invented by Gilbert S. Vernam when he was working for the American Telephone & Telegraph Company (AT&T) as an engineer in 1917. ")
 
 
 with tab2:
