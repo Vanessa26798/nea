@@ -10,6 +10,18 @@ tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a c
 
 with tab1:
     st.header("History")
+    col1, col2 = st.columns(2)
+
+with col1:
+    st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeIbofN8VxLSPyQPAXN5tGi4wE_xP2AQOPDyFZ05zAGSQfMsZupIP7IdQEMhP4diqqTxQ&usqp=CAU", caption="Gilbert S. Vernam")
+
+
+with col2:
+    st.write("The Caesar Cipher is one of the oldest cryptographic algorithms. It is named after Julius Caesar who initially used it to protect sensitive military messages, allowing him to communicate with his military generals.  ")
+    
+
+
+
 
 with tab2:
     st.header("Encryt a plaintext")
