@@ -1,4 +1,4 @@
-import streamlit as st
+ import streamlit as st
 import random
 
 Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
@@ -119,7 +119,7 @@ with tab3:
 
 with tab4: 
     st.header("Level of security")
-    st.write("Theoratically, Vernam cipher offers perfect security due to...")
+    st.write("Theoratically, Vernam cipher offers perfect security due to the unique key, making it mathematically impossible to break. ")
 
 
 
