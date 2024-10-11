@@ -17,10 +17,7 @@ with col1:
 
 
 with col2:
-    st.write("The Caesar Cipher is one of the oldest cryptographic algorithms. It is named after Julius Caesar who initially used it to protect sensitive military messages, allowing him to communicate with his military generals.  ")
-    
-
-
+    st.write("Vernam cipher, also known as one-time pad, is invented by Gilbert S. Vernam, an engineer for the American Telephone & Telegraph Company (AT&T), in 1917. ")
 
 
 with tab2:
