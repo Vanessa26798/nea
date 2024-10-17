@@ -25,27 +25,52 @@ with col2:
 
 with tab2:
     st.header("Encryt a plaintext")
+    
+    class Encrypt:
+    def __init__(self):
+        self.send = ""
+        self.res = []
+
+    # Sender encrypts the data
+    def sender(self):
+        self.send = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
+        self.res = [ord(i) + 2 for i in self.send]  
+        print("Encrypted data:", "".join(chr(i) for i in self.res))
+
+class Decrypt(Encrypt):
+    # Receiver decrypts the data
+    def receiver(self):
+        decrypted_data = "".join(chr(i - 2) for i in self.res)  
+        print("Decrypted data:", decrypted_data)
+
+# Usage
+obj = Decrypt()
+obj.sender()
+obj.receiver()
 
     
-    class Encrypt: 
-        def __init__(self):
-            self.Plaintext = ""
-            self.Ciphertext = []
+    # class Encrypt: 
+    #     def __init__(self):
+    #         self.Plaintext = ""
+    #         self.Ciphertext = []
 
-        def Plaintext(self):
-            self.Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
-            print("hello")
+    #     def Plaintext(self):
+    #         self.Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
+    #         print("hello")
             
-            # self.res = [ord(i) + 2 for i in self.send]  
-            # print("Encrypted data:", "".join(chr(i) for i in self.res))
+    #         # self.res = [ord(i) + 2 for i in self.send]  
+    #         # print("Encrypted data:", "".join(chr(i) for i in self.res))
 
-    obj = Encrypt()
-    obj.Plaintext()
+    # obj = Encrypt()
+    # obj.Plaintext()
     
     
-    if __name__ == "__main__":
-       Main()
-    
+    # if __name__ == "__main__":
+    #    Main()
+
+
+
+
 # Correct_Plaintext_Range = False
 #     Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
 #     Plaintext = Plaintext.upper()
