@@ -35,6 +35,12 @@ with tab2:
             self.plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
             st.write(self.plaintext)
 
+obj = Input()
+obj.plaintext()
+
+
+
+
 
     # class Encrypt(Input):
     #     # def ciphertext(self):
