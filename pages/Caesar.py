@@ -55,7 +55,6 @@ with tab2:
                     self.Plaintext_Length = True
 
 
-
     class Encrypt(Input):
         def __init__(self):
             self.Check_Encrypt_Key = False
@@ -81,7 +80,7 @@ with tab2:
                     self.Encrypt_Key = int(self.Encrypt_Key)
                     st.write("The key is ", Encrypt_Key)
                     self.Check_Encrypt_Key = True
-                elif Encrypt_Choice != 1 and Encrypt_Choice != 2 and Encrypt_Choice != "": 
+                elif self.Encrypt_Choice != 1 and self.Encrypt_Choice != 2 and self.Encrypt_Choice != "": 
                         st.error('Invalid input.', icon="🚨")
                         self.Check_Encrypt_Key = False
 
@@ -100,9 +99,8 @@ with tab2:
     #    st.write("".join(Ciphertext))
 
 
-    obj = Input()
     Input()
-    obj.Encrypt()
+    Encrypt()
 
 
 
