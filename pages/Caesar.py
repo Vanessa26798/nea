@@ -32,21 +32,21 @@ with tab2:
             self.Plaintext = self.Plaintext.upper()
             
             self.Plaintext_Range = False
-            
+            self.Plaintext_in_Alphabet = False
 
             for x in self.Plaintext: 
                 if (x in Alphabet or x == " ") and self.Plaintext[0] != " ":
-                    st.write("hello")
-    #         Plaintext_in_Alphabet = True
-    #     else:
-    #         Plaintext_in_Alphabet = False
+                  self.Plaintext_in_Alphabet = True
+                else:
+                  self.Plaintext_in_Alphabet = False
+                  return self.Plaintext_in_Alphabet
 
-    #     if Plaintext_in_Alphabet == False and Plaintext != "":
-    #         st.error('Invalid plaintext.', icon="🚨")
-    #         Correct_Plaintext_Range = False
-    #         break
-    #     elif Plaintext_in_Alphabet == True or Plaintext == " ":
-    #         Correct_Plaintext_Range = True
+                  if self.Plaintext_in_Alphabet == False and self.Plaintext != "":
+                    st.error('Invalid plaintext.', icon="🚨")
+                    self.Plaintext_Range = False
+                break
+            elif Plaintext_in_Alphabet == True or Plaintext == " ":
+                Correct_Plaintext_Range = True
 
     # Correct_Plaintext_Length = False
     # if Correct_Plaintext_Range == True:
