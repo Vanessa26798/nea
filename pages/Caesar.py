@@ -38,7 +38,9 @@ with tab2:
             print("Encrypted data:", "".join(chr(i) for i in self.res))
 
     
-
+    
+    if __name__ == "__main__":
+       Encrypt()
     
     # Correct_Plaintext_Range = False
     # Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
@@ -105,11 +107,6 @@ with tab2:
 
 
 
-
-    
-    
-    if __name__ == "__main__":
-       Encrypt()
 
 
 
