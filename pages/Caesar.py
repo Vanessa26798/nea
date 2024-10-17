@@ -36,8 +36,9 @@ with tab2:
             self.Plaintext = input("Enter the data: ")
             self.res = [ord(i) + 2 for i in self.send]  
             print("Encrypted data:", "".join(chr(i) for i in self.res))
-
-    Encrypt()
+            
+if __name__ == "__main__":
+   Encrypt()
 
 
 
