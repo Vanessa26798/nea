@@ -33,14 +33,14 @@ with tab2:
     
         def plaintext(self):
             self.plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
-            return self.plaintext
-
-
-    class Encrypt(Input):
-        # def ciphertext(self):
             st.write(self.plaintext)
+
+
+    # class Encrypt(Input):
+    #     # def ciphertext(self):
+    #         st.write(self.plaintext)
     
-    Encrypt(Input)
+        Input()
 
 
 
