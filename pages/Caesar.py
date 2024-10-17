@@ -72,7 +72,7 @@ with tab2:
             print("Decrypted data:")
 
 # Usage
-    obj = Decrypt()
+    obj = Encrypt()
     obj.sender()
     obj.receiver()
 
