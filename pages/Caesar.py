@@ -26,6 +26,10 @@ with col2:
 with tab2:
     st.header("Encryt a plaintext")
 
+    def Main(): 
+        Encrypt()
+
+    
     class Encrypt: 
         def __init__(self):
             self.Plaintext = ""
@@ -37,8 +41,9 @@ with tab2:
             
             self.res = [ord(i) + 2 for i in self.send]  
             print("Encrypted data:", "".join(chr(i) for i in self.res))
-
-
+    
+    
+    if __name__ == "__main__":
        Encrypt()
     
 # Correct_Plaintext_Range = False
