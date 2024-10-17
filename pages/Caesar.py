@@ -26,37 +26,18 @@ with col2:
 with tab2:
     st.header("Encryt a plaintext")
 
-    
     class Encrypt: 
         def __init__(self):
             self.Plaintext = ""
-            self.res = []
+            self.Ciphertext = []
 
         def Plaintext(self):
-            self.Plaintext = input("Enter the data: ")
+            self.Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
+            
             self.res = [ord(i) + 2 for i in self.send]  
             print("Encrypted data:", "".join(chr(i) for i in self.res))
-            
-if __name__ == "__main__":
-   Encrypt()
 
-
-
-# class Decrypt(Encrypt):
-#     # Receiver decrypts the data
-#     def receiver(self):
-#         decrypted_data = "".join(chr(i - 2) for i in self.res)  
-#         print("Decrypted data:", decrypted_data)
-
-# Usage
-# obj = Decrypt()
-# obj.sender()
-# obj.receiver()
-        
-
-
-
-
+    
 
     
     # Correct_Plaintext_Range = False
@@ -121,6 +102,30 @@ if __name__ == "__main__":
     #          Letter = Alphabet[Letter_index]
     #          Ciphertext.append(Letter)
     #    st.write("".join(Ciphertext))
+
+
+
+
+    
+    
+    if __name__ == "__main__":
+       Encrypt()
+
+
+
+# class Decrypt(Encrypt):
+#     # Receiver decrypts the data
+#     def receiver(self):
+#         decrypted_data = "".join(chr(i - 2) for i in self.res)  
+#         print("Decrypted data:", decrypted_data)
+
+# Usage
+# obj = Decrypt()
+# obj.sender()
+# obj.receiver()
+        
+
+
 
 
 with tab3:
