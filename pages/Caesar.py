@@ -62,28 +62,28 @@ with tab2:
             self.Encrypt_Key = ""
 
             if self.Plaintext_Length == True and self.Plaintext != "":
-                    self.Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
-                    if self.Encrypt_Choice == "1":
-                        self.Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
-                            if self.Encrypt_Key.isdigit() == True:
-                                self.Encrypt_Key = int(self.Encrypt_Key)
-                                if self.Encrypt_Key < 1 or self.Encrypt_Key > 25: 
-                                    st.error('Invalid input.', icon="🚨")
-                                    self.Check_Encrypt_Key = False
-                                elif self.Encrypt_Key >= 1 and self.Encrypt_Key <= 25: 
-                                    st.write("The key is ", Encrypt_Key)
-                                    self.Check_Encrypt_Key = True
-                            elif self.Encrypt_Key.isdigit() == False and self.Encrypt_Key != "": 
+                self.Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
+                if self.Encrypt_Choice == "1":
+                    self.Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
+                         if self.Encrypt_Key.isdigit() == True:
+                              self.Encrypt_Key = int(self.Encrypt_Key)
+                              if self.Encrypt_Key < 1 or self.Encrypt_Key > 25: 
                                 st.error('Invalid input.', icon="🚨")
                                 self.Check_Encrypt_Key = False
-                        elif self.Encrypt_Choice == "2": 
-                            self.Encrypt_Key = random.randrange(1, 26)
-                            self.Encrypt_Key = int(self.Encrypt_Key)
-                            st.write("The key is ", Encrypt_Key)
-                            self.Check_Encrypt_Key = True
-                        elif Encrypt_Choice != 1 and Encrypt_Choice != 2 and Encrypt_Choice != "": 
+                            elif self.Encrypt_Key >= 1 and self.Encrypt_Key <= 25: 
+                                st.write("The key is ", Encrypt_Key)
+                                self.Check_Encrypt_Key = True
+                        elif self.Encrypt_Key.isdigit() == False and self.Encrypt_Key != "": 
                             st.error('Invalid input.', icon="🚨")
                             self.Check_Encrypt_Key = False
+                    elif self.Encrypt_Choice == "2": 
+                        self.Encrypt_Key = random.randrange(1, 26)
+                        self.Encrypt_Key = int(self.Encrypt_Key)
+                        st.write("The key is ", Encrypt_Key)
+                          self.Check_Encrypt_Key = True
+                    elif Encrypt_Choice != 1 and Encrypt_Choice != 2 and Encrypt_Choice != "": 
+                        st.error('Invalid input.', icon="🚨")
+                        self.Check_Encrypt_Key = False
 
     # if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
     #    Ciphertext = ["The ciphertext is "]
