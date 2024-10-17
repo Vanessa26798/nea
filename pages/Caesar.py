@@ -28,25 +28,25 @@ with tab2:
     
     class Input:
         def __init__(self):
-            self.Plaintext = ""
-            self.Ciphertext = []
+            self.plaintext = ""
+            self.ciphertext = []
     
     # Sender encrypts the data
-        def Plaintext(self):
-            self.Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
-            self.Ciphertext = [ord(i) + 2 for i in self.send]  
-            print("Encrypted data:", "".join(chr(i) for i in self.res))
+        def plaintext(self):
+            self.plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
+            self.ciphertext = [ord(i) + 2 for i in self.send]  
+            print("Encrypted data:", "".join(chr(i) for i in self.ciphertext))
 
     class Encrypt(Input):
     # Receiver decrypts the data
-        def Ciphertext(self):
-            decrypted_data = "".join(chr(i - 2) for i in self.res)  
+        def ciphertext(self):
+            decrypted_data = "".join(chr(i - 2) for i in self.ciphertext)  
             print("Decrypted data:", decrypted_data)
 
 # Usage
     obj = Encrypt()
-    obj.Plaintext()
-    obj.Ciphertext()
+    obj.plaintext()
+    obj.ciphertext()
 
     
     
