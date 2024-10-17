@@ -26,8 +26,8 @@ with col2:
 with tab2:
     st.header("Encryt a plaintext")
     
-    class Input():
-        def __init__(self):
+    class Input:
+        def __init__(self, plaintext, ciphertext):
             self.plaintext = ""
             self.ciphertext = []
     
@@ -37,10 +37,12 @@ with tab2:
 
 
     class Encrypt(Input):
-        def ciphertext(self):
+        # def ciphertext(self):
             print(self.plaintext)
+    
+    Encrypt(Input)
 
-    Input()
+
 
 
 
