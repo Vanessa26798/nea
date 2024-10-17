@@ -33,7 +33,7 @@ with tab2:
     
     # Sender encrypts the data
         def sender(self):
-            self.send = input("Enter the data: ")
+            self.send = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
             self.res = [ord(i) + 2 for i in self.send]  
             print("Encrypted data:", "".join(chr(i) for i in self.res))
 
