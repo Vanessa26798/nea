@@ -30,7 +30,6 @@ with tab2:
         def __init__(self):
             self.Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
             self.Plaintext = self.Plaintext.upper()
-            return self.Plaintext
             
             self.Plaintext_Range = False
             self.Plaintext_in_Alphabet = False
@@ -55,7 +54,6 @@ with tab2:
                     self.Plaintext_Length = False
                 elif len(self.Plaintext) >= 10 and len(self.Plaintext) <= 30 and len(self.Plaintext) != 0 and self.Plaintext != "":
                     self.Plaintext_Length = True
-
 
     Input()
 
