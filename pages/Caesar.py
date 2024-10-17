@@ -62,10 +62,6 @@ with tab2:
 
 
 
-
-
-    
-
     class Encrypt(Input):
     # Receiver decrypts the data
         def receiver(self):
@@ -73,7 +69,7 @@ with tab2:
 
 # Usage
     obj = Encrypt()
-    obj.sender()
+    obj.Plaintext()
     obj.receiver()
 
     
