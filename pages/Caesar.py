@@ -34,7 +34,7 @@ with tab2:
             self.Plaintext_Range = False
             
 
-            for x in Plaintext: 
+            for x in self.Plaintext: 
                 if (x in Alphabet or x == " ") and self.Plaintext[0] != " ":
                     st.write("hello")
     #         Plaintext_in_Alphabet = True
