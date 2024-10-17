@@ -27,7 +27,7 @@ with tab2:
     st.header("Encryt a plaintext")
 
     
-    class Encrpyt: 
+    class Encrypt: 
         def __init__(self):
             self.Plaintext = ""
             self.res = []
