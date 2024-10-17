@@ -26,27 +26,27 @@ with col2:
 with tab2:
     st.header("Encryt a plaintext")
     
-    class Encrypt:
+    class Input:
         def __init__(self):
-            self.send = ""
-            self.res = []
+            self.Plaintext = ""
+            self.Ciphertext = []
     
     # Sender encrypts the data
-        def sender(self):
-            self.send = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
-            self.res = [ord(i) + 2 for i in self.send]  
+        def Plaintext(self):
+            self.Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
+            self.Ciphertext = [ord(i) + 2 for i in self.send]  
             print("Encrypted data:", "".join(chr(i) for i in self.res))
 
-    class Decrypt(Encrypt):
+    class Encrypt(Input):
     # Receiver decrypts the data
-        def receiver(self):
+        def Ciphertext(self):
             decrypted_data = "".join(chr(i - 2) for i in self.res)  
             print("Decrypted data:", decrypted_data)
 
 # Usage
-    obj = Decrypt()
-    obj.sender()
-    obj.receiver()
+    obj = Encrypt()
+    obj.Plaintext()
+    obj.Ciphertext()
 
     
     
