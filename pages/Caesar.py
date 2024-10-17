@@ -61,7 +61,7 @@ with tab2:
             self.Check_Encrypt_Key = False
             self.Encrypt_Key = ""
 
-            if self.Plaintext_Length = True and self.Plaintext != "":
+            if self.Plaintext_Length == True and self.Plaintext != "":
                     self.Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
                         if self.Encrypt_Choice == "1":
                             self.Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
