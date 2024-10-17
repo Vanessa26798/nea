@@ -44,7 +44,7 @@ with tab2:
     
     
     if __name__ == "__main__":
-       Encrypt()
+       Main()
     
 # Correct_Plaintext_Range = False
 #     Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
