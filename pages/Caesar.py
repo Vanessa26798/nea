@@ -41,7 +41,7 @@ with tab2:
             print(self.plaintext)
 
     Input()
-    Encrypt(Input)
+
 
 
 
