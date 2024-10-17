@@ -31,25 +31,18 @@ with tab2:
             self.plaintext = ""
             self.ciphertext = []
     
-    # Sender encrypts the data
         def plaintext(self):
             self.plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
-            self.ciphertext = [ord(i) + 2 for i in self.plaintext]  
-            print("Encrypted data:", "".join(chr(i) for i in self.ciphertext))
+            return self.plaintext
+
 
     class Encrypt(Input):
-    # Receiver decrypts the data
         def ciphertext(self):
-            decrypted_data = "".join(chr(i - 2) for i in self.ciphertext)  
-            print("Decrypted data:", decrypted_data)
+            print(self.plaintext)
 
-# Usage
-    obj = Encrypt()
-    obj.plaintext()
-    obj.ciphertext()
 
-    
-    
+
+
 
 
 
