@@ -37,6 +37,7 @@ with tab2:
             for x in self.Plaintext: 
                 if (x in Alphabet or x == " ") and self.Plaintext[0] != " ":
                   self.Plaintext_in_Alphabet = True
+                  st.write("hello")
                 else:
                   self.Plaintext_in_Alphabet = False
                   return self.Plaintext_in_Alphabet
@@ -44,6 +45,7 @@ with tab2:
                   if self.Plaintext_in_Alphabet == False and self.Plaintext != "":
                     st.error('Invalid plaintext.', icon="🚨")
                     self.Plaintext_Range = False
+                    st.write("hello")
                 break
             # elif Plaintext_in_Alphabet == True or Plaintext == " ":
             #     Correct_Plaintext_Range = True
