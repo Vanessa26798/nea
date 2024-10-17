@@ -28,24 +28,38 @@ with tab2:
     
     class Input():
         def __init__(self):
-            self.plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
-            st.write(self.plaintext)
+            self.Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
+            self.Plaintext = self.Plaintext.upper()
+            
+            self.Plaintext_Range = False
+            
 
+            for x in Plaintext: 
+                if (x in Alphabet or x == " ") and self.Plaintext[0] != " ":
+                    st.write("hello")
+    #         Plaintext_in_Alphabet = True
+    #     else:
+    #         Plaintext_in_Alphabet = False
+
+    #     if Plaintext_in_Alphabet == False and Plaintext != "":
+    #         st.error('Invalid plaintext.', icon="🚨")
+    #         Correct_Plaintext_Range = False
+    #         break
+    #     elif Plaintext_in_Alphabet == True or Plaintext == " ":
+    #         Correct_Plaintext_Range = True
+
+    # Correct_Plaintext_Length = False
+    # if Correct_Plaintext_Range == True:
+    #     if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
+    #         st.error('Plaintext out of range.', icon="🚨")
+    #         Correct_Plaintext_Length = False
+    #     elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
+    #         Correct_Plaintext_Length = True
+
+
+
+    
     Input()
-
-
-
-
-
-    # class Encrypt(Input):
-    #     # def ciphertext(self):
-    #         st.write(self.plaintext)
-
-
-
-
-
-
 
 
 
