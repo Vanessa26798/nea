@@ -30,6 +30,7 @@ with tab2:
         def __init__(self):
             self.Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
             self.Plaintext = self.Plaintext.upper()
+            return self.Plaintext
             
             self.Plaintext_Range = False
             self.Plaintext_in_Alphabet = False
@@ -40,26 +41,22 @@ with tab2:
                   st.write("hello")
                 else:
                   self.Plaintext_in_Alphabet = False
-                  return self.Plaintext_in_Alphabet
-
                   if self.Plaintext_in_Alphabet == False and self.Plaintext != "":
                     st.error('Invalid plaintext.', icon="🚨")
                     self.Plaintext_Range = False
-                break
-            # elif Plaintext_in_Alphabet == True or Plaintext == " ":
-            #     Correct_Plaintext_Range = True
+                    break
+                elif Plaintext_in_Alphabet == True or self.Plaintext == " ":
+                    self.Plaintext_Range = True
 
-    # Correct_Plaintext_Length = False
-    # if Correct_Plaintext_Range == True:
-    #     if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
-    #         st.error('Plaintext out of range.', icon="🚨")
-    #         Correct_Plaintext_Length = False
-    #     elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
-    #         Correct_Plaintext_Length = True
+            self.Plaintext_Length = False
+            if self.Plaintext_Range == True:
+                if (len(self.Plaintext) < 10 or len(self.Plaintext) > 30) and self.Plaintext != "": 
+                    st.error('Plaintext out of range.', icon="🚨")
+                    self.Plaintext_Length = False
+                elif len(self.Plaintext) >= 10 and len(self.Plaintext) <= 30 and len(self.Plaintext) != 0 and self.Plaintext != "":
+                    self.Plaintext_Length = True
 
 
-
-    
     Input()
 
 
@@ -130,22 +127,6 @@ with tab2:
 #              Letter = Alphabet[Letter_index]
 #              Ciphertext.append(Letter)
 #        st.write("".join(Ciphertext))
-
-
-
-
-
-# class Decrypt(Encrypt):
-#     # Receiver decrypts the data
-#     def receiver(self):
-#         decrypted_data = "".join(chr(i - 2) for i in self.res)  
-#         print("Decrypted data:", decrypted_data)
-
-# Usage
-# obj = Decrypt()
-# obj.sender()
-# obj.receiver()
-        
 
 
 
