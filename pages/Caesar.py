@@ -26,22 +26,50 @@ with col2:
 with tab2:
     st.header("Encryt a plaintext")
     
-    class Encrypt:
+    class Input:
         def __init__(self):
-            self.send = ""
-            self.res = []
+            self.Plaintext = ""
+            # self.res = []
 
-    # Sender encrypts the data
-        def sender(self):
-            self.send = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
-            self.res = [ord(i) + 2 for i in self.send]  
-            print("Encrypted data:", "".join(chr(i) for i in self.res))
+        def Plaintext(self):
+            self.Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
+    #         self.Plaintext = self.Plaintext.upper()
+    #         for x in self.Plaintext: 
+                
 
-    class Decrypt(Encrypt):
+    
+            
+    # for x in Plaintext: 
+    #     if (x in Alphabet or x == " ") and Plaintext[0] != " ":
+    #         Plaintext_in_Alphabet = True
+    #     else:
+    #         Plaintext_in_Alphabet = False
+
+    #     if Plaintext_in_Alphabet == False and Plaintext != "":
+    #         st.error('Invalid plaintext.', icon="🚨")
+    #         Correct_Plaintext_Range = False
+    #         break
+    #     elif Plaintext_in_Alphabet == True or Plaintext == " ":
+    #         Correct_Plaintext_Range = True
+
+    # Correct_Plaintext_Length = False
+    # if Correct_Plaintext_Range == True:
+    #     if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
+    #         st.error('Plaintext out of range.', icon="🚨")
+    #         Correct_Plaintext_Length = False
+    #     elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
+    #         Correct_Plaintext_Length = True
+
+
+
+
+
+    
+
+    class Encrypt(Input):
     # Receiver decrypts the data
         def receiver(self):
-            decrypted_data = "".join(chr(i - 2) for i in self.res)  
-            print("Decrypted data:", decrypted_data)
+            print("Decrypted data:")
 
 # Usage
     obj = Decrypt()
