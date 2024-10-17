@@ -70,7 +70,7 @@ with tab2:
 # Usage
     obj = Encrypt()
     obj.Plaintext()
-    obj.receiver()
+    # obj.receiver()
 
     
     # class Encrypt: 
