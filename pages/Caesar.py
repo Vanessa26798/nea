@@ -27,16 +27,11 @@ with tab2:
     st.header("Encryt a plaintext")
     
     class Input():
-        def __init__(self, plaintext, ciphertext):
-            self.plaintext = ""
-            self.ciphertext = []
-    
-        def plaintext(self):
+        def __init__(self, plaintext):
             self.plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
             st.write(self.plaintext)
 
-obj = Input()
-obj.plaintext()
+    Input()
 
 
 
