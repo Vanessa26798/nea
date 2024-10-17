@@ -39,8 +39,7 @@ with tab2:
     # class Encrypt(Input):
     #     # def ciphertext(self):
     #         st.write(self.plaintext)
-    
-        Input()
+
 
 
 
