@@ -101,7 +101,7 @@ with tab2:
 
 
     Input()
-    Encrypt(Input)
+    Encrypt()
 
 
 
