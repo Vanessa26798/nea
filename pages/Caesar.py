@@ -26,10 +26,6 @@ with col2:
 with tab2:
     st.header("Encryt a plaintext")
 
-    def Main(): 
-        Plaintext()
-        Ciphertext()
-
     
     class Encrypt: 
         def __init__(self):
@@ -42,6 +38,9 @@ with tab2:
             
             self.res = [ord(i) + 2 for i in self.send]  
             print("Encrypted data:", "".join(chr(i) for i in self.res))
+
+    obj = Encrypt()
+    obj.Plaintext()
     
     
     if __name__ == "__main__":
