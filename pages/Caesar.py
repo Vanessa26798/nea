@@ -45,7 +45,7 @@ with tab2:
                     st.error('Invalid plaintext.', icon="🚨")
                     self.Plaintext_Range = False
                     break
-                elif Plaintext_in_Alphabet == True or self.Plaintext == " ":
+                  elif self.Plaintext_in_Alphabet == True or self.Plaintext == " ":
                     self.Plaintext_Range = True
 
             self.Plaintext_Length = False
