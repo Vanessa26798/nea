@@ -100,8 +100,9 @@ with tab2:
     #    st.write("".join(Ciphertext))
 
 
+    obj = Input()
     Input()
-    Encrypt()
+    obj.Encrypt()
 
 
 
