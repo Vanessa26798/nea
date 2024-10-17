@@ -33,7 +33,8 @@ with tab2:
             
             self.Plaintext_Range = False
             self.Plaintext_in_Alphabet = False
-
+            self.Plaintext_Length = False
+            
             for x in self.Plaintext: 
                 if (x in Alphabet or x == " ") and self.Plaintext[0] != " ":
                   self.Plaintext_in_Alphabet = True
@@ -45,8 +46,8 @@ with tab2:
                     break
                   elif self.Plaintext_in_Alphabet == True or self.Plaintext == " ":
                     self.Plaintext_Range = True
+                    return self.Plaintext_Range
 
-            self.Plaintext_Length = False
             if self.Plaintext_Range == True:
                 if (len(self.Plaintext) < 10 or len(self.Plaintext) > 30) and self.Plaintext != "": 
                     st.error('Plaintext out of range.', icon="🚨")
