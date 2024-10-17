@@ -26,7 +26,7 @@ with col2:
 with tab2:
     st.header("Encryt a plaintext")
     
-    class Input:
+    class Input():
         def __init__(self, plaintext, ciphertext):
             self.plaintext = ""
             self.ciphertext = []
