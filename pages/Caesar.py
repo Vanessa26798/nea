@@ -34,10 +34,10 @@ with tab2:
 
         def Plaintext(self):
             self.Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
-            Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
+            print("hello")
             
-            self.res = [ord(i) + 2 for i in self.send]  
-            print("Encrypted data:", "".join(chr(i) for i in self.res))
+            # self.res = [ord(i) + 2 for i in self.send]  
+            # print("Encrypted data:", "".join(chr(i) for i in self.res))
 
     obj = Encrypt()
     obj.Plaintext()
