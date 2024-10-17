@@ -27,7 +27,8 @@ with tab2:
     st.header("Encryt a plaintext")
 
     def Main(): 
-        Encrypt()
+        Plaintext()
+        Ciphertext()
 
     
     class Encrypt: 
