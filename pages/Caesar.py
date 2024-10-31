@@ -101,6 +101,7 @@ with tab2:
         def get_length(self):
             return self.Plaintext_Length
             if self.Plaintext_Length == True and self.Plaintext != "":
+                st.write("123")
                 Encrypt(Key) 
                 
                 # self.Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
