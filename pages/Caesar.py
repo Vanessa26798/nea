@@ -61,7 +61,6 @@ with tab2:
         self.Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
         self.Key = 0
         self.Check_Key = False
-
         
         if self.Choice == "1":
             self.Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
@@ -85,6 +84,8 @@ with tab2:
             st.error('Invalid input.', icon="🚨")
             self.Check_Encrypt_Key = False
 
+        st.write("yeah")
+
 
     class Encrypt(Key):
         def __init__(self):
@@ -94,7 +95,7 @@ with tab2:
     
     class Encrypt(Input):
         def __init__(self):
-            self.Check_Encrypt_Key = False
+            self.Check_Key = False
 
 
         def get_length(self):
