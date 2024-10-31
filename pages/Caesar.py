@@ -57,6 +57,7 @@ with tab2:
                     return self.Plaintext_Length
 
     class Key: 
+      def __init__(self):
         self.Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
         self.Key = 0
         self.Check_Key = False
