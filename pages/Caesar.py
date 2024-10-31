@@ -26,7 +26,7 @@ with col2:
 with tab2:
     st.header("Encryt a plaintext")
     
-    class Input():
+    class Input:
         def __init__(self):
             self.Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
             self.Plaintext = self.Plaintext.upper()
