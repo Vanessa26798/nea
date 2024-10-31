@@ -64,8 +64,7 @@ with tab2:
 
         def get_length(self):
             return self.Plaintext_Length
-
-        if self.Plaintext_Length == True and self.Plaintext != "":
+            if self.Plaintext_Length == True and self.Plaintext != "":
                 self.Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
                 if self.Encrypt_Choice == "1":
                     self.Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
