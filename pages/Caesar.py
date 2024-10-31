@@ -89,8 +89,8 @@ with tab2:
 
     class Encrypt(Key):
         def __init__(self):
-            self.Check_Encrypt_Key = False
-            self.Encrypt_Key = ""
+            self.Check_Key = False
+            self.Key = ""
 
     
     class Encrypt(Input):
