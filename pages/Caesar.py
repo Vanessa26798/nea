@@ -46,7 +46,7 @@ with tab2:
                     break
                   elif self.Plaintext_in_Alphabet == True or self.Plaintext == " ":
                     self.Plaintext_Range = True
-                    # return self.Plaintext_Range
+                    return self.Plaintext_Range
 
             if self.Plaintext_Range == True:
                 if (len(self.Plaintext) < 10 or len(self.Plaintext) > 30) and self.Plaintext != "": 
