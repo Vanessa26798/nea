@@ -72,7 +72,7 @@ with tab2:
                 elif self.Key >= 1 and self.Key <= 25:
                     st.write("The key is ", self.Key)
                     self.Check_Key = True
-             elif self.Key.isdigit() == False and self.Key != "": 
+            elif self.Key.isdigit() == False and self.Key != "": 
                  st.error('Invalid input.', icon="🚨")
                  self.Check_Key = False
         elif self.Choice == "2": 
