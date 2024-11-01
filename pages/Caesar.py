@@ -106,7 +106,7 @@ with tab2:
 
 
 def Main():
-  Encrypt(Input)
+  Encrypt()
 
 if __name__ == "__main__":
   Main()
