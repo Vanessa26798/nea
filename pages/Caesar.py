@@ -142,10 +142,6 @@ with tab2:
     #    st.write("".join(Ciphertext))
 
 
-    Input()
-    Encrypt()
-
-
 
 
 
