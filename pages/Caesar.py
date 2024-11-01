@@ -54,7 +54,7 @@ with tab2:
                     self.Plaintext_Length = False
                 elif len(self.Plaintext) >= 10 and len(self.Plaintext) <= 30 and len(self.Plaintext) != 0 and self.Plaintext != "":
                     self.Plaintext_Length = True
-                    return self.Plaintext_Length
+            return self.Plaintext_Length
 
     class Key: 
       def __init__(self):
