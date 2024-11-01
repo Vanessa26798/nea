@@ -103,7 +103,14 @@ with tab2:
             if self.Plaintext_Length == True and self.Plaintext != "":
                 st.write("123")
                 Encrypt(Key) 
-                
+
+
+def Main():
+  Encrypt(Input)
+
+if __name__ == "__main__":
+  Main()
+    
                 # self.Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
                 # if self.Encrypt_Choice == "1":
                 #     self.Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
