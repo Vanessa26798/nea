@@ -107,7 +107,7 @@ with tab2:
 
 def Main():
   Input()
-  Encrypt()
+  get_length(Encrypt)
 
 if __name__ == "__main__":
   Main()
