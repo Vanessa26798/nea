@@ -185,7 +185,7 @@ with tab2:
 
 
 
-Correct_Plaintext_Range = False
+    Correct_Plaintext_Range = False
     Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
     Plaintext = Plaintext.upper()
     for x in Plaintext: 
