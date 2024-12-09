@@ -23,183 +23,71 @@ with col2:
 with tab2:
     st.header("Encryt a plaintext")
 
-    
-
-    
-#     class Input:
-#         def __init__(self):
-#             self.Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
-#             self.Plaintext = self.Plaintext.upper()
-            
-#             self.Plaintext_Range = False
-#             self.Plaintext_in_Alphabet = False
-#             self.Plaintext_Length = False
-            
-#             for x in self.Plaintext: 
-#                 if (x in Alphabet or x == " ") and self.Plaintext[0] != " ":
-#                   self.Plaintext_in_Alphabet = True
-#                 else:
-#                   self.Plaintext_in_Alphabet = False
-#                   if self.Plaintext_in_Alphabet == False and self.Plaintext != "":
-#                     st.error('Invalid plaintext.', icon="🚨")
-#                     self.Plaintext_Range = False
-#                     break
-#                   elif self.Plaintext_in_Alphabet == True or self.Plaintext == " ":
-#                     self.Plaintext_Range = True
-#             return self.Plaintext_Range
-
-#             if self.Plaintext_Range == True:
-#                 if (len(self.Plaintext) < 10 or len(self.Plaintext) > 30) and self.Plaintext != "": 
-#                     st.error('Plaintext out of range.', icon="🚨")
-#                     self.Plaintext_Length = False
-#                 elif len(self.Plaintext) >= 10 and len(self.Plaintext) <= 30 and len(self.Plaintext) != 0 and self.Plaintext != "":
-#                     self.Plaintext_Length = True
-#             return self.Plaintext_Length
+    class 
 
 
-# class Input:
-#     def __init__(self):
-#         self.Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
-#         self.Plaintext = self.Plaintext.upper()
-        
-#         self.Plaintext_Range = False
-#         self.Plaintext_in_Alphabet = False
-#         self.Plaintext_Length = False
-
-#     def check_plaintext_range(self):
-#         for x in self.Plaintext: 
-#             if (x in Alphabet or x == " ") and self.Plaintext[0] != " ":
-#               self.Plaintext_in_Alphabet = True
-#             else:
-#               self.Plaintext_in_Alphabet = False
-#               if self.Plaintext_in_Alphabet == False and self.Plaintext != "":
-#                 st.error('Invalid plaintext.', icon="🚨")
-#                 self.Plaintext_Range = False
-#                 break
-#               elif self.Plaintext_in_Alphabet == True or self.Plaintext == " ":
-#                 self.Plaintext_Range = True
-#         return self.Plaintext_Range
-
-#     def check_plaintext_range(self):
-#         if self.Plaintext_Range == True:
-#             if (len(self.Plaintext) < 10 or len(self.Plaintext) > 30) and self.Plaintext != "": 
-#                 st.error('Plaintext out of range.', icon="🚨")
-#                 self.Plaintext_Length = False
-#             elif len(self.Plaintext) >= 10 and len(self.Plaintext) <= 30 and len(self.Plaintext) != 0 and self.Plaintext != "":
-#                 self.Plaintext_Length = True
-#         return self.Plaintext_Length
+    def Plaintext_Range: 
+        Correct_Plaintext_Range = False
+        Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
+        Plaintext = Plaintext.upper()
 
 
-    
-# class Key: 
-#   def __init__(self):
-#     self.Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
-#     self.Key = 0
-#     self.Check_Key = False
+    def Plaintext_in_Alphabet:            
+        for x in Plaintext: 
+            if (x in Alphabet or x == " ") and Plaintext[0] != " ":
+                Plaintext_in_Alphabet = True
+                return Plaintext_in_Alphabet
+            else:
+                Plaintext_in_Alphabet = False
+                return Plaintext_in_Alphabet
 
-#     def check_key_choice(self):
-#         if self.Choice == "1":
-#             self.Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
-#             if self.Key.isdigit() == True:
-#                 self.Key = int(self.Key)
-#                 if self.Key < 1 or self.Key > 25: 
-#                     st.error('Invalid input.', icon="🚨")
-#                     self.Check_Key = False
-#                 elif self.Key >= 1 and self.Key <= 25:
-#                     st.write("The key is ", self.Key)
-#                     self.Check_Key = True
-#             elif self.Key.isdigit() == False and self.Key != "": 
-#                  st.error('Invalid input.', icon="🚨")
-#                  self.Check_Key = False
-#         elif self.Choice == "2": 
-#             self.Key = random.randrange(1, 26)
-#             self.Key = int(self.Key)
-#             st.write("The key is ", Key)
-#             self.Check_Key = True
-#         elif self.Encrypt_Choice != 1 and self.Encrypt_Choice != 2 and self.Encrypt_Choice != "": 
-#             st.error('Invalid input.', icon="🚨")
-#             self.Check_Encrypt_Key = False
+    def Plaintext_Length:
+        Correct_Plaintext_Length = False
+        if Correct_Plaintext_Range == True:
+            if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
+                st.error('Plaintext out of range.', icon="🚨")
+                Correct_Plaintext_Length = False
+            elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
+                Correct_Plaintext_Length = True
 
-# class Encrypt(Key):
-#     def __init__(self):
-#         self.Check_Key = False
-#         self.Key = ""
+    Correct_Encrypt_Key = False                
+    if Correct_Plaintext_Length == True and Plaintext != "":
+        Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
+        if Encrypt_Choice == "1":
+            Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
+            if Encrypt_Key.isdigit() == True:
+                Encrypt_Key = int(Encrypt_Key)
+                if Encrypt_Key < 1 or Encrypt_Key > 25: 
+                    st.error('Invalid input.', icon="🚨")
+                    Correct_Encrypt_Key = False
+                elif Encrypt_Key >= 1 and Encrypt_Key <= 25: 
+                    st.write("The key is ", Encrypt_Key)
+                    Correct_Encrypt_Key = True
+            elif Encrypt_Key.isdigit() == False and Encrypt_Key != "": 
+                st.error('Invalid input.', icon="🚨")
+                Correct_Encrypt_Key = False
+        elif Encrypt_Choice == "2": 
+            Encrypt_Key = random.randrange(1, 26)
+            Encrypt_Key = int(Encrypt_Key)
+            st.write("The key is ", Encrypt_Key)
+            Correct_Encrypt_Key = True
+        elif Encrypt_Choice != 1 and Encrypt_Choice != 2 and Encrypt_Choice != "": 
+            st.error('Invalid input.', icon="🚨")
+            Correct_Encrypt_Key = False
 
-
-# class Encrypt(Input):
-#     def __init__(self):
-#         self.Check_Key = False
-
-
-#     def get_length(self):
-#         return self.Plaintext_Length
-#         if self.Plaintext_Length == True and self.Plaintext != "":
-#             st.write("123")
-#             Encrypt(Key) 
-
-
-# def Main():
-#   Input(self)
-
-# if __name__ == "__main__":
-#   Main()
-
-    
-    # self.Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
-    # if self.Encrypt_Choice == "1":
-    #     self.Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
-    #     if self.Encrypt_Key.isdigit() == True:
-    #         self.Encrypt_Key = int(self.Encrypt_Key)
-    #         if self.Encrypt_Key < 1 or self.Encrypt_Key > 25: 
-    #             st.error('Invalid input.', icon="🚨")
-    #             self.Check_Encrypt_Key = False
-    #         elif self.Encrypt_Key >= 1 and self.Encrypt_Key <= 25:
-    #             st.write("The key is ", Encrypt_Key)
-    #             self.Check_Encrypt_Key = True
-    #     elif self.Encrypt_Key.isdigit() == False and self.Encrypt_Key != "": 
-    #         st.error('Invalid input.', icon="🚨")
-    #         self.Check_Encrypt_Key = False
-    # elif self.Encrypt_Choice == "2": 
-    #     self.Encrypt_Key = random.randrange(1, 26)
-    #     self.Encrypt_Key = int(self.Encrypt_Key)
-    #     st.write("The key is ", Encrypt_Key)
-    #     self.Check_Encrypt_Key = True
-    # elif self.Encrypt_Choice != 1 and self.Encrypt_Choice != 2 and self.Encrypt_Choice != "": 
-    #         st.error('Invalid input.', icon="🚨")
-    #         self.Check_Encrypt_Key = False
-
-    # if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
-    #    Ciphertext = ["The ciphertext is "]
-    #    for x in Plaintext:
-    #      if x == " ":
-    #          Ciphertext.append(x)
-    #      else: 
-    #          Letter_index = int(Alphabet.index(x))
-    #          Letter_index += Encrypt_Key
-    #          while Letter_index >= 25: 
-    #              Letter_index -= 26
-    #          Letter = Alphabet[Letter_index]
-    #          Ciphertext.append(Letter)
-    #    st.write("".join(Ciphertext))
-
-
-
-    # if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
-    #    Ciphertext = ["The ciphertext is "]
-    #    for x in Plaintext:
-    #      if x == " ":
-    #          Ciphertext.append(x)
-    #      else: 
-    #          Letter_index = int(Alphabet.index(x))
-    #          Letter_index += Encrypt_Key
-    #          while Letter_index >= 25: 
-    #              Letter_index -= 26
-    #          Letter = Alphabet[Letter_index]
-    #          Ciphertext.append(Letter)
-    #    st.write("".join(Ciphertext))
-
-
-
+    if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
+       Ciphertext = ["The ciphertext is "]
+       for x in Plaintext:
+         if x == " ":
+             Ciphertext.append(x)
+         else: 
+             Letter_index = int(Alphabet.index(x))
+             Letter_index += Encrypt_Key
+             while Letter_index >= 25: 
+                 Letter_index -= 26
+             Letter = Alphabet[Letter_index]
+             Ciphertext.append(Letter)
+       st.write("".join(Ciphertext))
 
 
     
