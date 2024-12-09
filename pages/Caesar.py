@@ -346,7 +346,7 @@ with tab4:
     for x in Plaintext:
       Total_occurance = len(Plaintext)
       Count = Plaintext.count(x)
-      Character_occurance = round(Count/ Total_occurance * 100)
+      Character_occurance = round(Count / Total_occurance * 100)
       if x not in Character:
           Character.append(x)
           Occurance.append(Character_occurance)
