@@ -339,6 +339,7 @@ with tab3:
 
 with tab4: 
     st.header("Level of security")
+
     Plaintext = "AAABCDE"
     st.write("The plaintext is " + Plaintext)
     Character = []
@@ -346,7 +347,7 @@ with tab4:
     for x in Plaintext:
       Total_occurance = len(Plaintext)
       Count = Plaintext.count(x)
-      Character_occurance = round(Count / Total_occurance * 100)
+      Character_occurance = round(Count/ Total_occurance * 100)
       if x not in Character:
           Character.append(x)
           Occurance.append(Character_occurance)
@@ -358,9 +359,10 @@ with tab4:
               elif int(Occurance[Last_Character_Index]) < int(Occurance[Character.index(x)]):
                   Highest_Occurance_Character = Character[x]
                   Highest_Occurance = Occurance[x]
-    
+
     chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
     st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
+
     st.write("The character with the highest occurance is " + Highest_Occurance_Character)
 
 
