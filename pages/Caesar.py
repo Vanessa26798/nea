@@ -2,8 +2,7 @@ import streamlit as st
 import random
 import pandas as pd
 
-# class Caesar:
-#     def __init__(self):
+
 Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 st.header("Caesar cipher")
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
@@ -23,6 +22,57 @@ with col2:
 
 with tab2:
     st.header("Encryt a plaintext")
+    
+    Correct_Plaintext_Range = False
+    Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
+    Plaintext = Plaintext.upper()
+    for x in Plaintext: 
+        if (x in Alphabet or x == " ") and Plaintext[0] != " ":
+            Plaintext_in_Alphabet = True
+        else:
+            Plaintext_in_Alphabet = False
+
+        if Plaintext_in_Alphabet == False and Plaintext != "":
+            st.error('Invalid plaintext.', icon="🚨")
+            Correct_Plaintext_Range = False
+            break
+        elif Plaintext_in_Alphabet == True or Plaintext == " ":
+            Correct_Plaintext_Range = True
+
+    Correct_Plaintext_Length = False
+    if Correct_Plaintext_Range == True:
+        if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
+            st.error('Plaintext out of range.', icon="🚨")
+            Correct_Plaintext_Length = False
+        elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
+            Correct_Plaintext_Length = True
+
+    Correct_Encrypt_Key = False                
+    if Correct_Plaintext_Length == True and Plaintext != "":
+        Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
+        if Encrypt_Choice == "1":
+            Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
+            if Encrypt_Key.isdigit() == True:
+                Encrypt_Key = int(Encrypt_Key)
+                if Encrypt_Key < 1 or Encrypt_Key > 25: 
+                    st.error('Invalid input.', icon="🚨")
+                    Correct_Encrypt_Key = False
+                elif Encrypt_Key >= 1 and Encrypt_Key <= 25: 
+                    st.write("The key is ", Encrypt_Key)
+                    Correct_Encrypt_Key = True
+            elif Encrypt_Key.isdigit() == False and Encrypt_Key != "": 
+                st.error('Invalid input.', icon="🚨")
+                Correct_Encrypt_Key = False
+        elif Encrypt_Choice == "2": 
+            Encrypt_Key = random.randrange(1, 26)
+            Encrypt_Key = int(Encrypt_Key)
+            st.write("The key is ", Encrypt_Key)
+            Correct_Encrypt_Key = True
+        elif Encrypt_Choice != 1 and Encrypt_Choice != 2 and Encrypt_Choice != "": 
+            st.error('Invalid input.', icon="🚨")
+            Correct_Encrypt_Key = False
+
+
     
 #     class Input:
 #         def __init__(self):
@@ -141,57 +191,6 @@ with tab2:
 
 # if __name__ == "__main__":
 #   Main()
-
-
-
-    # Correct_Plaintext_Range = False
-    # Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
-    # Plaintext = Plaintext.upper()
-    # for x in Plaintext: 
-    #     if (x in Alphabet or x == " ") and Plaintext[0] != " ":
-    #         Plaintext_in_Alphabet = True
-    #     else:
-    #         Plaintext_in_Alphabet = False
-
-    #     if Plaintext_in_Alphabet == False and Plaintext != "":
-    #         st.error('Invalid plaintext.', icon="🚨")
-    #         Correct_Plaintext_Range = False
-    #         break
-    #     elif Plaintext_in_Alphabet == True or Plaintext == " ":
-    #         Correct_Plaintext_Range = True
-
-    # Correct_Plaintext_Length = False
-    # if Correct_Plaintext_Range == True:
-    #     if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
-    #         st.error('Plaintext out of range.', icon="🚨")
-    #         Correct_Plaintext_Length = False
-    #     elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
-    #         Correct_Plaintext_Length = True
-
-    # Correct_Encrypt_Key = False                
-    # if Correct_Plaintext_Length == True and Plaintext != "":
-    #     Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
-    #     if Encrypt_Choice == "1":
-    #         Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
-    #         if Encrypt_Key.isdigit() == True:
-    #             Encrypt_Key = int(Encrypt_Key)
-    #             if Encrypt_Key < 1 or Encrypt_Key > 25: 
-    #                 st.error('Invalid input.', icon="🚨")
-    #                 Correct_Encrypt_Key = False
-    #             elif Encrypt_Key >= 1 and Encrypt_Key <= 25: 
-    #                 st.write("The key is ", Encrypt_Key)
-    #                 Correct_Encrypt_Key = True
-    #         elif Encrypt_Key.isdigit() == False and Encrypt_Key != "": 
-    #             st.error('Invalid input.', icon="🚨")
-    #             Correct_Encrypt_Key = False
-    #     elif Encrypt_Choice == "2": 
-    #         Encrypt_Key = random.randrange(1, 26)
-    #         Encrypt_Key = int(Encrypt_Key)
-    #         st.write("The key is ", Encrypt_Key)
-    #         Correct_Encrypt_Key = True
-    #     elif Encrypt_Choice != 1 and Encrypt_Choice != 2 and Encrypt_Choice != "": 
-    #         st.error('Invalid input.', icon="🚨")
-    #         Correct_Encrypt_Key = False
 
     
     # self.Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
