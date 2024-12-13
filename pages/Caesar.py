@@ -23,8 +23,8 @@ with col2:
 with tab2:
     st.header("Encryt a plaintext")
 
-    class 
-    
+    class(Encrypt)
+
         Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
         Plaintext = Plaintext.upper()
 
