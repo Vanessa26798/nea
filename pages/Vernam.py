@@ -57,8 +57,8 @@ with tab2:
          while LetterASCII >= 1:
           LetterBinary = LetterASCII % 2
           Plaintext_ASCII.append(LetterBinary)
-          LetterASCII = LetterASCII // 2 
-        st.write(Plaintext_ASCII)
+          LetterASCII = LetterASCII // 2
+          st.write(Plaintext_ASCII)
         
         # Key_ASCII = []
         # Key = random.choice(Alphabet)
