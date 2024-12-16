@@ -51,8 +51,9 @@ with tab2:
             Correct_Plaintext_Length = True
 
 # if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
+    Plaintext_Binary = []
     for x in Plaintext:
-     Plaintext_Binary = []
+     Letter_Binary = []
      LetterASCII = ord(x)
      st.write(LetterASCII)
      while LetterASCII >= 1:
@@ -62,7 +63,7 @@ with tab2:
      while len(Plaintext_ASCII) < 8:
          Plaintext_ASCII.append(0)
      Plaintext_Binary.append(Plaintext_ASCII)
-     st.write(Plaintext_ASCII)
+     st.write(Plaintext_Binary)
      
 
 
