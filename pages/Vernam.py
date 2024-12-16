@@ -60,14 +60,14 @@ with tab2:
           LetterASCII = LetterASCII // 2 
         st.write(Plaintext_ASCII)
         
-        Key_ASCII = []
-        Key = random.choice(Alphabet)
-        KeyASCII = ord(Key)
-        while KeyASCII >= 1:
-            KeyBinary = KeyASCII % 2
-            Key_ASCII.append(KeyBinary)
-            KeyASCII = KeyASCII // 2     
-            st.write(Key_ASCII)
+        # Key_ASCII = []
+        # Key = random.choice(Alphabet)
+        # KeyASCII = ord(Key)
+        # while KeyASCII >= 1:
+        #     KeyBinary = KeyASCII % 2
+        #     Key_ASCII.append(KeyBinary)
+        #     KeyASCII = KeyASCII // 2     
+        #     st.write(Key_ASCII)
         
          # Ciphtertext_ASCII = []
          # for x in Plaintext_ASCII:
