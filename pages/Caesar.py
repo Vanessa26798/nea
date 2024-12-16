@@ -1,9 +1,11 @@
 import streamlit as st
 import random
 import pandas as pd
+import string
 
 
-Alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+
+Alphabet = string.ascii_uppercase
 st.header("Caesar cipher")
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
 
