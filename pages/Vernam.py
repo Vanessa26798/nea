@@ -54,6 +54,7 @@ with tab2:
     for x in Plaintext:
      Plaintext_ASCII = []
      LetterASCII = ord(x)
+     st.write(LetterASCII)
      while LetterASCII >= 1:
       LetterBinary = LetterASCII % 2
       Plaintext_ASCII.append(LetterBinary)
