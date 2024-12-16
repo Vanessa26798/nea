@@ -1,10 +1,9 @@
 
-import string
 
 import streamlit as st
 import random
 
-
+import string
 Alphabet = string.ascii_uppercase
 
 st.header("Vernam cipher")
@@ -51,31 +50,30 @@ with tab2:
         elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
             Correct_Plaintext_Length = True
             
-
-    for x in Plaintext:
-     Plaintext_ASCII = []
-     LetterASCII = ord(x)
-     while LetterASCII >= 1:
-      LetterBinary = LetterASCII % 2
-      Plaintext_ASCII.append(LetterBinary)
-      LetterASCII = LetterASCII // 2
-    
-     Key_ASCII = []
-     Key = random.choice(Alphabet)
-     KeyASCII = ord(Key)
-     while KeyASCII >= 1:
-      KeyBinary = KeyASCII % 2
-      Key_ASCII.append(KeyBinary)
-      KeyASCII = KeyASCII // 2     
-    
-     st.write(Plaintext_ASCII)
-     st.write(Key_ASCII)
-    
-     Ciphtertext_ASCII = []
-     for x in Plaintext_ASCII:
-       CiphertextASCII = Plaintext_ASCII[x] ^ Key_ASCII[x]
-       Ciphtertext_ASCII.append(CiphertextASCII)
-       st.write(Ciphtertext_ASCII)       
+    if Plaintext_in_Alphabet == True and Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
+        for x in Plaintext:
+         Plaintext_ASCII = []
+         LetterASCII = ord(x)
+         while LetterASCII >= 1:
+          LetterBinary = LetterASCII % 2
+          Plaintext_ASCII.append(LetterBinary)
+          LetterASCII = LetterASCII // 2 
+          st.write(Plaintext_ASCII)
+        
+         Key_ASCII = []
+         Key = random.choice(Alphabet)
+         KeyASCII = ord(Key)
+         while KeyASCII >= 1:
+          KeyBinary = KeyASCII % 2
+          Key_ASCII.append(KeyBinary)
+          KeyASCII = KeyASCII // 2     
+         st.write(Key_ASCII)
+        
+         # Ciphtertext_ASCII = []
+         # for x in Plaintext_ASCII:
+         #   CiphertextASCII = Plaintext_ASCII[x] ^ Key_ASCII[x]
+         #   Ciphtertext_ASCII.append(CiphertextASCII)
+         #   st.write(Ciphtertext_ASCII)       
 
 
 
