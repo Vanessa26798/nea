@@ -61,7 +61,7 @@ with tab2:
       LetterASCII = LetterASCII // 2
      while len(Plaintext_ASCII) < 7:
       Plaintext_ASCII.append("0")
-     st.write(Plaintext_ASCII)
+      st.write(Plaintext_ASCII)
 
 
         # Key_ASCII = []
