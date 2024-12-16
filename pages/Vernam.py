@@ -48,21 +48,16 @@ with tab2:
             Correct_Plaintext_Length = False
         elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
             Correct_Plaintext_Length = True
+            
 
-
-
-# key < length? 
-
-
-
-   for x in Plaintext:
+    for x in Plaintext:
      Plaintext_ASCII = []
      LetterASCII = ord(x)
      while LetterASCII >= 1:
       LetterBinary = LetterASCII % 2
       Plaintext_ASCII.append(LetterBinary)
       LetterASCII = LetterASCII // 2
-
+    
      Key_ASCII = []
      Key = random.choice(Alphabet)
      KeyASCII = ord(Key)
@@ -70,15 +65,15 @@ with tab2:
       KeyBinary = KeyASCII % 2
       Key_ASCII.append(KeyBinary)
       KeyASCII = KeyASCII // 2     
-
+    
      st.write(Plaintext_ASCII)
      st.write(Key_ASCII)
-
+    
      Ciphtertext_ASCII = []
      for x in Plaintext_ASCII:
        CiphertextASCII = Plaintext_ASCII[x] ^ Key_ASCII[x]
        Ciphtertext_ASCII.append(CiphertextASCII)
-       print(Ciphtertext_ASCII)       
+       st.write(Ciphtertext_ASCII)       
 
 
 
