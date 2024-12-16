@@ -49,8 +49,8 @@ with tab2:
             Correct_Plaintext_Length = False
         elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
             Correct_Plaintext_Length = True
-            
-    if Plaintext_in_Alphabet == True and Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
+
+    if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
         for x in Plaintext:
          Plaintext_ASCII = []
          LetterASCII = ord(x)
