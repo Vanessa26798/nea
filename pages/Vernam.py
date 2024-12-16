@@ -50,15 +50,15 @@ with tab2:
         elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
             Correct_Plaintext_Length = True
 
-    if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
-        for x in Plaintext:
-         Plaintext_ASCII = []
-         LetterASCII = ord(x)
-         while LetterASCII >= 1:
-          LetterBinary = LetterASCII % 2
-          Plaintext_ASCII.append(LetterBinary)
-          LetterASCII = LetterASCII // 2
-         st.write(Plaintext_ASCII)
+# if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
+    for x in Plaintext:
+     Plaintext_ASCII = []
+     LetterASCII = ord(x)
+     while LetterASCII >= 1:
+      LetterBinary = LetterASCII % 2
+      Plaintext_ASCII.append(LetterBinary)
+      LetterASCII = LetterASCII // 2
+     st.write(Plaintext_ASCII)
 
 
         # Key_ASCII = []
