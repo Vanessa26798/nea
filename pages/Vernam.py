@@ -58,9 +58,11 @@ with tab2:
           LetterBinary = LetterASCII % 2
           Plaintext_ASCII.append(LetterBinary)
           LetterASCII = LetterASCII // 2
-         elif LetterASCII <= 1:
-          st.write(Plaintext_ASCII)
-        
+          if LetterASCII <= 1:
+              st.write(Plaintext_ASCII)
+              break
+
+
         # Key_ASCII = []
         # Key = random.choice(Alphabet)
         # KeyASCII = ord(Key)
