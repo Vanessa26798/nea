@@ -58,7 +58,7 @@ with tab2:
           LetterBinary = LetterASCII % 2
           Plaintext_ASCII.append(LetterBinary)
           LetterASCII = LetterASCII // 2
-        st.write(Plaintext_ASCII)
+         st.write(Plaintext_ASCII)
 
 
         # Key_ASCII = []
