@@ -58,12 +58,14 @@ with tab2:
      st.write(LetterASCII)
      while LetterASCII >= 1:
       LetterBinary = LetterASCII % 2
-      Letter_ASCII.append(LetterBinary)
+      Letter_Binary.append(LetterBinary)
       LetterASCII = LetterASCII // 2
-     while len(Plaintext_ASCII) < 8:
-         Plaintext_ASCII.append(0)
-     Plaintext_Binary.append(Plaintext_ASCII)
-     st.write(Plaintext_Binary)
+     while len(Letter_Binary) < 8:
+         Letter_Binary.append(0)
+     for x in Letter_Binary:
+         Plaintext_Binary.append(x.index - 1)
+    st.write(Plaintext_Binary)
+        
      
 
 
