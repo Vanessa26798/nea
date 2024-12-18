@@ -64,6 +64,7 @@ with tab2:
          Letter_Binary.append(0)  
      st.write(Letter_Binary) 
      Index = len(Letter_Binary)
+     st.write(Index)
      while Index > 0:   
          Plaintext_Binary.append(Letter_Binary[Index])
          Index = Index - 1 
