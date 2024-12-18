@@ -88,13 +88,15 @@ with tab2:
     st.write(Key_Binary)
     
     Ciphertext_Binary = []
+    Key_index = 0
     for x in Plaintext_Binary:
         XOR = [x]
-        XOR.append(Key_Binary[x])
+        XOR.append(Key_Binary[Key_index])
         st.write(XOR)
         result = XOR[0] ^ XOR [1]
         Ciphertext_Binary.append(result)
         st.write("hi", result)
+        Key_index = Key_index + 1
     st.write(Ciphertext_Binary)
 
 
