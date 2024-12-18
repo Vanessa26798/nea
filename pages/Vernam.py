@@ -65,9 +65,8 @@ with tab2:
      for x in Letter_Binary:
          index = int(Letter_Binary.index(x))
          st.write(index)
-
-    #      Plaintext_Binary.append(x.index - 1)
-    # st.write(Plaintext_Binary)
+         Plaintext_Binary.append(index - 1)
+    st.write(Plaintext_Binary)
         
      
 
