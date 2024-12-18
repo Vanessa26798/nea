@@ -92,8 +92,9 @@ with tab2:
          # XOR = [x]
          # XOR.append(Key_Binary[x])
          result = Plaintext_Binary[x] ^ Key_Binary[x]
-         Ciphertext_Binary.append(result)
-     st.write(Ciphertext_Binary)
+         st.write(result)
+     #     Ciphertext_Binary.append(result)
+     # st.write(Ciphertext_Binary)
 
 
 
