@@ -84,7 +84,7 @@ with tab2:
 
     Key_ASCII = []
     for x in Key:
-     Key_Binary = []
+     Letter_Binary = []
      LetterASCII = ord(x)
      while LetterASCII >= 1:
       LetterBinary = LetterASCII % 2
@@ -95,7 +95,7 @@ with tab2:
      st.write(Letter_Binary) 
      Index = len(Letter_Binary) - 1
      while Index >= 0:   
-         Plaintext_Binary.append(Letter_Binary[Index])
+         Key_ASCII.append(Letter_Binary[Index])
          Index = Index - 1 
     st.write(Key_ASCII)
         
