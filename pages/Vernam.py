@@ -65,7 +65,7 @@ with tab2:
      st.write(Letter_Binary) 
      Index = len(Letter_Binary)
      while Index > 0:   
-         Plaintext_Binary.append(Letter_Binary(Index-1))
+         Plaintext_Binary.append(Letter_Binary[Index])
          Index = Index - 1 
      st.write(Plaintext_Binary)
         
