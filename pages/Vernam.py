@@ -85,9 +85,17 @@ with tab2:
          while Index >= 0:   
              Key_Binary.append(Letter_Binary[Index])
              Index = Index - 1 
-        st.write(Key_Binary)
+        # st.write(Key_Binary)
         
-         # Ciphtertext_ASCII = []
+         Ciphtertext_Binary = []
+         for x in Plaintext_Binary:
+             XOR = [x]
+             XOR.append(Key_Binary[x])
+             result = XOR[0] XOR XOR[1]:
+             Ciphertext_Binary.append(result)
+         st.write(Ciphertext_Binary)
+
+             
          # for x in Plaintext_ASCII:
          #   CiphertextASCII = Plaintext_ASCII[x] ^ Key_ASCII[x]
          #   Ciphtertext_ASCII.append(CiphertextASCII)
