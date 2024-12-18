@@ -71,16 +71,16 @@ with tab2:
     Key = []
     while len(Key) < (len(Plaintext)):
         Key.append(random.choice(Alphabet))
-        
-    st.write(Key)
+    st.write("The key is ", "".join(Key))
+
     
-    Key_ASCII = []
-    KeyASCII = ord(Key)
-    while KeyASCII >= 1:
-        KeyBinary = KeyASCII % 2
-        Key_ASCII.append(KeyBinary)
-        KeyASCII = KeyASCII // 2     
-        st.write(Key_ASCII)
+    # Key_ASCII = []
+    # KeyASCII = ord(Key)
+    # while KeyASCII >= 1:
+    #     KeyBinary = KeyASCII % 2
+    #     Key_ASCII.append(KeyBinary)
+    #     KeyASCII = KeyASCII // 2     
+    #     st.write(Key_ASCII)
         
          # Ciphtertext_ASCII = []
          # for x in Plaintext_ASCII:
