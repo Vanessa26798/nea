@@ -50,50 +50,50 @@ with tab2:
         elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
             Correct_Plaintext_Length = True
 
-    if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
-        Plaintext_Binary = []
-        for x in Plaintext:
-         Letter_Binary = []
-         LetterASCII = ord(x)
-         while LetterASCII >= 1:
-          LetterBinary = LetterASCII % 2
-          Letter_Binary.append(LetterBinary)
-          LetterASCII = LetterASCII // 2
-         while len(Letter_Binary) < 8:
-             Letter_Binary.append(0)
-         Index = len(Letter_Binary) - 1
-         while Index >= 0:
-             Plaintext_Binary.append(Letter_Binary[Index])
-             Index = Index - 1 
+    # if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
+    Plaintext_Binary = []
+    for x in Plaintext:
+     Letter_Binary = []
+     LetterASCII = ord(x)
+     while LetterASCII >= 1:
+      LetterBinary = LetterASCII % 2
+      Letter_Binary.append(LetterBinary)
+      LetterASCII = LetterASCII // 2
+     while len(Letter_Binary) < 8:
+         Letter_Binary.append(0)
+     Index = len(Letter_Binary) - 1
+     while Index >= 0:
+         Plaintext_Binary.append(Letter_Binary[Index])
+         Index = Index - 1 
 
-        Key = []
-        while len(Key) < (len(Plaintext)):
-            Key.append(random.choice(Alphabet))
-        st.write("The key is ", "".join(Key))
+    Key = []
+    while len(Key) < (len(Plaintext)):
+        Key.append(random.choice(Alphabet))
+    st.write("The key is ", "".join(Key))
 
-        Key_Binary = []
-        for x in Key:
-         Letter_Binary = []
-         LetterASCII = ord(x)
-         while LetterASCII >= 1:
-          LetterBinary = LetterASCII % 2
-          Letter_Binary.append(LetterBinary)
-          LetterASCII = LetterASCII // 2
-         while len(Letter_Binary) < 8:
-             Letter_Binary.append(0)  
-         Index = len(Letter_Binary) - 1
-         while Index >= 0:   
-             Key_Binary.append(Letter_Binary[Index])
-             Index = Index - 1 
-        # st.write(Key_Binary)
-        
-         Ciphertext_Binary = []
-         for x in Plaintext_Binary:
-             # XOR = [x]
-             # XOR.append(Key_Binary[x])
-             result = Plaintext_Binary[x] ^ Key_Binary[x]
-             Ciphertext_Binary.append(result)
-         st.write(Ciphertext_Binary)
+    Key_Binary = []
+    for x in Key:
+     Letter_Binary = []
+     LetterASCII = ord(x)
+     while LetterASCII >= 1:
+      LetterBinary = LetterASCII % 2
+      Letter_Binary.append(LetterBinary)
+      LetterASCII = LetterASCII // 2
+     while len(Letter_Binary) < 8:
+         Letter_Binary.append(0)  
+     Index = len(Letter_Binary) - 1
+     while Index >= 0:   
+         Key_Binary.append(Letter_Binary[Index])
+         Index = Index - 1 
+    # st.write(Key_Binary)
+    
+     Ciphertext_Binary = []
+     for x in Plaintext_Binary:
+         # XOR = [x]
+         # XOR.append(Key_Binary[x])
+         result = Plaintext_Binary[x] ^ Key_Binary[x]
+         Ciphertext_Binary.append(result)
+     st.write(Ciphertext_Binary)
 
 
 
