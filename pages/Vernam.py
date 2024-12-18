@@ -50,36 +50,34 @@ with tab2:
         elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
             Correct_Plaintext_Length = True
 
-# if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
-    Plaintext_Binary = []
-    for x in Plaintext:
-     Letter_Binary = []
-     LetterASCII = ord(x)
-     st.write(LetterASCII)
-     while LetterASCII >= 1:
-      LetterBinary = LetterASCII % 2
-      Letter_Binary.append(LetterBinary)
-      LetterASCII = LetterASCII // 2
-     while len(Letter_Binary) < 8:
-         Letter_Binary.append(0)  
-     st.write(Letter_Binary) 
-     Index = len(Letter_Binary) - 1
-     while Index >= 0:   
-         Plaintext_Binary.append(Letter_Binary[Index])
-         Index = Index - 1 
-     st.write(Plaintext_Binary)
-        
-     
+    if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
+        Plaintext_Binary = []
+        for x in Plaintext:
+         Letter_Binary = []
+         LetterASCII = ord(x)
+         while LetterASCII >= 1:
+          LetterBinary = LetterASCII % 2
+          Letter_Binary.append(LetterBinary)
+          LetterASCII = LetterASCII // 2
+         while len(Letter_Binary) < 8:
+             Letter_Binary.append(0)  
+         st.write(Letter_Binary) 
+         Index = len(Letter_Binary) - 1
+         while Index >= 0:   
+             Plaintext_Binary.append(Letter_Binary[Index])
+             Index = Index - 1 
+         st.write(Plaintext_Binary)
 
-
-        # Key_ASCII = []
-        # Key = random.choice(Alphabet)
-        # KeyASCII = ord(Key)
-        # while KeyASCII >= 1:
-        #     KeyBinary = KeyASCII % 2
-        #     Key_ASCII.append(KeyBinary)
-        #     KeyASCII = KeyASCII // 2     
-        #     st.write(Key_ASCII)
+    while len(Key) == (len(Plaintext)):
+        Key = random.choice(Alphabet)
+        st.write(Key)
+    Key_ASCII = []
+    KeyASCII = ord(Key)
+    while KeyASCII >= 1:
+        KeyBinary = KeyASCII % 2
+        Key_ASCII.append(KeyBinary)
+        KeyASCII = KeyASCII // 2     
+        st.write(Key_ASCII)
         
          # Ciphtertext_ASCII = []
          # for x in Plaintext_ASCII:
