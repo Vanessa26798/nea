@@ -85,7 +85,7 @@ with tab2:
      while Index >= 0:   
          Key_Binary.append(Letter_Binary[Index])
          Index = Index - 1 
-    # st.write(Key_Binary)
+    st.write(Key_Binary)
     
      Ciphertext_Binary = []
      for x in Plaintext_Binary:
