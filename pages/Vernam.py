@@ -91,11 +91,11 @@ with tab2:
     for x in Plaintext_Binary:
          # XOR = [x]
          # XOR.append(Key_Binary[x])
-         st.write(x)
-         st.write(Key_Binary[x])
-         result = x ^ Key_Binary[x]
-         st.write(result)
-         Ciphertext_Binary.append(result)
+        st.write(x)
+        st.write(Key_Binary[x])
+        result = x ^ Key_Binary[x]
+        Ciphertext_Binary.append(result)
+        st.write("hi", result)
     st.write(Ciphertext_Binary)
 
 
