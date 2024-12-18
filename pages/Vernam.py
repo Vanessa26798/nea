@@ -80,7 +80,24 @@ with tab2:
     #     KeyBinary = KeyASCII % 2
     #     Key_ASCII.append(KeyBinary)
     #     KeyASCII = KeyASCII // 2     
-    #     st.write(Key_ASCII)
+
+
+    Key_ASCII = []
+    for x in Key:
+     Key_Binary = []
+     LetterASCII = ord(x)
+     while LetterASCII >= 1:
+      LetterBinary = LetterASCII % 2
+      Letter_Binary.append(LetterBinary)
+      LetterASCII = LetterASCII // 2
+     while len(Letter_Binary) < 8:
+         Letter_Binary.append(0)  
+     st.write(Letter_Binary) 
+     Index = len(Letter_Binary) - 1
+     while Index >= 0:   
+         Plaintext_Binary.append(Letter_Binary[Index])
+         Index = Index - 1 
+    st.write(Key_ASCII)
         
          # Ciphtertext_ASCII = []
          # for x in Plaintext_ASCII:
