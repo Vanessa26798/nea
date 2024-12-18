@@ -87,7 +87,7 @@ with tab2:
              Index = Index - 1 
         # st.write(Key_Binary)
         
-         Ciphtertext_Binary = []
+         Ciphertext_Binary = []
          for x in Plaintext_Binary:
              # XOR = [x]
              # XOR.append(Key_Binary[x])
