@@ -94,6 +94,7 @@ with tab2:
          st.write(x)
          st.write(Key_Binary[x])
          result = x ^ Key_Binary[x]
+         st.write(result)
          Ciphertext_Binary.append(result)
     st.write(Ciphertext_Binary)
 
