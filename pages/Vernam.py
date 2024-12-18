@@ -99,6 +99,19 @@ with tab2:
         Key_index = Key_index + 1
     st.write(Ciphertext_Binary)
 
+Index = 0
+for x  in Ciphertext:
+    Ciphertext_Letter = []
+    Ciphertext_Letter.append(Ciphertext_Binary[])
+    CiphertextIndex + 7
+    Index = Index + 8
+
+# split 
+
+
+# https://www.rapidtables.com/convert/number/ascii-to-binary.html
+
+
 
 
 # hashtable?
