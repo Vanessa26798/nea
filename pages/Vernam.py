@@ -68,9 +68,12 @@ with tab2:
              Index = Index - 1 
          st.write(Plaintext_Binary)
 
-    while len(Key) == (len(Plaintext)):
-        Key = random.choice(Alphabet)
-        st.write(Key)
+    Key = []
+    while len(Key) < (len(Plaintext)):
+        Key.append(random.choice(Alphabet))
+        
+    st.write(Key)
+    
     Key_ASCII = []
     KeyASCII = ord(Key)
     while KeyASCII >= 1:
