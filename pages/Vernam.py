@@ -72,30 +72,21 @@ with tab2:
             Key.append(random.choice(Alphabet))
         st.write("The key is ", "".join(Key))
 
-    
-    # Key_ASCII = []
-    # KeyASCII = ord(Key)
-    # while KeyASCII >= 1:
-    #     KeyBinary = KeyASCII % 2
-    #     Key_ASCII.append(KeyBinary)
-    #     KeyASCII = KeyASCII // 2     
-
-
-        Key_Binary = []
-        for x in Key:
-         Letter_Binary = []
-         LetterASCII = ord(x)
-         while LetterASCII >= 1:
-          LetterBinary = LetterASCII % 2
-          Letter_Binary.append(LetterBinary)
-          LetterASCII = LetterASCII // 2
-         while len(Letter_Binary) < 8:
-             Letter_Binary.append(0)  
-         Index = len(Letter_Binary) - 1
-         while Index >= 0:   
-             Key_Binary.append(Letter_Binary[Index])
-             Index = Index - 1 
-        st.write(Key_Binary)
+        # Key_Binary = []
+        # for x in Key:
+        #  Letter_Binary = []
+        #  LetterASCII = ord(x)
+        #  while LetterASCII >= 1:
+        #   LetterBinary = LetterASCII % 2
+        #   Letter_Binary.append(LetterBinary)
+        #   LetterASCII = LetterASCII // 2
+        #  while len(Letter_Binary) < 8:
+        #      Letter_Binary.append(0)  
+        #  Index = len(Letter_Binary) - 1
+        #  while Index >= 0:   
+        #      Key_Binary.append(Letter_Binary[Index])
+        #      Index = Index - 1 
+        # st.write(Key_Binary)
         
          # Ciphtertext_ASCII = []
          # for x in Plaintext_ASCII:
