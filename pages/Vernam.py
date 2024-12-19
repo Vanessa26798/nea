@@ -35,7 +35,8 @@ Baudot = {
     Alphabet[25]: "10001"
     }           
 
-
+key_list = list(Baudot.keys())
+value_list = list(Baudot.values())
 
 
 st.header("Vernam cipher")
@@ -83,82 +84,46 @@ with tab2:
             Correct_Plaintext_Length = True
 
     # if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
-    Plaintext_Binary = []
+    Plaintext_Baudot = []
     for x in Plaintext:
-     Letter_Binary = []
-     LetterASCII = ord(x)
-     while LetterASCII >= 1:
-      LetterBinary = LetterASCII % 2
-      Letter_Binary.append(LetterBinary)
-      LetterASCII = LetterASCII // 2
-     while len(Letter_Binary) < 8:
-         Letter_Binary.append(0)
-     Index = len(Letter_Binary) - 1
-     while Index >= 0:
-         Plaintext_Binary.append(Letter_Binary[Index])
-         Index = Index - 1 
+        Plaintext_Baudot.append(Baudot[x])
 
     Key = []
     while len(Key) < (len(Plaintext)):
         Key.append(random.choice(Alphabet))
     st.write("The key is ", "".join(Key))
 
-    Key_Binary = []
+    Key_Baudot = []
     for x in Key:
-     Letter_Binary = []
-     LetterASCII = ord(x)
-     while LetterASCII >= 1:
-      LetterBinary = LetterASCII % 2
-      Letter_Binary.append(LetterBinary)
-      LetterASCII = LetterASCII // 2
-     while len(Letter_Binary) < 8:
-         Letter_Binary.append(0)  
-     Index = len(Letter_Binary) - 1
-     while Index >= 0:   
-         Key_Binary.append(Letter_Binary[Index])
-         Index = Index - 1 
-    st.write(Key_Binary)
+        Key_Baudot.append(Baudot[x])
+
     
-    Ciphertext_Binary = []
+    Ciphertext_Baudot = []
     Key_index = 0
-    for x in Plaintext_Binary:
+    for x in Plaintext_Baudot:
         XOR = [x]
-        XOR.append(Key_Binary[Key_index])
+        XOR.append(Key_Baudot[Key_index])
         st.write(XOR)
         Result = XOR[0] ^ XOR [1]
-        Ciphertext_Binary.append(Result)
+        Ciphertext_Baudot.append(Result)
         st.write("hi", Result)
         Key_index = Key_index + 1
-    st.write(Ciphertext_Binary)
+    st.write(Ciphertext_Baudot)
 
 
     
-    Ciphertext_LetterBinary = []
-    for x in Ciphertext_Binary:
-        if len(Ciphertext_LetterBinary) % 8 == 0:
-            Ciphertext_Letter = []
-        Ciphertext_LetterBinary.append(Ciphertext_Binary[0])
-        Ciphertext_Binary.remove(Ciphertext_Binary[0])
-        st.write(Ciphertext_LetterBinary)
-    Result = 0
-    if Ciphertext_LetterBinary[0] == 1:
-        Result = Result + 128
-    if Ciphertext_LetterBinary[1] == 1:
-        Result = Result + 64
-    if Ciphertext_LetterBinary[2] == 1:
-        Result = Result + 32   
-    if Ciphertext_LetterBinary[3] == 1:
-        Result = Result + 16
-    if Ciphertext_LetterBinary[4] == 1:
-        Result = Result + 8
-    if Ciphertext_LetterBinary[5] == 1:
-        Result = Result + 4
-    if Ciphertext_LetterBinary[6] == 1:
-        Result = Result + 2
-    if Ciphertext_LetterBinary[7] == 1:
-        Result = Result + 1
-    Character = chr(Result)
-    st.write(Character)
+    Ciphertext_LetterBaudot = []
+    Ciphertext = []
+    for x in Ciphertext_Baudot:
+        if len(Ciphertext_LetterBaudot) % 8 == 0:
+            Ciphertext_LetterBaudot = []
+        Ciphertext_LetterBaudot.append(Ciphertext_Baudot[0])
+        Ciphertext_Baudot.remove(Ciphertext_Baudot[0])
+        st.write(Ciphertext_LetterBaudot)
+        Ciphertext_Baudot.append(Baudot[x])
+        Position = value_list.index(x)
+        Ciphertext.append(key_list[Position])
+    st.write(Ciphertext)
     
 
 
