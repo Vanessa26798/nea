@@ -106,7 +106,7 @@ with tab2:
             st.write(x)
             Ciphertext_Letter.append(x)
             Ciphertext_Binary.remove(x)
-        elif len(Ciphertext_Letter) == 8:
+        else:
             st.write(x)
             Ciphertext_Letter.append(x)
             Ciphertext_Binary.remove(x)
