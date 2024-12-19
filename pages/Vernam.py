@@ -93,24 +93,20 @@ with tab2:
         XOR = [x]
         XOR.append(Key_Binary[Key_index])
         st.write(XOR)
-        result = XOR[0] ^ XOR [1]
-        Ciphertext_Binary.append(result)
-        st.write("hi", result)
+        Result = XOR[0] ^ XOR [1]
+        Ciphertext_Binary.append(Result)
+        st.write("hi", Result)
         Key_index = Key_index + 1
     st.write(Ciphertext_Binary)
 
     Ciphertext_Letter = []
     for x in Ciphertext_Binary:
+        st.write(x)
         if len(Ciphertext_Letter) % 8 == 0:
             Ciphertext_Letter = []
-            st.write(x)
-            Ciphertext_Letter.append(x)
-            Ciphertext_Binary.remove(x)
-        else:
-            st.write(x)
-            Ciphertext_Letter.append(x)
-            Ciphertext_Binary.remove(x)
-        st.write(Ciphertext_Letter)
+        Ciphertext_Letter.append(x)
+        Ciphertext_Binary.remove(x)
+    st.write(Ciphertext_Letter)
 
         
 
