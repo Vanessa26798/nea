@@ -108,8 +108,8 @@ with tab2:
         st.write(Ciphertext_LetterBinary)
         # Result = 0
         # for x in Ciphertext_LetterBinary:
-        #     if Ciphertext_LetterBinary[0] == 1:
-        #         Result = Result + 128
+            if Ciphertext_LetterBinary[0] == 1:
+                Result = Result + 128
         #     if Ciphertext_LetterBinary[1] == 1:
         #         Result = Result + 64
         #     if Ciphertext_LetterBinary[2] == 1:
