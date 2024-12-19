@@ -99,25 +99,20 @@ with tab2:
         Key_index = Key_index + 1
     st.write(Ciphertext_Binary)
 
-    Ciphertext_Letter = []
-    st.write(Ciphertext_Binary)
+    Ciphertext_LetterBinary = []
     for x in Ciphertext_Binary:
-        st.write(Ciphertext_Binary)
-        st.write(x)
-        if len(Ciphertext_Letter) % 8 == 0:
+        if len(Ciphertext_LetterBinary) % 8 == 0:
             Ciphertext_Letter = []
-        Ciphertext_Letter.append(Ciphertext_Binary[0])
+        Ciphertext_LetterBinary.append(Ciphertext_Binary[0])
         Ciphertext_Binary.remove(Ciphertext_Binary[0])
-    st.write(Ciphertext_Letter)
-
-        
-
-    # Index = 0        # if Index 
-        # CiphertextIndex + 7
-        # Index = Index + 8
+        st.write(Ciphertext_LetterBinary)
+        Result = int(Ciphertext_LetterBinary, 2)
+        st.write(Result)
+        # for x in Ciphertext_LetterBinary:
+        #     if Ciphertext_LetterBinary[0] == 1:
+        #         Result = Result + 
     
-
-# split 
+    
 
 
 
