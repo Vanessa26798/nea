@@ -123,7 +123,8 @@ with tab2:
         Result = Result + 2
     if Ciphertext_LetterBinary[7] == 1:
         Result = Result + 1
-    st.write(Result)
+    Character = char(Result)
+    st.write(Character)
                 
 
 # hashtable?
