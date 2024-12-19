@@ -101,12 +101,12 @@ with tab2:
 
     Ciphertext_Letter = []
     for x in Ciphertext_Binary:
-        if len(Ciphertext_Letter) < 8:
+        if len(Ciphertext_Letter) % 8 == 0:
+            Ciphertext_Letter = []
             st.write(x)
             Ciphertext_Letter.append(x)
             Ciphertext_Binary.remove(x)
         elif len(Ciphertext_Letter) == 8:
-            Ciphertext_Letter = []
             st.write(x)
             Ciphertext_Letter.append(x)
             Ciphertext_Binary.remove(x)
