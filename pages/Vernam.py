@@ -102,10 +102,12 @@ with tab2:
     Ciphertext_Letter = []
     for x in Ciphertext_Binary:
         if len(Ciphertext_Letter) < 8:
+            st.write(x)
             Ciphertext_Letter.append(x)
             Ciphertext_Binary.remove(x)
         elif len(Ciphertext_Letter) == 8:
             Ciphertext_Letter = []
+            st.write(x)
             Ciphertext_Letter.append(x)
             Ciphertext_Binary.remove(x)
         st.write(Ciphertext_Letter)
@@ -150,8 +152,6 @@ with tab3:
             Correct_Ciphertext_Length = False
         elif len(Ciphertext) >= 10 and len(Ciphertext) <= 30 and len(Ciphertext) != 0 and Ciphertext != "":
             Correct_Ciphertext_Length = True
-
-
 
 
 
