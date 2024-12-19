@@ -134,7 +134,7 @@ with tab2:
 
 
 Baudot = {
-  Alphabet[0]: 00011}
+  Alphabet[0]: "00011"}
 
 st.write(Baudot)
 #   "B": ,
