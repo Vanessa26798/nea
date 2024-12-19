@@ -5,9 +5,38 @@ import random
 
 import string
 Alphabet = string.ascii_uppercase
-st.write(Alphabet)
-Baudot = {Alphabet[0]: "00011"}
-st.write(Baudot)
+
+Baudot = {
+    Alphabet[0]: "00011", 
+    Alphabet[1]: "11001",
+    Alphabet[2]: "01110", 
+    Alphabet[3]: "01001",
+    Alphabet[4]: "00001", 
+    Alphabet[5]: "01101",
+    Alphabet[6]: "11010", 
+    Alphabet[7]: "10100",
+    Alphabet[8]: "00110", 
+    Alphabet[9]: "01011",
+    Alphabet[10]: "01111", 
+    Alphabet[11]: "10010",
+    Alphabet[12]: "11100", 
+    Alphabet[13]: "01100",
+    Alphabet[14]: "11000", 
+    Alphabet[15]: "10110",
+    Alphabet[16]: "10111", 
+    Alphabet[17]: "01010",
+    Alphabet[18]: "00101", 
+    Alphabet[19]: "10000",
+    Alphabet[20]: "00111",
+    Alphabet[21]: "11110",
+    Alphabet[22]: "10011", 
+    Alphabet[23]: "11101",
+    Alphabet[24]: "10101", 
+    Alphabet[25]: "10001"
+    }           
+
+
+
 
 st.header("Vernam cipher")
 
@@ -103,9 +132,6 @@ with tab2:
     st.write(Ciphertext_Binary)
 
 
-
-
-
     
     Ciphertext_LetterBinary = []
     for x in Ciphertext_Binary:
@@ -133,34 +159,8 @@ with tab2:
         Result = Result + 1
     Character = chr(Result)
     st.write(Character)
-
-
-# Baudot = {
-#   Alphabet[0]: "00011"}
-
-# st.write(Baudot)
-#   "B": ,
-#   "C": , 
     
-#   "D": ,
-#   "E": , 
-#   "B": ,
-#   "C": , 
-#   "B": ,
-#   "C": , 
-#   "B": ,
-#   "C": , 
-#   "B": ,
-#   "C": , 
-#   "B": ,
-#   "C": , 
-#   "B": ,
-#   "C": , 
-# }
-#  11001 01110 01001 00001 01101 11010 10100 00110 01011 01111 10010 11100 01100 11000 10110 10111 01010 00101 10000 00111 11110 10011 11101 10101 10001
-                
 
-# hashtable?
 
 with tab3:
     st.header("Decrypt a ciphertext")
