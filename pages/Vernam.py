@@ -106,25 +106,24 @@ with tab2:
         Ciphertext_LetterBinary.append(Ciphertext_Binary[0])
         Ciphertext_Binary.remove(Ciphertext_Binary[0])
         st.write(Ciphertext_LetterBinary)
-        # Result = 0
-        # for x in Ciphertext_LetterBinary:
+        Result = 0
         if Ciphertext_LetterBinary[0] == 1:
             Result = Result + 128
-        #     if Ciphertext_LetterBinary[1] == 1:
-        #         Result = Result + 64
-        #     if Ciphertext_LetterBinary[2] == 1:
-        #         Result = Result + 32   
-        #     if Ciphertext_LetterBinary[3] == 1:
-        #         Result = Result + 16
-        #     if Ciphertext_LetterBinary[4] == 1:
-        #         Result = Result + 8
-        #     if Ciphertext_LetterBinary[5] == 1:
-        #         Result = Result + 4
-        #     if Ciphertext_LetterBinary[6] == 1:
-        #         Result = Result + 2
-        #     if Ciphertext_LetterBinary[7] == 1:
-        #         Result = Result + 1
-        # st.write(Result)
+        if Ciphertext_LetterBinary[1] == 1:
+            Result = Result + 64
+        if Ciphertext_LetterBinary[2] == 1:
+            Result = Result + 32   
+        if Ciphertext_LetterBinary[3] == 1:
+            Result = Result + 16
+        if Ciphertext_LetterBinary[4] == 1:
+            Result = Result + 8
+        if Ciphertext_LetterBinary[5] == 1:
+            Result = Result + 4
+        if Ciphertext_LetterBinary[6] == 1:
+            Result = Result + 2
+        if Ciphertext_LetterBinary[7] == 1:
+            Result = Result + 1
+        st.write(Result)
                 
 
 # hashtable?
