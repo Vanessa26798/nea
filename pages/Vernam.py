@@ -106,7 +106,8 @@ with tab2:
         Ciphertext_LetterBinary.append(Ciphertext_Binary[0])
         Ciphertext_Binary.remove(Ciphertext_Binary[0])
         st.write(Ciphertext_LetterBinary)
-        Ciphertext_LetterBinary = int("".join(Ciphertext_LetterBinary))
+        Ciphertext_LetterBinary = "".join(Ciphertext_LetterBinary)
+        Ciphertext_LetterBinary = int(Ciphertext_LetterBinary)
         Result = int(Ciphertext_LetterBinary, 2)
         st.write(Result)
         # for x in Ciphertext_LetterBinary:
