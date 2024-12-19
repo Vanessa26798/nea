@@ -99,7 +99,7 @@ with tab2:
         Key_index = Key_index + 1
     st.write(Ciphertext_Binary)
 
-    for x in Ciphertext:
+    for x in Ciphertext_Binary:
         for x in range(7):
             Ciphertext_Letter = []
             Ciphertext_Letter.append(x)
