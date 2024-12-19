@@ -123,7 +123,7 @@ with tab2:
         Result = Result + 2
     if Ciphertext_LetterBinary[7] == 1:
         Result = Result + 1
-    Character = char(Result)
+    Character = chr(Result)
     st.write(Character)
                 
 
