@@ -99,10 +99,6 @@ with tab2:
         Key_index = Key_index + 1
     st.write(Ciphertext_Binary)
 
-    Index = 0
-    for x  in Ciphertext:
-        Ciphertext_Letter = []
-        Ciphertext_Letter.append(Ciphertext_Binary[])
     for x in Ciphertext:
         for x in range(7):
             Ciphertext_Letter = []
@@ -111,7 +107,8 @@ with tab2:
         st.write(Ciphertext_Letter)
 
         
-        # if Index 
+
+    # Index = 0        # if Index 
         # CiphertextIndex + 7
         # Index = Index + 8
     
