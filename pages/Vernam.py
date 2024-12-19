@@ -5,6 +5,7 @@ import random
 
 import string
 Alphabet = string.ascii_uppercase
+st.write(Alphabet)
 
 st.header("Vernam cipher")
 
@@ -99,6 +100,11 @@ with tab2:
         Key_index = Key_index + 1
     st.write(Ciphertext_Binary)
 
+
+
+
+
+    
     Ciphertext_LetterBinary = []
     for x in Ciphertext_Binary:
         if len(Ciphertext_LetterBinary) % 8 == 0:
@@ -125,6 +131,29 @@ with tab2:
         Result = Result + 1
     Character = chr(Result)
     st.write(Character)
+
+
+# Baudot = {
+#   "A": 00011,
+#   "B": ,
+#   "C": , 
+    
+#   "D": ,
+#   "E": , 
+#   "B": ,
+#   "C": , 
+#   "B": ,
+#   "C": , 
+#   "B": ,
+#   "C": , 
+#   "B": ,
+#   "C": , 
+#   "B": ,
+#   "C": , 
+#   "B": ,
+#   "C": , 
+# }
+#  11001 01110 01001 00001 01101 11010 10100 00110 01011 01111 10010 11100 01100 11000 10110 10111 01010 00101 10000 00111 11110 10011 11101 10101 10001
                 
 
 # hashtable?
