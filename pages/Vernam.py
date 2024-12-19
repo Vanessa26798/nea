@@ -115,7 +115,7 @@ with tab2:
     Ciphertext_LetterBaudot = []
     Ciphertext = []
     for x in Ciphertext_Baudot:
-        if len(Ciphertext_LetterBaudot) % 8 == 0:
+        if len(Ciphertext_LetterBaudot) % 5 == 0:
             Ciphertext_LetterBaudot = []
         Ciphertext_LetterBaudot.append(Ciphertext_Baudot[0])
         Ciphertext_Baudot.remove(Ciphertext_Baudot[0])
