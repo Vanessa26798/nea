@@ -102,6 +102,7 @@ with tab2:
     Ciphertext_Letter = []
     st.write(Ciphertext_Binary)
     for x in Ciphertext_Binary:
+        st.write(Ciphertext_Binary)
         st.write(x)
         if len(Ciphertext_Letter) % 8 == 0:
             Ciphertext_Letter = []
