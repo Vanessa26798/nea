@@ -6,6 +6,8 @@ import random
 import string
 Alphabet = string.ascii_uppercase
 st.write(Alphabet)
+Baudot = {Alphabet[0]: "00011"}
+st.write(Baudot)
 
 st.header("Vernam cipher")
 
@@ -133,10 +135,10 @@ with tab2:
     st.write(Character)
 
 
-Baudot = {
-  Alphabet[0]: "00011"}
+# Baudot = {
+#   Alphabet[0]: "00011"}
 
-st.write(Baudot)
+# st.write(Baudot)
 #   "B": ,
 #   "C": , 
     
