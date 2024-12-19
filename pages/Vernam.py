@@ -99,11 +99,13 @@ with tab2:
         Key_index = Key_index + 1
     st.write(Ciphertext_Binary)
 
+    Ciphertext_Letter = []
     for x in Ciphertext_Binary:
-        for x in range(7):
+        if len(Ciphertext_Letter) < 8:
+            Ciphertext.append(x)
+            Ciphertext.remove(x)
+        elif len(Ciphertext_Letter) == 8:
             Ciphertext_Letter = []
-            Ciphertext_Letter.append(x)
-            Ciphertext_Binary.pop(0)
         st.write(Ciphertext_Letter)
 
         
