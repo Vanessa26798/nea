@@ -116,7 +116,7 @@ with tab2:
 
     
     Ciphertext_LetterBaudot = []
-    Ciphertext_LetterBaudot.append(\\)
+    Ciphertext_LetterBaudot.append(""")
     Ciphertext = []
     for x in Ciphertext_Baudot:
             Ciphertext_LetterBaudot.append(Ciphertext_Baudot[0])
