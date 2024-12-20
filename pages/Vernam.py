@@ -120,7 +120,7 @@ with tab2:
     Ciphertext = []
     for x in Ciphertext_Baudot:
         if len(Ciphertext_LetterBaudot) % 5 == 0:
-            Ciphertext_LetterBaudot = [""]
+            Ciphertext_LetterBaudot = [" "]
         Ciphertext_LetterBaudot.insert(1, Ciphertext_Baudot[0])
         Ciphertext_Baudot.remove(Ciphertext_Baudot[0])
         Ciphertext_LetterBaudot = str(Ciphertext_LetterBaudot)
