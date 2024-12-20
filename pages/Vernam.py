@@ -107,13 +107,13 @@ with tab2:
         XOR.append(Key_Baudot[Key_index])
         st.write("xor", XOR)
         Result = int(XOR[0]) ^ int(XOR[1])
-        if Result == 1: 
-            Ciphertext_Baudot.append("1")
-        if Result == 0: 
-            Ciphertext_Baudot.append("0")
-        # Result = str(Result)
+        # if Result == 1: 
+        #     Ciphertext_Baudot.append("1")
+        # if Result == 0: 
+        #     Ciphertext_Baudot.append("0")
+        Result = str(Result)
         st.write("Result", Result)
-        # Ciphertext_Baudot.append(Result)
+        Ciphertext_Baudot.append(Result)
         Key_index = Key_index + 1
     st.write(Ciphertext_Baudot)
 
