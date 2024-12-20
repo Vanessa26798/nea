@@ -115,7 +115,6 @@ with tab2:
     st.write(Ciphertext_Baudot)
 
     
-    # Ciphertext_LetterBaudot = []
     Ciphertext = []
     Index = 0
     for x in Ciphertext_Baudot:
@@ -130,19 +129,6 @@ with tab2:
             st.write("bye", Bye)
             Ciphertext.append(Bye)
     st.write(Ciphertext)
-    #         Ciphertext_LetterBaudot = str(Ciphertext_LetterBaudot)
-    #         st.write(Ciphertext_LetterBaudot)
-    #     # else:
-    #         if len(Ciphertext_LetterBaudot) % 5 == 0:
-    #             def get_key(val):
-    #                 for key, value in Baudot.items():
-    #                     if val == value:
-    #                         return key
-    #                 return "key doesn't exist"
-    #             Bye = get_key(Ciphertext_LetterBaudot)
-    #             st.write("bye", Bye)
-    #             Ciphertext.append(Bye)
-    # st.write(Ciphertext)
             
     
 
