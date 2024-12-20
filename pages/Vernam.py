@@ -87,7 +87,7 @@ with tab2:
     Plaintext_Baudot = []
     for x in Plaintext:
         Plaintext_Baudot.append(Baudot[x])
-        st.write_stream(Plaintext_Baudot)
+        st.write(Plaintext_Baudot)
 
     Key = []
     while len(Key) < (len(Plaintext)):
