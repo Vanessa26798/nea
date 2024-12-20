@@ -96,6 +96,7 @@ with tab2:
     Key_Baudot = []
     for x in Key:
         Key_Baudot.append(Baudot[x])
+    st.write(Key_Baudot)
 
     
     Ciphertext_Baudot = []
@@ -104,7 +105,7 @@ with tab2:
         XOR = [x]
         XOR.append(Key_Baudot[Key_index])
         st.write("xor", XOR)
-        Result = int(XOR[0]) ^ int(XOR [1])
+        Result = int(XOR[0]) ^ int(XOR[1])
         Ciphertext_Baudot.append(Result)
         st.write("Result", Result)
         Key_index = Key_index + 1
