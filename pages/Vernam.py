@@ -121,6 +121,7 @@ with tab2:
     Ciphertext = []
     Index = 0
     for x in Ciphertext_Baudot:
+        while Bye == "key doesn't exist":
             def get_key(val):
                 for key, value in Baudot.items():
                     if val == value:
