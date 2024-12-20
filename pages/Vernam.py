@@ -121,6 +121,7 @@ with tab2:
             Ciphertext_LetterBaudot = []
         Ciphertext_LetterBaudot.append(Ciphertext_Baudot[0])
         Ciphertext_Baudot.remove(Ciphertext_Baudot[0])
+        Ciphertext_LetterBaudot = str(Ciphertext_LetterBaudot)
         st.write(Ciphertext_LetterBaudot)
         def get_key(val):
           
