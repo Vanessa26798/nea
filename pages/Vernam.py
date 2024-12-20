@@ -116,15 +116,13 @@ with tab2:
 
     
     Ciphertext_LetterBaudot = []
-    Ciphertext_LetterBaudot.append(""")
     Ciphertext = []
     for x in Ciphertext_Baudot:
             Ciphertext_LetterBaudot.append(Ciphertext_Baudot[0])
             Ciphertext_Baudot.remove(Ciphertext_Baudot[0])
-            Ciphertext_LetterBaudot = int(Ciphertext_LetterBaudot)
+            Ciphertext_LetterBaudot = str(Ciphertext_LetterBaudot)
             st.write(Ciphertext_LetterBaudot)
         # else:
-        #     Ciphertext_LetterBaudot.append(")
             if len(Ciphertext_LetterBaudot) % 5 == 0:
                 def get_key(val):
                     for key, value in Baudot.items():
