@@ -35,7 +35,6 @@ Baudot = {
     Alphabet[24]: "10101", 
     Alphabet[25]: "10001"
     }     
-st.write(Baudot)
 
 key_list = list(Baudot.keys())
 value_list = list(Baudot.values())
