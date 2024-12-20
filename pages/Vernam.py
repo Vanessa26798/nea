@@ -121,7 +121,7 @@ with tab2:
     for x in Ciphertext_Baudot:
             Ciphertext_LetterBaudot.append(Ciphertext_Baudot[0])
             Ciphertext_Baudot.remove(Ciphertext_Baudot[0])
-            Ciphertext_LetterBaudot = \\"".join(Ciphertext_LetterBaudot)\\
+            Ciphertext_LetterBaudot = "".join(Ciphertext_LetterBaudot)
             st.write(Ciphertext_LetterBaudot)
         # else:
         #     Ciphertext_LetterBaudot.append(")
