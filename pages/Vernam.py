@@ -7,7 +7,6 @@ import string
 Alphabet = string.ascii_uppercase
 
 Baudot = {
-
     Alphabet[0]: '00011', 
     Alphabet[1]: '11001',
     Alphabet[2]: '01110', 
