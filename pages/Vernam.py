@@ -123,17 +123,17 @@ with tab2:
             Ciphertext_Baudot.remove(Ciphertext_Baudot[0])
             Ciphertext_LetterBaudot = str(Ciphertext_LetterBaudot)
             st.write(Ciphertext_LetterBaudot)
-        # else:
-            if len(Ciphertext_LetterBaudot) % 5 == 0:
-                def get_key(val):
-                    for key, value in Baudot.items():
-                        if val == value:
-                            return key
-                    return "key doesn't exist"
-                Bye = get_key(Ciphertext_LetterBaudot)
-                st.write("bye", Bye)
-                Ciphertext.append(Bye)
-    st.write(Ciphertext)
+    #     # else:
+    #         if len(Ciphertext_LetterBaudot) % 5 == 0:
+    #             def get_key(val):
+    #                 for key, value in Baudot.items():
+    #                     if val == value:
+    #                         return key
+    #                 return "key doesn't exist"
+    #             Bye = get_key(Ciphertext_LetterBaudot)
+    #             st.write("bye", Bye)
+    #             Ciphertext.append(Bye)
+    # st.write(Ciphertext)
             
     
 
