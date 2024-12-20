@@ -103,10 +103,10 @@ with tab2:
     for x in Plaintext_Baudot:
         XOR = [x]
         XOR.append(Key_Baudot[Key_index])
-        st.write(XOR)
+        st.write("xor", XOR)
         Result = int(XOR[0]) ^ int(XOR [1])
         Ciphertext_Baudot.append(Result)
-        st.write("xor", Result)
+        st.write("Result", Result)
         Key_index = Key_index + 1
     st.write(Ciphertext_Baudot)
 
