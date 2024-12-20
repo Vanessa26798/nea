@@ -131,7 +131,7 @@ with tab2:
                     if val == value:
                         return key
                 return "key doesn't exist"
-            st.write(get_key(Ciphertext_LetterBaudot))
+            st.write("bye", get_key(Ciphertext_LetterBaudot))
             Ciphertext.append(get_key(Ciphertext_LetterBaudot))
     st.write(Ciphertext)
             
