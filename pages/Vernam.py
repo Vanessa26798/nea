@@ -120,11 +120,10 @@ with tab2:
         Ciphertext_LetterBaudot.append(Ciphertext_Baudot[0])
         Ciphertext_Baudot.remove(Ciphertext_Baudot[0])
         st.write(Ciphertext_LetterBaudot)
-        st.write(Baudot[x])
-        Ciphertext_Baudot.append(Baudot[x])
-        Position = value_list.index(x)
-        Ciphertext.append(key_list[Position])
-    st.write(Ciphertext)
+    #     Ciphertext_Baudot.append(Baudot[x])
+    #     Position = value_list.index(x)
+    #     Ciphertext.append(key_list[Position])
+    # st.write(Ciphertext)
     
 
 
