@@ -108,8 +108,6 @@ with tab2:
         st.write("xor", XOR)
         Result = int(XOR[0]) ^ int(XOR[1])
         st.write("Result", Result)
-        if Result == 0: 
-            Ciphertext_Baudot.append(0)
         Ciphertext_Baudot.append(Result)
         Key_index = Key_index + 1
     st.write(Ciphertext_Baudot)
@@ -124,7 +122,7 @@ with tab2:
         Ciphertext_LetterBaudot.append(Ciphertext_Baudot[0])
         Ciphertext_Baudot.remove(Ciphertext_Baudot[0])
         st.write(Ciphertext_LetterBaudot)
-        Ciphertext_Baudot.append(Baudot[x])
+        # Ciphertext_Baudot.append(Baudot[x])
         Position = value_list.index(x)
         Ciphertext.append(key_list[Position])
     st.write(Ciphertext)
