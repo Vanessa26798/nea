@@ -116,7 +116,8 @@ with tab2:
 
 
     
-    Ciphertext_LetterBaudot = ["]
+    Ciphertext_LetterBaudot = []
+    Ciphertext_LetterBaudot.append(")
     Ciphertext = []
     for x in Ciphertext_Baudot:
         if len(Ciphertext_LetterBaudot) % 6 != 0:
