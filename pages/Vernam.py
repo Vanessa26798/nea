@@ -7,32 +7,33 @@ import string
 Alphabet = string.ascii_uppercase
 
 Baudot = {
-    Alphabet[0]: 00011, 
-    Alphabet[1]: 11001,
-    Alphabet[2]: 01110, 
-    Alphabet[3]: 01001,
-    Alphabet[4]: 00001, 
-    Alphabet[5]: 01101,
-    Alphabet[6]: 11010, 
-    Alphabet[7]: 10100,
-    Alphabet[8]: 00110, 
-    Alphabet[9]: 01011,
-    Alphabet[10]: 01111, 
-    Alphabet[11]: 10010,
-    Alphabet[12]: 11100, 
-    Alphabet[13]: 01100,
-    Alphabet[14]: 11000, 
-    Alphabet[15]: 10110,
-    Alphabet[16]: 10111, 
-    Alphabet[17]: 01010,
-    Alphabet[18]: 00101, 
-    Alphabet[19]: 10000,
-    Alphabet[20]: 00111,
-    Alphabet[21]: 11110,
-    Alphabet[22]: 10011, 
-    Alphabet[23]: 11101,
-    Alphabet[24]: 10101, 
-    Alphabet[25]: 10001
+
+    Alphabet[0]: "00011", 
+    Alphabet[1]: "11001",
+    Alphabet[2]: "01110", 
+    Alphabet[3]: "01001",
+    Alphabet[4]: "00001", 
+    Alphabet[5]: "01101",
+    Alphabet[6]: "11010", 
+    Alphabet[7]: "10100",
+    Alphabet[8]: "00110", 
+    Alphabet[9]: "01011",
+    Alphabet[10]: "01111", 
+    Alphabet[11]: "10010",
+    Alphabet[12]: "11100", 
+    Alphabet[13]: "01100",
+    Alphabet[14]: "11000", 
+    Alphabet[15]: "10110",
+    Alphabet[16]: "10111", 
+    Alphabet[17]: "01010",
+    Alphabet[18]: "00101", 
+    Alphabet[19]: "10000",
+    Alphabet[20]: "00111",
+    Alphabet[21]: "11110",
+    Alphabet[22]: "10011", 
+    Alphabet[23]: "11101",
+    Alphabet[24]: "10101", 
+    Alphabet[25]: "10001"
     }     
 st.write(Baudot)
 
@@ -119,8 +120,8 @@ with tab2:
     Ciphertext = []
     for x in Ciphertext_Baudot:
         if len(Ciphertext_LetterBaudot) % 5 == 0:
-            Ciphertext_LetterBaudot = []
-        Ciphertext_LetterBaudot.append(Ciphertext_Baudot[0])
+            Ciphertext_LetterBaudot = [""]
+        Ciphertext_LetterBaudot.insert(1, Ciphertext_Baudot[0])
         Ciphertext_Baudot.remove(Ciphertext_Baudot[0])
         Ciphertext_LetterBaudot = str(Ciphertext_LetterBaudot)
         st.write(Ciphertext_LetterBaudot)
