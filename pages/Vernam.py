@@ -126,11 +126,11 @@ with tab2:
                         return key
                     else: 
                         return "key doesn't exist"
-            BauToText = get_key(x)
-            Ciphertext_Baudot.remove(Ciphertext_Baudot[Index])
-            Index = Index + 1
-            st.write("BauToText", BauToText)
-            Ciphertext.append(BauToText)
+                BauToText = get_key(x)
+                Ciphertext_Baudot.remove(Ciphertext_Baudot[Index])
+                Index = Index + 1
+                st.write("BauToText", BauToText)
+                Ciphertext.append(BauToText)
         st.write("The ciphertext is ", "".join(Ciphertext))              
 
 
