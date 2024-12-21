@@ -117,7 +117,7 @@ with tab2:
 
     Ciphertext = []
     for x in Ciphertext_Baudot:
-        if Ciphertext_Baudot != []:
+        if len(Ciphertext_Baudot) > 0:
             def get_key(val):
                 for key, value in Baudot.items():
                     if val == value:
