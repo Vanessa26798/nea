@@ -86,48 +86,52 @@ with tab2:
     # if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
     Plaintext_Baudot = []
     for x in Plaintext:
-            Plaintext_Baudot.append(Baudot[x])
-            st.write(Plaintext_Baudot)
-    
-    Key = []
-    while len(Key) != (len(Plaintext)):
-            Key.append(random.choice(Alphabet))
-    st.write("The key is ", "".join(Key))
+        Plaintext_Baudot.append(Baudot[x])
+        st.write(Plaintext_Baudot)
 
-    Key_Baudot = []
-    for x in Key:
-        Key_Baudot.append(Baudot[x])
-    st.write(Key_Baudot)
+    BauToText = "key doesn't exist"
+    while BauToText == "key doesn't exist": 
+        Key = []
+        while len(Key) < (len(Plaintext)):
+            Key.append(random.choice(Alphabet))
+        st.write("The key is ", "".join(Key))
     
-    Ciphertext_Baudot = []
-    Key_index = 0
-    for x in Plaintext_Baudot:
-        XOR = [x]
-        XOR.append(Key_Baudot[Key_index])
-        st.write("xor", XOR)
-        Result = int(XOR[0], 2) ^ int(XOR[1], 2)
-        Result = bin(Result)[2:].zfill(len(XOR[0]))
-        Result = str(Result)
-        st.write("Result", Result)
-        Ciphertext_Baudot.append(Result)
-        Key_index = Key_index + 1
-    st.write(Ciphertext_Baudot)
+        Key_Baudot = []
+        for x in Key:
+            Key_Baudot.append(Baudot[x])
+        st.write(Key_Baudot)
     
-    Ciphertext = []
-    Index = 0
-    for x in Ciphertext_Baudot:
-        def get_key(val):
-            for key, value in Baudot.items():
-                if val == value:
-                    return key
-                else: 
-                    return "key doesn't exist"
-        BauToText = get_key(x)
-        Ciphertext_Baudot.remove(Ciphertext_Baudot[Index])
-        Index = Index + 1
-        st.write("BauToText", BauToText)
-        Ciphertext.append(BauToText)
-    st.write("The ciphertext is ", "".join(Ciphertext))             
+        
+        Ciphertext_Baudot = []
+        Key_index = 0
+        for x in Plaintext_Baudot:
+            XOR = [x]
+            XOR.append(Key_Baudot[Key_index])
+            st.write("xor", XOR)
+            Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+            Result = bin(Result)[2:].zfill(len(XOR[0]))
+            Result = str(Result)
+            st.write("Result", Result)
+            Ciphertext_Baudot.append(Result)
+            Key_index = Key_index + 1
+        st.write(Ciphertext_Baudot)
+    
+    
+        Ciphertext = []
+        Index = 0
+        for x in Ciphertext_Baudot:
+            def get_key(val):
+                for key, value in Baudot.items():
+                    if val == value:
+                        return key
+                    else: 
+                        return "key doesn't exist"
+            BauToText = get_key(x)
+            Ciphertext_Baudot.remove(Ciphertext_Baudot[Index])
+            Index = Index + 1
+            st.write("BauToText", BauToText)
+            Ciphertext.append(BauToText)
+        st.write("The ciphertext is ", "".join(Ciphertext))              
 
 
 
