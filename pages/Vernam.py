@@ -122,7 +122,6 @@ with tab2:
                     return key
                 else: 
                     return "key doesn't exist"
-                    Key.remove(x)
         BauToText = get_key(x)
         Ciphertext_Baudot.remove(Ciphertext_Baudot[Index])
         Index = Index + 1
