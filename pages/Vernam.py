@@ -124,7 +124,8 @@ with tab2:
                         return key
                 return "key doesn't exist"
             Bye = get_key(x)
-            Ciphertext_Baudot.remove(Ciphertext_Baudot[0])
+            Ciphertext_Baudot.pop(0)
+            st.write(Ciphertext_Baudot)
             st.write("bye", Bye)
             Ciphertext.append(Bye)
     st.write(Ciphertext)          
