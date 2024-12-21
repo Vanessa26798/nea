@@ -126,7 +126,7 @@ with tab2:
             st.write("bye", Bye)
             Ciphertext.append(Bye)
             st.write(Ciphertext_Baudot)
-    st.write(Ciphertext)          
+    st.write("The key is ", "".join(Ciphertext))          
 
 
 
