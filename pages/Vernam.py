@@ -84,23 +84,20 @@ with tab2:
             Correct_Plaintext_Length = True
 
     # if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
-    Plaintext_Baudot = []
-    for x in Plaintext:
+for x in Plaintext:
         Plaintext_Baudot.append(Baudot[x])
         st.write(Plaintext_Baudot)
 
-    BauToText = "key doesn't exist"
-    while BauToText == "key doesn't exist": 
-        Key = []
-        while len(Key) < (len(Plaintext)):
-            Key.append(random.choice(Alphabet))
+Key = []
+while len(Key) != (len(Plaintext)):
+        Key.append(random.choice(Alphabet))
+else:
         st.write("The key is ", "".join(Key))
-    
+
         Key_Baudot = []
         for x in Key:
             Key_Baudot.append(Baudot[x])
         st.write(Key_Baudot)
-    
         
         Ciphertext_Baudot = []
         Key_index = 0
@@ -115,8 +112,7 @@ with tab2:
             Ciphertext_Baudot.append(Result)
             Key_index = Key_index + 1
         st.write(Ciphertext_Baudot)
-    
-    
+        
         Ciphertext = []
         Index = 0
         for x in Ciphertext_Baudot:
@@ -126,12 +122,13 @@ with tab2:
                         return key
                     else: 
                         return "key doesn't exist"
+                        Key.remove(x)
             BauToText = get_key(x)
             Ciphertext_Baudot.remove(Ciphertext_Baudot[Index])
             Index = Index + 1
             st.write("BauToText", BauToText)
             Ciphertext.append(BauToText)
-        st.write("The ciphertext is ", "".join(Ciphertext))            
+        st.write("The ciphertext is ", "".join(Ciphertext))             
 
 
 
