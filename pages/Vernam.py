@@ -115,7 +115,11 @@ with tab2:
     st.write(Ciphertext_Baudot)
 
 
-    Ciphertext = []
+    Ciphertext = ["The ciphertext is "]
+       for x in Plaintext:
+         if x == " ":
+             Ciphertext.append(x)
+         else:
     for x in Ciphertext_Baudot:
             def get_key(val):
                 for key, value in Baudot.items():
