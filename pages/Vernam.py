@@ -130,8 +130,8 @@ with tab2:
                 Index = Index + 1
                 st.write("bye", Bye)
                 Ciphertext.append(Bye)
-     st.write("The ciphertext is ", "".join(Ciphertext))            
-    
+    st.write("The ciphertext is ", "".join(Ciphertext))            
+
 
 
 with tab3:
