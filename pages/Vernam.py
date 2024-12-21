@@ -108,14 +108,6 @@ with tab2:
         st.write("xor", XOR)
         Result = int(XOR[0], 2) ^ int(XOR[1], 2)
         Result = bin(Result)[2:].zfill(len(XOR[0]))
-#         a = "11011111101100110110011001011101000"
-# b = "11001011101100111000011100001100001"
-# y = int(a, 2)^int(b,2)
-# print bin(y)[2:].zfill(len(a))
-        # if Result == 1: 
-        #     Ciphertext_Baudot.append("1")
-        # if Result == 0: 
-        #     Ciphertext_Baudot.append("0")
         Result = str(Result)
         st.write("Result", Result)
         Ciphertext_Baudot.append(Result)
@@ -136,8 +128,7 @@ with tab2:
             Index = Index + 1
             st.write("bye", Bye)
             Ciphertext.append(Bye)
-    st.write(Ciphertext)
-            
+    st.write("The ciphertext is ", "".join(Ciphertext))            
     
 
 
