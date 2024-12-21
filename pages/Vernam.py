@@ -116,10 +116,6 @@ with tab2:
 
 
     Ciphertext = ["The ciphertext is "]
-       for x in Plaintext:
-         if x == " ":
-             Ciphertext.append(x)
-         else:
     for x in Ciphertext_Baudot:
             def get_key(val):
                 for key, value in Baudot.items():
@@ -128,9 +124,12 @@ with tab2:
                 return "key doesn't exist"
             Bye = get_key(x)
             st.write("bye", Bye)
-            Ciphertext.append(Bye)
-            st.write(Ciphertext_Baudot)
-    st.write("The key is ", "".join(Ciphertext))          
+            if Plaintext.index(x) == " ":
+                 Ciphertext.append(x)
+            else: 
+                Ciphertext.append(Bye)
+                st.write(Ciphertext_Baudot)
+    st.write("".join(Ciphertext))          
 
 
 
