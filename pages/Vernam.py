@@ -89,8 +89,8 @@ with tab2:
         Plaintext_Baudot.append(Baudot[x])
         st.write(Plaintext_Baudot)
 
-    Bye = "key doesn't exist"
-    while Bye == "key doesn't exist":
+    Ciphertext = ["key doesn't exist"]
+    while "key doesn't exist" in Ciphertext:
         Key = []
         while len(Key) < (len(Plaintext)):
             Key.append(random.choice(Alphabet))
