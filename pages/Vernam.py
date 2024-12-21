@@ -118,18 +118,17 @@ with tab2:
     Ciphertext = []
     Index = 0
     for x in Ciphertext_Baudot:
-        def get_key(val):
-            for key, value in Baudot.items():
-                if val == value:
-                    return key
-                else: 
-                    return "key doesn't exist"
-                BauToText = get_key(x)
-                Ciphertext_Baudot.remove(Ciphertext_Baudot[Index])
-                Index = Index + 1
-                st.write("BauToText", BauToText)
-                Ciphertext.append(BauToText)
-    st.write("The ciphertext is ", "".join(Ciphertext))              
+            def get_key(val):
+                for key, value in Baudot.items():
+                    if val == value:
+                        return key
+                return "key doesn't exist"
+            Bye = get_key(x)
+            Ciphertext_Baudot.remove(Ciphertext_Baudot[Index])
+            Index = Index + 1
+            st.write("bye", Bye)
+            Ciphertext.append(Bye)
+    st.write(Ciphertext)          
 
 
 
