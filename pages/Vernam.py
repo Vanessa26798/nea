@@ -106,7 +106,11 @@ with tab2:
         XOR = [x]
         XOR.append(Key_Baudot[Key_index])
         st.write("xor", XOR)
-        Result = int(XOR[0]) ^ int(XOR[1])
+        Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+#         a = "11011111101100110110011001011101000"
+# b = "11001011101100111000011100001100001"
+# y = int(a, 2)^int(b,2)
+# print bin(y)[2:].zfill(len(a))
         # if Result == 1: 
         #     Ciphertext_Baudot.append("1")
         # if Result == 0: 
