@@ -130,7 +130,7 @@ with tab2:
             # st.write("bye", Bye)
             # Ciphertext.append(Bye)
             # st.write(Ciphertext_Baudot)
-            # Ciphertext_Index = Ciphertext_Index + 1        
+            Ciphertext_Index = Ciphertext_Index + 1        
 
     st.write("The key is ", "".join(Key))
     st.write(Key_Baudot)
