@@ -95,7 +95,12 @@ with tab2:
 
     Key = []
     while len(Key) < Plaintext_Length:
-        Key.append(random.choice(Alphabet))
+        for x in Plaintext:
+            if x != " ":
+                Plaintext_Baudot.append(Baudot[x])
+            elif x == " ": 
+                Plaintext_Length = Plaintext_Length - 1
+            Key.append(random.choice(Alphabet))
     st.write("The key is ", "".join(Key))
 
     Key_Baudot = []
