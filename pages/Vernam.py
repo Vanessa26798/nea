@@ -106,6 +106,7 @@ with tab2:
             Key_Baudot.append(" ") 
             Key_index = Key_index + 1
             Ciphertext.append(" ")
+            Ciphertext_Baudot.append(" ")
             Ciphertext_Index = Ciphertext_Index + 1  
         else:
             Key_Letter = random.choice(Alphabet)
