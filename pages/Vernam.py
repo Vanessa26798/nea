@@ -86,8 +86,9 @@ with tab2:
     # if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
     Plaintext_Baudot = []
     for x in Plaintext:
-        Plaintext_Baudot.append(Baudot[x])
-        st.write(Plaintext_Baudot)
+        if x != " ":
+            Plaintext_Baudot.append(Baudot[x])
+    st.write(Plaintext_Baudot)
 
     Key = []
     while len(Key) < (len(Plaintext)):
