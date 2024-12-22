@@ -125,6 +125,7 @@ with tab2:
                     if val == value:
                         return key
                 return "key doesn't exist"
+            st.write(Ciphertext_Index)
             Bye = get_key(Ciphertext_Baudot[Ciphertext_Index])
             st.write("bye", Bye)
             Ciphertext.append(Bye)
