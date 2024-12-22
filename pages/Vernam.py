@@ -111,7 +111,7 @@ with tab2:
             Key_Letter = random.choice(Alphabet)
             Key.append(Key_Letter)
             Key_Baudot.append(Baudot[Key_Letter])
-            XOR = [Key_Letter]
+            XOR = [x]
             XOR.append(Key_Baudot[Key_index])
             st.write("xor", XOR)
             Result = int(XOR[0], 2) ^ int(XOR[1], 2)
