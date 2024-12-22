@@ -85,16 +85,16 @@ with tab2:
 
     # if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
     Plaintext_Baudot = []
-    Length = len(Plaintext)
+    Plaintext_Length = len(Plaintext)
     for x in Plaintext:
         if x != " ":
             Plaintext_Baudot.append(Baudot[x])
         elif x == " ": 
-            Length = Length - 1
+            Plaintext_Length = Plaintext_Length - 1
     st.write(Plaintext_Baudot)
 
     Key = []
-    while len(Key) < (len(Plaintext)):
+    while len(Key) < Plaintext_Length:
         Key.append(random.choice(Alphabet))
     st.write("The key is ", "".join(Key))
 
