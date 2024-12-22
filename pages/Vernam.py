@@ -109,6 +109,7 @@ with tab2:
             Ciphertext_Index = Ciphertext_Index + 1  
         else:
             Key_Letter = Key.append(random.choice(Alphabet))
+            st.write(Key_Letter)
             Key_Baudot.append(Baudot[Key_Letter])
             XOR = [x]
             XOR.append(Key_Baudot[Key_index])
