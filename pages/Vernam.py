@@ -90,7 +90,7 @@ with tab2:
         if x != " ":
             Plaintext_Baudot.append(Baudot[x])
         elif x == " ": 
-            Length = len(Plaintext) - 1
+            Length = Length - 1
     st.write(Plaintext_Baudot)
 
     Key = []
