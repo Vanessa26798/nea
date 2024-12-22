@@ -110,9 +110,8 @@ with tab2:
         else:
             Key_Letter = random.choice(Alphabet)
             Key.append(Key_Letter)
-            st.write(Key_Letter)
             Key_Baudot.append(Baudot[Key_Letter])
-            XOR = [x]
+            XOR = [Key_Letter]
             XOR.append(Key_Baudot[Key_index])
             st.write("xor", XOR)
             Result = int(XOR[0], 2) ^ int(XOR[1], 2)
@@ -126,7 +125,7 @@ with tab2:
                     if val == value:
                         return key
                 return "key doesn't exist"
-            Bye = get_key(x)
+            Bye = get_key(Ciphertext_Baudot[Ciphertext_Index])
             st.write("bye", Bye)
             Ciphertext.append(Bye)
             st.write(Ciphertext_Baudot)
