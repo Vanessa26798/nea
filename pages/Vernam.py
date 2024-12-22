@@ -83,6 +83,7 @@ with tab2:
         elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
             Correct_Plaintext_Length = True
 
+
     # if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
     Plaintext_Baudot = []
     Plaintext_Length = len(Plaintext)
@@ -134,6 +135,7 @@ with tab2:
     st.write(Key_Baudot)
     st.write(Ciphertext_Baudot)
     st.write("".join(Ciphertext))          
+    
 
 
 
