@@ -121,16 +121,16 @@ with tab2:
             st.write("Result", Result)
             Ciphertext_Baudot.append(Result)
             Key_index = Key_index + 1
-            # def get_key(val):
-            #     for key, value in Baudot.items():
-            #         if val == value:
-            #             return key
-            #     return "key doesn't exist"
-            # st.write(Ciphertext_Index)
-            # Bye = get_key(Ciphertext_Baudot[Ciphertext_Index])
-            # st.write("bye", Bye)
-            # Ciphertext.append(Bye)
-            # st.write(Ciphertext_Baudot)
+            def get_key(val):
+                for key, value in Baudot.items():
+                    if val == value:
+                        return key
+                return "key doesn't exist"
+            st.write(Ciphertext_Index)
+            Bye = get_key(Ciphertext_Baudot[Ciphertext_Index])
+            st.write("bye", Bye)
+            Ciphertext.append(Bye)
+            st.write(Ciphertext_Baudot)
             Ciphertext_Index = Ciphertext_Index + 1        
 
     st.write("The key is ", "".join(Key))
