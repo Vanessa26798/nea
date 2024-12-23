@@ -122,7 +122,7 @@ with tab2:
             Key_Baudot.append(Baudot[Key_Letter])
             XOR = [x]
             st.write("2", Key_Index)
-            XOR.append(Key_Baudot[Key_Index + 1])
+            XOR.append(Key_Baudot[Key_Index])
             st.write("xor", XOR)
             Result = int(XOR[0], 2) ^ int(XOR[1], 2)
             Result = bin(Result)[2:].zfill(len(XOR[0]))
@@ -144,7 +144,10 @@ with tab2:
                 Result = str(Result)
                 st.write("Result", Result)
                 Ciphertext_Letter = get_key(Result)
-                if Ciphertext != "key doesn't exist" and " ": 
+                if Ciphertext != "key doesn't exist" and " ":
+                    Ciphertext.append(Ciphertext_Letter)
+                    Key_Index = Key_Index + 1
+                    st.write("4", Key_Index)
                     break
             else:
                 Ciphertext.append(Ciphertext_Letter)
