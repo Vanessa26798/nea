@@ -113,16 +113,16 @@ with tab2:
             Key.append(" ") 
             Key_Baudot.append(" ") 
             Key_Index = Key_Index + 1
-            st.write("1", Key_Index)
             Ciphertext.append(" ")
             Ciphertext_Baudot.append(" ")
             Ciphertext_Index = Ciphertext_Index + 1  
+            st.write("1", Key_Index, Ciphertext_Index)       
         elif x != " ":
             Key_Letter = random.choice(Alphabet)
             Key.append(Key_Letter)
             Key_Baudot.append(Baudot[Key_Letter])
             XOR = [x]
-            st.write("2", Key_Index)
+            st.write("2", Key_Index, Ciphertext_Index)
             XOR.append(Key_Baudot[Key_Index])
             st.write("xor", XOR)
             Result = int(XOR[0], 2) ^ int(XOR[1], 2)
@@ -132,7 +132,7 @@ with tab2:
             Ciphertext_Letter = get_key(Result) 
             while Ciphertext_Letter == "key doesn't exist":
                 Key_Letter = random.choice(Alphabet)
-                st.write("3", Key_Index)
+                st.write("3", Key_Index, Ciphertext_Index)
                 Key[Key_Index] = Key_Letter
                 Key_Baudot[Key_Index] = Baudot[Key_Letter]
                 XOR = [x]
@@ -148,8 +148,8 @@ with tab2:
             else:
                 Ciphertext.append(Ciphertext_Letter)
                 Key_Index = Key_Index + 1
-                st.write("4", Key_Index)
                 Ciphertext_Index = Ciphertext_Index + 1 
+                st.write("4", Key_Index, Ciphertext_Index)
                 
     st.write("The key is ", "".join(Key))
     st.write(Key_Baudot)
