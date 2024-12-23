@@ -144,7 +144,7 @@ with tab2:
                 Ciphertext_Letter = get_key(Ciphertext_Baudot[Ciphertext_Index]) 
             else:
                 Ciphertext.append(Ciphertext_Letter)
-                Key_index = Key_index + 1
+                Key_Index = Key_Index + 1
                 Ciphertext_Index = Ciphertext_Index + 1   
                 
     st.write("The key is ", "".join(Key))
