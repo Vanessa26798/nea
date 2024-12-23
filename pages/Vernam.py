@@ -117,7 +117,7 @@ with tab2:
             Ciphertext_Baudot.append(" ")
             Ciphertext_Index = Ciphertext_Index + 1  
         else:
-            Ciphertext_Letter = "key doesn't exist"
+            # Ciphertext_Letter = "key doesn't exist"
             while Ciphertext_Letter == "key doesn't exist":
                 Key_Letter = random.choice(Alphabet)
                 Key.append(Key_Letter)
