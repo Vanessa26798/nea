@@ -146,7 +146,6 @@ with tab2:
                 if Ciphertext != "key doesn't exist":  
                     break 
             else:
-                Ciphertext_Baudot.append(Result)
                 Ciphertext.append(Ciphertext_Letter)
                 Key_Index = Key_Index + 1
                 st.write("4", Key_Index)
