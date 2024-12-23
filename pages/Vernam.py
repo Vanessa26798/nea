@@ -112,10 +112,10 @@ with tab2:
         if x == " ": 
             Key.append(" ") 
             Key_Baudot.append(" ") 
-            Key_Index = Key_Index + 2
+            Key_Index = Key_Index + 1
             Ciphertext.append(" ")
             Ciphertext_Baudot.append(" ")
-            Ciphertext_Index = Ciphertext_Index + 2  
+            Ciphertext_Index = Ciphertext_Index + 1 
             st.write("1", Key_Index, Ciphertext_Index)       
         elif x != " ":
             Key_Letter = random.choice(Alphabet)
