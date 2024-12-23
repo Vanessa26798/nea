@@ -144,12 +144,13 @@ with tab2:
                 st.write("Result", Result)
                 Ciphertext_Baudot.append(Result)
                 Ciphertext_Letter = get_key(Ciphertext_Baudot[Ciphertext_Index]) 
-                if Ciphertext != "key doesn't exist": 
-                    Ciphertext.append(Ciphertext_Letter)
-                    st.write(Key_Index)
-                    Key_Index = Key_Index + 1
-                    Ciphertext_Index = Ciphertext_Index + 1  
+                if Ciphertext != "key doesn't exist":  
                     break 
+            else:
+                Ciphertext.append(Ciphertext_Letter)
+                st.write(Key_Index)
+                Key_Index = Key_Index + 1
+                Ciphertext_Index = Ciphertext_Index + 1 
                 
     st.write("The key is ", "".join(Key))
     st.write(Key_Baudot)
