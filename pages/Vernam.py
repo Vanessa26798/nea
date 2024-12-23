@@ -107,15 +107,12 @@ with tab2:
     Key_Index = 0
     Ciphertext = []
     for x in Plaintext_Baudot:
-        st.write(x)
         if x == " ": 
             Key.append(" ") 
             Key_Baudot.append(" ") 
-            st.write("0", Key_Index) 
             Key_Index = Key_Index + 1
             Ciphertext_Baudot.append(" ")
-            Ciphertext.append(" ")
-            st.write("1", Key_Index)      
+            Ciphertext.append(" ")    
         elif x != " ":
             Key_Letter = random.choice(Alphabet)
             Key.append(Key_Letter)
@@ -123,40 +120,30 @@ with tab2:
             XOR = [x]
             st.write("2", Key_Index)
             XOR.append(Key_Baudot[Key_Index])
-            st.write("xor", XOR)
-            Result = int(XOR[0], 2) ^ int(XOR[1], 2)
-            Result = bin(Result)[2:].zfill(len(XOR[0]))
-            Result = str(Result)
-            st.write("Result", Result)
-            Ciphertext_Letter = get_key(Result) 
+            XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+            XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
+            XOR_Result = str(XOR_Result)
+            Ciphertext_Letter = get_key(XOR_Result) 
             while Ciphertext_Letter == "key doesn't exist":
-                st.write(x)
                 Key_Letter = random.choice(Alphabet)
-                st.write("3", Key_Index)
                 Key[Key_Index] = Key_Letter
                 Key_Baudot[Key_Index] = Baudot[Key_Letter]
                 Key_LetterBaudot = Key_Baudot[Key_Index]
                 XOR = [x]
                 XOR.append(Key_LetterBaudot)
-                st.write("xor", XOR)
-                Result = int(XOR[0], 2) ^ int(XOR[1], 2)
-                Result = bin(Result)[2:].zfill(len(XOR[0]))
-                Result = str(Result)
-                st.write("Result", Result)
-                Ciphertext_Letter = get_key(Result)
+                XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+                XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
+                XOR_Result = str(XOR_Result)
+                Ciphertext_Letter = get_key(XOR_Result)
                 if Ciphertext_Letter != "key doesn't exist" and " ":
                     Ciphertext.append(Ciphertext_Letter)
-                    Key_Index = Key_Index + 1
-                    st.write("4", Key_Index)    
+                    Key_Index = Key_Index + 1   
                     break
             else:
                 Ciphertext.append(Ciphertext_Letter)
-                Key_Index = Key_Index + 1
-                st.write("4", Key_Index)    
-        st.write(Ciphertext) 
+                Key_Index = Key_Index + 1  
                 
     st.write("The key is ", "".join(Key))
-    st.write(Key_Baudot)
     st.write( "The ciphertext is ", "".join(Ciphertext))          
     
 
