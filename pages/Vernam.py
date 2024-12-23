@@ -96,10 +96,10 @@ with tab2:
 
 
     def get_key(val):
-    for key, value in Baudot.items():
-        if val == value:
-            return key
-    return "key doesn't exist"
+        for key, value in Baudot.items():
+            if val == value:
+                return key
+        return "key doesn't exist"
 
     
     Key = []
