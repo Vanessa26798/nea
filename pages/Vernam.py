@@ -135,8 +135,8 @@ with tab2:
                 Key[Key_Index] = Key_Letter
                 Key_Baudot[Key_Index] = Baudot[Key_Letter]
                 Key_LetterBaudot = Key_Baudot[Key_Index]
-                XOR = [Key_LetterBaudot]
-                XOR.append(Key_Baudot[Key_Index])
+                XOR = [x]
+                XOR.append(Key_LetterBaudot)
                 st.write("xor", XOR)
                 Result = int(XOR[0], 2) ^ int(XOR[1], 2)
                 Result = bin(Result)[2:].zfill(len(XOR[0]))
