@@ -107,6 +107,7 @@ with tab2:
     Key_Index = 0
     Ciphertext = ["The ciphertext is "]
     for x in Plaintext_Baudot:
+        st.write(x)
         if x == " ": 
             Key.append(" ") 
             Key_Baudot.append(" ") 
