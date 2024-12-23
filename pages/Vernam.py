@@ -84,67 +84,64 @@ with tab2:
             Correct_Plaintext_Length = True
 
 
-    # if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
-    Plaintext_Baudot = []
-    for x in Plaintext:
-        if x != " ":
-            Plaintext_Baudot.append(Baudot[x])
-        elif x == " ": 
-            Plaintext_Baudot.append(" ")
-    st.write(Plaintext_Baudot)
-
-
-    def get_key(val):
-        for key, value in Baudot.items():
-            if val == value:
-                return key
-        return "key doesn't exist"
-
+    if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
+        Plaintext_Baudot = []
+        for x in Plaintext:
+            if x != " ":
+                Plaintext_Baudot.append(Baudot[x])
+            elif x == " ": 
+                Plaintext_Baudot.append(" ")
     
-    Key = []
-    Key_Baudot = []
-    Ciphertext_Baudot = []
-    Key_Index = 0
-    Ciphertext = []
-    for x in Plaintext_Baudot:
-        if x == " ": 
-            Key.append(" ") 
-            Key_Baudot.append(" ") 
-            Key_Index = Key_Index + 1
-            Ciphertext_Baudot.append(" ")
-            Ciphertext.append(" ")    
-        elif x != " ":
-            Key_Letter = random.choice(Alphabet)
-            Key.append(Key_Letter)
-            Key_Baudot.append(Baudot[Key_Letter])
-            XOR = [x]
-            st.write("2", Key_Index)
-            XOR.append(Key_Baudot[Key_Index])
-            XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
-            XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
-            XOR_Result = str(XOR_Result)
-            Ciphertext_Letter = get_key(XOR_Result) 
-            while Ciphertext_Letter == "key doesn't exist":
+        def get_key(val):
+            for key, value in Baudot.items():
+                if val == value:
+                    return key
+            return "key doesn't exist"
+    
+        
+        Key = []
+        Key_Baudot = []
+        Ciphertext_Baudot = []
+        Key_Index = 0
+        Ciphertext = []
+        for x in Plaintext_Baudot:
+            if x == " ": 
+                Key.append(" ") 
+                Key_Baudot.append(" ") 
+                Key_Index = Key_Index + 1
+                Ciphertext_Baudot.append(" ")
+                Ciphertext.append(" ")    
+            elif x != " ":
                 Key_Letter = random.choice(Alphabet)
-                Key[Key_Index] = Key_Letter
-                Key_Baudot[Key_Index] = Baudot[Key_Letter]
-                Key_LetterBaudot = Key_Baudot[Key_Index]
+                Key.append(Key_Letter)
+                Key_Baudot.append(Baudot[Key_Letter])
                 XOR = [x]
-                XOR.append(Key_LetterBaudot)
+                XOR.append(Key_Baudot[Key_Index])
                 XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
                 XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
                 XOR_Result = str(XOR_Result)
-                Ciphertext_Letter = get_key(XOR_Result)
-                if Ciphertext_Letter != "key doesn't exist" and " ":
+                Ciphertext_Letter = get_key(XOR_Result) 
+                while Ciphertext_Letter == "key doesn't exist":
+                    Key_Letter = random.choice(Alphabet)
+                    Key[Key_Index] = Key_Letter
+                    Key_Baudot[Key_Index] = Baudot[Key_Letter]
+                    Key_LetterBaudot = Key_Baudot[Key_Index]
+                    XOR = [x]
+                    XOR.append(Key_LetterBaudot)
+                    XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+                    XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
+                    XOR_Result = str(XOR_Result)
+                    Ciphertext_Letter = get_key(XOR_Result)
+                    if Ciphertext_Letter != "key doesn't exist" and " ":
+                        Ciphertext.append(Ciphertext_Letter)
+                        Key_Index = Key_Index + 1   
+                        break
+                else:
                     Ciphertext.append(Ciphertext_Letter)
-                    Key_Index = Key_Index + 1   
-                    break
-            else:
-                Ciphertext.append(Ciphertext_Letter)
-                Key_Index = Key_Index + 1  
-                
-    st.write("The key is ", "".join(Key))
-    st.write( "The ciphertext is ", "".join(Ciphertext))          
+                    Key_Index = Key_Index + 1  
+                    
+        st.write("The key is ", "".join(Key))
+        st.write( "The ciphertext is ", "".join(Ciphertext))          
     
 
 
