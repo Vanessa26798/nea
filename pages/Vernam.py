@@ -105,7 +105,7 @@ with tab2:
     Key_Baudot = []
     Ciphertext_Baudot = []
     Key_Index = 0
-    Ciphertext = ["The ciphertext is "]
+    Ciphertext = []
     for x in Plaintext_Baudot:
         st.write(x)
         if x == " ": 
@@ -154,7 +154,7 @@ with tab2:
                 
     st.write("The key is ", "".join(Key))
     st.write(Key_Baudot)
-    st.write("".join(Ciphertext))          
+    st.write( "The ciphertext is ", "".join(Ciphertext))          
     
 
 
