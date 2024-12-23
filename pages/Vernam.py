@@ -117,7 +117,7 @@ with tab2:
             Ciphertext.append(" ")
             Ciphertext_Baudot.append(" ")
             Ciphertext_Index = Ciphertext_Index + 1  
-        else:
+        elif x != " ": :
             Key_Letter = random.choice(Alphabet)
             Key.append(Key_Letter)
             Key_Baudot.append(Baudot[Key_Letter])
