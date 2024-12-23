@@ -117,11 +117,22 @@ with tab2:
             Ciphertext_Baudot.append(" ")
             Ciphertext_Index = Ciphertext_Index + 1  
         else:
-            # Ciphertext_Letter = "key doesn't exist"
+            Key_Letter = random.choice(Alphabet)
+            Key.append(Key_Letter)
+            Key_Baudot.append(Baudot[Key_Letter])
+            XOR = [x]
+            XOR.append(Key_Baudot[Key_index])
+            st.write("xor", XOR)
+            Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+            Result = bin(Result)[2:].zfill(len(XOR[0]))
+            Result = str(Result)
+            st.write("Result", Result)
+            Ciphertext_Baudot.append(Result)
+            Ciphertext_Letter = get_key(Ciphertext_Baudot[Ciphertext_Index]) 
             while Ciphertext_Letter == "key doesn't exist":
                 Key_Letter = random.choice(Alphabet)
-                Key.append(Key_Letter)
-                Key_Baudot.append(Baudot[Key_Letter])
+                Key[Key_Index] = Key_Letter
+                Key_Baudot[Key_Index] = Baudot[Key_Letter]
                 XOR = [x]
                 XOR.append(Key_Baudot[Key_index])
                 st.write("xor", XOR)
@@ -130,10 +141,10 @@ with tab2:
                 Result = str(Result)
                 st.write("Result", Result)
                 Ciphertext_Baudot.append(Result)
-                Key_index = Key_index + 1
                 Ciphertext_Letter = get_key(Ciphertext_Baudot[Ciphertext_Index]) 
-            else: 
+            else:
                 Ciphertext.append(Ciphertext_Letter)
+                Key_index = Key_index + 1
                 Ciphertext_Index = Ciphertext_Index + 1   
                 
     st.write("The key is ", "".join(Key))
