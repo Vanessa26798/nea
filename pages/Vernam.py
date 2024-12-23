@@ -96,12 +96,11 @@ with tab2:
             for key, value in Baudot.items():
                 if val == value:
                     return key
-            return "key doesn't exist"
+            return "Key doesn't exist"
     
         
         Key = []
         Key_Baudot = []
-        Ciphertext_Baudot = []
         Key_Index = 0
         Ciphertext = []
         for x in Plaintext_Baudot:
@@ -109,7 +108,6 @@ with tab2:
                 Key.append(" ") 
                 Key_Baudot.append(" ") 
                 Key_Index = Key_Index + 1
-                Ciphertext_Baudot.append(" ")
                 Ciphertext.append(" ")    
             elif x != " ":
                 Key_Letter = random.choice(Alphabet)
@@ -132,7 +130,7 @@ with tab2:
                     XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
                     XOR_Result = str(XOR_Result)
                     Ciphertext_Letter = get_key(XOR_Result)
-                    if Ciphertext_Letter != "key doesn't exist" and " ":
+                    if Ciphertext_Letter != "Key doesn't exist" and " ":
                         Ciphertext.append(Ciphertext_Letter)
                         Key_Index = Key_Index + 1   
                         break
@@ -174,7 +172,62 @@ with tab3:
             Correct_Ciphertext_Length = True
 
 
-
+    if Correct_Ciphertext_Range == True and Correct_Ciphertext_Length == True:
+        Ciphertext_Baudot = []
+        for x in Ciphertext:
+            if x != " ":
+                Ciphertext_Baudot.append(Baudot[x])
+            elif x == " ": 
+                Ciphertext_Baudot.append(" ")
+    
+        def get_key(val):
+            for key, value in Baudot.items():
+                if val == value:
+                    return key
+            return "Key doesn't exist"
+    
+        
+        Key = []
+        Key_Baudot = []
+        Key_Index = 0
+        Plaintext = []
+        for x in Ciphertext_Baudot:
+            if x == " ": 
+                Key.append(" ") 
+                Key_Baudot.append(" ") 
+                Key_Index = Key_Index + 1
+                Plaintext.append(" ")    
+            elif x != " ":
+                Key_Letter = random.choice(Alphabet)
+                Key.append(Key_Letter)
+                Key_Baudot.append(Baudot[Key_Letter])
+                XOR = [x]
+                XOR.append(Key_Baudot[Key_Index])
+                XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+                XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
+                XOR_Result = str(XOR_Result)
+                Plaintext_Letter = get_key(XOR_Result) 
+                while Plaintext_Letter == "Key doesn't exist":
+                    Key_Letter = random.choice(Alphabet)
+                    Key[Key_Index] = Key_Letter
+                    Key_Baudot[Key_Index] = Baudot[Key_Letter]
+                    Key_LetterBaudot = Key_Baudot[Key_Index]
+                    XOR = [x]
+                    XOR.append(Key_LetterBaudot)
+                    XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+                    XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
+                    XOR_Result = str(XOR_Result)
+                    Plaintext_Letter = get_key(XOR_Result)
+                    if Plaintext_Letter != "Key doesn't exist" and " ":
+                        Plaintext.append(Plaintext_Letter)
+                        Key_Index = Key_Index + 1   
+                        break
+                else:
+                    Plaintext.append(Plaintext_Letter)
+                    Key_Index = Key_Index + 1  
+                    
+        st.write("The key is ", "".join(Key))
+        st.write( "The plaintext is ", "".join(Plaintext))    
 
 
 with tab4: 
