@@ -148,11 +148,11 @@ with tab2:
             else:
                 Ciphertext.append(Ciphertext_Letter)
                 Key_Index = Key_Index + 1
-                st.write("4", Key_Index)
+                st.write("4", Key_Index)    
+        st.write(Ciphertext) 
                 
     st.write("The key is ", "".join(Key))
     st.write(Key_Baudot)
-    st.write(Ciphertext_Baudot)
     st.write("".join(Ciphertext))          
     
 
