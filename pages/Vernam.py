@@ -145,9 +145,6 @@ with tab2:
                 st.write("Result", Result)
                 Ciphertext_Letter = get_key(Result)
                 if Ciphertext_Letter != "key doesn't exist" and " ":
-                    Ciphertext.append(Ciphertext_Letter)
-                    Key_Index = Key_Index + 1
-                    st.write("4", Key_Index)
                     break
             else:
                 Ciphertext.append(Ciphertext_Letter)
