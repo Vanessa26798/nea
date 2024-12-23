@@ -122,6 +122,7 @@ with tab2:
             Key.append(Key_Letter)
             Key_Baudot.append(Baudot[Key_Letter])
             XOR = [x]
+            st.write(Key_Index)
             XOR.append(Key_Baudot[Key_Index])
             st.write("xor", XOR)
             Result = int(XOR[0], 2) ^ int(XOR[1], 2)
