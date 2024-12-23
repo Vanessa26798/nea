@@ -111,6 +111,7 @@ with tab2:
         if x == " ": 
             Key.append(" ") 
             Key_Baudot.append(" ") 
+            st.write("0", Key_Index, Ciphertext_Index) 
             Key_Index = Key_Index + 1
             Ciphertext.append(" ")
             Ciphertext_Baudot.append(" ")
