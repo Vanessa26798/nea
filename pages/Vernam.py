@@ -113,7 +113,7 @@ with tab2:
             Key.append(" ") 
             Key_Baudot.append(" ") 
             Key_Index = Key_Index + 1
-            st.write(Key_Index)
+            st.write("1", Key_Index)
             Ciphertext.append(" ")
             Ciphertext_Baudot.append(" ")
             Ciphertext_Index = Ciphertext_Index + 1  
@@ -122,7 +122,7 @@ with tab2:
             Key.append(Key_Letter)
             Key_Baudot.append(Baudot[Key_Letter])
             XOR = [x]
-            st.write(Key_Index)
+            st.write("2", Key_Index)
             XOR.append(Key_Baudot[Key_Index])
             st.write("xor", XOR)
             Result = int(XOR[0], 2) ^ int(XOR[1], 2)
@@ -149,8 +149,8 @@ with tab2:
                     break 
             else:
                 Ciphertext.append(Ciphertext_Letter)
-                st.write(Key_Index)
                 Key_Index = Key_Index + 1
+                st.write("3", Key_Index)
                 Ciphertext_Index = Ciphertext_Index + 1 
                 
     st.write("The key is ", "".join(Key))
