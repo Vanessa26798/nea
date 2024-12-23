@@ -105,14 +105,14 @@ with tab2:
     Key = []
     Key_Baudot = []
     Ciphertext_Baudot = []
-    Key_index = 0
+    Key_Index = 0
     Ciphertext_Index = 0
     Ciphertext = ["The ciphertext is "]
     for x in Plaintext_Baudot:
         if x == " ": 
             Key.append(" ") 
             Key_Baudot.append(" ") 
-            Key_index = Key_index + 1
+            Key_Index = Key_Index + 1
             Ciphertext.append(" ")
             Ciphertext_Baudot.append(" ")
             Ciphertext_Index = Ciphertext_Index + 1  
@@ -134,7 +134,7 @@ with tab2:
                 Key[Key_Index] = Key_Letter
                 Key_Baudot[Key_Index] = Baudot[Key_Letter]
                 XOR = [x]
-                XOR.append(Key_Baudot[Key_index])
+                XOR.append(Key_Baudot[Key_Index])
                 st.write("xor", XOR)
                 Result = int(XOR[0], 2) ^ int(XOR[1], 2)
                 Result = bin(Result)[2:].zfill(len(XOR[0]))
