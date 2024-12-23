@@ -119,7 +119,7 @@ with tab2:
                 XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
                 XOR_Result = str(XOR_Result)
                 Ciphertext_Letter = get_key(XOR_Result) 
-                while Ciphertext_Letter == "key doesn't exist":
+                while Ciphertext_Letter == "Key doesn't exist":
                     Key_Letter = random.choice(Alphabet)
                     Key[Key_Index] = Key_Letter
                     Key_Baudot[Key_Index] = Baudot[Key_Letter]
