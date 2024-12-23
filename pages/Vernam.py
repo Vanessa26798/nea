@@ -130,24 +130,24 @@ with tab2:
             Ciphertext_Baudot.append(Result)
             Key_Index = Key_Index + 1
             Ciphertext_Letter = get_key(Ciphertext_Baudot[Ciphertext_Index]) 
-            while Ciphertext_Letter == "key doesn't exist":
-                Key_Letter = random.choice(Alphabet)
-                st.write(Key_Index)
-                Key[Key_Index] = Key_Letter
-                Key_Baudot[Key_Index] = Baudot[Key_Letter]
-                XOR = [x]
-                XOR.append(Key_Baudot[Key_Index])
-                st.write("xor", XOR)
-                Result = int(XOR[0], 2) ^ int(XOR[1], 2)
-                Result = bin(Result)[2:].zfill(len(XOR[0]))
-                Result = str(Result)
-                st.write("Result", Result)
-                Ciphertext_Baudot.append(Result)
-                Ciphertext_Letter = get_key(Ciphertext_Baudot[Ciphertext_Index]) 
-            else:
-                Ciphertext.append(Ciphertext_Letter)
-                st.write(Key_Index)
-                Ciphertext_Index = Ciphertext_Index + 1   
+            # while Ciphertext_Letter == "key doesn't exist":
+            #     Key_Letter = random.choice(Alphabet)
+            #     st.write(Key_Index)
+            #     Key[Key_Index] = Key_Letter
+            #     Key_Baudot[Key_Index] = Baudot[Key_Letter]
+            #     XOR = [x]
+            #     XOR.append(Key_Baudot[Key_Index])
+            #     st.write("xor", XOR)
+            #     Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+            #     Result = bin(Result)[2:].zfill(len(XOR[0]))
+            #     Result = str(Result)
+            #     st.write("Result", Result)
+            #     Ciphertext_Baudot.append(Result)
+            #     Ciphertext_Letter = get_key(Ciphertext_Baudot[Ciphertext_Index]) 
+            # else:
+            Ciphertext.append(Ciphertext_Letter)
+            st.write(Key_Index)
+            Ciphertext_Index = Ciphertext_Index + 1   
                 
     st.write("The key is ", "".join(Key))
     st.write(Key_Baudot)
