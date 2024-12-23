@@ -128,6 +128,7 @@ with tab2:
             Result = str(Result)
             st.write("Result", Result)
             Ciphertext_Baudot.append(Result)
+            Key_Index = Key_Index + 1
             Ciphertext_Letter = get_key(Ciphertext_Baudot[Ciphertext_Index]) 
             while Ciphertext_Letter == "key doesn't exist":
                 Key_Letter = random.choice(Alphabet)
@@ -146,7 +147,6 @@ with tab2:
             else:
                 Ciphertext.append(Ciphertext_Letter)
                 st.write(Key_Index)
-                Key_Index = Key_Index + 1
                 Ciphertext_Index = Ciphertext_Index + 1   
                 
     st.write("The key is ", "".join(Key))
