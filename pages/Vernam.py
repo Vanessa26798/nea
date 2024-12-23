@@ -86,7 +86,6 @@ with tab2:
 
     # if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
     Plaintext_Baudot = []
-    Plaintext_Length = len(Plaintext)
     for x in Plaintext:
         if x != " ":
             Plaintext_Baudot.append(Baudot[x])
@@ -143,7 +142,7 @@ with tab2:
                 Result = str(Result)
                 st.write("Result", Result)
                 Ciphertext_Letter = get_key(Result) 
-                if Ciphertext != "key doesn't exist":  
+                if Ciphertext != "key doesn't exist" and " ":  
                     break 
             else:
                 Ciphertext.append(Ciphertext_Letter)
