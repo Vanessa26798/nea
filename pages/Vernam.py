@@ -129,6 +129,7 @@ with tab2:
             st.write("Result", Result)
             Ciphertext_Letter = get_key(Result) 
             while Ciphertext_Letter == "key doesn't exist":
+                st.write(x)
                 Key_Letter = random.choice(Alphabet)
                 st.write("3", Key_Index)
                 Key[Key_Index] = Key_Letter
