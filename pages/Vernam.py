@@ -135,7 +135,8 @@ with tab2:
                 st.write("3", Key_Index, Ciphertext_Index)
                 Key[Key_Index] = Key_Letter
                 Key_Baudot[Key_Index] = Baudot[Key_Letter]
-                XOR = [x]
+                Key_LetterBaudot = Key_Baudot[Key_Index]
+                XOR = [Key_LetterBaudot]
                 XOR.append(Key_Baudot[Key_Index])
                 st.write("xor", XOR)
                 Result = int(XOR[0], 2) ^ int(XOR[1], 2)
