@@ -143,8 +143,13 @@ with tab2:
                 Result = bin(Result)[2:].zfill(len(XOR[0]))
                 Result = str(Result)
                 st.write("Result", Result)
-                Ciphertext_Letter = get_key(Result) 
-            elif Ciphertext != "key doesn't exist" and " ": 
+                Ciphertext_Letter = get_key(Result)
+                if Ciphertext != "key doesn't exist" and " ": 
+                    Ciphertext.append(Ciphertext_Letter)
+                    Key_Index = Key_Index + 1
+                    st.write("4", Key_Index) 
+                    break
+            else:
                 Ciphertext.append(Ciphertext_Letter)
                 Key_Index = Key_Index + 1
                 st.write("4", Key_Index)    
