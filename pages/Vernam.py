@@ -171,7 +171,10 @@ with tab3:
         elif len(Ciphertext) >= 10 and len(Ciphertext) <= 30 and len(Ciphertext) != 0 and Ciphertext != "":
             Correct_Ciphertext_Length = True
 
-
+        
+    Correct_Decrypt_Key_Range = False
+    Correct_Decrypt_Key = False  
+    
     if Correct_Ciphertext_Range == True and Correct_Ciphertext_Length == True:
         Ciphertext_Baudot = []
         for x in Ciphertext:
@@ -186,11 +189,6 @@ with tab3:
                     return key
             return "Key doesn't exist"
     
-
-        
-        Correct_Decrypt_Key_Range = False
-        
-        Correct_Decrypt_Key = False                
 
         Decrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
         if Decrypt_Choice == "1":
@@ -218,7 +216,7 @@ with tab3:
                 if x == " ": 
                     Decrypt_Key.append(" ") 
                     Decrypt_Key_Baudot.append(" ") 
-                    Decrypt_Key_Index = Key_Index + 1
+                    Decrypt_Key_Index = Decrypt_Key_Index + 1
                     Plaintext.append(" ")    
                 elif x != " ":
                     Decrypt_Key_Letter = random.choice(Alphabet)
@@ -247,7 +245,7 @@ with tab3:
                             break
             else:
                 Plaintext.append(Plaintext_Letter)
-                Key_Index = Key_Index + 1  
+                Decrypt_Key_Index = Decrypt_Key_Index + 1  
         
         elif Encrypt_Choice != 1 and Encrypt_Choice != 2 and Encrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
