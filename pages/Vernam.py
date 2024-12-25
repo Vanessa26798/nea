@@ -259,7 +259,7 @@ with tab3:
                             Decrypt_Key_Index = Decrypt_Key_Index + 1   
                             break
                     else:
-                        Plaintext.append(Decrypt_Plaintext_Letter)
+                        Plaintext.append(Plaintext_Letter)
                         Decrypt_Key_Index = Decrypt_Key_Index + 1  
                         
             st.write("The key is ", "".join(Decrypt_Key))
