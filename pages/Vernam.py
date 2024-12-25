@@ -239,6 +239,7 @@ with tab3:
                         XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
                         XOR_Result = str(XOR_Result)
                         Plaintext_Letter = get_key(XOR_Result)
+                        st.write(Plaintext_Letter)
                         if Plaintext_Letter != "Key doesn't exist" and " ":
                             Plaintext.append(Plaintext_Letter)
                             Decrypt_Key_Index = Decrypt_Key_Index + 1   
