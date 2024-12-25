@@ -195,7 +195,9 @@ with tab3:
         Decrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
         if Decrypt_Choice == "1":
             Decrypt_Key = st.text_input("Please enter the key for decryption, with the same length as the ciphertext : ", value="")
-            Decrypt_Key = Decrypt_Key.upper()         
+            Decrypt_Key = Decrypt_Key.upper()   
+            
+            
             if Decrypt_Key.isdigit() == True:
                 Decrypt_Key = int(Decrypt_Key)
                 if Encrypt_Key < 1 or Encrypt_Key > 25: 
@@ -209,8 +211,7 @@ with tab3:
                 Correct_Encrypt_Key = False
                 
         elif Decrypt_Choice == "2": 
-            Correct_De
-            crypt_Key = True
+            Correct_Decrypt_Key = True
             Decrypt_Key = []
             Decrypt_Key_Baudot = []
             Decrypt_Key_Index = 0
