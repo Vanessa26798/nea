@@ -196,8 +196,7 @@ with tab3:
         if Decrypt_Choice == "1":
             Decrypt_Key = st.text_input("Please enter the key for decryption, with the same length as the ciphertext : ", value="")
             Decrypt_Key = Decrypt_Key.upper()   
-            
-            
+
             if Decrypt_Key.isdigit() == True:
                 Decrypt_Key = int(Decrypt_Key)
                 if Encrypt_Key < 1 or Encrypt_Key > 25: 
@@ -211,7 +210,6 @@ with tab3:
                 Correct_Encrypt_Key = False
                 
         elif Decrypt_Choice == "2": 
-            Correct_Decrypt_Key = True
             Decrypt_Key = []
             Decrypt_Key_Baudot = []
             Decrypt_Key_Index = 0
@@ -257,15 +255,7 @@ with tab3:
 
 
 
-
-
-
-
-        
-        
-
-                    
-        st.write("The key is ", "".join(Key))
+        st.write("The key is ", "".join(Decrypt_Key))
         st.write( "The plaintext is ", "".join(Plaintext))    
 
 
