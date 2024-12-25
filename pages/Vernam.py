@@ -193,19 +193,19 @@ with tab3:
         Decrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
         if Decrypt_Choice == "1":
             Decrypt_Key = st.text_input("Please enter the key for decryption, with the same length as the ciphertext : ", value="")
-            Decrypt_Key = Key.upper()   
+            Decrypt_Key = Decrypt_Key.upper()   
 
-            if Decrypt_Key.isdigit() == True:
-                Decrypt_Key = int(Decrypt_Key)
-                if Encrypt_Key < 1 or Encrypt_Key > 25: 
-                    st.error('Invalid input.', icon="🚨")
-                    Correct_Encrypt_Key = False
-                elif Encrypt_Key >= 1 and Encrypt_Key <= 25: 
-                    st.write("The key is ", Encrypt_Key)
-                    Correct_Encrypt_Key = True
-            elif Encrypt_Key.isdigit() == False and Encrypt_Key != "": 
-                st.error('Invalid input.', icon="🚨")
-                Correct_Encrypt_Key = False
+            # if Decrypt_Key.isdigit() == True:
+            #     Decrypt_Key = int(Decrypt_Key)
+            #     if Encrypt_Key < 1 or Encrypt_Key > 25: 
+            #         st.error('Invalid input.', icon="🚨")
+            #         Correct_Encrypt_Key = False
+            #     elif Encrypt_Key >= 1 and Encrypt_Key <= 25: 
+            #         st.write("The key is ", Encrypt_Key)
+            #         Correct_Encrypt_Key = True
+            # elif Encrypt_Key.isdigit() == False and Encrypt_Key != "": 
+            #     st.error('Invalid input.', icon="🚨")
+            #     Correct_Encrypt_Key = False
                 
         elif Decrypt_Choice == "2": 
             Ciphertext_Baudot = []
@@ -244,8 +244,8 @@ with tab3:
                     Plaintext_Letter = get_key(XOR_Result) 
                     while Plaintext_Letter == "Key doesn't exist":
                         Decrypt_Key_Letter = random.choice(Alphabet)
-                        Decrypt_Key[Key_Index] = Decrypt_Key_Letter
-                        Decrypt_Key_Baudot[Key_Index] = Baudot[Decrypt_Key_Letter]
+                        Decrypt_Key[Decrypt_Key_Index] = Decrypt_Key_Letter
+                        Decrypt_Key_Baudot[Decrypt_Key_Index] = Baudot[Decrypt_Key_Letter]
                         Decrypt_Key_LetterBaudot = Decrypt_Key_Baudot[Decrypt_Key_Index]
                         XOR = [x]
                         XOR.append(Decrypt_Key_LetterBaudot)
