@@ -208,55 +208,66 @@ with tab3:
                 Correct_Encrypt_Key = False
                 
         elif Decrypt_Choice == "2": 
-            Decrypt_Key = []
-            Decrypt_Key_Baudot = []
-            Decrypt_Key_Index = 0
+            Ciphertext_Baudot = []
+            for x in Ciphertext:
+                if x != " ":
+                    Ciphertext_Baudot.append(Baudot[x])
+                elif x == " ": 
+                    Ciphertext_Baudot.append(" ")
+        
+            def get_key(val):
+                for key, value in Baudot.items():
+                    if val == value:
+                        return key
+                return "Key doesn't exist"
+        
+            
+            Key = []
+            Key_Baudot = []
+            Key_Index = 0
             Plaintext = []
             for x in Ciphertext_Baudot:
                 if x == " ": 
-                    Decrypt_Key.append(" ") 
-                    Decrypt_Key_Baudot.append(" ") 
-                    Decrypt_Key_Index = Decrypt_Key_Index + 1
+                    Key.append(" ") 
+                    Key_Baudot.append(" ") 
+                    Key_Index = Key_Index + 1
                     Plaintext.append(" ")    
                 elif x != " ":
-                    Decrypt_Key_Letter = random.choice(Alphabet)
-                    Decrypt_Key.append(Decrypt_Key_Letter)
-                    Decrypt_Key_Baudot.append(Baudot[Decrypt_Key_Letter])
+                    Key_Letter = random.choice(Alphabet)
+                    Key.append(Key_Letter)
+                    Key_Baudot.append(Baudot[Key_Letter])
                     XOR = [x]
-                    XOR.append(Decrypt_Key_Baudot[Decrypt_Key_Index])
+                    XOR.append(Key_Baudot[Key_Index])
                     XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
                     XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
                     XOR_Result = str(XOR_Result)
                     Plaintext_Letter = get_key(XOR_Result) 
                     while Plaintext_Letter == "Key doesn't exist":
-                        Decrypt_Key_Letter = random.choice(Alphabet)
-                        Decrypt_Key[Decrypt_Key_Index] = Decrypt_Key_Letter
-                        Decrypt_Key_Baudot[Decrypt_Key_Index] = Baudot[Decrypt_Key_Letter]
-                        Decrypt_Key_LetterBaudot = Decrypt_Key_Baudot[Decrypt_Key_Index]
+                        Key_Letter = random.choice(Alphabet)
+                        Key[Key_Index] = Key_Letter
+                        Key_Baudot[Key_Index] = Baudot[Key_Letter]
+                        Key_LetterBaudot = Key_Baudot[Key_Index]
                         XOR = [x]
-                        XOR.append(Decrypt_Key_LetterBaudot)
+                        XOR.append(Key_LetterBaudot)
                         XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
                         XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
                         XOR_Result = str(XOR_Result)
                         Plaintext_Letter = get_key(XOR_Result)
-                        st.write(Plaintext_Letter)
                         if Plaintext_Letter != "Key doesn't exist" and " ":
                             Plaintext.append(Plaintext_Letter)
-                            Decrypt_Key_Index = Decrypt_Key_Index + 1   
+                            Key_Index = Key_Index + 1   
                             break
-            else:
-                Plaintext.append(Plaintext_Letter)
-                Decrypt_Key_Index = Decrypt_Key_Index + 1  
-            st.write(Plaintext)
+                    else:
+                        Plaintext.append(Plaintext_Letter)
+                        Key_Index = Key_Index + 1  
+                        
+            st.write("The key is ", "".join(Key))
+            st.write( "The plaintext is ", "".join(Plaintext))   
         
         elif Encrypt_Choice != 1 and Encrypt_Choice != 2 and Encrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
             Correct_Encrypt_Key = False
 
-
-
-        st.write("The key is ", "".join(Decrypt_Key))
-        st.write("The plaintext is ", "".join(Plaintext))    
 
 
 with tab4: 
