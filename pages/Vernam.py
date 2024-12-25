@@ -255,7 +255,7 @@ with tab3:
                         XOR_Result = str(XOR_Result)
                         Plaintext_Letter = get_key(XOR_Result)
                         if Plaintext_Letter != "Key doesn't exist" and " ":
-                            Plaintext.append(Decrypt_Plaintext_Letter)
+                            Plaintext.append(Plaintext_Letter)
                             Decrypt_Key_Index = Decrypt_Key_Index + 1   
                             break
                     else:
