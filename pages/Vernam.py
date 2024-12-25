@@ -35,11 +35,11 @@ Baudot = {
     Alphabet[25]: '10001'
     }     
 
-    def get_key(val):
-        for key, value in Baudot.items():
-            if val == value:
-                return key
-        return "Key doesn't exist"
+def get_key(val):
+    for key, value in Baudot.items():
+        if val == value:
+            return key
+    return "Key doesn't exist"
 
 
 st.header("Vernam cipher")
