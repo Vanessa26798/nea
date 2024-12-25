@@ -180,21 +180,43 @@ with tab3:
 
         Decrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
         if Decrypt_Choice == "1":
-            Decrypt_Key = st.text_input("Please enter the key for decryption, with the same length as the ciphertext : ", value="")
-            Decrypt_Key = Decrypt_Key.upper()   
+            DecryptKey = st.text_input("Please enter the key for decryption, with the same length as the ciphertext : ", value="")
+            DecryptKey = DecryptKey.upper()
+            Decrypt_Key = []
+            for x in Decrypt_Key: 
+                if (x in Alphabet or x == " ") and Decrypt_Key[0] != " ":
+                    Key_in_Alphabet = True
+                    Decrypt_Key.append(x)
+                else:
+                    Key_in_Alphabet = False
+                    st.error('Invalid input.', icon="🚨")
+                    if Key_in_Alphabet == False and Key != "":
+                        st.error('Invalid plaintext.', icon="🚨")
+                        Correct_Plaintext_Range = False
+                        break
+                elif Key_in_Alphabet == True or Key == " ":
+                    Correct_Plaintext_Range = True
 
-            # if Decrypt_Key.isdigit() == True:
-            #     Decrypt_Key = int(Decrypt_Key)
-            #     if Encrypt_Key < 1 or Encrypt_Key > 25: 
-            #         st.error('Invalid input.', icon="🚨")
-            #         Correct_Encrypt_Key = False
-            #     elif Encrypt_Key >= 1 and Encrypt_Key <= 25: 
-            #         st.write("The key is ", Encrypt_Key)
-            #         Correct_Encrypt_Key = True
-            # elif Encrypt_Key.isdigit() == False and Encrypt_Key != "": 
-            #     st.error('Invalid input.', icon="🚨")
-            #     Correct_Encrypt_Key = False
-                
+    Correct_Key_Length = False
+    if Correct_Key_Range == True:
+        if len(Key) != len(Plaintext) and Key != "": 
+            st.error('Plaintext out of range.', icon="🚨")
+            Correct_Plaintext_Length = False
+        elif len(Key) == len(Plaintext) and len(Key) != 0 and Key != "":
+            Correct_Plaintext_Length = True
+
+for x in Key: 
+    Key_Index = 0
+    if x == " " and [Key_Index]:
+        
+
+
+count " "
+
+
+
+
+        
         elif Decrypt_Choice == "2": 
             Ciphertext_Baudot = []
             for x in Ciphertext:
