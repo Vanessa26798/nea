@@ -35,8 +35,11 @@ Baudot = {
     Alphabet[25]: '10001'
     }     
 
-key_list = list(Baudot.keys())
-value_list = list(Baudot.values())
+    def get_key(val):
+        for key, value in Baudot.items():
+            if val == value:
+                return key
+        return "Key doesn't exist"
 
 
 st.header("Vernam cipher")
@@ -91,14 +94,6 @@ with tab2:
                 Plaintext_Baudot.append(Baudot[x])
             elif x == " ": 
                 Plaintext_Baudot.append(" ")
-    
-        def get_key(val):
-            for key, value in Baudot.items():
-                if val == value:
-                    return key
-            return "Key doesn't exist"
-    
-        
         Key = []
         Key_Baudot = []
         Key_Index = 0
@@ -182,13 +177,6 @@ with tab3:
                 Ciphertext_Baudot.append(Baudot[x])
             elif x == " ": 
                 Ciphertext_Baudot.append(" ")
-    
-        def get_key(val):
-            for key, value in Baudot.items():
-                if val == value:
-                    return key
-            return "Key doesn't exist"
-    
 
         Decrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
         if Decrypt_Choice == "1":
@@ -214,14 +202,6 @@ with tab3:
                     Ciphertext_Baudot.append(Baudot[x])
                 elif x == " ": 
                     Ciphertext_Baudot.append(" ")
-        
-            def get_key(val):
-                for key, value in Baudot.items():
-                    if val == value:
-                        return key
-                return "Key doesn't exist"
-        
-            
             Decrypt_Key = []
             Decrypt_Key_Baudot = []
             Decrypt_Key_Index = 0
@@ -249,7 +229,6 @@ with tab3:
                         Decrypt_Key_LetterBaudot = Decrypt_Key_Baudot[Decrypt_Key_Index]
                         XOR = [x]
                         XOR.append(Decrypt_Key_LetterBaudot)
-                        st.write(XOR)
                         XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
                         XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
                         XOR_Result = str(XOR_Result)
@@ -261,14 +240,13 @@ with tab3:
                     else:
                         Plaintext.append(Plaintext_Letter)
                         Decrypt_Key_Index = Decrypt_Key_Index + 1  
-                        
-            st.write("The key is ", "".join(Decrypt_Key))
-            st.write( "The plaintext is ", "".join(Plaintext))   
         
         elif Decrypt_Choice != 1 and Decrypt_Choice != 2 and Decrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
             Correct_Decrypt_Key = False
-
+        
+        st.write("The key is ", "".join(Decrypt_Key))
+        st.write( "The plaintext is ", "".join(Plaintext))   
 
 
 with tab4: 
