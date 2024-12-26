@@ -1,5 +1,7 @@
 
 
+
+
 import streamlit as st
 import random
 
@@ -165,10 +167,7 @@ with tab3:
             Correct_Ciphertext_Length = False
         elif len(Ciphertext) >= 10 and len(Ciphertext) <= 30 and len(Ciphertext) != 0 and Ciphertext != "":
             Correct_Ciphertext_Length = True
-
-        
-    Correct_Decrypt_Key_Range = False
-    Correct_Decrypt_Key = False  
+ 
     
     if Correct_Ciphertext_Range == True and Correct_Ciphertext_Length == True:
         Ciphertext_Baudot = []
@@ -178,40 +177,40 @@ with tab3:
             elif x == " ": 
                 Ciphertext_Baudot.append(" ")
 
+        Key_in_Alphabet == False
+        Correct_Decrypt_Key_Range == False
         Decrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
         if Decrypt_Choice == "1":
             DecryptKey = st.text_input("Please enter the key for decryption, with the same length as the ciphertext : ", value="")
             DecryptKey = DecryptKey.upper()
             Decrypt_Key = []
-            for x in Decrypt_Key: 
-                if (x in Alphabet or x == " ") and Decrypt_Key[0] != " ":
-                    Key_in_Alphabet = True
+            Decrpyt_Key_Index = 0
+            for x in DecryptKey: 
+                if (x in Alphabet or x == " ") and DecryptKey[0] != " " and type(x) == type(Ciphertext_Baudot[Decrpyt_Key_Index]):
                     Decrypt_Key.append(x)
-                else:
-                    Key_in_Alphabet = False
+                    Decrypt_Key_Index = Decrypt_Key_Index + 1
+                    Key_in_Alphabet = True
+                    Correct_Decrypt_Key_Range = True    
+                elif Decrypt_Key == " " or DecryptKey[0] == " " or type(x) != type(Ciphertext_Baudot[Decrpyt_Key_Index]):
                     st.error('Invalid input.', icon="🚨")
-                    if Key_in_Alphabet == False and Key != "":
-                        st.error('Invalid plaintext.', icon="🚨")
-                        Correct_Plaintext_Range = False
-                        break
-                elif Key_in_Alphabet == True or Key == " ":
-                    Correct_Plaintext_Range = True
 
-    Correct_Key_Length = False
-    if Correct_Key_Range == True:
-        if len(Key) != len(Plaintext) and Key != "": 
-            st.error('Plaintext out of range.', icon="🚨")
-            Correct_Plaintext_Length = False
-        elif len(Key) == len(Plaintext) and len(Key) != 0 and Key != "":
-            Correct_Plaintext_Length = True
-
-for x in Key: 
-    Key_Index = 0
-    if x == " " and [Key_Index]:
+# for x in Decrypt_Key: 
+#     Key_Index = 0
+    
+#     if x == " " and [Key_Index]:
         
+# x = fruits.count("cherry")
+# # Correct_Key_Length
 
+    
+#     Correct_Key_Length = False
+#     if Correct_Key_Range == True:
+#         if len(Key) != len(Plaintext) and Key != "": 
+#             st.error('Plaintext out of range.', icon="🚨")
+#             Correct_Plaintext_Length = False
+#         elif len(Key) == len(Plaintext) and len(Key) != 0 and Key != "":
+#             Correct_Plaintext_Length = True
 
-count " "
 
 
 
