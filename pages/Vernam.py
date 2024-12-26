@@ -177,8 +177,8 @@ with tab3:
             elif x == " ": 
                 Ciphertext_Baudot.append(" ")
 
-        Key_in_Alphabet == False
-        Correct_Decrypt_Key_Range == False
+        Key_in_Alphabet = False
+        Correct_Decrypt_Key_Range = False
         Decrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
         if Decrypt_Choice == "1":
             DecryptKey = st.text_input("Please enter the key for decryption, with the same length as the ciphertext : ", value="")
