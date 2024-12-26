@@ -192,42 +192,27 @@ with tab3:
                     Decrypt_Key_Index = Decrypt_Key_Index + 1
                     Key_in_Alphabet = True
                     Correct_Decrypt_Key_Range = True    
-                elif Decrypt_Key == " " or DecryptKey[0] == " " or type(x) != type(Ciphertext_Baudot[Decrypt_Key_Index]):
+                elif DecryptKey == " " or DecryptKey[0] == " " or type(x) != type(Ciphertext_Baudot[Decrypt_Key_Index]):
                     st.error('Invalid input.', icon="🚨")
                     Correct_Decrypt_Key_Range = False
     
         Correct_Decrypt_Key_Length = False
         if Correct_Decrypt_Key_Range == True:
-            if len(Decrypt_Key) != len(Ciphertext) and Decrypt_Key != "": 
+            if len(Decrypt_Key) != len(Ciphertext) and DecryptKey != "": 
                 st.error('Key out of range.', icon="🚨")
-                Correct_Plaintext_Length = False
-            elif len(Decrypt_Key) == len(Ciphertext) and len(Decrypt_Key) != 0 and Decrypt_Key != "":
-                Correct_Plaintext_Length = True
+                Correct_Decrypt_Key_Length = False
+            elif len(Decrypt_Key) == len(Ciphertext) and len(Decrypt_Key) != 0 and DecryptKey != "":
+                Correct_Decrypt_Key_Length = True
     
     
-
-            
-
-# for x in Decrypt_Key: 
-#     Key_Index = 0
-    
-
-
-# Correct_Decrypt_Key_Length = False
-# x = fruits.count("cherry")
-# # Correct_Key_Length
-
-    
-
-
-        
-        elif Decrypt_Choice == "2": 
-            Ciphertext_Baudot = []
-            for x in Ciphertext:
-                if x != " ":
-                    Ciphertext_Baudot.append(Baudot[x])
-                elif x == " ": 
-                    Ciphertext_Baudot.append(" ")
+        if Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length = True:
+            elif Decrypt_Choice == "2": 
+                Ciphertext_Baudot = []
+                for x in Ciphertext:
+                    if x != " ":
+                        Ciphertext_Baudot.append(Baudot[x])
+                    elif x == " ": 
+                        Ciphertext_Baudot.append(" ")
             Decrypt_Key = []
             Decrypt_Key_Baudot = []
             Decrypt_Key_Index = 0
