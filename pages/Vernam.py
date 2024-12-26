@@ -186,12 +186,12 @@ with tab3:
             Decrypt_Key = []
             Decrypt_Key_Index = 0
             for x in DecryptKey: 
-                if (x in Alphabet or x == " ") and DecryptKey[0] != " " and type(x) == type(Ciphertext_Baudot[Decrpyt_Key_Index]):
+                if (x in Alphabet or x == " ") and DecryptKey[0] != " " and type(x) == type(Ciphertext_Baudot[Decrypt_Key_Index]):
                     Decrypt_Key.append(x)
                     Decrypt_Key_Index = Decrypt_Key_Index + 1
                     Key_in_Alphabet = True
                     Correct_Decrypt_Key_Range = True    
-                elif Decrypt_Key == " " or DecryptKey[0] == " " or type(x) != type(Ciphertext_Baudot[Decrpyt_Key_Index]):
+                elif Decrypt_Key == " " or DecryptKey[0] == " " or type(x) != type(Ciphertext_Baudot[Decrypt_Key_Index]):
                     st.error('Invalid input.', icon="🚨")
 
 # for x in Decrypt_Key: 
