@@ -205,7 +205,7 @@ with tab3:
                 Correct_Decrypt_Key_Length = True
     
     
-        if Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length = True:
+        if Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
             elif Decrypt_Choice == "2": 
                 Ciphertext_Baudot = []
                 for x in Ciphertext:
