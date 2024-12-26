@@ -179,6 +179,7 @@ with tab3:
 
         Key_in_Alphabet = False
         Correct_Decrypt_Key_Range = False
+        Correct_Decrypt_Key_Length = False
         Decrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
         if Decrypt_Choice == "1":
             DecryptKey = st.text_input("Please enter the key for decryption, with the same length as the ciphertext : ", value="")
@@ -193,26 +194,30 @@ with tab3:
                     Correct_Decrypt_Key_Range = True    
                 elif Decrypt_Key == " " or DecryptKey[0] == " " or type(x) != type(Ciphertext_Baudot[Decrypt_Key_Index]):
                     st.error('Invalid input.', icon="🚨")
+                    Correct_Decrypt_Key_Range = False
+    
+        Correct_Decrypt_Key_Length = False
+        if Correct_Key_Range == True:
+            if len(Decrypt_Key) != len(Ciphertext) and Decrypt_Key != "": 
+                st.error('Key out of range.', icon="🚨")
+                Correct_Plaintext_Length = False
+            elif len(Decrypt_Key) == len(Ciphertext) and len(Decrypt_Key) != 0 and Decrypt_Key != "":
+                Correct_Plaintext_Length = True
+    
+    
+
+            
 
 # for x in Decrypt_Key: 
 #     Key_Index = 0
     
-#     if x == " " and [Key_Index]:
-        
+
+
+# Correct_Decrypt_Key_Length = False
 # x = fruits.count("cherry")
 # # Correct_Key_Length
 
     
-#     Correct_Key_Length = False
-#     if Correct_Key_Range == True:
-#         if len(Key) != len(Plaintext) and Key != "": 
-#             st.error('Plaintext out of range.', icon="🚨")
-#             Correct_Plaintext_Length = False
-#         elif len(Key) == len(Plaintext) and len(Key) != 0 and Key != "":
-#             Correct_Plaintext_Length = True
-
-
-
 
 
         
