@@ -197,7 +197,7 @@ with tab3:
                     Correct_Decrypt_Key_Range = False
     
         Correct_Decrypt_Key_Length = False
-        if Correct_Key_Range == True:
+        if Correct_Decrypt_Key_Range == True:
             if len(Decrypt_Key) != len(Ciphertext) and Decrypt_Key != "": 
                 st.error('Key out of range.', icon="🚨")
                 Correct_Plaintext_Length = False
