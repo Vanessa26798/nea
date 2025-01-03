@@ -13,7 +13,7 @@ def stream_data():
     
     for x in Spaced_Alphabet.split(" "):
         yield x + " "
-        time.sleep(0.32)
+        time.sleep(0.05)
 
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
