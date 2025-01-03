@@ -13,13 +13,7 @@ def stream_data():
     
     for x in Spaced_Alphabet.split(" "):
         yield x + " "
-        time.sleep(0.02)
-
-    # yield pd.DataFrame(
-    #     np.random.randn(5, 10),
-    #     columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
-    # )
-
+        time.sleep(1.12)
 
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
