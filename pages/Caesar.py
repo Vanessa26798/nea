@@ -17,7 +17,7 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 
 def stream_data():
-    for word in Alphabet.split(" "):
+    for x in Alphabet.split(" "):
         yield word + " "
         time.sleep(0.02)
 
@@ -26,7 +26,7 @@ def stream_data():
         columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
     )
 
-    for word in Alphabet.split(" "):
+    for x in Alphabet.split(" "):
         yield word + " "
         time.sleep(0.02)
 
