@@ -14,10 +14,14 @@ def Original_Alphabet():
         yield x + "  |  "
         time.sleep(0.04)
     
-    yield pd.DataFrame(
-        np.random.randn(5, 10),
-        columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
-    )
+    yield pd.DataFrame(np.random.randn(5, 10),columns=(for x in Alphabet))
+
+# df = pd.DataFrame(
+#     np.random.randn(10, 5), columns=("col %d" % i for i in range(5))
+# )
+
+# st.table(df)
+
 
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
