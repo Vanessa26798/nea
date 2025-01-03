@@ -11,7 +11,7 @@ st.header("Caesar cipher")
 def Original_Alphabet():
     Spaced_Alphabet = '  '.join(Alphabet)
     
-    for x in Spaced_Alphabet.split("  "):
+    for x in Spaced_Alphabet.split(" , "):
         yield x + "  "
         time.sleep(0.04)
 
