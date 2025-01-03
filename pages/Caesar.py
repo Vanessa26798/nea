@@ -96,7 +96,7 @@ with tab2:
             time.sleep(0.1)
 
     # ⇨ ⇦
-    st.write_stream(Encrypted_Alphabet, end)
+    st.write_stream(Encrypted_Alphabet, end = "")
     st.write_stream(Spaced_Alphabet)
 
     
