@@ -18,7 +18,7 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 def stream_data():
     for x in Alphabet.split(" "):
-        yield word + " "
+        yield x + " "
         time.sleep(0.02)
 
     yield pd.DataFrame(
@@ -27,7 +27,7 @@ def stream_data():
     )
 
     for x in Alphabet.split(" "):
-        yield word + " "
+        yield x + " "
         time.sleep(0.02)
 
 
