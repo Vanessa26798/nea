@@ -96,7 +96,8 @@ with tab2:
             time.sleep(0.1)
 
     # ⇨ ⇦
-    st.write_stream(Encrypted_Alphabet, Spaced_Alphabet)
+    st.write_stream(Encrypted_Alphabet, end)
+    st.write_stream(Spaced_Alphabet)
 
     
     if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
