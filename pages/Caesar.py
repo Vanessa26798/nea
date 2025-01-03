@@ -20,6 +20,7 @@ def Original_Alphabet():
     # st.write(Alphabet_List)
     Alphabet_List = ' '.join(Alphabet)
     myList = Alphabet_List.split(" ")
+    st.write(myList)
     yield pd.DataFrame(
         np.random.randn(1, 10),
         columns=myList
