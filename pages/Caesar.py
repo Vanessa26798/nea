@@ -87,20 +87,20 @@ with tab2:
             Correct_Encrypt_Key = False
 
     def stream_data():
-    Alphabet = ' '.join(Alphabet)
+        Alphabet = ' '.join(Alphabet)
+        
+        for x in Alphbet.split(" "):
+            yield x + " "
+            time.sleep(0.02)
     
-    for x in Alphbet.split(" "):
-        yield x + " "
-        time.sleep(0.02)
-
-    yield pd.DataFrame(
-        np.random.randn(5, 10),
-        columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
-    )
-
-    for x in Alphbet.split(" "):
-        yield x + " "
-        time.sleep(0.02)
+        yield pd.DataFrame(
+            np.random.randn(5, 10),
+            columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
+        )
+    
+        for x in Alphbet.split(" "):
+            yield x + " "
+            time.sleep(0.02)
         
     if Print_Encrypt_Key == True:
             st.write_stream(stream_data)
