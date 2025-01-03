@@ -15,7 +15,7 @@ def Original_Alphabet():
         time.sleep(0.04)
 
     df = pd.DataFrame(
-        np.random.randn(10, 5), columns=("col %d" % i for i in range(5))
+        np.random.randn(10, 5), columns=("col %d" % i for x in Alphabet_List)
     )
     
     st.table(df)
