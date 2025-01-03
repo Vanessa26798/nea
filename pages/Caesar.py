@@ -16,25 +16,6 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 """
 
 
-def stream_data():
-    Alphbet_list = []
-    for x in Alphabet:
-        Alphbet_list.append(x)
-    
-    for x in Alphbet_list.split(" "):
-        yield x + " "
-        time.sleep(0.02)
-
-    yield pd.DataFrame(
-        np.random.randn(5, 10),
-        columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
-    )
-
-    for x in Alphbet_list.split(" "):
-        yield x + " "
-        time.sleep(0.02)
-
-
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
 
 with tab1:
@@ -105,6 +86,22 @@ with tab2:
             st.error('Invalid input.', icon="🚨")
             Correct_Encrypt_Key = False
 
+    def stream_data():
+    Alphabet = ' '.join(Alphabet)
+    
+    for x in Alphbet.split(" "):
+        yield x + " "
+        time.sleep(0.02)
+
+    yield pd.DataFrame(
+        np.random.randn(5, 10),
+        columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
+    )
+
+    for x in Alphbet.split(" "):
+        yield x + " "
+        time.sleep(0.02)
+        
     if Print_Encrypt_Key == True:
             st.write_stream(stream_data)
 
