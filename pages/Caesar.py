@@ -9,9 +9,9 @@ Alphabet = string.ascii_uppercase
 st.header("Caesar cipher")
 
 def Spaced_Alphabet():
-    Spaced_Alphabet = ' | '.join(Alphabet)
-    for x in Spaced_Alphabet.split(" | "):
-        yield x + " | "
+    Spaced_Alphabet = '  |  '.join(Alphabet)
+    for x in Spaced_Alphabet.split("  |  "):
+        yield x + "  |  "
         time.sleep(0.04)
 
 
@@ -86,12 +86,12 @@ with tab2:
             Correct_Encrypt_Key = False
             
     def Encrypted_Alphabet():
-        Encrypted_Alphabet = ' | '.join(Alphabet)
+        Encrypted_Alphabet = '  |  '.join(Alphabet)
         while Encrypted_Alphabet.count("⇨") != Encrypt_Key:
             Encrypted_Alphabet = "⇨  | " + Encrypted_Alphabet
     
-        for x in Encrypted_Alphabet.split(" | "):
-            yield x + " | "
+        for x in Encrypted_Alphabet.split("  |  "):
+            yield x + "  |  "
             time.sleep(0.04)
     # ⇨ ⇦
     st.write_stream(Encrypted_Alphabet)
