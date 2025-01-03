@@ -8,9 +8,9 @@ import string
 Alphabet = string.ascii_uppercase
 st.header("Caesar cipher")
 
-def Spaced_Alphabet():
-    Spaced_Alphabet = '  |  '.join(Alphabet)
-    for x in Spaced_Alphabet.split("  |  "):
+def Original_Alphabet():
+    Original_Alphabet = '  |  '.join(Alphabet)
+    for x in Original_Alphabet.split("  |  "):
         yield x + "  |  "
         time.sleep(0.04)
 
@@ -70,7 +70,7 @@ with tab2:
                     Correct_Encrypt_Key = False
                 elif Encrypt_Key >= 1 and Encrypt_Key <= 25: 
                     st.write("The key is ", Encrypt_Key)
-                    st.write_stream(Spaced_Alphabet)
+                    st.write_stream(Original_Alphabet)
                     Correct_Encrypt_Key = True
             elif Encrypt_Key.isdigit() == False and Encrypt_Key != "": 
                 st.error('Invalid input.', icon="🚨")
@@ -79,7 +79,7 @@ with tab2:
             Encrypt_Key = random.randrange(1, 26)
             Encrypt_Key = int(Encrypt_Key)
             st.write("The key is ", Encrypt_Key)
-            st.write_stream(Spaced_Alphabet)
+            st.write_stream(Original_Alphabet)
             Correct_Encrypt_Key = True
         elif Encrypt_Choice != 1 and Encrypt_Choice != 2 and Encrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
@@ -89,13 +89,16 @@ with tab2:
         Spaces = ""
         while Spaces.count("⇨") != Encrypt_Key:
             Spaces = "⇨ " + Spaces
-        Spaces = Spaces + " | " 
+        # Spaces = Spaces + " | " 
         
         for x in Spaces.split(" | "):
             yield x + " | "
             time.sleep(0.1)
-
-        st.write_stream(Spaced_Alphabet)
+            
+        Original_Alphabet = '  |  '.join(Alphabet)
+        for x in Original_Alphabet.split("  |  "):
+            yield x + "  |  "
+            time.sleep(0.04)
 
     # ⇨ ⇦
     st.write_stream(Encrypted_Alphabet)
@@ -157,7 +160,7 @@ with tab3:
                     Correct_Decrypt_Key = False
                 elif Decrypt_Key >= 1 and Decrypt_Key <= 25: 
                     st.write("The key is ", Decrypt_Key)
-                    st.write_stream(Spaced_Alphabet)
+                    st.write_stream(Original_Alphabet)
                     Correct_Decrypt_Key = True
             elif Decrypt_Key.isdigit() == False and Decrypt_Key != "": 
                 st.error('Invalid input.', icon="🚨")
@@ -166,7 +169,7 @@ with tab3:
             Decrypt_Key = random.randrange(1, 26)
             Decrypt_Key = int(Decrypt_Key)            
             st.write("The key is ", Decrypt_Key)
-            st.write_stream(Spaced_Alphabet)
+            st.write_stream(Original_Alphabet)
             Correct_Decrypt_Key = True
         elif Decrypt_Choice != 1 and Decrypt_Choice != 2 and Decrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
