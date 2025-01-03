@@ -19,7 +19,7 @@ def Original_Alphabet():
         Alphabet_List.append(x)
     st.write(Alphabet_List)
     df = pd.DataFrame(
-        np.random.randn(10, 5), columns=("col %d" % i for x in Alphabet_List)
+        np.random.randn(10, 5), columns=("col %d" % x for x in Alphabet_List)
     )
     
     st.table(df)
