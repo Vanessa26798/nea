@@ -13,13 +13,11 @@ def Original_Alphabet():
     for x in Original_Alphabet.split("  |  "):
         yield x + "  |  "
         time.sleep(0.04)
-
-    Alphabet = ' '.join(Alphabet)
+    
     yield pd.DataFrame(
         np.random.randn(5, 10),
-        columns = [Alphabet]
+        columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
     )
-
 
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
