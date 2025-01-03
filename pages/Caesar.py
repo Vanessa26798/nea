@@ -13,10 +13,14 @@ def Original_Alphabet():
     for x in Original_Alphabet.split("  |  "):
         yield x + "  |  "
         time.sleep(0.04)
-    
+
+    Alphabet = ' '.join(Alphabet)
     yield pd.DataFrame(
         np.random.randn(5, 10),
-        columns = Alphabet,
+        columns =   yield pd.DataFrame(
+        np.random.randn(5, 10),
+        columns=[Alphabet],
+    ),
     )
 
 
