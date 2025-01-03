@@ -21,10 +21,10 @@ def stream_data():
         yield word + " "
         time.sleep(0.02)
 
-    # yield pd.DataFrame(
-    #     np.random.randn(5, 10),
-    #     columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
-    # )
+    yield pd.DataFrame(
+        np.random.randn(5, 10),
+        columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
+    )
 
     for word in Alphabet.split(" "):
         yield word + " "
