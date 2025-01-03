@@ -8,33 +8,7 @@ import string
 Alphabet = string.ascii_uppercase
 st.header("Caesar cipher")
 
-st.write("⓪
-①
-②
-③
-④
-⑤
-⑥
-⑦
-⑧
-⑨
-⑩
-⑪
-⑫
-⑬
-⑭
-⑮
-⑯
-⑰
-⑱
-⑲
-⑳
-㉑
-㉒
-㉓
-㉔
-㉕
-")
+st.write("⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕")
 
 def stream_data():
     Spaced_Alphabet = ' '.join(Alphabet)
