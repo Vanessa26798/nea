@@ -9,10 +9,9 @@ Alphabet = string.ascii_uppercase
 st.header("Caesar cipher")
 
 def stream_data():
-    st.write(Alphabet)
-    # Alphabet = ' '.join(Alphabet)
+    Alphabet_list = ' '.join(Alphabet)
     
-    for x in Alphbet.split(" "):
+    for x in Alphabet_list.split(" "):
         yield x + " "
         time.sleep(0.02)
 
@@ -21,7 +20,7 @@ def stream_data():
         columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
     )
 
-    for x in Alphbet.split(" "):
+    for x in Alphabet_list.split(" "):
         yield x + " "
         time.sleep(0.02)
 
