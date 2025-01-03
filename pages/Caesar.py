@@ -22,7 +22,7 @@ def Original_Alphabet():
     myList = Alphabet_List.split(" ")
     st.write(myList)
     yield pd.DataFrame(
-        np.random.randn(1, 10),
+        np.random.randn(1, 25),
         columns=myList
     )
 
