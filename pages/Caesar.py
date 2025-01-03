@@ -7,6 +7,7 @@ import numpy as np
 import string
 Alphabet = string.ascii_uppercase
 st.header("Caesar cipher")
+st.write("⇨ ⇦")
 
 def Original_Alphabet():
     Spaced_Alphabet = '  '.join(Alphabet)
