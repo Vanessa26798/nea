@@ -18,14 +18,9 @@ def Original_Alphabet():
     for x in Alphabet:
         Alphabet_List.append(x)
     st.write(Alphabet_List)
-    yield pd.DataFrame(np.random.randn(5, 10), columns = Alphabet_List)
-
-# df = pd.DataFrame(
-#     np.random.randn(10, 5), columns=("col %d" % i for i in range(5))
-# )
-
-# st.table(df)
-
+    yield pd.DataFrame(
+        np.random.randn(5, 10), columns = Alphabet_List
+    )
 
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
