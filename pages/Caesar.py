@@ -18,7 +18,7 @@ def Original_Alphabet():
     for x in Alphabet:
         Alphabet_List.append(x)
     st.write(Alphabet_List)
-    yield pd.DataFrame(np.random.randn(5, 10), columns = Alphabet)
+    yield pd.DataFrame(np.random.randn(5, 10), columns = Alphabet_List)
 
 # df = pd.DataFrame(
 #     np.random.randn(10, 5), columns=("col %d" % i for i in range(5))
