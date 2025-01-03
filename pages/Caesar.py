@@ -13,6 +13,11 @@ def Original_Alphabet():
     for x in Original_Alphabet.split("  |  "):
         yield x + "  |  "
         time.sleep(0.04)
+    
+    yield pd.DataFrame(
+        np.random.randn(5, 10),
+        columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
+    )
 
 
 
