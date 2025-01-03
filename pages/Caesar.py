@@ -7,7 +7,7 @@ import numpy as np
 import string
 Alphabet = string.ascii_uppercase
 st.header("Caesar cipher")
-
+st.header("①②③④⑤⑥⑦⑧⑨⑩⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴㉑㉒㉓㉔㉕")
 st.write("①②③④⑤⑥⑦⑧⑨⑩⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴㉑㉒㉓㉔㉕")
 
 def stream_data():
