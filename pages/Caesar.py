@@ -86,16 +86,17 @@ with tab2:
             Correct_Encrypt_Key = False
             
     def Encrypted_Alphabet():
-        Encrypted_Alphabet = '  |  '.join(Alphabet)
-        while Encrypted_Alphabet.count("⇨") != Encrypt_Key:
-            Encrypted_Alphabet = "⇨ " + Encrypted_Alphabet
-    
-        for x in Encrypted_Alphabet.split("  |  "):
-            yield x + "  |  "
-            time.sleep(0.04)
+        Spaces = "⇨ "
+        while Spaces.count("⇨") != (Encrypt_Key - 1):
+            Spaces = "⇨ " + Spaces
+        Spaces = Spaces + " | " 
+        
+        for x in Spaces.split(" | "):
+            yield x + " | "
+            time.sleep(0.1)
+
     # ⇨ ⇦
-    st.write_stream(Encrypted_Alphabet)
-    st.write_stream(Spaced_Alphabet)
+    st.write_stream(Encrypted_Alphabet, Spaced_Alphabet)
 
     
     if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
