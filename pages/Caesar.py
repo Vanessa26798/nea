@@ -19,7 +19,7 @@ def Original_Alphabet():
         Alphabet_List.append(x)
     st.write(Alphabet_List)
     yield pd.DataFrame(
-        np.random.randn(5, 10), columns = Alphabet_List
+        np.random.randn(5, 10), columns=Alphabet_List
     )
 
 
