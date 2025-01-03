@@ -13,8 +13,10 @@ def Original_Alphabet():
     for x in Original_Alphabet.split("  |  "):
         yield x + "  |  "
         time.sleep(0.04)
-    
-    yield pd.DataFrame(np.random.randn(5, 10),columns=(for x in Alphabet))
+
+    Alphabet_List = []
+    Alphabet_List.append(' '.join(Alphabet))    
+    yield pd.DataFrame(np.random.randn(5, 10), columns = Alphabet_List)
 
 # df = pd.DataFrame(
 #     np.random.randn(10, 5), columns=("col %d" % i for i in range(5))
