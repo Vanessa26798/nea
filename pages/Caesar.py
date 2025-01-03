@@ -16,19 +16,19 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 """
 
 
-def stream_data():
-    for x in Alphabet.split(" "):
-        yield x + " "
-        time.sleep(0.02)
+# def stream_data():
+#     for x in Alphabet.split(" "):
+#         yield x + " "
+#         time.sleep(0.02)
 
-    yield pd.DataFrame(
-        np.random.randn(5, 10),
-        columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
-    )
+#     yield pd.DataFrame(
+#         np.random.randn(5, 10),
+#         columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
+#     )
 
-    for x in Alphabet.split(" "):
-        yield x + " "
-        time.sleep(0.02)
+#     for x in Alphabet.split(" "):
+#         yield x + " "
+#         time.sleep(0.02)
 
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
@@ -102,7 +102,7 @@ with tab2:
             Correct_Encrypt_Key = False
 
     if Print_Encrypt_Key == True:
-            st.write_stream(stream_data)
+            st.write_stream(Alphabet)
 
         
     if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
