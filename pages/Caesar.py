@@ -3,10 +3,37 @@ import random
 import pandas as pd
 import string
 
-
-
 Alphabet = string.ascii_uppercase
 st.header("Caesar cipher")
+
+
+import time
+import numpy as np
+import pandas as pd
+import streamlit as st
+
+_LOREM_IPSUM = """
+Lorem ipsum dolor sit amet, **consectetur adipiscing** elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+"""
+
+
+def stream_data():
+    for word in _LOREM_IPSUM.split(" "):
+        yield word + " "
+        time.sleep(0.02)
+
+    yield pd.DataFrame(
+        np.random.randn(5, 10),
+        columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
+    )
+
+    for word in _LOREM_IPSUM.split(" "):
+        yield word + " "
+        time.sleep(0.02)
+
+
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
 
 with tab1:
@@ -16,9 +43,9 @@ with tab1:
 with col1:
     st.image("https://cdn.britannica.com/17/193717-050-030D75E3/Julius-Caesar-statue-Rome-Italy.jpg?w=300", caption="Bronze sculpture of Julius Caesar in Rome")
 
-
 with col2:
     st.write("The Caesar Cipher is one of the oldest cryptographic algorithms. It is named after Julius Caesar who initially used it to protect sensitive military messages, allowing him to communicate with his military generals.  ")
+
 
 
 with tab2:
@@ -49,7 +76,8 @@ with tab2:
         elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
             Correct_Plaintext_Length = True
 
-    Correct_Encrypt_Key = False                
+    Correct_Encrypt_Key = False 
+    Print_Encrypt_Key = False
     if Correct_Plaintext_Length == True and Plaintext != "":
         Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
         if Encrypt_Choice == "1":
@@ -62,6 +90,7 @@ with tab2:
                 elif Encrypt_Key >= 1 and Encrypt_Key <= 25: 
                     st.write("The key is ", Encrypt_Key)
                     Correct_Encrypt_Key = True
+                    Print_Encrypt_Key = True
             elif Encrypt_Key.isdigit() == False and Encrypt_Key != "": 
                 st.error('Invalid input.', icon="🚨")
                 Correct_Encrypt_Key = False
@@ -70,10 +99,15 @@ with tab2:
             Encrypt_Key = int(Encrypt_Key)
             st.write("The key is ", Encrypt_Key)
             Correct_Encrypt_Key = True
+            Print_Encrypt_Key = True
         elif Encrypt_Choice != 1 and Encrypt_Choice != 2 and Encrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
             Correct_Encrypt_Key = False
 
+    if Print_Encrypt_Key == True:
+            st.write_stream(stream_data)
+
+        
     if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
        Ciphertext = ["The ciphertext is "]
        for x in Plaintext:
