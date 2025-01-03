@@ -86,8 +86,8 @@ with tab2:
             Correct_Encrypt_Key = False
             
     def Encrypted_Alphabet():
-        Spaces = "⇨ "
-        while Spaces.count("⇨") != (Encrypt_Key - 1):
+        Spaces = ""
+        while Spaces.count("⇨") != Encrypt_Key:
             Spaces = "⇨ " + Spaces
         Spaces = Spaces + " | " 
         
