@@ -6,7 +6,6 @@ import numpy as np
 
 import string
 Alphabet = string.ascii_uppercase
-st.write(Alphabet)
 st.header("Caesar cipher")
 
 def Original_Alphabet():
@@ -19,10 +18,11 @@ def Original_Alphabet():
     # for x in Alphabet:
     #     Alphabet_List.append(x)
     # st.write(Alphabet_List)
-    
+    Alphabet_List = ' '.join(Alphabet)
+    myList = Alphabet_List.split(" ")
     yield pd.DataFrame(
         np.random.randn(1, 10),
-        columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+        columns=myList
     )
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
