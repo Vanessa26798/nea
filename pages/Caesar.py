@@ -13,6 +13,10 @@ def Original_Alphabet():
     for x in Original_Alphabet.split("  |  "):
         yield x + "  |  "
         time.sleep(0.04)
+    for x in Original_Alphabet.split("  |  "):
+        yield x + "  |  "
+        time.sleep(0.04)
+
 
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
