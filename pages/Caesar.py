@@ -16,7 +16,7 @@ def Original_Alphabet():
     
     yield pd.DataFrame(
         np.random.randn(5, 10),
-        columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
+        columns = Alphabet,
     )
 
 
