@@ -8,13 +8,21 @@ import string
 Alphabet = string.ascii_uppercase
 st.header("Caesar cipher")
 
+def stream_data():
+    Alphabet = ' '.join(Alphabet)
+    
+    for x in Alphbet.split(" "):
+        yield x + " "
+        time.sleep(0.02)
 
-_LOREM_IPSUM = """
-Lorem ipsum dolor sit amet, **consectetur adipiscing** elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-"""
+    yield pd.DataFrame(
+        np.random.randn(5, 10),
+        columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
+    )
 
+    for x in Alphbet.split(" "):
+        yield x + " "
+        time.sleep(0.02)
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
 
@@ -86,21 +94,6 @@ with tab2:
             st.error('Invalid input.', icon="🚨")
             Correct_Encrypt_Key = False
 
-    def stream_data():
-        Alphabet = ' '.join(Alphabet)
-        
-        for x in Alphbet.split(" "):
-            yield x + " "
-            time.sleep(0.02)
-    
-        yield pd.DataFrame(
-            np.random.randn(5, 10),
-            columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
-        )
-    
-        for x in Alphbet.split(" "):
-            yield x + " "
-            time.sleep(0.02)
         
     if Print_Encrypt_Key == True:
             st.write_stream(stream_data)
