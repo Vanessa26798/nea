@@ -15,7 +15,8 @@ def Original_Alphabet():
         time.sleep(0.04)
 
     Alphabet_List = []
-    Alphabet_List.append(' '.join(Alphabet))
+    for x in Alphabet:
+        Alphabet_List.append(x)
     st.write(Alphabet_List)
     yield pd.DataFrame(np.random.randn(5, 10), columns = Alphabet_List)
 
