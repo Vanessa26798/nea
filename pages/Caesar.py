@@ -9,20 +9,18 @@ Alphabet = string.ascii_uppercase
 st.header("Caesar cipher")
 
 def stream_data():
-    Alphabet_list = ' '.join(Alphabet)
+    Spaced_Alphabet = ' '.join(Alphabet)
     
-    for x in Alphabet_list.split(" "):
+    for x in Spaced_Alphabet.split(" "):
         yield x + " "
         time.sleep(0.02)
 
-    yield pd.DataFrame(
-        np.random.randn(5, 10),
-        columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
-    )
+    # yield pd.DataFrame(
+    #     np.random.randn(5, 10),
+    #     columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
+    # )
 
-    for x in Alphabet_list.split(" "):
-        yield x + " "
-        time.sleep(0.02)
+
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
 
