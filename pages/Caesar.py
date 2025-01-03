@@ -13,9 +13,6 @@ def Original_Alphabet():
     for x in Original_Alphabet.split("  |  "):
         yield x + "  |  "
         time.sleep(0.04)
-    for x in Original_Alphabet.split("  |  "):
-        yield x + "  |  "
-        time.sleep(0.04)
 
 
 
@@ -90,19 +87,20 @@ with tab2:
             Correct_Encrypt_Key = False
             
     def Encrypted_Alphabet():
-        Spaces = ""
-        while Spaces.count("⇨") != Encrypt_Key:
-            Spaces = "⇨-" + Spaces
-        # Spaces = Spaces + " | " 
-        
-        for x in Spaces.split(" | "):
-            yield x + " | "
-            time.sleep(0.1)
+        if Correct_Encrypt_Key == True:
+            Spaces = ""
+            while Spaces.count("⇨") != Encrypt_Key:
+                Spaces = "⇨-" + Spaces
+            # Spaces = Spaces + " | " 
             
-        Original_Alphabet = '  |  '.join(Alphabet)
-        for x in Original_Alphabet.split("  |  "):
-            yield x + "  |  "
-            time.sleep(0.04)
+            for x in Spaces.split(" | "):
+                yield x + " | "
+                time.sleep(0.1)
+                
+            Original_Alphabet = '  |  '.join(Alphabet)
+            for x in Original_Alphabet.split("  |  "):
+                yield x + "  |  "
+                time.sleep(0.04)
 
     # ⇨ ⇦
     st.write_stream(Encrypted_Alphabet)
