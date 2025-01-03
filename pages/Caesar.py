@@ -1,16 +1,13 @@
 import streamlit as st
 import random
 import pandas as pd
-import string
+import time
+import numpy as np
 
+import string
 Alphabet = string.ascii_uppercase
 st.header("Caesar cipher")
 
-
-import time
-import numpy as np
-import pandas as pd
-import streamlit as st
 
 _LOREM_IPSUM = """
 Lorem ipsum dolor sit amet, **consectetur adipiscing** elit, sed do eiusmod tempor
@@ -20,7 +17,7 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 
 def stream_data():
-    for word in _LOREM_IPSUM.split(" "):
+    for word in Alphabet.split(" "):
         yield word + " "
         time.sleep(0.02)
 
@@ -29,9 +26,9 @@ def stream_data():
         columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
     )
 
-    for word in _LOREM_IPSUM.split(" "):
-        yield word + " "
-        time.sleep(0.02)
+    # for word in _LOREM_IPSUM.split(" "):
+    #     yield word + " "
+    #     time.sleep(0.02)
 
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
