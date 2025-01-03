@@ -88,7 +88,7 @@ with tab2:
     def Encrypted_Alphabet():
         Encrypted_Alphabet = '  |  '.join(Alphabet)
         while Encrypted_Alphabet.count("⇨") != Encrypt_Key:
-            Encrypted_Alphabet = "⇨  | " + Encrypted_Alphabet
+            Encrypted_Alphabet = "⇨" + Encrypted_Alphabet
     
         for x in Encrypted_Alphabet.split("  |  "):
             yield x + "  |  "
