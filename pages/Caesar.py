@@ -22,7 +22,7 @@ def Original_Alphabet():
     Alphabet_List = Alphabet_List.split(" ")
     yield pd.DataFrame(
         np.random.randn(0, 26),
-        columns=Alphabet_List
+        columns = "Original alphabet" + Alphabet_List
     )
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
