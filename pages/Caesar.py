@@ -9,16 +9,17 @@ Alphabet = string.ascii_uppercase
 st.header("Caesar cipher")
 
 def Original_Alphabet():
-    Original_Alphabet = '  |  '.join(Alphabet)
-    for x in Original_Alphabet.split("  |  "):
-        yield x + "  |  "
-        time.sleep(0.04)
+    # Original_Alphabet = '  |  '.join(Alphabet)
+    # for x in Original_Alphabet.split("  |  "):
+    #     yield x + "  |  "
+    #     time.sleep(0.04)
 
     Alphabet_List = ' '.join(Alphabet)
     Alphabet_List = Alphabet_List.split(" ")
-    yield pd.DataFrame(
-        columns = Alphabet_List
-            )
+    Table = pd.DataFrame(columns = Alphabet_List)
+    
+    Encrypted_Alphabet_List = pd.DataFrame(columns = Alphabet_List)
+    Table.add_rows(df2)
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
 
