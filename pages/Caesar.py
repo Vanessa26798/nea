@@ -175,8 +175,8 @@ with tab3:
         Original_Alphabet = pd.DataFrame(columns = Alphabet_List)
         st.write("Original alphabet list:")
         Original_table = st.table(Original_Alphabet)
-        Decrypted_Alphabet_List_PartTwo = Alphabet[Decrypt_Key:26]
-        Decrypted_Alphabet_List_PartOne = Alphabet[0:Decrypt_Key]
+        Decrypted_Alphabet_List_PartOne = Alphabet[(26-Decrypt_Key):26]
+        Decrypted_Alphabet_List_PartTwo = Alphabet[0:(26-Decrypt_Key)]
         Decrypted_Alphabet_List = Decrypted_Alphabet_List_PartOne + Decrypted_Alphabet_List_PartTwo
         Decrypted_Alphabet_List = ' '.join(Decrypted_Alphabet_List)
         Decrypted_Alphabet_List = Decrypted_Alphabet_List.split(" ")
