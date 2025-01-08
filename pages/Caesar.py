@@ -84,13 +84,13 @@ with tab2:
             st.error('Invalid input.', icon="🚨")
             Correct_Encrypt_Key = False
 
-    
-    Alphabet_List = ' '.join(Alphabet)
-    Alphabet_List = Alphabet_List.split(" ")
-    Original_Alphabet = pd.DataFrame(np.random.randn(0, 26), columns = Alphabet_List)
-    st.write("Original alphabet list:")
-    Original_table = st.table(Original_Alphabet)
-    if Correct_Encrypt_Key == True:
+    if Correct_Encrypt_Key == True:    
+        st.write("The alphabet list is shifted to the right by ", Encrypt_Key)
+        Alphabet_List = ' '.join(Alphabet)
+        Alphabet_List = Alphabet_List.split(" ")
+        Original_Alphabet = pd.DataFrame(np.random.randn(0, 26), columns = Alphabet_List)
+        st.write("Original alphabet list:")
+        Original_table = st.table(Original_Alphabet)
         Encrypted_Alphabet_List_PartOne = Alphabet[Encrypt_Key:26]
         Encrypted_Alphabet_List_PartTwo = Alphabet[0:Encrypt_Key]
         Encrypted_Alphabet_List = Encrypted_Alphabet_List_PartOne + Encrypted_Alphabet_List_PartTwo
@@ -99,7 +99,6 @@ with tab2:
         Encrypted_Alphabet = pd.DataFrame(columns = Encrypted_Alphabet_List)
         st.write("Encryted alphabet list:")
         Encrypted_table = st.table(Encrypted_Alphabet)
-        st.write("The alphabet list is shifted to the right by ", Encrypt_Key)
 
     if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
        Ciphertext = ["Therefore, The ciphertext is "]
