@@ -88,7 +88,7 @@ with tab2:
         st.write("The alphabet list is shifted to the right by ", Encrypt_Key)
         Alphabet_List = ' '.join(Alphabet)
         Alphabet_List = Alphabet_List.split(" ")
-        Original_Alphabet = pd.DataFrame(np.random.randn(0, 26), columns = Alphabet_List)
+        Original_Alphabet = pd.DataFrame(columns = Alphabet_List)
         st.write("Original alphabet list:")
         Original_table = st.table(Original_Alphabet)
         Encrypted_Alphabet_List_PartOne = Alphabet[Encrypt_Key:26]
@@ -101,7 +101,7 @@ with tab2:
         Encrypted_table = st.table(Encrypted_Alphabet)
 
     if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
-       Ciphertext = ["Therefore, The ciphertext is "]
+       Ciphertext = ["Therefore, the ciphertext is "]
        for x in Plaintext:
          if x == " ":
              Ciphertext.append(x)
@@ -168,8 +168,24 @@ with tab3:
             st.error('Invalid input.', icon="🚨")
             Correct_Decrypt_Key = False
 
+    if Correct_Decrypt_Key == True:    
+        st.write("The alphabet list is shifted to the left by ", Decrypt_Key)
+        Alphabet_List = ' '.join(Alphabet)
+        Alphabet_List = Alphabet_List.split(" ")
+        Original_Alphabet = pd.DataFrame(columns = Alphabet_List)
+        st.write("Original alphabet list:")
+        Original_table = st.table(Original_Alphabet)
+        Decrypted_Alphabet_List_PartTwo = Alphabet[Decrypt_Key:26]
+        Decrypted_Alphabet_List_PartOne = Alphabet[0:Decrypt_Key]
+        Decrypted_Alphabet_List = Decrypted_Alphabet_List_PartOne + Decrypted_Alphabet_List_PartTwo
+        Decrypted_Alphabet_List = ' '.join(Decrypted_Alphabet_List)
+        Decrypted_Alphabet_List = Decrypted_Alphabet_List.split(" ")
+        Decrypted_Alphabet = pd.DataFrame(columns = Decrypted_Alphabet_List)
+        st.write("Decryted alphabet list:")
+        Decrypted_table = st.table(Decrypted_Alphabet)
+
     if Correct_Ciphertext_Range == True and Correct_Decrypt_Key == True and Correct_Ciphertext_Length == True:
-       Plaintext = ["The plaintext is "]
+       Plaintext = ["Therefore, the plaintext is "]
        for x in Ciphertext:
          if x == " ":
              Plaintext.append(x)
