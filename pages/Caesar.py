@@ -203,8 +203,8 @@ with tab3:
 with tab4: 
     st.header("Level of security")
 
-    st.write("The plaintext is APPLE")
-    Plaintext = "APPLE"
+    Plaintext = "AAABCFDG"
+    st.write("The plaintext is " + Plaintext)
     Character = []
     Occurance = []
     for x in Plaintext:
