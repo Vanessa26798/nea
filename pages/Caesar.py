@@ -84,38 +84,19 @@ with tab2:
             st.error('Invalid input.', icon="🚨")
             Correct_Encrypt_Key = False
 
-
     
     Alphabet_List = ' '.join(Alphabet)
     Alphabet_List = Alphabet_List.split(" ")
     Original_Alphabet = pd.DataFrame(columns = Alphabet_List)
     Original_table = st.table(Original_Alphabet)
-    
     if Correct_Encrypt_Key == True:
         One = Alphabet[Encrypt_Key:26]
         Two = Alphabet[0:Encrypt_Key]
         Encrypted_Alphabet_List = One + Two
         Encrypted_Alphabet_List = ' '.join(Encrypted_Alphabet_List)
         Encrypted_Alphabet_List = Encrypted_Alphabet_List.split(" ")
-        st.write(Encrypted_Alphabet_List)
         Encrypted_Alphabet = pd.DataFrame(columns = Encrypted_Alphabet_List)
         Encrypted_table = st.table(Encrypted_Alphabet)
-            # Spaces = ""
-            # while Spaces.count("⇨") != Encrypt_Key:
-            #     Spaces = "⇨-" + Spaces
-            # # Spaces = Spaces + " | " 
-            
-            # for x in Spaces.split(" | "):
-            #     yield x + " | "
-            #     time.sleep(0.1)
-                
-            # Original_Alphabet = '  |  '.join(Alphabet)
-            # for x in Original_Alphabet.split("  |  "):
-            #     yield x + "  |  "
-            #     time.sleep(0.04)
-
-    # ⇨ ⇦
-
 
     
     if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
