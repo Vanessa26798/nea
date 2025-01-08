@@ -92,9 +92,9 @@ with tab2:
     Original_table = st.table(Original_Alphabet)
     if Correct_Encrypt_Key == True:
         def Arrows():
-            Spaces = "__    "
+            Spaces = "___    "
             while Spaces.count("▢") != Encrypt_Key:
-                Spaces = Spaces + " ▢ " 
+                Spaces = Spaces + "  ▢  " 
             for x in Spaces.split("▢"):
                 yield x + "▢"
                 time.sleep(0.1)
