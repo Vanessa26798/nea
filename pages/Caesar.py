@@ -85,47 +85,34 @@ with tab2:
             Correct_Encrypt_Key = False
 
 
-    # df1 = pd.DataFrame(
-    #     np.random.randn(50, 20), columns=("col %d" % i for i in range(20))
-    # )
-    
-    # my_table = st.table(df1)
-    
-    # df2 = pd.DataFrame(
-    #     np.random.randn(50, 20), columns=("col %d" % i for i in range(20))
-    # )
-    
-    # my_table.add_rows(df2)
-
-
     
     Alphabet_List = ' '.join(Alphabet)
     Alphabet_List = Alphabet_List.split(" ")
     Original_Alphabet = pd.DataFrame(columns = Alphabet_List)
     Table = st.table(Original_Alphabet)
-    # Encrypted_Alphabet_List = Alphabet_List
-    # # Encrypted_Alphabet = pd.DataFrame(columns = Encrypted_Alphabet_List)
-    # Table.add_rows(Original_Alphabet)
 
-    
-    def Encrypted_Alphabet():
-        if Correct_Encrypt_Key == True:
-            Spaces = ""
-            while Spaces.count("⇨") != Encrypt_Key:
-                Spaces = "⇨-" + Spaces
-            # Spaces = Spaces + " | " 
+    if Correct_Encrypt_Key == True:
+        one = Alphabet[Key-26]
+        two = [26-Key]
+        Encrypted_Alphabet_List = one + two
+        st.write(Encrypted_Alphabet_List)
+    # Encrypted_Alphabet = pd.DataFrame(columns = Encrypted_Alphabet_List)
+    # Table.add_rows(Original_Alphabet)
+            # Spaces = ""
+            # while Spaces.count("⇨") != Encrypt_Key:
+            #     Spaces = "⇨-" + Spaces
+            # # Spaces = Spaces + " | " 
             
-            for x in Spaces.split(" | "):
-                yield x + " | "
-                time.sleep(0.1)
+            # for x in Spaces.split(" | "):
+            #     yield x + " | "
+            #     time.sleep(0.1)
                 
-            Original_Alphabet = '  |  '.join(Alphabet)
-            for x in Original_Alphabet.split("  |  "):
-                yield x + "  |  "
-                time.sleep(0.04)
+            # Original_Alphabet = '  |  '.join(Alphabet)
+            # for x in Original_Alphabet.split("  |  "):
+            #     yield x + "  |  "
+            #     time.sleep(0.04)
 
     # ⇨ ⇦
-    st.write_stream(Encrypted_Alphabet)
 
 
     
