@@ -95,6 +95,8 @@ with tab2:
         One = Alphabet[Encrypt_Key:26]
         Two = Alphabet[0:Encrypt_Key]
         Encrypted_Alphabet_List = One + Two
+            # Alphabet_List = ' '.join(Alphabet)
+        Encrypted_Alphabet_List = Encrypted_Alphabet_List.split(" ")
         st.write(Encrypted_Alphabet_List)
         Encrypted_Alphabet = pd.DataFrame(columns = Encrypted_Alphabet_List)
         Encrypted_table = st.table(Encrypted_Alphabet)
