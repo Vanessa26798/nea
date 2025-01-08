@@ -93,8 +93,8 @@ with tab2:
     if Correct_Encrypt_Key == True:
         def Arrows():
             Spaces = "__    "
-            while Spaces.count("▢ ") != Encrypt_Key:
-                Spaces = "▢ " + Spaces
+            while Spaces.count("▢") != Encrypt_Key:
+                Spaces = Spaces + " ▢ " 
             for x in Spaces.split("▢"):
                 yield x + "▢"
                 time.sleep(0.1)
