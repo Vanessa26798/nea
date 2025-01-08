@@ -92,14 +92,14 @@ with tab2:
     Original_table = st.table(Original_Alphabet)
     if Correct_Encrypt_Key == True:
         def Arrows():
-        Spaces = ""
-        while Spaces.count("⇨") != Encrypt_Key:
-            Spaces = "⇨-" + Spaces
-        # Spaces = Spaces + " | " 
-
-        for x in Spaces.split(" | "):
-            yield x + " | "
-            time.sleep(0.1)
+            Spaces = ""
+            while Spaces.count("⇨") != Encrypt_Key:
+                Spaces = "⇨-" + Spaces
+            # Spaces = Spaces + " | " 
+    
+            for x in Spaces.split(" | "):
+                yield x + " | "
+                time.sleep(0.1)
         st.write.stream(Arrows)
         One = Alphabet[Encrypt_Key:26]
         Two = Alphabet[0:Encrypt_Key]
