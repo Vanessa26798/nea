@@ -90,7 +90,7 @@ with tab2:
     Alphabet_List = Alphabet_List.split(" ")
     Original_Alphabet = pd.DataFrame(columns = Alphabet_List)
     Table = st.table(Original_Alphabet)
-
+    
     if Correct_Encrypt_Key == True:
         one = Alphabet[Key-26]
         two = [26-Key]
