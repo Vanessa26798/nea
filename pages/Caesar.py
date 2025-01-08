@@ -89,7 +89,7 @@ with tab2:
     Alphabet_List = ' '.join(Alphabet)
     Alphabet_List = Alphabet_List.split(" ")
     Original_Alphabet = pd.DataFrame(columns = Alphabet_List)
-    Table = st.table(Original_Alphabet)
+    Original_table = st.table(Original_Alphabet)
     
     if Correct_Encrypt_Key == True:
         One = Alphabet[Encrypt_Key:26]
@@ -97,7 +97,7 @@ with tab2:
         Encrypted_Alphabet_List = One + Two
         st.write(Encrypted_Alphabet_List)
         Encrypted_Alphabet = pd.DataFrame(columns = Encrypted_Alphabet_List)
-        Table.add_rows(Encrypted_Alphabet)
+        Encrypted_table = st.table(Encrypted_Alphabet)
             # Spaces = ""
             # while Spaces.count("⇨") != Encrypt_Key:
             #     Spaces = "⇨-" + Spaces
