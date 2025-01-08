@@ -19,11 +19,10 @@ def Original_Alphabet():
     #     Alphabet_List.append(x)
     # st.write(Alphabet_List)
     Alphabet_List = ' '.join(Alphabet)
-    myList = Alphabet_List.split(" ")
-    st.write(myList)
+    Alphabet_List = Alphabet_List.split(" ")
     yield pd.DataFrame(
-        np.random.randn(1, 26),
-        columns=myList
+        np.random.randn(5, 26),
+        columns=Alphabet_List
     )
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
