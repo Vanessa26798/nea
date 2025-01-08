@@ -100,7 +100,7 @@ with tab2:
             for x in Spaces.split(" | "):
                 yield x + " | "
                 time.sleep(0.1)
-        st.write_stream((Arrows)
+        st.write_stream(Arrows)
         One = Alphabet[Encrypt_Key:26]
         Two = Alphabet[0:Encrypt_Key]
         Encrypted_Alphabet_List = One + Two
