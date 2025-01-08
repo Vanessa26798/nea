@@ -203,7 +203,7 @@ with tab3:
 with tab4: 
     st.header("Level of security")
 
-    Plaintext = "GOODDOG"
+    Plaintext = "ABC"
     st.write("The plaintext is " + Plaintext)
     Character = []
     Occurance = []
