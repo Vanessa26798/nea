@@ -21,7 +21,7 @@ def Original_Alphabet():
     Alphabet_List = ' '.join(Alphabet)
     Alphabet_List = Alphabet_List.split(" ")
     yield pd.DataFrame(
-        np.random.randn(5, 26),
+        np.random.randn(0, 45),
         columns=Alphabet_List
     )
 
