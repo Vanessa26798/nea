@@ -87,7 +87,7 @@ with tab2:
     
     Alphabet_List = ' '.join(Alphabet)
     Alphabet_List = Alphabet_List.split(" ")
-    Original_Alphabet = pd.DataFrame(np.random.randn(1, 26), columns = Alphabet_List)
+    Original_Alphabet = pd.DataFrame(np.random.randn(0, 26), columns = Alphabet_List)
     st.write("Original alphabet list:")
     Original_table = st.table(Original_Alphabet)
     if Correct_Encrypt_Key == True:
