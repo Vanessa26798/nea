@@ -99,7 +99,7 @@ with tab2:
         Encrypted_Alphabet = pd.DataFrame(columns = Encrypted_Alphabet_List)
         st.write("Encryted alphabet list:")
         Encrypted_table = st.table(Encrypted_Alphabet)
-        st.write("The alphabet list is shifted to the right by " + Encrypt_Key)
+        st.write("The alphabet list is shifted to the right by ", Encrypt_Key)
 
     if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
        Ciphertext = ["Therefore, The ciphertext is "]
