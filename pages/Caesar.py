@@ -86,10 +86,10 @@ with tab2:
     
     Alphabet_List = ' '.join(Alphabet)
     Alphabet_List = Alphabet_List.split(" ")
-    Table = pd.DataFrame(columns = Alphabet_List)
-    
-    Encrypted_Alphabet_List = pd.DataFrame(columns = Alphabet_List)
-    Table.add_rows(Encrypted_Alphabet_List)
+    Original_Alphabet = pd.DataFrame(columns = Alphabet_List)
+    Table = st.table(Original_Alphabet)
+    Encrypted_Alphabet = pd.DataFrame(columns = Alphabet_List)
+    Table.add_rows(Encrypted_Alphabet)
 
     
     def Encrypted_Alphabet():
