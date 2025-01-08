@@ -23,7 +23,7 @@ def Original_Alphabet():
     st.write(myList)
     yield pd.DataFrame(
         np.random.randn(1, 25),
-        columns=myList
+        columns=["a", "b"]
     )
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
