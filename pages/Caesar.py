@@ -94,7 +94,7 @@ with tab2:
     if Correct_Encrypt_Key == True:
         One = Alphabet[Encrypt_Key:26]
         Two = Alphabet[26:Encrypt_Key]
-        Encrypted_Alphabet = one + two
+        Encrypted_Alphabet = One + Two
         st.write(Encrypted_Alphabet)
     # Encrypted_Alphabet = pd.DataFrame(columns = Encrypted_Alphabet_List)
     # Table.add_rows(Original_Alphabet)
