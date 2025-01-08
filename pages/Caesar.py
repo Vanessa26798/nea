@@ -91,26 +91,18 @@ with tab2:
     st.write("Original alphabet list:")
     Original_table = st.table(Original_Alphabet)
     if Correct_Encrypt_Key == True:
-        def Arrows():
-            Spaces = "___    "
-            while Spaces.count("▢") != Encrypt_Key:
-                Spaces = Spaces + "  ▢  " 
-            for x in Spaces.split("▢"):
-                yield x + "▢"
-                time.sleep(0.1)
-        st.write_stream(Arrows)
-        One = Alphabet[Encrypt_Key:26]
-        Two = Alphabet[0:Encrypt_Key]
-        Encrypted_Alphabet_List = One + Two
+        Encrypted_Alphabet_List_PartOne = Alphabet[Encrypt_Key:26]
+        Encrypted_Alphabet_List_PartTwo = Alphabet[0:Encrypt_Key]
+        Encrypted_Alphabet_List = Encrypted_Alphabet_List_PartOne + Encrypted_Alphabet_List_PartTwo
         Encrypted_Alphabet_List = ' '.join(Encrypted_Alphabet_List)
         Encrypted_Alphabet_List = Encrypted_Alphabet_List.split(" ")
         Encrypted_Alphabet = pd.DataFrame(columns = Encrypted_Alphabet_List)
         st.write("Encryted alphabet list:")
         Encrypted_table = st.table(Encrypted_Alphabet)
+        st.write("The alphabet list is shifted to the right by " + Encrypted_Key)
 
-    
     if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
-       Ciphertext = ["The ciphertext is "]
+       Ciphertext = ["Therefore, The ciphertext is "]
        for x in Plaintext:
          if x == " ":
              Ciphertext.append(x)
