@@ -137,14 +137,13 @@ with tab2:
                     Ciphertext.append(Ciphertext_Letter)
                     Key_Index = Key_Index + 1  
 
-        x_Index = 0
+
         Plaintext_Baudot_two = []
         for x in Plaintext_Baudot:
-            if x == " ": 
-                Plaintext_Baudot_two.append(x)
-            elif x != " ":
+            # if x == " ": 
+            #     Plaintext_Baudot_two.append(x)
+            if x != " ":
                 Plaintext_Baudot_two.append(" ")
-            x_Index = x_Index + 1
         # Plaintext_Baudot = Plaintext_Baudot.split(" ")
         st.write(Plaintext_Baudot_two)
         st.write("".join(Plaintext_Baudot_two))
