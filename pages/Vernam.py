@@ -340,8 +340,8 @@ with tab3:
                 st.error('Invalid input.', icon="🚨")
                 Correct_Decrypt_Key = False
         
-        st.write("The key is ", "".join(Decrypt_Key))
-        st.write( "The plaintext is ", "".join(Plaintext))   
+    st.write("The key is ", "".join(Decrypt_Key))
+    st.write( "The plaintext is ", "".join(Plaintext))   
 
 
 with tab4: 
