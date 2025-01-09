@@ -241,7 +241,7 @@ with tab3:
                         Decrypt_Key_Index = Decrypt_Key_Index + 1
                         Plaintext.append(" ")    
                     elif x != " ":
-                        Decrypt_Key_Letter = Decrypt_Key[Decrpyt_Key_Index]
+                        Decrypt_Key_Letter = Decrypt_Key[Decrypt_Key_Index]
                         Decrypt_Key_Baudot.append(Baudot[Decrypt_Key_Letter])
                         XOR = [x]
                         XOR.append(Decrypt_Key_Baudot[Decrypt_Key_Index])
