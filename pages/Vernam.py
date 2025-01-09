@@ -101,12 +101,14 @@ with tab2:
         Key = []
         Key_Baudot = []
         Key_Index = 0
+        Ciphertext_Baudot = []
         Ciphertext = []
         for x in Plaintext_Baudot:
             if x == " ": 
                 Key.append(" ") 
                 Key_Baudot.append(" ") 
                 Key_Index = Key_Index + 1
+                Ciphertext_Baudot.append(XOR_Result)
                 Ciphertext.append(" ")    
             elif x != " ":
                 Key_Letter = random.choice(Alphabet)
@@ -135,20 +137,21 @@ with tab2:
                         break
                 else:
                     Ciphertext.append(Ciphertext_Letter)
-                    Key_Index = Key_Index + 1  
+                    Key_Index = Key_Index + 1 
+                Ciphertext_Baudot.append(XOR_Result)
 
 
-        Plaintext_Baudot_two = []
+        Spaced_Plaintext_Baudot = []
         for x in Plaintext_Baudot:
             if x == " ": 
-                Plaintext_Baudot_two.append(x)
+                Spaced_Plaintext_Baudot.append(x)
             elif x != " ":
-                Plaintext_Baudot_two.append(x)
-                Plaintext_Baudot_two.append(" ")
-        # Plaintext_Baudot = Plaintext_Baudot.split(" ")
-        st.write(Plaintext_Baudot_two)
-        st.write("".join(Plaintext_Baudot_two))
+                Spaced_Plaintext_Baudot.append(x)
+                Spaced_Plaintext_Baudot.append(" ")
+        st.write("Baudot of Plaintext: ", "".join(Spaced_Plaintext_Baudot))
+        st.write(Ciphertext_Baudot)
         st.write("The key is ", "".join(Key)) 
+        
         
         # Plaintext = ' '.join(Plaintext)
         # Plaintext = Plaintext.split(" ")
