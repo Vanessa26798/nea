@@ -31,7 +31,7 @@ with col2:
 
 
 with tab2:
-    st.header("Encryt a plaintext")
+    st.header("Encrypt a plaintext")
 
     Correct_Plaintext_Range = False
     Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
@@ -97,7 +97,7 @@ with tab2:
         Encrypted_Alphabet_List = ' '.join(Encrypted_Alphabet_List)
         Encrypted_Alphabet_List = Encrypted_Alphabet_List.split(" ")
         Encrypted_Alphabet = pd.DataFrame(columns = Encrypted_Alphabet_List)
-        st.write("Encryted alphabet list:")
+        st.write("Encrypted alphabet list:")
         Encrypted_table = st.table(Encrypted_Alphabet)
 
     if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
