@@ -90,7 +90,7 @@ with tab2:
         Alphabet_List = ' '.join(Alphabet)
         st.write(Alphabet_List)
         Alphabet_List = Alphabet_List.split(" ")
-        st.write(Alphabet_list)
+        st.write(Alphabet_List)
         Original_Alphabet = pd.DataFrame(columns = Alphabet_List)
         st.write("Original alphabet list:")
         Original_table = st.table(Original_Alphabet)
