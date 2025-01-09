@@ -143,7 +143,7 @@ with tab2:
             if x != " ": 
                 Plaintext_Baudot_two.insert(x_Index, " ")
             x_Index = x_Index + 1
-        Plaintext_Baudot = Plaintext_Baudot.split(" ")
+        # Plaintext_Baudot = Plaintext_Baudot.split(" ")
         st.write("".join(Plaintext_Baudot))
         st.write("The key is ", "".join(Key)) 
         
