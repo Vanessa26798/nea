@@ -138,7 +138,7 @@ with tab2:
                     Key_Index = Key_Index + 1  
                     
         st.write("The key is ", "".join(Key)) 
-        st.write(.join(Plaintext_Baudot))
+        st.write("".join(Plaintext_Baudot))
         # Plaintext = ' '.join(Plaintext)
         # Plaintext = Plaintext.split(" ")
         # st.write(Plaintext)
