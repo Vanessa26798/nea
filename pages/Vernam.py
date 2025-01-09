@@ -149,7 +149,14 @@ with tab2:
                 Spaced_Plaintext_Baudot.append(x)
                 Spaced_Plaintext_Baudot.append(" ")
         st.write("Baudot of Plaintext: ", "".join(Spaced_Plaintext_Baudot))
-        st.write(Ciphertext_Baudot)
+        Spaced_Ciphertext_Baudot = []
+        for x in Ciphertext_Baudot:
+            if x == " ": 
+                Spaced_Ciphertext_Baudot.append(x)
+            elif x != " ":
+                Spaced_Ciphertext_Baudot.append(x)
+                Spaced_Ciphertext_Baudot.append(" ")
+        st.write(Spaced_Ciphertext_Baudot)
         st.write("The key is ", "".join(Key)) 
         
         
