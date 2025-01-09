@@ -140,9 +140,10 @@ with tab2:
 
         Plaintext_Baudot_two = []
         for x in Plaintext_Baudot:
-            # if x == " ": 
-            #     Plaintext_Baudot_two.append(x)
-            if x != " ":
+            if x == " ": 
+                Plaintext_Baudot_two.append(x)
+            elif x != " ":
+                Plaintext_Baudot_two.append(x)
                 Plaintext_Baudot_two.append(" ")
         # Plaintext_Baudot = Plaintext_Baudot.split(" ")
         st.write(Plaintext_Baudot_two)
