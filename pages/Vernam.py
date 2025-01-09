@@ -153,7 +153,7 @@ with tab2:
         st.write("The plaintext and key of each characters are converted to Baudot, and XOR is carried out:") 
         st.write("".join(Spaced_Plaintext_Baudot))
         Spaced_Key_Baudot = []
-        for x in Key:
+        for x in Key_Baudot:
             if x == " ": 
                 Spaced_Key_Baudot.append(x)
             elif x != " ":
