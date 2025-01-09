@@ -59,7 +59,6 @@ with tab2:
             Correct_Plaintext_Length = True
 
     Correct_Encrypt_Key = False 
-    Print_Encrypt_Key = False
     if Correct_Plaintext_Length == True and Plaintext != "":
         Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
         if Encrypt_Choice == "1":
