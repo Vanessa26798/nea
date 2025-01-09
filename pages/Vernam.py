@@ -312,9 +312,9 @@ with tab3:
                             Plaintext.append(Plaintext_Letter)
                             Decrypt_Key_Index = Decrypt_Key_Index + 1  
         
-    #         elif Decrypt_Choice != 1 and Decrypt_Choice != 2 and Decrypt_Choice != "": 
-    #             st.error('Invalid input.', icon="🚨")
-    #             Correct_Decrypt_Key = False
+            elif Decrypt_Choice != 1 and Decrypt_Choice != 2 and Decrypt_Choice != "": 
+                st.error('Invalid input.', icon="🚨")
+                Correct_Decrypt_Key = False
 
 
     # Ciphertext_Baudot.append(" | ")
@@ -339,9 +339,9 @@ with tab3:
     #             Spaced_Encrypt_Key_Baudot.append(" | ")
     #     st.write("".join(Spaced_Encrypt_Key_Baudot), " - Key")
     #     st.write("".join(Ciphertext_Baudot), " - Ciphertext")
-    #     st.write("The ciphertext is ", "".join(Ciphertext))    
-    st.write("The key is ", "".join(Decrypt_Key))
-    st.write( "The plaintext is ", "".join(Plaintext))   
+    #     st.write("The ciphertext is ", "".join(Ciphertext))
+                st.write("The key is ", "".join(Decrypt_Key))
+                st.write( "The plaintext is ", "".join(Plaintext))   
 
 
 with tab4: 
