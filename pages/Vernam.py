@@ -150,9 +150,16 @@ with tab2:
                 Spaced_Plaintext_Baudot.append(x)
                 Spaced_Plaintext_Baudot.append(" ")
         st.write("The key is ", "".join(Key))
-        st.write("The plaintext and key of each characters are converted to Baudot, and XOR is carried out.") 
+        st.write("The plaintext and key of each characters are converted to Baudot, and XOR is carried out:") 
         st.write("".join(Spaced_Plaintext_Baudot))
-        st.write("".join(Key_Baudot))
+        Spaced_Key_Baudot = []
+        for x in Key:
+            if x == " ": 
+                Spaced_Key_Baudot.append(x)
+            elif x != " ":
+                Spaced_Key_Baudot.append(x)
+                Spaced_Key_Baudot.append(" ")
+        st.write("".join(Spaced_Key_Baudot))
         st.write("".join(Ciphertext_Baudot))
  
         
