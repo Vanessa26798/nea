@@ -227,7 +227,7 @@ with tab4:
     st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
 
     st.write("The character with the highest occurance is " + Highest_Occurance_Character + ".")
-    st.write("The higher the occurance, the easier it is to be able to guess the key , therefore the level of security is lower.")
+    st.write("The higher the occurance, the easier it is to be able to guess the key , therefore the level of security for Caesar cipher is lower.")
 
 
 
