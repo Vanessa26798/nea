@@ -86,8 +86,11 @@ with tab2:
 
     if Correct_Encrypt_Key == True:    
         st.write("The alphabet list is shifted to the right by ", Encrypt_Key)
+        st.write(Alphabet)
         Alphabet_List = ' '.join(Alphabet)
+        st.write(Alphabet_List)
         Alphabet_List = Alphabet_List.split(" ")
+        st.write(Alphabet_list)
         Original_Alphabet = pd.DataFrame(columns = Alphabet_List)
         st.write("Original alphabet list:")
         Original_table = st.table(Original_Alphabet)
