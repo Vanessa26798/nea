@@ -139,6 +139,7 @@ with tab2:
                     Ciphertext.append(Ciphertext_Letter)
                     Key_Index = Key_Index + 1 
                 Ciphertext_Baudot.append(XOR_Result)
+                Ciphertext_Baudot.append(" ")
 
 
         Spaced_Plaintext_Baudot = []
