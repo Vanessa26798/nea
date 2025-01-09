@@ -151,7 +151,7 @@ with tab2:
                 Spaced_Plaintext_Baudot.append(" | ")
         st.write("The key is ", "".join(Key))
         st.write("The plaintext and key of each characters are converted to Baudot, and XOR is carried out:") 
-        st.write("".join(Spaced_Plaintext_Baudot))
+        st.write("".join(Spaced_Plaintext_Baudot), " - Plaintext")
         Spaced_Key_Baudot = []
         for x in Key_Baudot:
             if x == " ": 
@@ -159,32 +159,8 @@ with tab2:
             elif x != " ":
                 Spaced_Key_Baudot.append(x)
                 Spaced_Key_Baudot.append(" | ")
-        st.write("".join(Spaced_Key_Baudot))
-        st.write("".join(Ciphertext_Baudot))
- 
-        
-        
-        # Plaintext = ' '.join(Plaintext)
-        # Plaintext = Plaintext.split(" ")
-        # st.write(Plaintext)
-        # Plaintext_table = pd.DataFrame(columns = Plaintext)
-        # Table = st.table(Plaintext_table)
-            
-            # Encrypted_Alphabet_List_PartOne = Alphabet[Encrypt_Key:26]
-            # Encrypted_Alphabet_List_PartTwo = Alphabet[0:Encrypt_Key]
-            # Encrypted_Alphabet_List = Encrypted_Alphabet_List_PartOne + Encrypted_Alphabet_List_PartTwo
-            # Encrypted_Alphabet_List = ' '.join(Encrypted_Alphabet_List)
-            # Encrypted_Alphabet_List = Encrypted_Alphabet_List.split(" ")
-            # Encrypted_Alphabet = pd.DataFrame(columns = Encrypted_Alphabet_List)
-            # st.write("Encryted alphabet list:")
-            # Encrypted_table = st.table(Encrypted_Alphabet)
-
-
-        # baudot of original
-        # xor baudot of key
-        # = encrypted baudot 
-        # encrypted text 
-        
+        st.write("".join(Spaced_Key_Baudot), " - Key")
+        st.write("".join(Ciphertext_Baudot), " - Ciphertext")
         st.write("The ciphertext is ", "".join(Ciphertext))          
     
 
