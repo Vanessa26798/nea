@@ -152,7 +152,7 @@ with tab2:
         st.write("The key is ", "".join(Key))
         st.write("The plaintext and key of each characters are converted to Baudot, and XOR is carried out.") 
         st.write("".join(Spaced_Plaintext_Baudot))
-        st.write(Key_Baudot)
+        st.write("".join(Key_Baudot))
         st.write("".join(Ciphertext_Baudot))
  
         
