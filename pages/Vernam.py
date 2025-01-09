@@ -141,7 +141,7 @@ with tab2:
         Plaintext_Baudot_two = []
         for x in Plaintext_Baudot:
             if x != " ": 
-                Plaintext_Baudot_two.insert(x_Index, " ")
+                Plaintext_Baudot_two.insert(x_Index + 1, " ")
             x_Index = x_Index + 1
         # Plaintext_Baudot = Plaintext_Baudot.split(" ")
         st.write(Plaintext_Baudot_two)
