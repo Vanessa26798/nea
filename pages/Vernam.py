@@ -108,7 +108,7 @@ with tab2:
                 Key.append(" ") 
                 Key_Baudot.append(" ") 
                 Key_Index = Key_Index + 1
-                Ciphertext_Baudot.append(XOR_Result)
+                Ciphertext_Baudot.append(" ")
                 Ciphertext.append(" ")    
             elif x != " ":
                 Key_Letter = random.choice(Alphabet)
