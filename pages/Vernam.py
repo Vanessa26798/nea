@@ -251,6 +251,7 @@ with tab3:
                         Plaintext_Letter = get_key(XOR_Result) 
                         if Plaintext_Letter == "Key doesn't exist":
                             st.error('Invalid input.', icon="🚨")
+                            break
 
                             #                             Decrypt_Key_Baudot[Decrypt_Key_Index] = Baudot[Decrypt_Key_Letter]
                             # Decrypt_Key_LetterBaudot = Decrypt_Key_Baudot[Decrypt_Key_Index]
