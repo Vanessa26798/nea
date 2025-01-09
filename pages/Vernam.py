@@ -207,26 +207,26 @@ with tab3:
         Correct_Decrypt_Key_Length = False
         Decrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
         if Decrypt_Choice == "1":
-            DecryptKey = st.text_input("Please enter the key for decryption, with the same length as the ciphertext : ", value="")
-            DecryptKey = DecryptKey.upper()
+            Decrypt_Key_Input = st.text_input("Please enter the key for decryption, with the same length as the ciphertext : ", value="")
+            Decrypt_Key_Input = Decrypt_Key_Input.upper()
             Decrypt_Key = []
             Decrypt_Key_Index = 0
-            for x in DecryptKey: 
-                if (x in Alphabet or x == " ") and DecryptKey[0] != " " and type(x) == type(Ciphertext_Baudot[Decrypt_Key_Index]):
+            for x in Decrypt_Key_Input: 
+                if (x in Alphabet or x == " ") and Decrypt_Key_Input[0] != " " and type(x) == type(Ciphertext_Baudot[Decrypt_Key_Index]):
                     Decrypt_Key.append(x)
                     Decrypt_Key_Index = Decrypt_Key_Index + 1
                     Key_in_Alphabet = True
                     Correct_Decrypt_Key_Range = True    
-                elif DecryptKey == " " or DecryptKey[0] == " " or type(x) != type(Ciphertext_Baudot[Decrypt_Key_Index]):
+                elif Decrypt_Key_Input == " " or Decrypt_Key_Input[0] == " " or type(x) != type(Ciphertext_Baudot[Decrypt_Key_Index]):
                     st.error('Invalid input.', icon="🚨")
                     Correct_Decrypt_Key_Range = False
         
             Correct_Decrypt_Key_Length = False
             if Correct_Decrypt_Key_Range == True:
-                if len(Decrypt_Key) != len(Ciphertext) and DecryptKey != "": 
+                if len(Decrypt_Key) != len(Ciphertext) and Decrypt_Key_Input != "": 
                     st.error('Key out of range.', icon="🚨")
                     Correct_Decrypt_Key_Length = False
-                elif len(Decrypt_Key) == len(Ciphertext) and len(Decrypt_Key) != 0 and DecryptKey != "":
+                elif len(Decrypt_Key) == len(Ciphertext) and len(Decrypt_Key) != 0 and Decrypt_Key_Input != "":
                     Correct_Decrypt_Key_Length = True
         
         
@@ -312,10 +312,34 @@ with tab3:
                             Plaintext.append(Plaintext_Letter)
                             Decrypt_Key_Index = Decrypt_Key_Index + 1  
         
-            elif Decrypt_Choice != 1 and Decrypt_Choice != 2 and Decrypt_Choice != "": 
-                st.error('Invalid input.', icon="🚨")
-                Correct_Decrypt_Key = False
-        
+    #         elif Decrypt_Choice != 1 and Decrypt_Choice != 2 and Decrypt_Choice != "": 
+    #             st.error('Invalid input.', icon="🚨")
+    #             Correct_Decrypt_Key = False
+
+
+    # Ciphertext_Baudot.append(" | ")
+
+
+    #     Spaced_Plaintext_Baudot = []
+    #     for x in Plaintext_Baudot:
+    #         if x == " ": 
+    #             Spaced_Plaintext_Baudot.append(" | ")
+    #         elif x != " ":
+    #             Spaced_Plaintext_Baudot.append(x)
+    #             Spaced_Plaintext_Baudot.append(" | ")
+    #     st.write("The key is ", "".join(Encrypt_Key))
+    #     st.write("The plaintext and key of each characters are converted to Baudot, and XOR is carried out:") 
+    #     st.write("".join(Spaced_Plaintext_Baudot), " - Plaintext")
+    #     Spaced_Encrypt_Key_Baudot = []
+    #     for x in Encrypt_Key_Baudot:
+    #         if x == " ": 
+    #             Spaced_Encrypt_Key_Baudot.append(" | ")
+    #         elif x != " ":
+    #             Spaced_Encrypt_Key_Baudot.append(x)
+    #             Spaced_Encrypt_Key_Baudot.append(" | ")
+    #     st.write("".join(Spaced_Encrypt_Key_Baudot), " - Key")
+    #     st.write("".join(Ciphertext_Baudot), " - Ciphertext")
+    #     st.write("The ciphertext is ", "".join(Ciphertext))    
     st.write("The key is ", "".join(Decrypt_Key))
     st.write( "The plaintext is ", "".join(Plaintext))   
 
