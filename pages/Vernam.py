@@ -140,8 +140,9 @@ with tab2:
         st.write("The key is ", "".join(Key))    
         Plaintext = ' '.join(Plaintext)
         Plaintext = Plaintext.split(" ")
+        st.write(Plaintext)
         Plaintext = pd.DataFrame(columns = Plaintext)
-        Table = st.table(Plaintext)
+        # Table = st.table(Plaintext)
             
             # Encrypted_Alphabet_List_PartOne = Alphabet[Encrypt_Key:26]
             # Encrypted_Alphabet_List_PartTwo = Alphabet[0:Encrypt_Key]
