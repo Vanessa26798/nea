@@ -249,20 +249,21 @@ with tab3:
                         XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
                         XOR_Result = str(XOR_Result)
                         Plaintext_Letter = get_key(XOR_Result) 
-                        while Plaintext_Letter == "Key doesn't exist":
-                            Decrypt_Key_NewInput = st.text_input("Please enter another key for decryption, with the same length as the ciphertext : ", value="")
-                            Decrypt_Key_Baudot[Decrypt_Key_Index] = Baudot[Decrypt_Key_Letter]
-                            Decrypt_Key_LetterBaudot = Decrypt_Key_Baudot[Decrypt_Key_Index]
-                            XOR = [x]
-                            XOR.append(Decrypt_Key_LetterBaudot)
-                            XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
-                            XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
-                            XOR_Result = str(XOR_Result)
-                            Plaintext_Letter = get_key(XOR_Result)
-                            if Plaintext_Letter != "Key doesn't exist" and " ":
-                                Plaintext.append(Plaintext_Letter)
-                                Decrypt_Key_Index = Decrypt_Key_Index + 1   
-                                break
+                        if Plaintext_Letter == "Key doesn't exist":
+                            st.error('Invalid input.', icon="🚨")
+
+                            #                             Decrypt_Key_Baudot[Decrypt_Key_Index] = Baudot[Decrypt_Key_Letter]
+                            # Decrypt_Key_LetterBaudot = Decrypt_Key_Baudot[Decrypt_Key_Index]
+                            # XOR = [x]
+                            # XOR.append(Decrypt_Key_LetterBaudot)
+                            # XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+                            # XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
+                            # XOR_Result = str(XOR_Result)
+                            # Plaintext_Letter = get_key(XOR_Result)
+                        if Plaintext_Letter != "Key doesn't exist" and " ":
+                            Plaintext.append(Plaintext_Letter)
+                            Decrypt_Key_Index = Decrypt_Key_Index + 1   
+                            break
                         else:
                             Plaintext.append(Plaintext_Letter)
                             Decrypt_Key_Index = Decrypt_Key_Index + 1  
