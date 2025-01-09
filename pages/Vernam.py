@@ -195,52 +195,52 @@ with tab3:
                 elif DecryptKey == " " or DecryptKey[0] == " " or type(x) != type(Ciphertext_Baudot[Decrypt_Key_Index]):
                     st.error('Invalid input.', icon="🚨")
                     Correct_Decrypt_Key_Range = False
-    
-        Correct_Decrypt_Key_Length = False
-        if Correct_Decrypt_Key_Range == True:
-            if len(Decrypt_Key) != len(Ciphertext) and DecryptKey != "": 
-                st.error('Key out of range.', icon="🚨")
-                Correct_Decrypt_Key_Length = False
-            elif len(Decrypt_Key) == len(Ciphertext) and len(Decrypt_Key) != 0 and DecryptKey != "":
-                Correct_Decrypt_Key_Length = True
-    
-    
-        if Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
-            Decrypt_Key_Baudot = []
-            Decrypt_Key_Index = 0
-            Plaintext = []
-            for x in Ciphertext_Baudot:
-                if x == " ": 
-                    Decrypt_Key.append(" ") 
-                    Decrypt_Key_Baudot.append(" ") 
-                    Decrypt_Key_Index = Decrypt_Key_Index + 1
-                    Plaintext.append(" ")    
-                elif x != " ":
-                    Decrypt_Key_Letter = Decrypt_Key[Decrpyt_Key_Index]
-                    Decrypt_Key_Baudot.append(Baudot[Decrypt_Key_Letter])
-                    XOR = [x]
-                    XOR.append(Decrypt_Key_Baudot[Decrypt_Key_Index])
-                    XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
-                    XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
-                    XOR_Result = str(XOR_Result)
-                    Plaintext_Letter = get_key(XOR_Result) 
-                    while Plaintext_Letter == "Key doesn't exist":
-                        Decrypt_Key = st.text_input("Please enter the key for decryption, with the same length as the ciphertext : ", value="")
-                        Decrypt_Key_Baudot[Decrypt_Key_Index] = Baudot[Decrypt_Key_Letter]
-                        Decrypt_Key_LetterBaudot = Decrypt_Key_Baudot[Decrypt_Key_Index]
+        
+            Correct_Decrypt_Key_Length = False
+            if Correct_Decrypt_Key_Range == True:
+                if len(Decrypt_Key) != len(Ciphertext) and DecryptKey != "": 
+                    st.error('Key out of range.', icon="🚨")
+                    Correct_Decrypt_Key_Length = False
+                elif len(Decrypt_Key) == len(Ciphertext) and len(Decrypt_Key) != 0 and DecryptKey != "":
+                    Correct_Decrypt_Key_Length = True
+        
+        
+            if Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
+                Decrypt_Key_Baudot = []
+                Decrypt_Key_Index = 0
+                Plaintext = []
+                for x in Ciphertext_Baudot:
+                    if x == " ": 
+                        Decrypt_Key.append(" ") 
+                        Decrypt_Key_Baudot.append(" ") 
+                        Decrypt_Key_Index = Decrypt_Key_Index + 1
+                        Plaintext.append(" ")    
+                    elif x != " ":
+                        Decrypt_Key_Letter = Decrypt_Key[Decrpyt_Key_Index]
+                        Decrypt_Key_Baudot.append(Baudot[Decrypt_Key_Letter])
                         XOR = [x]
-                        XOR.append(Decrypt_Key_LetterBaudot)
+                        XOR.append(Decrypt_Key_Baudot[Decrypt_Key_Index])
                         XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
                         XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
                         XOR_Result = str(XOR_Result)
-                        Plaintext_Letter = get_key(XOR_Result)
-                        if Plaintext_Letter != "Key doesn't exist" and " ":
+                        Plaintext_Letter = get_key(XOR_Result) 
+                        while Plaintext_Letter == "Key doesn't exist":
+                            Decrypt_Key = st.text_input("Please enter the key for decryption, with the same length as the ciphertext : ", value="")
+                            Decrypt_Key_Baudot[Decrypt_Key_Index] = Baudot[Decrypt_Key_Letter]
+                            Decrypt_Key_LetterBaudot = Decrypt_Key_Baudot[Decrypt_Key_Index]
+                            XOR = [x]
+                            XOR.append(Decrypt_Key_LetterBaudot)
+                            XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+                            XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
+                            XOR_Result = str(XOR_Result)
+                            Plaintext_Letter = get_key(XOR_Result)
+                            if Plaintext_Letter != "Key doesn't exist" and " ":
+                                Plaintext.append(Plaintext_Letter)
+                                Decrypt_Key_Index = Decrypt_Key_Index + 1   
+                                break
+                        else:
                             Plaintext.append(Plaintext_Letter)
-                            Decrypt_Key_Index = Decrypt_Key_Index + 1   
-                            break
-                    else:
-                        Plaintext.append(Plaintext_Letter)
-                        Decrypt_Key_Index = Decrypt_Key_Index + 1  
+                            Decrypt_Key_Index = Decrypt_Key_Index + 1  
             elif Decrypt_Choice == "2": 
                 Ciphertext_Baudot = []
                 for x in Ciphertext:
@@ -248,48 +248,48 @@ with tab3:
                         Ciphertext_Baudot.append(Baudot[x])
                     elif x == " ": 
                         Ciphertext_Baudot.append(" ")
-            Decrypt_Key = []
-            Decrypt_Key_Baudot = []
-            Decrypt_Key_Index = 0
-            Plaintext = []
-            for x in Ciphertext_Baudot:
-                if x == " ": 
-                    Decrypt_Key.append(" ") 
-                    Decrypt_Key_Baudot.append(" ") 
-                    Decrypt_Key_Index = Decrypt_Key_Index + 1
-                    Plaintext.append(" ")    
-                elif x != " ":
-                    Decrypt_Key_Letter = random.choice(Alphabet)
-                    Decrypt_Key.append(Decrypt_Key_Letter)
-                    Decrypt_Key_Baudot.append(Baudot[Decrypt_Key_Letter])
-                    XOR = [x]
-                    XOR.append(Decrypt_Key_Baudot[Decrypt_Key_Index])
-                    XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
-                    XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
-                    XOR_Result = str(XOR_Result)
-                    Plaintext_Letter = get_key(XOR_Result) 
-                    while Plaintext_Letter == "Key doesn't exist":
+                Decrypt_Key = []
+                Decrypt_Key_Baudot = []
+                Decrypt_Key_Index = 0
+                Plaintext = []
+                for x in Ciphertext_Baudot:
+                    if x == " ": 
+                        Decrypt_Key.append(" ") 
+                        Decrypt_Key_Baudot.append(" ") 
+                        Decrypt_Key_Index = Decrypt_Key_Index + 1
+                        Plaintext.append(" ")    
+                    elif x != " ":
                         Decrypt_Key_Letter = random.choice(Alphabet)
-                        Decrypt_Key[Decrypt_Key_Index] = Decrypt_Key_Letter
-                        Decrypt_Key_Baudot[Decrypt_Key_Index] = Baudot[Decrypt_Key_Letter]
-                        Decrypt_Key_LetterBaudot = Decrypt_Key_Baudot[Decrypt_Key_Index]
+                        Decrypt_Key.append(Decrypt_Key_Letter)
+                        Decrypt_Key_Baudot.append(Baudot[Decrypt_Key_Letter])
                         XOR = [x]
-                        XOR.append(Decrypt_Key_LetterBaudot)
+                        XOR.append(Decrypt_Key_Baudot[Decrypt_Key_Index])
                         XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
                         XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
                         XOR_Result = str(XOR_Result)
-                        Plaintext_Letter = get_key(XOR_Result)
-                        if Plaintext_Letter != "Key doesn't exist" and " ":
+                        Plaintext_Letter = get_key(XOR_Result) 
+                        while Plaintext_Letter == "Key doesn't exist":
+                            Decrypt_Key_Letter = random.choice(Alphabet)
+                            Decrypt_Key[Decrypt_Key_Index] = Decrypt_Key_Letter
+                            Decrypt_Key_Baudot[Decrypt_Key_Index] = Baudot[Decrypt_Key_Letter]
+                            Decrypt_Key_LetterBaudot = Decrypt_Key_Baudot[Decrypt_Key_Index]
+                            XOR = [x]
+                            XOR.append(Decrypt_Key_LetterBaudot)
+                            XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+                            XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
+                            XOR_Result = str(XOR_Result)
+                            Plaintext_Letter = get_key(XOR_Result)
+                            if Plaintext_Letter != "Key doesn't exist" and " ":
+                                Plaintext.append(Plaintext_Letter)
+                                Decrypt_Key_Index = Decrypt_Key_Index + 1   
+                                break
+                        else:
                             Plaintext.append(Plaintext_Letter)
-                            Decrypt_Key_Index = Decrypt_Key_Index + 1   
-                            break
-                    else:
-                        Plaintext.append(Plaintext_Letter)
-                        Decrypt_Key_Index = Decrypt_Key_Index + 1  
+                            Decrypt_Key_Index = Decrypt_Key_Index + 1  
         
-        elif Decrypt_Choice != 1 and Decrypt_Choice != 2 and Decrypt_Choice != "": 
-            st.error('Invalid input.', icon="🚨")
-            Correct_Decrypt_Key = False
+            elif Decrypt_Choice != 1 and Decrypt_Choice != 2 and Decrypt_Choice != "": 
+                st.error('Invalid input.', icon="🚨")
+                Correct_Decrypt_Key = False
         
         st.write("The key is ", "".join(Decrypt_Key))
         st.write( "The plaintext is ", "".join(Plaintext))   
