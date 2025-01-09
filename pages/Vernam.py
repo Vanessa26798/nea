@@ -138,8 +138,8 @@ with tab2:
                     Key_Index = Key_Index + 1  
                     
         st.write("The key is ", "".join(Key))    
-        Plaintext = ' '.join(Plaintext)
-        Plaintext = Plaintext.split(" ")
+        # Plaintext = ' '.join(Plaintext)
+        # Plaintext = Plaintext.split(" ")
         st.write(Plaintext)
         Plaintext = pd.DataFrame(columns = Plaintext)
         # Table = st.table(Plaintext)
