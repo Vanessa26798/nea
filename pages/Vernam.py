@@ -150,7 +150,7 @@ with tab2:
                 Spaced_Plaintext_Baudot.append(" ")
         # "Baudot of Plaintext: ", Baudot of Ciphertext: ", 
         st.write("".join(Spaced_Plaintext_Baudot))
-        st.write("".join(Spaced_Ciphertext_Baudot))
+        st.write("".join(Ciphertext_Baudot))
         st.write("The key is ", "".join(Key)) 
         
         
