@@ -220,9 +220,8 @@ with tab4:
                   Highest_Occurance_Character = Character[Last_Character_Index]
                   Highest_Occurance = Occurance[Last_Character_Index]
               elif int(Occurance[Last_Character_Index]) < int(Occurance[Character.index(x)]):
-                  st.write(x)
-                  Highest_Occurance_Character = Character[x]
-                  Highest_Occurance = Occurance[x]
+                  Highest_Occurance_Character = [x]
+                  Highest_Occurance = [x]
 
     chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
     st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
