@@ -250,7 +250,7 @@ with tab3:
                         XOR_Result = str(XOR_Result)
                         Plaintext_Letter = get_key(XOR_Result) 
                         while Plaintext_Letter == "Key doesn't exist":
-                            Decrypt_Key = st.text_input("Please enter the key for decryption, with the same length as the ciphertext : ", value="")
+                            Decrypt_Key_Input = st.text_input("Please enter the key for decryption, with the same length as the ciphertext : ", value="")
                             Decrypt_Key_Baudot[Decrypt_Key_Index] = Baudot[Decrypt_Key_Letter]
                             Decrypt_Key_LetterBaudot = Decrypt_Key_Baudot[Decrypt_Key_Index]
                             XOR = [x]
