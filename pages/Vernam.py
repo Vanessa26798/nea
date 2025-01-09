@@ -135,13 +135,11 @@ with tab2:
                     Ciphertext.append(Ciphertext_Letter)
                     Key_Index = Key_Index + 1  
                     
-        st.write("The key is ", "".join(Key))
-        
-        if Correct_Decrypt_Key == True:    
-            Plaintext = ' '.join(Plaintext)
-            Plaintext = Plaintext.split(" ")
-            Plaintext = pd.DataFrame(columns = Plaintext)
-            Table = st.table(Plaintext)
+        st.write("The key is ", "".join(Key))    
+        Plaintext = ' '.join(Plaintext)
+        Plaintext = Plaintext.split(" ")
+        Plaintext = pd.DataFrame(columns = Plaintext)
+        Table = st.table(Plaintext)
             
             # Encrypted_Alphabet_List_PartOne = Alphabet[Encrypt_Key:26]
             # Encrypted_Alphabet_List_PartTwo = Alphabet[0:Encrypt_Key]
