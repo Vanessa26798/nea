@@ -139,7 +139,7 @@ with tab2:
                     
         st.write("The key is ", "".join(Key))    
         # Plaintext = ' '.join(Plaintext)
-        # Plaintext = Plaintext.split(" ")
+        Plaintext = Plaintext.split(" ")
         st.write(Plaintext)
         Plaintext = pd.DataFrame(columns = Plaintext)
         # Table = st.table(Plaintext)
