@@ -136,9 +136,11 @@ with tab2:
                 else:
                     Ciphertext.append(Ciphertext_Letter)
                     Key_Index = Key_Index + 1  
-                    
-        st.write("The key is ", "".join(Key)) 
+
+        Plaintext_Baudot = Plaintext_Baudot.split(" ")
         st.write("".join(Plaintext_Baudot))
+        st.write("The key is ", "".join(Key)) 
+        
         # Plaintext = ' '.join(Plaintext)
         # Plaintext = Plaintext.split(" ")
         # st.write(Plaintext)
