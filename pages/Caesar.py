@@ -220,6 +220,7 @@ with tab4:
                   Highest_Occurance_Character = Character[Last_Character_Index]
                   Highest_Occurance = Occurance[Last_Character_Index]
               elif int(Occurance[Last_Character_Index]) < int(Occurance[Character.index(x)]):
+                  st.write(x)
                   Highest_Occurance_Character = Character[x]
                   Highest_Occurance = Occurance[x]
 
