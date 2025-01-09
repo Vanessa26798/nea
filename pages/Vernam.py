@@ -108,7 +108,7 @@ with tab2:
                 Key.append(" ") 
                 Key_Baudot.append(" ") 
                 Key_Index = Key_Index + 1
-                Ciphertext_Baudot.append(" ")
+                Ciphertext_Baudot.append(" | ")
                 Ciphertext.append(" ")    
             elif x != " ":
                 Key_Letter = random.choice(Alphabet)
@@ -139,26 +139,26 @@ with tab2:
                     Ciphertext.append(Ciphertext_Letter)
                     Key_Index = Key_Index + 1 
                 Ciphertext_Baudot.append(XOR_Result)
-                Ciphertext_Baudot.append(" ")
+                Ciphertext_Baudot.append(" | ")
 
 
         Spaced_Plaintext_Baudot = []
         for x in Plaintext_Baudot:
             if x == " ": 
-                Spaced_Plaintext_Baudot.append(x)
+                Spaced_Plaintext_Baudot.append(" | ")
             elif x != " ":
                 Spaced_Plaintext_Baudot.append(x)
-                Spaced_Plaintext_Baudot.append(" ")
+                Spaced_Plaintext_Baudot.append(" | ")
         st.write("The key is ", "".join(Key))
         st.write("The plaintext and key of each characters are converted to Baudot, and XOR is carried out:") 
         st.write("".join(Spaced_Plaintext_Baudot))
         Spaced_Key_Baudot = []
         for x in Key_Baudot:
             if x == " ": 
-                Spaced_Key_Baudot.append(x)
+                Spaced_Key_Baudot.append(" | ")
             elif x != " ":
                 Spaced_Key_Baudot.append(x)
-                Spaced_Key_Baudot.append(" ")
+                Spaced_Key_Baudot.append(" | ")
         st.write("".join(Spaced_Key_Baudot))
         st.write("".join(Ciphertext_Baudot))
  
@@ -185,7 +185,7 @@ with tab2:
         # = encrypted baudot 
         # encrypted text 
         
-        st.write( "The ciphertext is ", "".join(Ciphertext))          
+        st.write("The ciphertext is ", "".join(Ciphertext))          
     
 
 
@@ -340,7 +340,7 @@ with tab3:
                 st.error('Invalid input.', icon="🚨")
                 Correct_Decrypt_Key = False
         
-    st.write("The key is ", "".join(Decrypt_Key_Baudot))
+    st.write("The key is ", "".join(Decrypt_Key))
     st.write( "The plaintext is ", "".join(Plaintext))   
 
 
