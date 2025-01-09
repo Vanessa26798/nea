@@ -136,6 +136,28 @@ with tab2:
                     Key_Index = Key_Index + 1  
                     
         st.write("The key is ", "".join(Key))
+        
+        if Correct_Decrypt_Key == True:    
+            Plaintext = ' '.join(Plaintext)
+            Plaintext = Plaintext.split(" ")
+            Plaintext = pd.DataFrame(columns = Plaintext)
+            Table = st.table(Plaintext)
+            
+            # Encrypted_Alphabet_List_PartOne = Alphabet[Encrypt_Key:26]
+            # Encrypted_Alphabet_List_PartTwo = Alphabet[0:Encrypt_Key]
+            # Encrypted_Alphabet_List = Encrypted_Alphabet_List_PartOne + Encrypted_Alphabet_List_PartTwo
+            # Encrypted_Alphabet_List = ' '.join(Encrypted_Alphabet_List)
+            # Encrypted_Alphabet_List = Encrypted_Alphabet_List.split(" ")
+            # Encrypted_Alphabet = pd.DataFrame(columns = Encrypted_Alphabet_List)
+            # st.write("Encryted alphabet list:")
+            # Encrypted_table = st.table(Encrypted_Alphabet)
+
+        # original text
+        # baudot of original
+        # xor baudot of key
+        # = encrypted baudot 
+        # encrypted text 
+        
         st.write( "The ciphertext is ", "".join(Ciphertext))          
     
 
