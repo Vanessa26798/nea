@@ -229,7 +229,7 @@ with tab3:
                 elif len(Decrypt_Key) == len(Ciphertext) and len(Decrypt_Key) != 0 and Decrypt_Key_Input != "":
                     Correct_Decrypt_Key_Length = True
         
-        
+            Correct_Decrypt_Key = False
             if Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
                 Decrypt_Key_Baudot = []
                 Decrypt_Key_Index = 0
