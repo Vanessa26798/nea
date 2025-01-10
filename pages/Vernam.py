@@ -216,7 +216,7 @@ with tab3:
                     Decrypt_Key.append(x)
                     Correct_Decrypt_Key_Range = True    
                 elif (x not in Alphabet and Decrypt_Key_Input != "") or (Decrypt_Key_Input == " " or Decrypt_Key_Input[0] == " " or type(x) != type(Ciphertext_Baudot[Decrypt_Key_Index])):
-                    st.error('Invalid input.1', icon="🚨")
+                    st.error('Invalid input.', icon="🚨")
                     Correct_Decrypt_Key_Range = False
         
             Correct_Decrypt_Key_Length = False
@@ -249,7 +249,6 @@ with tab3:
                         Plaintext_Letter = get_key(XOR_Result) 
                         if Plaintext_Letter == "Key doesn't exist":
                             st.error('Invalid input.2', icon="🚨")
-                            break
 
                             #                             Decrypt_Key_Baudot[Decrypt_Key_Index] = Baudot[Decrypt_Key_Letter]
                             # Decrypt_Key_LetterBaudot = Decrypt_Key_Baudot[Decrypt_Key_Index]
@@ -315,7 +314,7 @@ with tab3:
                             Decrypt_Key_Index = Decrypt_Key_Index + 1  
         
             elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "":
-                st.error('Invalid input.3', icon="🚨")
+                st.error('Invalid input.', icon="🚨")
                 Correct_Decrypt_Key = False
 
 
