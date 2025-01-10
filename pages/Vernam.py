@@ -210,6 +210,7 @@ with tab3:
             Decrypt_Key_Input = st.text_input("Please input the key for decryption, with the same length as the ciphertext : ", value="")
             Decrypt_Key_Input = Decrypt_Key_Input.upper()
             Decrypt_Key_Index = 0
+            Decrypt_Key = []
             for x in Decrypt_Key_Input: 
                 if (x in Alphabet or x == " ") and Decrypt_Key_Input[0] != " " and type(x) == type(Ciphertext_Baudot[Decrypt_Key_Index]):
                     Decrypt_Key.append(x)
