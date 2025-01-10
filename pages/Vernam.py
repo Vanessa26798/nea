@@ -67,7 +67,7 @@ with tab2:
     st.header("Encrypt a plaintext")
 
     Correct_Plaintext_Range = False
-    Plaintext = st.text_input(" the plaintext in upper case, within 10-30 characters: ", value="")
+    Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
     Plaintext = Plaintext.upper()
     for x in Plaintext: 
         if (x in Alphabet or x == " ") and Plaintext[0] != " ":
@@ -170,7 +170,7 @@ with tab3:
     st.header("Decrypt a ciphertext")
 
     Correct_Ciphertext_Range = False
-    Ciphertext = st.text_input(" the ciphertext in upper case, within 10-30 characters: ", value="")    
+    Ciphertext = st.text_input("Please enter the ciphertext in upper case, within 10-30 characters: ", value="")    
     Ciphertext = Ciphertext.upper()
     for x in Ciphertext: 
         if (x in Alphabet or x == " ") and Ciphertext[0] != " ":
