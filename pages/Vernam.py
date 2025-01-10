@@ -209,13 +209,9 @@ with tab3:
         if Decrypt_Choice == "1":
             Decrypt_Key_Input = st.text_input("Please input the key for decryption, with the same length as the ciphertext : ", value="")
             Decrypt_Key_Input = Decrypt_Key_Input.upper()
-            Decrypt_Key = []
             Decrypt_Key_Index = 0
             for x in Decrypt_Key_Input: 
                 if (x in Alphabet or x == " ") and Decrypt_Key_Input[0] != " " and type(x) == type(Ciphertext_Baudot[Decrypt_Key_Index]):
-                    Decrypt_Key.append(x)
-                    Decrypt_Key_Index = Decrypt_Key_Index + 1
-                    Key_in_Alphabet = True
                     Correct_Decrypt_Key_Range = True    
                 elif (x not in Alphabet and Decrypt_Key_Input != "") or (Decrypt_Key_Input == " " or Decrypt_Key_Input[0] == " " or type(x) != type(Ciphertext_Baudot[Decrypt_Key_Index])):
                     st.error('Invalid input.', icon="🚨")
@@ -223,10 +219,10 @@ with tab3:
         
             Correct_Decrypt_Key_Length = False
             if Correct_Decrypt_Key_Range == True:
-                if len(Decrypt_Key) != len(Ciphertext) and Decrypt_Key_Input != "": 
+                if len(Decrypt_Key_Input) != len(Ciphertext) and Decrypt_Key_Input != "": 
                     st.error('Key out of range.', icon="🚨")
                     Correct_Decrypt_Key_Length = False
-                elif len(Decrypt_Key) == len(Ciphertext) and len(Decrypt_Key) != 0 and Decrypt_Key_Input != "":
+                elif len(Decrypt_Key_Input) == len(Ciphertext) and len(Decrypt_Key_Input) != 0 and Decrypt_Key_Input != "":
                     Correct_Decrypt_Key_Length = True
         
             Correct_Decrypt_Key = False
@@ -347,7 +343,7 @@ with tab3:
 
 
             if (Decrypt_Choice == "1" or "2") and Correct_Decrypt_Key == True and Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
-                st.write("The key is ", "".join(Decrypt_Key))
+                st.write("The key is ", "".join(Decrypt_Key_Input))
                 st.write( "The plaintext is ", "".join(Plaintext))   
 
 
