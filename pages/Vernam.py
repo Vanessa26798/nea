@@ -268,7 +268,9 @@ with tab3:
                         else:
                             Plaintext.append(Plaintext_Letter)
                             Decrypt_Key_Index = Decrypt_Key_Index + 1  
+                Correct_Decrypt_Key = True
             elif Decrypt_Choice == "2": 
+                Correct_Key = True
                 Ciphertext_Baudot = []
                 for x in Ciphertext:
                     if x != " ":
@@ -342,8 +344,9 @@ with tab3:
     #     st.write("".join(Spaced_Encrypt_Key_Baudot), " - Key")
     #     st.write("".join(Ciphertext_Baudot), " - Ciphertext")
     #     st.write("The ciphertext is ", "".join(Ciphertext))
-                st.write("The key is ", "".join(Decrypt_Key))
-                st.write( "The plaintext is ", "".join(Plaintext))   
+                if (Decrypt_Choice == 1 or 2) and Correct_Decrypt_Key == True and Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
+                    st.write("The key is ", "".join(Decrypt_Key))
+                    st.write( "The plaintext is ", "".join(Plaintext))   
 
 
 with tab4: 
