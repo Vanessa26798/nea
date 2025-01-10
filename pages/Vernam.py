@@ -259,11 +259,7 @@ with tab3:
                             Plaintext_Letter = get_key(XOR_Result)
                         if Plaintext_Letter != "Key doesn't exist" and " ":
                             Plaintext.append(Plaintext_Letter)
-                            st.write(Plaintext_Letter)
                             Decrypt_Key_Index = Decrypt_Key_Index + 1   
-                        # else:
-                        #     Plaintext.append(Plaintext_Letter)
-                        #     Decrypt_Key_Index = Decrypt_Key_Index + 1  
                 Correct_Decrypt_Key = True
             elif Decrypt_Choice == "2": 
                 Correct_Decrypt_Key = True
