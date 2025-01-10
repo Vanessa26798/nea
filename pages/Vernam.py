@@ -217,7 +217,7 @@ with tab3:
                     Decrypt_Key_Index = Decrypt_Key_Index + 1
                     Key_in_Alphabet = True
                     Correct_Decrypt_Key_Range = True    
-                elif Decrypt_Key_Input != "" and (Decrypt_Key_Input == " " or Decrypt_Key_Input[0] == " " or type(x) != type(Ciphertext_Baudot[Decrypt_Key_Index])):
+                elif x not in Alphabet and Decrypt_Key_Input != "" and (Decrypt_Key_Input == " " or Decrypt_Key_Input[0] == " " or type(x) != type(Ciphertext_Baudot[Decrypt_Key_Index])):
                     st.error('Invalid input.', icon="🚨")
                     Correct_Decrypt_Key_Range = False
         
