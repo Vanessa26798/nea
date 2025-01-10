@@ -1,4 +1,4 @@
-     
+         
 
 
 import streamlit as st
@@ -6,6 +6,7 @@ import random
 import pandas as pd
 import time
 import numpy as np
+
 
 import string
 Alphabet = string.ascii_uppercase
