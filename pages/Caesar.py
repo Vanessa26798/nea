@@ -79,7 +79,7 @@ with tab2:
             Encrypt_Key = int(Encrypt_Key)
             st.write("The key is ", Encrypt_Key)
             Correct_Encrypt_Key = True
-        elif Encrypt_Choice != 1 and Encrypt_Choice != 2 and Encrypt_Choice != "": 
+        elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
             Correct_Encrypt_Key = False
 
@@ -163,7 +163,7 @@ with tab3:
             Decrypt_Key = int(Decrypt_Key)            
             st.write("The key is ", Decrypt_Key)
             Correct_Decrypt_Key = True
-        elif Decrypt_Choice != 1 and Decrypt_Choice != 2 and Decrypt_Choice != "": 
+        elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
             Correct_Decrypt_Key = False
 
