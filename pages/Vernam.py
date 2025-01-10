@@ -270,7 +270,7 @@ with tab3:
                             Decrypt_Key_Index = Decrypt_Key_Index + 1  
                 Correct_Decrypt_Key = True
             elif Decrypt_Choice == "2": 
-                Correct_Key = True
+                Correct_Decrypt_Key = True
                 Ciphertext_Baudot = []
                 for x in Ciphertext:
                     if x != " ":
@@ -317,7 +317,7 @@ with tab3:
                             Decrypt_Key_Index = Decrypt_Key_Index + 1  
         
             elif Decrypt_Choice != 1 and Decrypt_Choice != 2 and Decrypt_Choice != "":
-                st.error('Invalid input.', icon="🚨")
+                st.error('Invalid input.3', icon="🚨")
                 Correct_Decrypt_Key = False
 
 
