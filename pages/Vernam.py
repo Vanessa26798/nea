@@ -1,4 +1,4 @@
-
+    
 
 
 import streamlit as st
@@ -342,8 +342,9 @@ with tab3:
     #     st.write("".join(Spaced_Encrypt_Key_Baudot), " - Key")
     #     st.write("".join(Ciphertext_Baudot), " - Ciphertext")
     #     st.write("The ciphertext is ", "".join(Ciphertext))
-                    st.write("The key is ", "".join(Decrypt_Key))
-                    st.write( "The plaintext is ", "".join(Plaintext))   
+
+        st.write("The key is ", "".join(Decrypt_Key))
+        st.write( "The plaintext is ", "".join(Plaintext))   
 
 
 with tab4: 
