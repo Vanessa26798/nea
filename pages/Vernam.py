@@ -269,7 +269,7 @@ with tab3:
                             Plaintext.append(Plaintext_Letter)
                             Decrypt_Key_Index = Decrypt_Key_Index + 1  
                 Correct_Decrypt_Key = True
-            elif Decrypt_Choice == "2": 
+            elif == "2": 
                 Correct_Decrypt_Key = True
                 Ciphertext_Baudot = []
                 for x in Ciphertext:
@@ -316,7 +316,7 @@ with tab3:
                             Plaintext.append(Plaintext_Letter)
                             Decrypt_Key_Index = Decrypt_Key_Index + 1  
         
-            elif Decrypt_Choice != 1 and Decrypt_Choice != 2 and Decrypt_Choice != "":
+            elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "":
                 st.error('Invalid input.3', icon="🚨")
                 Correct_Decrypt_Key = False
 
@@ -346,7 +346,7 @@ with tab3:
     #     st.write("The ciphertext is ", "".join(Ciphertext))
 
 
-            if (Decrypt_Choice == 1 or 2) and Correct_Decrypt_Key == True and Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
+            if (Decrypt_Choice == "1" or "2") and Correct_Decrypt_Key == True and Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
                 st.write("The key is ", "".join(Decrypt_Key))
                 st.write( "The plaintext is ", "".join(Plaintext))   
 
