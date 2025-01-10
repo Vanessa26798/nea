@@ -344,9 +344,11 @@ with tab3:
     #     st.write("".join(Spaced_Encrypt_Key_Baudot), " - Key")
     #     st.write("".join(Ciphertext_Baudot), " - Ciphertext")
     #     st.write("The ciphertext is ", "".join(Ciphertext))
-                if (Decrypt_Choice == 1 or 2) and Correct_Decrypt_Key == True and Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
-                    st.write("The key is ", "".join(Decrypt_Key))
-                    st.write( "The plaintext is ", "".join(Plaintext))   
+
+
+            if (Decrypt_Choice == 1 or 2) and Correct_Decrypt_Key == True and Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
+                st.write("The key is ", "".join(Decrypt_Key))
+                st.write( "The plaintext is ", "".join(Plaintext))   
 
 
 with tab4: 
