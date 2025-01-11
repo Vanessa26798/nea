@@ -320,15 +320,15 @@ with tab3:
                 st.error('Invalid input.', icon="🚨")
                 Correct_Decrypt_Key = False
          if (Decrypt_Choice == "1" or "2") and Correct_Decrypt_Key == True and Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
-                Spaced_Plaintext_Baudot = []
-                for x in Plaintext_Baudot:
+                Spaced_Ciphertext_Baudot = []
+                for x in Ciphertext_Baudot:
                     if x == " ": 
-                        Spaced_Plaintext_Baudot.append(" | ")
+                        Spaced_Ciphertext_Baudot.append(" | ")
                     elif x != " ":
-                        Spaced_Plaintext_Baudot.append(x)
-                        Spaced_Plaintext_Baudot.append(" | ")
+                        Spaced_Ciphertext_Baudot.append(x)
+                        Spaced_Ciphertext_Baudot.append(" | ")
                 st.write("The key is ", "".join(Decrypt_Key))
-                st.write("The Ciphertext and key of each characters are converted to Baudot, and XOR is carried out:") 
+                st.write("The ciphertext and key of each characters are converted to Baudot, and XOR is carried out:") 
                 st.write("".join(Spaced_Ciphertext_Baudot), " - Ciphertext")
                 Spaced_Decrypt_Key_Baudot = []
                 for x in Decrypt_Key_Baudot:
