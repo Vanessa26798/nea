@@ -376,8 +376,8 @@ with tab3:
          elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "":
                 st.error('Invalid input.', icon="🚨")
              
-         st.write(len(Plaintext))
-         st.write(len(Ciphertext))
+         st.write(Plaintext)
+         st.write(Ciphertext)
          if len(Ciphertext) == len(Plaintext):
             Spaced_Ciphertext_Baudot = []
             for x in Ciphertext_Baudot:
