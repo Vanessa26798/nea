@@ -196,13 +196,12 @@ with tab3:
  
     
     if Correct_Ciphertext_Range == True and Correct_Ciphertext_Length == True:
-        Ciphertext_Baudot = []
-        for x in Ciphertext:
+         Ciphertext_Baudot = []
+         for x in Ciphertext:
             if x != " ":
                 Ciphertext_Baudot.append(Baudot[x])
             elif x == " ": 
                 Ciphertext_Baudot.append(" ")
-
          Key_in_Alphabet = False
          Correct_Decrypt_Key_Range = False
          Correct_Decrypt_Key_Length = False
