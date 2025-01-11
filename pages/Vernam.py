@@ -207,6 +207,8 @@ with tab2:
          elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "":
                 st.error('Invalid input.', icon="🚨")
 
+         st.write(len(Plaintext))
+         st.write(len(Ciphertext))
          if len(Plaintext) == len(Ciphertext):
             Spaced_Plaintext_Baudot = []
             for x in Plaintext_Baudot:
