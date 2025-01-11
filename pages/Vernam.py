@@ -78,7 +78,7 @@ with tab2:
             st.error('Invalid plaintext.', icon="🚨")
             Correct_Plaintext_Range = False
             break
-        elif Encrypt_laintext_in_Alphabet == True or Encrypt_Plaintext == " ":
+        elif Encrypt_Plaintext_in_Alphabet == True or Encrypt_Plaintext == " ":
             Correct_Encrypt_Plaintext = True
 
     Correct_Encrypt_Plaintext_Length = False
