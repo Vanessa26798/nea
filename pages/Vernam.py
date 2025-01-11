@@ -241,9 +241,7 @@ with tab3:
                         Plaintext.append(" ")    
                     elif x != " ":
                         Decrypt_Key_Letter = Decrypt_Key[Decrypt_Key_Index]
-                        st.write(Decrypt_Key_Letter)
                         Decrypt_Key_Baudot.append(Baudot[Decrypt_Key_Letter])
-                        st.write(x)
                         XOR = [x]
                         XOR.append(Decrypt_Key_Baudot[Decrypt_Key_Index])
                         XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
