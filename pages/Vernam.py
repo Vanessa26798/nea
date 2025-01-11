@@ -321,7 +321,7 @@ with tab3:
                          Decrypt_Key_Index = Decrypt_Key_Index + 1
                      Plaintext_Baudot.append(XOR_Result)
                      Plaintext_Baudot.append(" | ")
-                st.write(Decrypt_Key)
+             st.write(Decrypt_Key)
          elif Decrypt_Choice == "2":
                   Ciphertext_Baudot = []
                   for x in Ciphertext:
