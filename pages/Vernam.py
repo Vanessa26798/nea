@@ -255,6 +255,8 @@ with tab3:
                      elif Plaintext_Letter != "Key doesn't exist" and " ":
                          Plaintext.append(Plaintext_Letter)
                          Decrypt_Key_Index = Decrypt_Key_Index + 1
+                     Plaintext_Baudot.append(XOR_Result)
+                     Plaintext_Baudot.append(" | ")
     
          elif Decrypt_Choice == "2":
                   Ciphertext_Baudot = []
