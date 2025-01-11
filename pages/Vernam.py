@@ -193,7 +193,6 @@ with tab3:
             Correct_Ciphertext_Length = False
         elif len(Ciphertext) >= 10 and len(Ciphertext) <= 30 and len(Ciphertext) != 0 and Ciphertext != "":
             Correct_Ciphertext_Length = True
- 
     
     if Correct_Ciphertext_Range == True and Correct_Ciphertext_Length == True:
          Ciphertext_Baudot = []
@@ -228,7 +227,6 @@ with tab3:
                 elif len(Decrypt_Key) == len(Ciphertext) and len(Decrypt_Key) != 0 and Decrypt_Key != "":
                     Correct_Decrypt_Key_Length = True
         
-            Correct_Decrypt_Key = False
             if Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
                 Decrypt_Key_Baudot = []
                 Decrypt_Key_Index = 0
@@ -250,7 +248,7 @@ with tab3:
                         XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
                         XOR_Result = str(XOR_Result)
                         Plaintext_Letter = get_key(XOR_Result) 
-                        if Plaintext_Letter == "Key doesn't exist":
+                        while Plaintext_Letter == "Key doesn't exist":
                             st.error('Invalid input.2', icon="🚨")
                             # Decrypt_Key_Baudot[Decrypt_Key_Index] = Baudot[Decrypt_Key_Letter]
                             # Decrypt_Key_LetterBaudot = Decrypt_Key_Baudot[Decrypt_Key_Index]
