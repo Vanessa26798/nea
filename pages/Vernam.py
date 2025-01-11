@@ -307,7 +307,7 @@ with tab3:
                         else:
                             Plaintext.append(Plaintext_Letter)
                             Decrypt_Key_Index = Decrypt_Key_Index + 1  
-                     Correct_Decrypt_Key = True
+                Correct_Decrypt_Key = True
             elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "":
                 st.error('Invalid input.', icon="🚨")
                 Correct_Decrypt_Key = False
