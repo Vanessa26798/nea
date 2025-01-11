@@ -81,6 +81,7 @@ with tab2:
         elif Plaintext_in_Alphabet == True or Plaintext == " ":
             Correct_Plaintext = True
 
+    st.write("one")
     Correct_Plaintext_Length = False
     if Correct_Plaintext_Range == True:
         if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
@@ -268,7 +269,7 @@ with tab3:
          Correct_Decrypt_Key_Range = False
          Correct_Decrypt_Key_Length = False
          Correct_Decrypt_Key = False
-         Decrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
+         Decrypt_Choice = st.text_input("Input your own key for decryption (1) or generate a random key (2)? ", value="")
          if Decrypt_Choice == "1":
             Decrypt_Key_Input = st.text_input("Please input the key for decryption, with the same length as the ciphertext : ", value="")
             Decrypt_Key_Input = Decrypt_Key_Input.upper()
