@@ -209,8 +209,6 @@ with tab3:
             Decrypt_Key_Input = Decrypt_Key_Input.upper()
             Decrypt_Key_Index = 0
             Decrypt_Key = []
-            # Correct_Decrypt_Key = True
-            # if Correct_Decrypt_Key == True: 
             for x in Decrypt_Key_Input: 
              if (x in Alphabet or x == " ") and Decrypt_Key_Input[0] != " " and type(x) == type(Ciphertext_Baudot[Decrypt_Key_Index]):
                  Decrypt_Key.append(x)
@@ -218,7 +216,7 @@ with tab3:
              elif (x not in Alphabet and Decrypt_Key_Input != "") or (Decrypt_Key_Input == " " or Decrypt_Key_Input[0] == " " or type(x) != type(Ciphertext_Baudot[Decrypt_Key_Index])):
                  st.error('Invalid input.', icon="🚨")
                  Correct_Decrypt_Key_Range = False
-                      
+    
             Correct_Decrypt_Key_Length = False
             if Correct_Decrypt_Key_Range == True:
              if len(Decrypt_Key) != len(Ciphertext) and Decrypt_Key_Input != "": 
@@ -226,7 +224,7 @@ with tab3:
                  Correct_Decrypt_Key_Length = False
              elif len(Decrypt_Key) == len(Ciphertext) and len(Decrypt_Key) != 0 and Decrypt_Key != "":
                  Correct_Decrypt_Key_Length = True
-            
+    
             if Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
              Decrypt_Key_Baudot = []
              Decrypt_Key_Index = 0
@@ -254,17 +252,10 @@ with tab3:
                          st.error('Invalid input.2', icon="🚨")
                          Correct_Decrypt_Key = False
                          break
-                         # Decrypt_Key_Baudot[Decrypt_Key_Index] = Baudot[Decrypt_Key_Letter]
-                         # Decrypt_Key_LetterBaudot = Decrypt_Key_Baudot[Decrypt_Key_Index]
-                         # XOR = [x]
-                         # XOR.append(Decrypt_Key_LetterBaudot)
-                         # XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
-                         # XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
-                         # XOR_Result = str(XOR_Result)
-                         # Plaintext_Letter = get_key(XOR_Result)
                      elif Plaintext_Letter != "Key doesn't exist" and " ":
                          Plaintext.append(Plaintext_Letter)
-                         Decrypt_Key_Index = Decrypt_Key_Index + 1   
+                         Decrypt_Key_Index = Decrypt_Key_Index + 1
+    
          elif Decrypt_Choice == "2":
                   Ciphertext_Baudot = []
                   for x in Ciphertext:
@@ -314,14 +305,17 @@ with tab3:
                             Decrypt_Key_Index = Decrypt_Key_Index + 1 
                         Plaintext_Baudot.append(XOR_Result)
                         Plaintext_Baudot.append(" | ")
-                  Correct_Decrypt_Key = True
-                  Correct_Decrypt_Key_Range = True
-                  Correct_Decrypt_Key_Length = True
+
          elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "":
                 st.error('Invalid input.', icon="🚨")
-                Correct_Decrypt_Key = False
-         if (Decrypt_Choice == "1" or "2") and Correct_Decrypt_Key == True and Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
-                Spaced_Ciphertext_Baudot = []
+
+         if len(Ciphertext) == len(Plaintext):
+            # Correct_Decrypt_Key_Range = True
+            # Correct_Decrypt_Key_Length = True
+            # Correct_Decrypt_Key = True
+             
+         # if (Decrypt_Choice == "1" or "2") and Correct_Decrypt_Key == True and Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
+         #      Spaced_Ciphertext_Baudot = []
                 for x in Ciphertext_Baudot:
                     if x == " ": 
                         Spaced_Ciphertext_Baudot.append(" | ")
