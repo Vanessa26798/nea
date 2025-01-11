@@ -314,6 +314,8 @@ with tab3:
                         Plaintext_Baudot.append(XOR_Result)
                         Plaintext_Baudot.append(" | ")
                   Correct_Decrypt_Key = True
+                  Correct_Decrypt_Key_Range = True
+                  Correct_Decrypt_Key_Length = True
          elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "":
                 st.error('Invalid input.', icon="🚨")
                 Correct_Decrypt_Key = False
