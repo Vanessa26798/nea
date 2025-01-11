@@ -262,7 +262,7 @@ with tab3:
                             Plaintext.append(Plaintext_Letter)
                             Decrypt_Key_Index = Decrypt_Key_Index + 1   
                 Correct_Decrypt_Key = True
-            elif Decrypt_Choice == "2":                 Correct_Decrypt_Key = True
+            elif Decrypt_Choice == "2":
                 Ciphertext_Baudot = []
                 for x in Ciphertext:
                     if x != " ":
