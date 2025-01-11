@@ -219,7 +219,7 @@ with tab3:
                 elif (x not in Alphabet and Decrypt_Key_Input != "") or (Decrypt_Key_Input == " " or Decrypt_Key_Input[0] == " " or type(x) != type(Ciphertext_Baudot[Decrypt_Key_Index])):
                     st.error('Invalid input.', icon="🚨")
                     Correct_Decrypt_Key_Range = False
-        
+                         
             Correct_Decrypt_Key_Length = False
             if Correct_Decrypt_Key_Range == True:
                 if len(Decrypt_Key) != len(Ciphertext) and Decrypt_Key_Input != "": 
@@ -262,8 +262,7 @@ with tab3:
                             Plaintext.append(Plaintext_Letter)
                             Decrypt_Key_Index = Decrypt_Key_Index + 1   
                 Correct_Decrypt_Key = True
-            elif Decrypt_Choice == "2": 
-                Correct_Decrypt_Key = True
+            elif Decrypt_Choice == "2":                 Correct_Decrypt_Key = True
                 Ciphertext_Baudot = []
                 for x in Ciphertext:
                     if x != " ":
@@ -308,6 +307,7 @@ with tab3:
                         else:
                             Plaintext.append(Plaintext_Letter)
                             Decrypt_Key_Index = Decrypt_Key_Index + 1  
+                     Correct_Decrypt_Key = True
             elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "":
                 st.error('Invalid input.', icon="🚨")
                 Correct_Decrypt_Key = False
