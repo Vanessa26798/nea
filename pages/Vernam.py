@@ -1,8 +1,4 @@
 
-
-
-
-
 import streamlit as st
 import random
 import pandas as pd
@@ -244,7 +240,9 @@ with tab3:
                                  Plaintext_Baudot.append(" | ")
                                  Plaintext.append(" ")    
                              elif x != " ":
+                                 st.write(x)
                                  Decrypt_Key_Letter = Decrypt_Key[Decrypt_Key_Index]
+                                 st.write(Decrypt_Key_Letter)
                                  Decrypt_Key_Baudot.append(Baudot[Decrypt_Key_Letter])
                                  XOR = [x]
                                  XOR.append(Decrypt_Key_Baudot[Decrypt_Key_Index])
