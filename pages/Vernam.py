@@ -203,11 +203,11 @@ with tab3:
             elif x == " ": 
                 Ciphertext_Baudot.append(" ")
 
-        Key_in_Alphabet = False
-        Correct_Decrypt_Key_Range = False
-        Correct_Decrypt_Key_Length = False
-        Decrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
-        if Decrypt_Choice == "1":
+         Key_in_Alphabet = False
+         Correct_Decrypt_Key_Range = False
+         Correct_Decrypt_Key_Length = False
+         Decrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
+         if Decrypt_Choice == "1":
             Decrypt_Key_Input = st.text_input("Please input the key for decryption, with the same length as the ciphertext : ", value="")
             Decrypt_Key_Input = Decrypt_Key_Input.upper()
             Decrypt_Key_Index = 0
@@ -262,18 +262,18 @@ with tab3:
                             Plaintext.append(Plaintext_Letter)
                             Decrypt_Key_Index = Decrypt_Key_Index + 1   
                 Correct_Decrypt_Key = True
-            elif Decrypt_Choice == "2":
-                Ciphertext_Baudot = []
-                for x in Ciphertext:
+         elif Decrypt_Choice == "2":
+                  Ciphertext_Baudot = []
+                  for x in Ciphertext:
                     if x != " ":
                         Ciphertext_Baudot.append(Baudot[x])
                     elif x == " ": 
                         Ciphertext_Baudot.append(" ")
-                Decrypt_Key = []
-                Decrypt_Key_Baudot = []
-                Decrypt_Key_Index = 0
-                Plaintext = []
-                for x in Ciphertext_Baudot:
+                  Decrypt_Key = []
+                  Decrypt_Key_Baudot = []
+                  Decrypt_Key_Index = 0
+                  Plaintext = []
+                  for x in Ciphertext_Baudot:
                     if x == " ": 
                         Decrypt_Key.append(" ") 
                         Decrypt_Key_Baudot.append(" ") 
@@ -311,11 +311,11 @@ with tab3:
                            Plaintext_Baudot.append(" | ")
                            Plaintext.append(Plaintext_Letter)
                            Decrypt_Key_Index = Decrypt_Key_Index + 1  
-                Correct_Decrypt_Key = True
-            elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "":
+                  Correct_Decrypt_Key = True
+         elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "":
                 st.error('Invalid input.', icon="🚨")
                 Correct_Decrypt_Key = False
-            if (Decrypt_Choice == "1" or "2") and Correct_Decrypt_Key == True and Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
+         if (Decrypt_Choice == "1" or "2") and Correct_Decrypt_Key == True and Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
                 Spaced_Plaintext_Baudot = []
                 for x in Plaintext_Baudot:
                     if x == " ": 
@@ -336,7 +336,7 @@ with tab3:
                 st.write("".join(Spaced_Decrypt_Key_Baudot), " - Key")
                 st.write("".join(Plaintext_Baudot), " - Plaintext")
                 st.write( "The plaintext is ", "".join(Plaintext))   
-
+         
 
 with tab4: 
     st.header("Level of security")
