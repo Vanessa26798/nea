@@ -231,6 +231,7 @@ with tab3:
             if Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
                 Decrypt_Key_Baudot = []
                 Decrypt_Key_Index = 0
+                
                 Plaintext = []
                 for x in Ciphertext_Baudot:
                     if x == " ": 
@@ -271,12 +272,15 @@ with tab3:
                   Decrypt_Key = []
                   Decrypt_Key_Baudot = []
                   Decrypt_Key_Index = 0
+                  Plaintext_Baudot = []
                   Plaintext = []
                   for x in Ciphertext_Baudot:
                     if x == " ": 
                         Decrypt_Key.append(" ") 
                         Decrypt_Key_Baudot.append(" ") 
                         Decrypt_Key_Index = Decrypt_Key_Index + 1
+                        Plaintext_Baudot.append(" ")
+                        Plaintext_Baudot.append(" | ")
                         Plaintext.append(" ")    
                     elif x != " ":
                         Decrypt_Key_Letter = random.choice(Alphabet)
