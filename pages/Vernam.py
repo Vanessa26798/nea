@@ -205,6 +205,7 @@ with tab3:
          Key_in_Alphabet = False
          Correct_Decrypt_Key_Range = False
          Correct_Decrypt_Key_Length = False
+         Correct_Decrypt_Key = False
          Decrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
          if Decrypt_Choice == "1":
             Decrypt_Key_Input = st.text_input("Please input the key for decryption, with the same length as the ciphertext : ", value="")
