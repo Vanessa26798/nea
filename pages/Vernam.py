@@ -301,21 +301,21 @@ with tab3:
                             XOR_Result = str(XOR_Result)
                             Plaintext_Letter = get_key(XOR_Result)
                             if Plaintext_Letter != "Key doesn't exist" and " ":
+                                Plaintext_Baudot.append(XOR_Result)
+                                Plaintext_Baudot.append(" | ")
                                 Plaintext.append(Plaintext_Letter)
                                 Decrypt_Key_Index = Decrypt_Key_Index + 1   
                                 break
                         else:
-                            Plaintext.append(Plaintext_Letter)
-                            Decrypt_Key_Index = Decrypt_Key_Index + 1  
+                           Plaintext_Baudot.append(XOR_Result)
+                           Plaintext_Baudot.append(" | ")
+                           Plaintext.append(Plaintext_Letter)
+                           Decrypt_Key_Index = Decrypt_Key_Index + 1  
                 Correct_Decrypt_Key = True
             elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "":
                 st.error('Invalid input.', icon="🚨")
                 Correct_Decrypt_Key = False
             if (Decrypt_Choice == "1" or "2") and Correct_Decrypt_Key == True and Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
-                Plaintext_Baudot.append(XOR_Result)
-                Plaintext_Baudot.append(" | ")
-        
-        
                 Spaced_Plaintext_Baudot = []
                 for x in Plaintext_Baudot:
                     if x == " ": 
