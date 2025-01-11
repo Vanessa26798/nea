@@ -309,7 +309,7 @@ with tab3:
                      XOR_Result = str(XOR_Result)
                      Plaintext_Letter = get_key(XOR_Result) 
                      if Plaintext_Letter == "Key doesn't exist":
-                         st.error('Invalid input.', icon="🚨")
+                         st.error('Invalid key.', icon="🚨")
                          Correct_Decrypt_Key = False
                          break
                      elif Plaintext_Letter != "Key doesn't exist" and " ":
