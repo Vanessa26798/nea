@@ -231,13 +231,14 @@ with tab3:
             if Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
                 Decrypt_Key_Baudot = []
                 Decrypt_Key_Index = 0
-                
+                Plaintext_Baudot = []
                 Plaintext = []
                 for x in Ciphertext_Baudot:
                     if x == " ": 
                         Decrypt_Key.append(" ") 
                         Decrypt_Key_Baudot.append(" ") 
                         Decrypt_Key_Index = Decrypt_Key_Index + 1
+                        Plaintext_Baudot.append(" | ")
                         Plaintext.append(" ")    
                     elif x != " ":
                         Decrypt_Key_Letter = Decrypt_Key[Decrypt_Key_Index]
@@ -279,7 +280,6 @@ with tab3:
                         Decrypt_Key.append(" ") 
                         Decrypt_Key_Baudot.append(" ") 
                         Decrypt_Key_Index = Decrypt_Key_Index + 1
-                        Plaintext_Baudot.append(" ")
                         Plaintext_Baudot.append(" | ")
                         Plaintext.append(" ")    
                     elif x != " ":
@@ -304,16 +304,14 @@ with tab3:
                             XOR_Result = str(XOR_Result)
                             Plaintext_Letter = get_key(XOR_Result)
                             if Plaintext_Letter != "Key doesn't exist" and " ":
-                                Plaintext_Baudot.append(XOR_Result)
-                                Plaintext_Baudot.append(" | ")
                                 Plaintext.append(Plaintext_Letter)
                                 Decrypt_Key_Index = Decrypt_Key_Index + 1   
                                 break
                         else:
-                           Plaintext_Baudot.append(XOR_Result)
-                           Plaintext_Baudot.append(" | ")
-                           Plaintext.append(Plaintext_Letter)
-                           Decrypt_Key_Index = Decrypt_Key_Index + 1  
+                            Plaintext.append(Plaintext_Letter)
+                            Decrypt_Key_Index = Decrypt_Key_Index + 1 
+                        Plaintext_Baudot.append(XOR_Result)
+                        Plaintext_Baudot.append(" | ")
                   Correct_Decrypt_Key = True
          elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "":
                 st.error('Invalid input.', icon="🚨")
