@@ -66,7 +66,7 @@ with tab2:
     st.header("Encrypt a plaintext")
 
     Correct_Plaintext_Range = False
-    Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
+    Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")    
     Plaintext = Plaintext.upper()
     for x in Plaintext: 
         if (x in Alphabet or x == " ") and Plaintext[0] != " ":
@@ -79,7 +79,7 @@ with tab2:
             Correct_Plaintext_Range = False
             break
         elif Plaintext_in_Alphabet == True or Plaintext == " ":
-            Correct_Plaintext_Range = True
+            Correct_Plaintext = True
 
     Correct_Plaintext_Length = False
     if Correct_Plaintext_Range == True:
@@ -88,80 +88,145 @@ with tab2:
             Correct_Plaintext_Length = False
         elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
             Correct_Plaintext_Length = True
-
-
+    
     if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
-        Plaintext_Baudot = []
-        for x in Plaintext:
+         Plaintext_Baudot = []
+         for x in Plaintext:
             if x != " ":
                 Plaintext_Baudot.append(Baudot[x])
             elif x == " ": 
                 Plaintext_Baudot.append(" ")
-        Encrypt_Key = []
-        Encrypt_Key_Baudot = []
-        Encrypt_Key_Index = 0
-        Ciphertext_Baudot = []
-        Ciphertext = []
-        for x in Plaintext_Baudot:
-            if x == " ": 
-                Encrypt_Key.append(" ") 
-                Encrypt_Key_Baudot.append(" ") 
-                Encrypt_Key_Index = Encrypt_Key_Index + 1
-                Ciphertext_Baudot.append(" | ")
-                Ciphertext.append(" ")    
-            elif x != " ":
-                Encrypt_Key_Letter = random.choice(Alphabet)
-                Encrypt_Key.append(Encrypt_Key_Letter)
-                Encrypt_Key_Baudot.append(Baudot[Encrypt_Key_Letter])
-                XOR = [x]
-                XOR.append(Encrypt_Key_Baudot[Encrypt_Key_Index])
-                XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
-                XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
-                XOR_Result = str(XOR_Result)
-                Ciphertext_Letter = get_key(XOR_Result) 
-                while Ciphertext_Letter == "Key doesn't exist":
-                    Encrypt_Key_Letter = random.choice(Alphabet)
-                    Encrypt_Key[Encrypt_Key_Index] = Encrypt_Key_Letter
-                    Encrypt_Key_Baudot[Encrypt_Key_Index] = Baudot[Encrypt_Key_Letter]
-                    Encrypt_Key_LetterBaudot = Encrypt_Key_Baudot[Encrypt_Key_Index]
-                    XOR = [x]
-                    XOR.append(Encrypt_Key_LetterBaudot)
-                    XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
-                    XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
-                    XOR_Result = str(XOR_Result)
-                    Ciphertext_Letter = get_key(XOR_Result)
-                    if Ciphertext_Letter != "Key doesn't exist" and " ":
-                        Ciphertext.append(Ciphertext_Letter)
-                        Encrypt_Key_Index = Encrypt_Key_Index + 1   
-                        break
-                else:
-                    Ciphertext.append(Ciphertext_Letter)
-                    Encrypt_Key_Index = Encrypt_Key_Index + 1 
-                Ciphertext_Baudot.append(XOR_Result)
-                Ciphertext_Baudot.append(" | ")
-
-
-        Spaced_Plaintext_Baudot = []
-        for x in Plaintext_Baudot:
-            if x == " ": 
-                Spaced_Plaintext_Baudot.append(" | ")
-            elif x != " ":
-                Spaced_Plaintext_Baudot.append(x)
-                Spaced_Plaintext_Baudot.append(" | ")
-        st.write("The key is ", "".join(Encrypt_Key))
-        st.write("The plaintext and key of each characters are converted to Baudot, and XOR is carried out:") 
-        st.write("".join(Spaced_Plaintext_Baudot), " - Plaintext")
-        Spaced_Encrypt_Key_Baudot = []
-        for x in Encrypt_Key_Baudot:
-            if x == " ": 
-                Spaced_Encrypt_Key_Baudot.append(" | ")
-            elif x != " ":
-                Spaced_Encrypt_Key_Baudot.append(x)
-                Spaced_Encrypt_Key_Baudot.append(" | ")
-        st.write("".join(Spaced_Encrypt_Key_Baudot), " - Key")
-        st.write("".join(Ciphertext_Baudot), " - Ciphertext")
-        st.write("The ciphertext is ", "".join(Ciphertext))          
+         Key_in_Alphabet = False
+         Correct_Encrypt_Key_Range = False
+         Correct_Encrypt_Key_Length = False
+         Correct_Encrypt_Key = False
+         Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
+         if Encrypt_Choice == "1":
+            Encrypt_Key_Input = st.text_input("Please input the key for encryption, with the same length as the ciphertext : ", value="")
+            Encrypt_Key_Input = Encrypt_Key_Input.upper()
+            Encrypt_Key_Index = 0
+            Encrypt_Key = []
+            for x in Encrypt_Key_Input: 
+             if (x in Alphabet or x == " ") and Encrypt_Key_Input[0] != " " and type(x) == type(Plaintext_Baudot[Encrypt_Key_Index]):
+                 Encrypt_Key.append(x)
+                 Correct_Encrypt_Key_Range = True    
+             elif (x not in Alphabet and Encrypt_Key_Input != "") or (Encrypt_Key_Input == " " or Encrypt_Key_Input[0] == " " or type(x) != type(Plaintext_Baudot[Encrypt_Key_Index])):
+                 st.error('Invalid input.', icon="🚨")
+                 Correct_Encrypt_Key_Range = False
     
+            Correct_Encrypt_Key_Length = False
+            if Correct_Encrypt_Key_Range == True:
+             if len(Encrypt_Key) != len(Plaintext) and Encrypt_Key_Input != "": 
+                 st.error('Key out of range.', icon="🚨")
+                 Correct_Encrypt_Key_Length = False
+             elif len(Encrypt_Key) == len(Plaintext) and len(Encrypt_Key) != 0 and Encrypt_Key != "":
+                 Correct_Encrypt_Key_Length = True
+    
+            if Correct_Encrypt_Key_Range == True and Correct_Encrypt_Key_Length == True:
+             Encrypt_Key_Baudot = []
+             Encrypt_Key_Index = 0
+             Ciphertext_Baudot = []
+             Ciphertext = []
+             for x in Ciphertext_Baudot:
+                 if x == " ": 
+                     Encrypt_Key.append(" ") 
+                     Encrypt_Key_Baudot.append(" ") 
+                     Encrypt_Key_Index = Encrypt_Key_Index + 1
+                     Ciphertext_Baudot.append(" | ")
+                     Ciphertext.append(" ")    
+                 elif x != " ":
+                     Encrypt_Key_Letter = Encrypt_Key[Encrypt_Key_Index]
+                     Encrypt_Key_Baudot.append(Baudot[Encryptt_Key_Letter])
+                     XOR = [x]
+                     XOR.append(Encrypt_Key_Baudot[Encrypt_Key_Index])
+                     XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+                     XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
+                     XOR_Result = str(XOR_Result)
+                     Ciphertext_Letter = get_key(XOR_Result) 
+                     if Ciphertext_Letter == "Key doesn't exist":
+                         st.error('Invalid input.', icon="🚨")
+                         Correct_Encrypt_Key = False
+                         break
+                     elif Ciphertext_Letter != "Key doesn't exist" and " ":
+                         Plaintext.append(Ciphertext_Letter)
+                         Encrypt_Key_Index = Encrypt_Key_Index + 1
+                     Ciphertext_Baudot.append(XOR_Result)
+                     Ciphertext_Baudot.append(" | ")
+    
+         elif Encrypt_Choice == "2":
+                  Plaintext_Baudot = []
+                  for x in Plaintext:
+                    if x != " ":
+                        Plaintext_Baudot.append(Baudot[x])
+                    elif x == " ": 
+                        Plaintext_Baudot.append(" ")
+                  Encrypt_Key = []
+                  Encrypt_Key_Baudot = []
+                  Encrypt_Key_Index = 0
+                  Ciphertext_Baudot = []
+                  Ciphertext = []
+                  for x in Plaintext_Baudot:
+                    if x == " ": 
+                        Encrypt_Key.append(" ") 
+                        Encrypt_Key_Baudot.append(" ") 
+                        Encrypt_Key_Index = Encrypt_Key_Index + 1
+                        Ciphertext_Baudot.append(" | ")
+                        Ciphertext.append(" ")    
+                    elif x != " ":
+                        Encrypt_Key_Letter = random.choice(Alphabet)
+                        Encrypt_Key.append(Encrypt_Key_Letter)
+                        Encrypt_Key_Baudot.append(Baudot[Encrypt_Key_Letter])
+                        XOR = [x]
+                        XOR.append(Encrypt_Key_Baudot[Encrypt_Key_Index])
+                        XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+                        XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
+                        XOR_Result = str(XOR_Result)
+                        Ciphertext_Letter = get_key(XOR_Result) 
+                        while Ciphertext_Letter == "Key doesn't exist":
+                            Encrypt_Key_Letter = random.choice(Alphabet)
+                            Encrypt_Key[Encrypt_Key_Index] = Encrypt_Key_Letter
+                            Encrypt_Key_Baudot[Encrypt_Key_Index] = Baudot[Encrypt_Key_Letter]
+                            Encrypt_Key_LetterBaudot = Encrypt_Key_Baudot[Encrypt_Key_Index]
+                            XOR = [x]
+                            XOR.append(Encrypt_Key_LetterBaudot)
+                            XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+                            XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
+                            XOR_Result = str(XOR_Result)
+                            Ciphertext_Letter = get_key(XOR_Result)
+                            if Ciphertext_Letter != "Key doesn't exist" and " ":
+                                Ciphertext.append(Ciphertext_Letter)
+                                Encrypt_Key_Index = Encrypt_Key_Index + 1   
+                                break
+                        else:
+                            Ciphertext.append(Ciphertext)
+                            Encrypt_Key_Index = Encrypt_Key_Index + 1 
+                        Ciphertext_Baudot.append(XOR_Result)
+                        Ciphertext_Baudot.append(" | ")
+
+         elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "":
+                st.error('Invalid input.', icon="🚨")
+
+         if len(Plaintext) == len(Ciphertext):
+            Spaced_Plaintext_Baudot = []
+            for x in Plaintext_Baudot:
+                if x == " ": 
+                    Spaced_Plaintext_Baudot.append(" | ")
+                elif x != " ":
+                    Spaced_Plaintext_Baudot.append(x)
+                    Spaced_Plaintext_Baudot.append(" | ")
+            st.write("The key is ", "".join(Encrypt_Key))
+            st.write("The plaintext and key of each characters are converted to Baudot, and XOR is carried out:") 
+            st.write("".join(Spaced_Plaintext_Baudot), " - Plaintext")
+            Spaced_Encrypt_Key_Baudot = []
+            for x in Encrypt_Key_Baudot:
+                if x == " ": 
+                    Spaced_Encrypt_Key_Baudot.append(" | ")
+                elif x != " ":
+                    Spaced_Encrypt_Key_Baudot.append(x)
+                    Spaced_Encrypt_Key_Baudot.append(" | ")
+            st.write("".join(Spaced_Encrypt_Key_Baudot), " - Key")
+            st.write("".join(Ciphertext_Baudot), " - Ciphertext")
+            st.write( "The ciphertext is ", "".join(Ciphertext))   
 
 
 
@@ -247,7 +312,7 @@ with tab3:
                      XOR_Result = str(XOR_Result)
                      Plaintext_Letter = get_key(XOR_Result) 
                      if Plaintext_Letter == "Key doesn't exist":
-                         st.error('Invalid input.2', icon="🚨")
+                         st.error('Invalid input.', icon="🚨")
                          Correct_Decrypt_Key = False
                          break
                      elif Plaintext_Letter != "Key doesn't exist" and " ":
@@ -310,31 +375,26 @@ with tab3:
                 st.error('Invalid input.', icon="🚨")
 
          if len(Ciphertext) == len(Plaintext):
-            # Correct_Decrypt_Key_Range = True
-            # Correct_Decrypt_Key_Length = True
-            # Correct_Decrypt_Key = True
-             
-         # if (Decrypt_Choice == "1" or "2") and Correct_Decrypt_Key == True and Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
-                Spaced_Ciphertext_Baudot = []
-                for x in Ciphertext_Baudot:
-                    if x == " ": 
-                        Spaced_Ciphertext_Baudot.append(" | ")
-                    elif x != " ":
-                        Spaced_Ciphertext_Baudot.append(x)
-                        Spaced_Ciphertext_Baudot.append(" | ")
-                st.write("The key is ", "".join(Decrypt_Key))
-                st.write("The ciphertext and key of each characters are converted to Baudot, and XOR is carried out:") 
-                st.write("".join(Spaced_Ciphertext_Baudot), " - Ciphertext")
-                Spaced_Decrypt_Key_Baudot = []
-                for x in Decrypt_Key_Baudot:
-                    if x == " ": 
-                        Spaced_Decrypt_Key_Baudot.append(" | ")
-                    elif x != " ":
-                        Spaced_Decrypt_Key_Baudot.append(x)
-                        Spaced_Decrypt_Key_Baudot.append(" | ")
-                st.write("".join(Spaced_Decrypt_Key_Baudot), " - Key")
-                st.write("".join(Plaintext_Baudot), " - Plaintext")
-                st.write( "The plaintext is ", "".join(Plaintext))   
+            Spaced_Ciphertext_Baudot = []
+            for x in Ciphertext_Baudot:
+                if x == " ": 
+                    Spaced_Ciphertext_Baudot.append(" | ")
+                elif x != " ":
+                    Spaced_Ciphertext_Baudot.append(x)
+                    Spaced_Ciphertext_Baudot.append(" | ")
+            st.write("The key is ", "".join(Decrypt_Key))
+            st.write("The ciphertext and key of each characters are converted to Baudot, and XOR is carried out:") 
+            st.write("".join(Spaced_Ciphertext_Baudot), " - Ciphertext")
+            Spaced_Decrypt_Key_Baudot = []
+            for x in Decrypt_Key_Baudot:
+                if x == " ": 
+                    Spaced_Decrypt_Key_Baudot.append(" | ")
+                elif x != " ":
+                    Spaced_Decrypt_Key_Baudot.append(x)
+                    Spaced_Decrypt_Key_Baudot.append(" | ")
+            st.write("".join(Spaced_Decrypt_Key_Baudot), " - Key")
+            st.write("".join(Plaintext_Baudot), " - Plaintext")
+            st.write( "The plaintext is ", "".join(Plaintext))   
          
 
 with tab4: 
