@@ -315,7 +315,7 @@ with tab3:
             # Correct_Decrypt_Key = True
              
          # if (Decrypt_Choice == "1" or "2") and Correct_Decrypt_Key == True and Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
-         #      Spaced_Ciphertext_Baudot = []
+                Spaced_Ciphertext_Baudot = []
                 for x in Ciphertext_Baudot:
                     if x == " ": 
                         Spaced_Ciphertext_Baudot.append(" | ")
