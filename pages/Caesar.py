@@ -211,6 +211,8 @@ with tab4:
          else: 
              Letter_index = int(Alphabet.index(x))
              Letter_index += Key
+             while Letter_index >= 25: 
+                 Letter_index -= 26
              Letter = Alphabet[Letter_index]
              Ciphertext.append(Letter)
     st.write("If the plaintext is " + Plaintext + ", the key is " + Key + ", the ciphertext is " + "".join(Ciphertext))
