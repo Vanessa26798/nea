@@ -2,7 +2,7 @@ import streamlit as st
 import random
 
 st.title("ENCRYPTION TEACHING TOOL")
-st.write("Select the encryption method that you would like to discover more about")
+st.write("Select the encryption method that you would like to discover more about:")
 
 col1, col2 = st.columns(2)
 with col1:
