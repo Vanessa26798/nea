@@ -7,7 +7,6 @@ import numpy as np
 import string
 Alphabet = string.ascii_uppercase
 
-st.page_link("pages/streamlit_app.py", label="Click me")
 st.header("Caesar cipher")
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
@@ -18,6 +17,7 @@ with tab1:
     
     with col1:
         st.image("https://cdn.britannica.com/17/193717-050-030D75E3/Julius-Caesar-statue-Rome-Italy.jpg?w=300", caption="Bronze sculpture of Julius Caesar in Rome")
+        st.page_link("pages/streamlit_app.py", label="Click me")
     
     with col2:
         st.write("The Caesar Cipher is one of the oldest cryptographic algorithms. It is named after Julius Caesar who initially used it to protect sensitive military messages, allowing him to communicate with his military generals.  ")
