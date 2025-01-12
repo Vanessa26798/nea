@@ -6,8 +6,9 @@ import numpy as np
 
 import string
 Alphabet = string.ascii_uppercase
-st.header("Caesar cipher")
 
+st.page_link("pages/streamlit_app.py", label="Click me")
+st.header("Caesar cipher")
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
 
