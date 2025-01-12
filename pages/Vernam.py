@@ -146,7 +146,7 @@ with tab2:
                          Correct_Encrypt_Key = False
                          break
                      elif Ciphertext_Letter != "Key doesn't exist" and " ":
-                         Plaintext.append(Ciphertext_Letter)
+                         Ciphertext.append(Ciphertext_Letter)
                          Encrypt_Key_Index = Encrypt_Key_Index + 1
                      Ciphertext_Baudot.append(XOR_Result)
                      Ciphertext_Baudot.append(" | ")
