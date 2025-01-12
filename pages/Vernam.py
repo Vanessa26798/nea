@@ -55,7 +55,7 @@ with tab1:
     col1, col2 = st.columns(2)
 
     with col1:
-        st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeIbofN8VxLSPyQPAXN5tGi4wE_xP2AQOPDyFZ05zAGSQfMsZupIP7IdQEMhP4diqqTxQ&usqp=CAU", caption="Gilbert S. Vernam")
+        st.image("https://upload.wikimedia.org/wikipedia/en/f/f6/Gilbert_Vernam.jpg", caption="Gilbert S. Vernam")
     
     with col2:
         st.subheader("Vernam cipher, also known as one-time pad, is invented by Gilbert S. Vernam when he was working for the American Telephone & Telegraph Company (AT&T) as an engineer in 1917. ")
