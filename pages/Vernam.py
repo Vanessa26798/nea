@@ -134,7 +134,7 @@ with tab2:
                      Ciphertext.append(" ")    
                  elif x != " ":
                      Encrypt_Key_Letter = Encrypt_Key[Encrypt_Key_Index]
-                     Encrypt_Key_Baudot.append(Baudot[Encryptt_Key_Letter])
+                     Encrypt_Key_Baudot.append(Baudot[Encrypt_Key_Letter])
                      XOR = [x]
                      XOR.append(Encrypt_Key_Baudot[Encrypt_Key_Index])
                      XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
