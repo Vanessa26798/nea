@@ -461,7 +461,7 @@ with tab4:
     chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
     st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
     st.write("The character with the highest occurance is " + Highest_Occurance_Character + ".")
-    st.write("However, it does not matter which character has the highest occurance as theoratically the unique key offers perfect security, making it mathematically impossible to break.") 
+    st.write("However, even though some character has higher occurance, it is mathematically impossible to break due to the unique key which offers prefect security.") 
     st.write("Therefore, level of security for Vernam cipher is higher.")
 
 
