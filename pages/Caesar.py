@@ -17,8 +17,7 @@ with tab1:
     with col1:
         st.image("https://cdn.britannica.com/17/193717-050-030D75E3/Julius-Caesar-statue-Rome-Italy.jpg?w=300", caption="Bronze sculpture of Julius Caesar in Rome")
     with col2:
-        st.write("Caesar Cipher, also known as substitution cipher, is one of the oldest cryptographic algorithms. It is named after Julius Caesar who initially used it to protect sensitive military messages, allowing him to communicate with his military generals.  ")
-
+        st.write("Caesar Cipher, also known as substitution cipher, is one of the oldest cryptographic algorithms. It is named after Julius Caesar who initially used it to protect sensitive and secret military messages, allowing him to communicate with his army generals in the war front.  ")
 
 
 with tab2:
