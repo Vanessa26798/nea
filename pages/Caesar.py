@@ -215,7 +215,7 @@ with tab4:
                  Letter_index -= 26
              Letter = Alphabet[Letter_index]
              Ciphertext.append(Letter)
-    st.write("If the plaintext is ", Plaintext, ", the key is ", Key, ", the ciphertext is ", "".join(Ciphertext))
+    st.write("If the plaintext is ", Plaintext, ", the key is ", Key, ", the ciphertext is ", "".join(Ciphertext), " :")
     Character = []
     Occurance = []
     for x in Plaintext:
