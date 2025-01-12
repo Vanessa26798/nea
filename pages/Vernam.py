@@ -231,7 +231,6 @@ with tab2:
                         Spaced_Encrypt_Key_Baudot.append(" | ")
                 st.write("".join(Spaced_Encrypt_Key_Baudot), " - Key")
                 st.write("".join(Ciphertext_Baudot), " - Ciphertext")
-                st.write(Ciphertext)   
                 st.write("The ciphertext is ", "".join(Ciphertext))   
 
 with tab3:
