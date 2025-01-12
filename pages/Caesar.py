@@ -212,7 +212,7 @@ with tab4:
             Letter_index -= 26
         Letter = Alphabet[Letter_index]
         Ciphertext.append(Letter)
-    st.write("If the plaintext is ", Plaintext, ", the key is ", Key, ", the ciphertext is ", "".join(Ciphertext), " :")
+    st.write("If the plaintext is ", Plaintext, ", the key is ", Key, ", the ciphertext is ", "".join(Ciphertext), ":")
     Character = []
     Occurance = []
     for x in Plaintext:
@@ -236,7 +236,8 @@ with tab4:
     st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
 
     st.write("The character with the highest occurance is " + Highest_Occurance_Character + ".")
-    st.write("The higher the occurance, the easier it is to guess the key, therefore the level of security for Caesar cipher is lower.")
+    st.write("The higher the occurance, the easier it is to guess the key as the character is the same before and after the encrpytion.")
+    st.write("Therefore, the level of security for Caesar cipher is lower.")
 
 
 
