@@ -67,7 +67,7 @@ with tab2:
     Correct_Plaintext_Range = False
     Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")    
     Plaintext = Plaintext.upper()
-    for x in Encrypt_Plaintext: 
+    for x in Plaintext: 
         if (x in Alphabet or x == " ") and Plaintext[0] != " ":
             Plaintext_in_Alphabet = True
         else:
