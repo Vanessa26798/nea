@@ -194,7 +194,7 @@ with tab3:
 with tab4: 
     st.header("Level of security")
 
-    Plaintext = "CAESAR ENCRYPTION"
+    Plaintext = "CAESAR CIPHER"
     Key = 12
     Ciphertext = []
     for x in Plaintext:
