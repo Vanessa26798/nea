@@ -80,6 +80,7 @@ with tab2:
         elif Plaintext_in_Alphabet == True or Plaintext == " ":
             Correct_Plaintext = True
 
+    st.write("One")
     Correct_Plaintext_Length = False
     if Correct_Plaintext_Range == True:
         if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
