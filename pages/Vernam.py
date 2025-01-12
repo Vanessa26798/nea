@@ -78,7 +78,7 @@ with tab2:
             Correct_Plaintext_Range = False
             break
         elif Plaintext_in_Alphabet == True or Plaintext == " ":
-            Correct_Plaintext = True
+            Correct_Plaintext_Range  = True
 
     st.write("One")
     Correct_Plaintext_Length = False
