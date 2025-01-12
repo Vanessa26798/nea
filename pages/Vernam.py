@@ -150,9 +150,9 @@ with tab2:
                          Encrypt_Key_Index = Encrypt_Key_Index + 1
                      Ciphertext_Baudot.append(XOR_Result)
                      Ciphertext_Baudot.append(" | ")
-             Correct_Decrypt_Key = True
-             Correct_Decrypt_Key_Range = True
-             Correct_Decrypt_Key_Length = True
+             Correct_Encrypt_Key = True
+             Correct_Encrypt_Key_Range = True
+             Correct_Encrypt_Key_Length = True
 
          elif Encrypt_Choice == "2":
                   Plaintext_Baudot = []
