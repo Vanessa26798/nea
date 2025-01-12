@@ -211,7 +211,7 @@ with tab2:
                 st.error('Invalid input.', icon="🚨")
 
          if (Encrypt_Choice == "1" or "2") and Correct_Encrypt_Key == True and Correct_Encrypt_Key_Range == True and Correct_Encrypt_Key_Length == True:
-            if len(Ciphertext) == len(Plaintext)::
+            if len(Ciphertext) == len(Plaintext):
                 Spaced_Plaintext_Baudot = []
                 for x in Plaintext_Baudot:
                     if x == " ": 
