@@ -203,6 +203,7 @@ with tab4:
         Letter = Alphabet[Letter_index]
         Ciphertext.append(Letter)
     st.write("If the plaintext is ", Plaintext, ", the key is ", Key, ", the ciphertext is ", "".join(Ciphertext), ":")
+    st.write(" ")
     Character = []
     Occurance = []
     for x in Plaintext:
@@ -225,10 +226,8 @@ with tab4:
     chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
     st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
     st.write("The character with the highest occurance is " + Highest_Occurance_Character + ".")
-    st.write("The higher the occurance, the easier it is to guess the key as the character is the same before and after the encrpytion.")
+    st.write("This graph shows how easy it is to guess the key as the length of plaintext increases, the more obvious it is to identify the common patterns. Furthermore, there are only 25 possible keys so they can all be easily tested.")
     st.write("Therefore, level of security for Caesar cipher is lower.")
-
-
 
 
 
