@@ -425,19 +425,19 @@ with tab4:
             Key_Baudot.append(" ")
     Key_Index = 0
     for x in Plaintext_Baudot:
-    if x == " ": 
-        Key.append(" ") 
-        Key_Index = Key_Index + 1
-        Ciphertext.append(" ")    
-    elif x != " ":
-        XOR = [x]
-        XOR.append(Key_Baudot[Key_Index])
-        XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
-        XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
-        XOR_Result = str(XOR_Result)
-        Ciphertext_Letter = get_key(XOR_Result) 
-        Ciphertext.append(Ciphertext_Letter)
-        Key_Index = Key_Index + 1 
+        if x == " ": 
+            Key.append(" ") 
+            Key_Index = Key_Index + 1
+            Ciphertext.append(" ")    
+        elif x != " ":
+            XOR = [x]
+            XOR.append(Key_Baudot[Key_Index])
+            XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+            XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
+            XOR_Result = str(XOR_Result)
+            Ciphertext_Letter = get_key(XOR_Result) 
+            Ciphertext.append(Ciphertext_Letter)
+            Key_Index = Key_Index + 1 
     st.write("If the plaintext is ", Plaintext, ", the key is ", Key, ", the ciphertext is ", "".join(Ciphertext), ":")
     Character = []
     Occurance = []
