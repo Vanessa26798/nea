@@ -438,7 +438,8 @@ with tab4:
             Ciphertext_Letter = get_key(XOR_Result) 
             Ciphertext.append(Ciphertext_Letter)
             Key_Index = Key_Index + 1 
-    st.write("If the plaintext is " + Plaintext + ", the key is " + "".join(Key) + ", the ciphertext is " + "".join(Ciphertext) + ":" + \n)
+    st.write("If the plaintext is " + Plaintext + ", the key is " + "".join(Key) + ", the ciphertext is " + "".join(Ciphertext) + ":")
+    st.write(\n)
     Character = []
     Occurance = []
     for x in Plaintext:
