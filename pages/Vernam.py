@@ -451,7 +451,7 @@ with tab4:
               Occurance.append(Character_occurance)
               if Character.index(x) > 0:
                   Last_Character_Index = Character.index(x) - 1
-                  if int(Occurance[Last_Character_Index]) > int(Occurance[Character.index(x)]):
+                  if int(Occurance[Last_Character_Index]) >= int(Occurance[Character.index(x)]):
                       Highest_Occurance_Character = Character[Last_Character_Index]
                       Highest_Occurance = Occurance[Last_Character_Index]
                   elif int(Occurance[Last_Character_Index]) < int(Occurance[Character.index(x)]):
