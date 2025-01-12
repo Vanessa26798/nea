@@ -407,7 +407,61 @@ with tab3:
 
 with tab4: 
     st.header("Level of security")
-    st.write("Theoratically, Vernam cipher offers perfect security due to the unique key, making it mathematically impossible to break. ")
+    Plaintext = "VERNAM CIPHER"
+    Plaintext_Baudot = []
+    Key = list("INUZRS TNZNHS")
+    Key_Baudot = []    
+    Ciphertext_Baudot = []
+    Ciphertext = []
+    for x in Plaintext:
+        if x != " ":
+            Plaintext_Baudot.append(Baudot[x])
+        elif x == " ": 
+            Plaintext_Baudot.append(" ")
+    for x in Key:
+        if x != " ":
+            Key_Baudot.append(Baudot[x])
+        elif x == " ": 
+            Key_Baudot.append(" ")
+    Key_Index = 0
+    for x in Plaintext_Baudot:
+    if x == " ": 
+        Key.append(" ") 
+        Key_Index = Key_Index + 1
+        Ciphertext.append(" ")    
+    elif x != " ":
+        XOR = [x]
+        XOR.append(Key_Baudot[Key_Index])
+        XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+        XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
+        XOR_Result = str(XOR_Result)
+        Ciphertext_Letter = get_key(XOR_Result) 
+        Ciphertext.append(Ciphertext_Letter)
+        Key_Index = Key_Index + 1 
+    st.write("If the plaintext is ", Plaintext, ", the key is ", Key, ", the ciphertext is ", "".join(Ciphertext), ":")
+    Character = []
+    Occurance = []
+    for x in Plaintext:
+      if x != " ":
+          Total_occurance = len(Plaintext)
+          Count = Plaintext.count(x)
+          Character_occurance = round(Count / Total_occurance * 100)
+          if x not in Character:
+              Character.append(x)
+              Occurance.append(Character_occurance)
+              if Character.index(x) > 0:
+                  Last_Character_Index = Character.index(x) - 1
+                  if int(Occurance[Last_Character_Index]) > int(Occurance[Character.index(x)]):
+                      Highest_Occurance_Character = Character[Last_Character_Index]
+                      Highest_Occurance = Occurance[Last_Character_Index]
+                  elif int(Occurance[Last_Character_Index]) < int(Occurance[Character.index(x)]):
+                      Highest_Occurance_Character = [x]
+                      Highest_Occurance = [x]
+    chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
+    st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
+    st.write("The character with the highest occurance is " + Highest_Occurance_Character + ".")
+    st.write("It does not matter whether any character has higher occurance as theoratically the unique key offers perfect security, making it mathematically impossible to break.") 
+    st.write("Therefore, level of security for Vernam cipher is higher.")
 
 
 
