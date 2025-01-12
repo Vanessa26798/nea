@@ -1,13 +1,7 @@
 import streamlit as st
 import random
 
-col1, col2, col3 = st.columns(3)
-with col1:
-    st.title("ENCRYPTION")
-with col2:
-    st.title("TEACHING")
-with col3:
-    st.title("TOOL")
+st.title("ENCRYPTION TEACHING TOOL")
 st.write("Select the encryption method that you would like to discover more about")
 
 col1, col2 = st.columns(2)
