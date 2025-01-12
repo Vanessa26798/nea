@@ -439,7 +439,7 @@ with tab4:
             Ciphertext.append(Ciphertext_Letter)
             Key_Index = Key_Index + 1 
     st.write("If the plaintext is " + Plaintext + ", the key is " + "".join(Key) + ", the ciphertext is " + "".join(Ciphertext) + ":")
-    st.write(\n)
+    st.write(" ")
     Character = []
     Occurance = []
     for x in Plaintext:
