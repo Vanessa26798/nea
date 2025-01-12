@@ -8,25 +8,18 @@ import string
 Alphabet = string.ascii_uppercase
 st.header("Caesar cipher")
 
-# def Original_Alphabet():
-    # Original_Alphabet = '  |  '.join(Alphabet)
-    # for x in Original_Alphabet.split("  |  "):
-    #     yield x + "  |  "
-    #     time.sleep(0.04)
-
-
 
 tab1, tab2, tab3, tab4 = st.tabs(["History", "Encrypt a plaintext", "Decrypt a ciphertext", "Level of security"])
 
 with tab1:
     st.header("History")
     col1, col2 = st.columns(2)
-
-with col1:
-    st.image("https://cdn.britannica.com/17/193717-050-030D75E3/Julius-Caesar-statue-Rome-Italy.jpg?w=300", caption="Bronze sculpture of Julius Caesar in Rome")
-
-with col2:
-    st.write("The Caesar Cipher is one of the oldest cryptographic algorithms. It is named after Julius Caesar who initially used it to protect sensitive military messages, allowing him to communicate with his military generals.  ")
+    
+    with col1:
+        st.image("https://cdn.britannica.com/17/193717-050-030D75E3/Julius-Caesar-statue-Rome-Italy.jpg?w=300", caption="Bronze sculpture of Julius Caesar in Rome")
+    
+    with col2:
+        st.write("The Caesar Cipher is one of the oldest cryptographic algorithms. It is named after Julius Caesar who initially used it to protect sensitive military messages, allowing him to communicate with his military generals.  ")
 
 
 
@@ -49,7 +42,6 @@ with tab2:
         elif Plaintext_in_Alphabet == True or Plaintext == " ":
             Correct_Plaintext_Range = True
             
-
     Correct_Plaintext_Length = False
     if Correct_Plaintext_Range == True:
         if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
@@ -202,16 +194,19 @@ with tab3:
 with tab4: 
     st.header("Level of security")
 
-    Plaintext = "CAESAR"
+    Plaintext = "CAESAR ENCRYPTION"
     Key = 12
     Ciphertext = []
     for x in Plaintext:
-        Letter_index = int(Alphabet.index(x))
-        Letter_index += Key
-        while Letter_index >= 25: 
-            Letter_index -= 26
-        Letter = Alphabet[Letter_index]
-        Ciphertext.append(Letter)
+        if x == " ":
+            Ciphertext.append(x)
+        else: 
+            Letter_index = int(Alphabet.index(x))
+            Letter_index += Key
+            while Letter_index >= 25: 
+                Letter_index -= 26
+            Letter = Alphabet[Letter_index]
+            Ciphertext.append(Letter)
     st.write("If the plaintext is ", Plaintext, ", the key is ", Key, ", the ciphertext is ", "".join(Ciphertext), ":")
     Character = []
     Occurance = []
