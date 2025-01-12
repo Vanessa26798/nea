@@ -407,9 +407,9 @@ with tab3:
 
 with tab4: 
     st.header("Level of security")
-    Plaintext = "VERNAM CIPHER"
+    Plaintext = "VERNAM ENCRYPTION"
     Plaintext_Baudot = []
-    Key = list("KWOFQC MYDXPR")
+    Key = list("KWOFQC MYDXPRPGIJ")
     Key_Baudot = []    
     Ciphertext_Baudot = []
     Ciphertext = []
