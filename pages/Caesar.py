@@ -203,7 +203,17 @@ with tab4:
     st.header("Level of security")
 
     Plaintext = "CAESAR CIPHER"
-    st.write("The plaintext is " + Plaintext)
+    Key = 12
+    Ciphertext = []
+    for x in Plaintext:
+         if x == " ":
+             Ciphertext.append(x)
+         else: 
+             Letter_index = int(Alphabet.index(x))
+             Letter_index += Key
+             Letter = Alphabet[Letter_index]
+             Ciphertext.append(Letter)
+    st.write("If the plaintext is " + Plaintext + ", the key is " + Key + ", the ciphertext is " + "".join(Ciphertext))
     Character = []
     Occurance = []
     for x in Plaintext:
