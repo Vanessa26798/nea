@@ -202,31 +202,32 @@ with tab3:
 with tab4: 
     st.header("Level of security")
 
-    Plaintext = "GOODDOG"
+    Plaintext = "CAESARCIPHER"
     st.write("The plaintext is " + Plaintext)
     Character = []
     Occurance = []
     for x in Plaintext:
-      Total_occurance = len(Plaintext)
-      Count = Plaintext.count(x)
-      Character_occurance = round(Count / Total_occurance * 100)
-      if x not in Character:
-          Character.append(x)
-          Occurance.append(Character_occurance)
-          if Character.index(x) > 0:
-              Last_Character_Index = Character.index(x) - 1
-              if int(Occurance[Last_Character_Index]) > int(Occurance[Character.index(x)]):
-                  Highest_Occurance_Character = Character[Last_Character_Index]
-                  Highest_Occurance = Occurance[Last_Character_Index]
-              elif int(Occurance[Last_Character_Index]) < int(Occurance[Character.index(x)]):
-                  Highest_Occurance_Character = [x]
-                  Highest_Occurance = [x]
+      if x != " ":
+          Total_occurance = len(Plaintext)
+          Count = Plaintext.count(x)
+          Character_occurance = round(Count / Total_occurance * 100)
+          if x not in Character:
+              Character.append(x)
+              Occurance.append(Character_occurance)
+              if Character.index(x) > 0:
+                  Last_Character_Index = Character.index(x) - 1
+                  if int(Occurance[Last_Character_Index]) > int(Occurance[Character.index(x)]):
+                      Highest_Occurance_Character = Character[Last_Character_Index]
+                      Highest_Occurance = Occurance[Last_Character_Index]
+                  elif int(Occurance[Last_Character_Index]) < int(Occurance[Character.index(x)]):
+                      Highest_Occurance_Character = [x]
+                      Highest_Occurance = [x]
 
     chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
     st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
 
     st.write("The character with the highest occurance is " + Highest_Occurance_Character + ".")
-    st.write("The higher the occurance, the easier it is to be able to guess the key , therefore the level of security for Caesar cipher is lower.")
+    st.write("The higher the occurance, the easier it is to guess the key, therefore the level of security for Caesar cipher is lower.")
 
 
 
