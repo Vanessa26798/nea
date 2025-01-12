@@ -237,7 +237,7 @@ with tab4:
 
     st.write("The character with the highest occurance is " + Highest_Occurance_Character + ".")
     st.write("The higher the occurance, the easier it is to guess the key as the character is the same before and after the encrpytion.")
-    st.write("Therefore, the level of security for Caesar cipher is lower.")
+    st.write("Therefore, level of security for Caesar cipher is lower.")
 
 
 
