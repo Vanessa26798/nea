@@ -231,7 +231,7 @@ with tab2:
                         Spaced_Encrypt_Key_Baudot.append(" | ")
                 st.write("".join(Spaced_Encrypt_Key_Baudot), " - Key")
                 st.write("".join(Ciphertext_Baudot), " - Ciphertext")
-                st.write("The ciphertext is ", "".join(Ciphertext))   
+                st.write("Therefore, the ciphertext is ", "".join(Ciphertext))   
 
 with tab3:
     st.header("Decrypt a ciphertext")
@@ -402,7 +402,7 @@ with tab3:
                         Spaced_Decrypt_Key_Baudot.append(" | ")
                 st.write("".join(Spaced_Decrypt_Key_Baudot), " - Key")
                 st.write("".join(Plaintext_Baudot), " - Plaintext")
-                st.write( "The plaintext is ", "".join(Plaintext))   
+                st.write("Therefore, the plaintext is ", "".join(Plaintext))   
          
 
 with tab4: 
