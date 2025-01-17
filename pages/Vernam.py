@@ -441,27 +441,27 @@ with tab4:
     st.write("If the plaintext is " + Plaintext + ", the key is " + "".join(Key) + ", the ciphertext is " + "".join(Ciphertext) + ":")
     st.write(" ")
     Character = []
-    Occurance = []
+    Occurrence = []
     for x in Plaintext:
       if x != " ":
-          Total_occurance = len(Plaintext)
+          Total_occurrence = len(Plaintext)
           Count = Plaintext.count(x)
-          Character_occurance = round(Count / Total_occurance * 100)
+          Character_occurrence = round(Count / Total_occurrence * 100)
           if x not in Character:
               Character.append(x)
-              Occurance.append(Character_occurance)
+              Occurrence.append(Character_occurrence)
               if Character.index(x) > 0:
                   Last_Character_Index = Character.index(x) - 1
-                  if int(Occurance[Last_Character_Index]) > int(Occurance[Character.index(x)]):
-                      Highest_Occurance_Character = Character[Last_Character_Index]
-                      Highest_Occurance = Occurance[Last_Character_Index]
-                  elif int(Occurance[Last_Character_Index]) < int(Occurance[Character.index(x)]):
-                      Highest_Occurance_Character = [x]
-                      Highest_Occurance = [x]
-    chart_data = pd.DataFrame({"Character": Character, "Occurance": Occurance})
-    st.bar_chart(chart_data, x = "Character", y = "Occurance", horizontal=True)
-    st.write("The character with the highest occurance is " + Highest_Occurance_Character + ".")
-    st.write("However, even though some character has higher occurance, it is mathematically impossible to break due to the unique key for each character which offers prefect security.") 
+                  if int(Occurrence[Last_Character_Index]) > int(Occurrence[Character.index(x)]):
+                      Highest_Occurrence_Character = Character[Last_Character_Index]
+                      Highest_Occurrence = Occurrence[Last_Character_Index]
+                  elif int(Occurrence[Last_Character_Index]) < int(Occurrence[Character.index(x)]):
+                      Highest_Occurrence_Character = [x]
+                      Highest_Occurrence = [x]
+    chart_data = pd.DataFrame({"Character": Character, "Occurrence": Occurrence})
+    st.bar_chart(chart_data, x = "Character", y = "Occurrence", horizontal=True)
+    st.write("The character with the highest occurrence is " + Highest_Occurrence_Character + ".")
+    st.write("However, even though some character has higher occurrence, it is mathematically impossible to break due to the unique key for each character which offers prefect security.") 
     st.write("Therefore, level of security for Vernam cipher is higher.")
 
 
