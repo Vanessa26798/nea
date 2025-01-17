@@ -100,7 +100,7 @@ with tab2:
          Correct_Encrypt_Key = False
          Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
          if Encrypt_Choice == "1":
-            Encrypt_Key_Input = st.text_input("Please input the key for encryption, with the same length as the ciphertext: ", value="")
+            Encrypt_Key_Input = st.text_input("Please input the key for encryption, with the same length as the plaintext: ", value="")
             Encrypt_Key_Input = Encrypt_Key_Input.upper()
             Encrypt_Key_Index = 0
             Encrypt_Key = []
