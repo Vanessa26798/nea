@@ -220,7 +220,7 @@ with tab2:
                         Spaced_Plaintext_Baudot.append(x)
                         Spaced_Plaintext_Baudot.append(" | ")
                 st.write("The key is ", "".join(Encrypt_Key))
-                st.write("The plaintext and key of each characters are converted to Baudot, and XOR is carried out:") 
+                st.write("The plaintext and key of each character are converted to Baudot, and XOR is carried out:") 
                 st.write("".join(Spaced_Plaintext_Baudot), " - Plaintext")
                 Spaced_Encrypt_Key_Baudot = []
                 for x in Encrypt_Key_Baudot:
@@ -391,7 +391,7 @@ with tab3:
                         Spaced_Ciphertext_Baudot.append(x)
                         Spaced_Ciphertext_Baudot.append(" | ")
                 st.write("The key is ", "".join(Decrypt_Key))
-                st.write("The ciphertext and key of each characters are converted to Baudot, and XOR is carried out:") 
+                st.write("The ciphertext and key of each character are converted to Baudot, and XOR is carried out:") 
                 st.write("".join(Spaced_Ciphertext_Baudot), " - Ciphertext")
                 Spaced_Decrypt_Key_Baudot = []
                 for x in Decrypt_Key_Baudot:
