@@ -14,5 +14,5 @@ with col2:
     st.header("Vernam cipher")
     st.image("https://www.cryptomuseum.com/crypto/svg/xor3.svg")
     st.info('An encryption that uses one-time pad which contributes to its perfect security.')
-    st.page_link("pages/Vernam.py", label="Click me")
+    st.page_link("pages/Vernam.py", label="Click me", use_container_width=True)
 
