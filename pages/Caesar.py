@@ -172,7 +172,7 @@ with tab3:
             elif len(Ciphertext) >= 10 and len(Ciphertext) <= 30 and len(Ciphertext) != 0 and Ciphertext != "":
                 Correct_Ciphertext_Length = True
 
-    def Input_Decrypt_Key_Choice():
+    def Input_Key_Choice():
         global Decrypt_Choice
         if Correct_Ciphertext_Length == True and Ciphertext != "":
             Decrypt_Choice = st.text_input("Input your own key for Decryption (1) or generate a random key (2)? ", value="")
@@ -247,7 +247,7 @@ with tab3:
     Check_Ciphertext_in_Alphabet()
     Check_Ciphertext_Range()
     Check_Ciphertext_Length()
-    Input_Decrypt_Key_Choice()
+    Input_Key_Choice()
     Get_Decrypt_Key()
     Check_Decrypt_Key()
     Output_Alphabet_List()
