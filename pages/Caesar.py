@@ -225,7 +225,7 @@ with tab3:
     def Output_Plaintext():
         if Correct_Ciphertext_Range == True and Correct_Decrypt_Key == True and Correct_Ciphertext_Length == True:
            Plaintext = ["Therefore, the plaintext is "]
-           for x in Cipherext:
+           for x in Ciphetext:
              if x == " ":
                  Plaintext.append(x)
              else: 
