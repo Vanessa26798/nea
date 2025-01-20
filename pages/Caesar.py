@@ -52,12 +52,10 @@ with tab2:
             elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
                 Correct_Plaintext_Length = True
 
-
     def Input_Key_Choice():
         global Encrypt_Choice
         if Correct_Plaintext_Length == True and Plaintext != "":
             Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
-        
 
     def Get_Encrypt_Key():
         global Correct_Encrypt_Key
@@ -70,7 +68,6 @@ with tab2:
             Correct_Encrypt_Key == True
         elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
-
 
     def Check_Encrypt_Key():
         global Correct_Encrypt_Key
@@ -86,9 +83,41 @@ with tab2:
             elif Encrypt_Key.isdigit() == False and Encrypt_Key != "": 
                 st.error('Invalid input.', icon="🚨")
                 Correct_Encrypt_Key = False
-            
 
-        
+        def Output_Alphabet_List():
+        if Correct_Encrypt_Key == True:
+            st.write("The key is ", Encrypt_Key)
+            st.write("The alphabet list is shifted to the right by ", Encrypt_Key)
+            Alphabet_List = ' '.join(Alphabet)
+            Alphabet_List = Alphabet_List.split(" ")
+            Original_Alphabet = pd.DataFrame(columns = Alphabet_List)
+            st.write("Original alphabet list:")
+            Original_table = st.table(Original_Alphabet)
+            Encrypted_Alphabet_List_PartOne = Alphabet[Encrypt_Key:26]
+            Encrypted_Alphabet_List_PartTwo = Alphabet[0:Encrypt_Key]
+            Encrypted_Alphabet_List = Encrypted_Alphabet_List_PartOne + Encrypted_Alphabet_List_PartTwo
+            Encrypted_Alphabet_List = ' '.join(Encrypted_Alphabet_List)
+            Encrypted_Alphabet_List = Encrypted_Alphabet_List.split(" ")
+            Encrypted_Alphabet = pd.DataFrame(columns = Encrypted_Alphabet_List)
+            st.write("Encrypted alphabet list:")
+            Encrypted_table = st.table(Encrypted_Alphabet)
+
+    def Output_Ciphertext():
+        if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
+           Ciphertext = ["Therefore, the ciphertext is "]
+           for x in Plaintext:
+             if x == " ":
+                 Ciphertext.append(x)
+             else: 
+                 Letter_index = int(Alphabet.index(x))
+                 Letter_index += Encrypt_Key
+                 while Letter_index >= 25: 
+                     Letter_index -= 26
+                 Letter = Alphabet[Letter_index]
+                 Ciphertext.append(Letter)
+           st.write("".join(Ciphertext))
+
+    
     Plaintext_in_Alphabet = False
     Correct_Plaintext_Range = False
     Correct_Plaintext_Length = False
@@ -101,38 +130,8 @@ with tab2:
     Input_Key_Choice()
     Get_Encrypt_Key()
     Check_Encrypt_Key()
-
-    
-    if Correct_Encrypt_Key == True:
-        st.write("The key is ", Encrypt_Key)
-        st.write("The alphabet list is shifted to the right by ", Encrypt_Key)
-        Alphabet_List = ' '.join(Alphabet)
-        Alphabet_List = Alphabet_List.split(" ")
-        Original_Alphabet = pd.DataFrame(columns = Alphabet_List)
-        st.write("Original alphabet list:")
-        Original_table = st.table(Original_Alphabet)
-        Encrypted_Alphabet_List_PartOne = Alphabet[Encrypt_Key:26]
-        Encrypted_Alphabet_List_PartTwo = Alphabet[0:Encrypt_Key]
-        Encrypted_Alphabet_List = Encrypted_Alphabet_List_PartOne + Encrypted_Alphabet_List_PartTwo
-        Encrypted_Alphabet_List = ' '.join(Encrypted_Alphabet_List)
-        Encrypted_Alphabet_List = Encrypted_Alphabet_List.split(" ")
-        Encrypted_Alphabet = pd.DataFrame(columns = Encrypted_Alphabet_List)
-        st.write("Encrypted alphabet list:")
-        Encrypted_table = st.table(Encrypted_Alphabet)
-
-    if Correct_Plaintext_Range == True and Correct_Encrypt_Key == True and Correct_Plaintext_Length == True:
-       Ciphertext = ["Therefore, the ciphertext is "]
-       for x in Plaintext:
-         if x == " ":
-             Ciphertext.append(x)
-         else: 
-             Letter_index = int(Alphabet.index(x))
-             Letter_index += Encrypt_Key
-             while Letter_index >= 25: 
-                 Letter_index -= 26
-             Letter = Alphabet[Letter_index]
-             Ciphertext.append(Letter)
-       st.write("".join(Ciphertext))
+    Output_Alphabet_List()
+    Output_Ciphertext()
 
 
 
