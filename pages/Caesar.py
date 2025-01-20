@@ -20,23 +20,6 @@ with tab1:
 
 with tab2:
     st.header("Encrypt a plaintext")
-    
-    Plaintext_in_Alphabet = False
-    Correct_Plaintext_Range = False
-    Correct_Plaintext_Length = False
-    Correct_Encrypt_Key = False 
-
-    Input_Plaintext()
-    Check_Plaintext_in_Alphabet()
-    Check_Plaintext_Range()
-    Check_Plaintext_Length()
-    Input_Key_Choice()
-    Get_Encrypt_Key()
-    Check_Encrypt_Key()
-    if Correct_Encrypt_Key == True:
-        st.write("The key is ", Encrypt_Key)
-                
-
 
     def Input_Plaintext():
         Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
@@ -99,7 +82,21 @@ with tab2:
         return Correct_Encrypt_Key
             
 
-    
+        
+    Plaintext_in_Alphabet = False
+    Correct_Plaintext_Range = False
+    Correct_Plaintext_Length = False
+    Correct_Encrypt_Key = False 
+
+    Input_Plaintext()
+    Check_Plaintext_in_Alphabet()
+    Check_Plaintext_Range()
+    Check_Plaintext_Length()
+    Input_Key_Choice()
+    Get_Encrypt_Key()
+    Check_Encrypt_Key()
+    if Correct_Encrypt_Key == True:
+        st.write("The key is ", Encrypt_Key)
 
 
     if Correct_Encrypt_Key == True:    
