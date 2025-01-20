@@ -27,6 +27,7 @@ with tab2:
         Plaintext = Plaintext.upper()
 
     def Check_Plaintext_in_Alphabet():
+        global Plaintext_in_Alphabet
         for x in Plaintext: 
             if (x in Alphabet or x == " ") and Plaintext[0] != " ":
                 Plaintext_in_Alphabet = True
@@ -60,7 +61,6 @@ with tab2:
 
     def Get_Encrypt_Key():
         global Encrypt_Key
-        st.write(Encrypt_Choice)
         if Encrypt_Choice == "1":
             Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
         elif Encrypt_Choice == "2": 
