@@ -35,6 +35,13 @@ my_function()
     Check_Plaintext_in_Alphabet()
     Check_Plaintext_Range()
     Check_Plaintext_Length()
+    Input_Key_Choice()
+    Get_Encrypt_Key()
+    Check_Encrypt_Key()
+    if Correct_Encrypt_Key == True:
+        st.write("The key is ", Encrypt_Key)
+                
+
 
     def Input_Plaintext():
         Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
@@ -67,11 +74,23 @@ my_function()
                 Correct_Plaintext_Length = True
             return Correct_Plaintext_Length
 
-    def Check_Encrypt_Choice():
-    if Correct_Plaintext_Length == True and Plaintext != "":
-        Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
+    def Input_Key_Choice():
+        if Correct_Plaintext_Length == True and Plaintext != "":
+            Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
+        return Encrypt_Choice
+
+    def Get_Encrypt_Key():
         if Encrypt_Choice == "1":
             Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
+        elif Encrypt_Choice == "2": 
+            Encrypt_Key = random.randrange(1, 26)
+            Encrypt_Key = int(Encrypt_Key)
+        elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "": 
+            st.error('Invalid input.', icon="🚨")
+        return Encrypt_Key
+
+    def Check_Encrypt_Key():
+        if Encrypt_Choice == "1":
             if Encrypt_Key.isdigit() == True:
                 Encrypt_Key = int(Encrypt_Key)
                 if Encrypt_Key < 1 or Encrypt_Key > 25: 
@@ -83,14 +102,11 @@ my_function()
             elif Encrypt_Key.isdigit() == False and Encrypt_Key != "": 
                 st.error('Invalid input.', icon="🚨")
                 Correct_Encrypt_Key = False
-        elif Encrypt_Choice == "2": 
-            Encrypt_Key = random.randrange(1, 26)
-            Encrypt_Key = int(Encrypt_Key)
-            st.write("The key is ", Encrypt_Key)
-            Correct_Encrypt_Key = True
-        elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "": 
-            st.error('Invalid input.', icon="🚨")
-            Correct_Encrypt_Key = False
+         return Correct_Encrypt_Key
+            
+
+    
+
 
     if Correct_Encrypt_Key == True:    
         st.write("The alphabet list is shifted to the right by ", Encrypt_Key)
