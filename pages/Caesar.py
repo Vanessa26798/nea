@@ -20,11 +20,6 @@ with tab1:
 
 with tab2:
     st.header("Encrypt a plaintext")
-
-def my_function():
-  print("Hello from a function")
-
-my_function()
     
     Plaintext_in_Alphabet = False
     Correct_Plaintext_Range = False
