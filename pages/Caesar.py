@@ -60,12 +60,14 @@ with tab2:
         
 
     def Get_Encrypt_Key():
+        global Correct_Encrypt_Key
         global Encrypt_Key
         if Encrypt_Choice == "1":
             Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
         elif Encrypt_Choice == "2": 
             Encrypt_Key = random.randrange(1, 26)
             Encrypt_Key = int(Encrypt_Key)
+            Correct_Encrypt_Key == True
         elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
 
@@ -80,7 +82,6 @@ with tab2:
                     st.error('Invalid input.', icon="🚨")
                     Correct_Encrypt_Key = False
                 elif Encrypt_Key >= 1 and Encrypt_Key <= 25: 
-                    st.write("The key is ", Encrypt_Key)
                     Correct_Encrypt_Key = True
             elif Encrypt_Key.isdigit() == False and Encrypt_Key != "": 
                 st.error('Invalid input.', icon="🚨")
