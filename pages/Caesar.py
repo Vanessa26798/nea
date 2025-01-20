@@ -84,7 +84,7 @@ with tab2:
                 st.error('Invalid input.', icon="🚨")
                 Correct_Encrypt_Key = False
 
-        def Output_Alphabet_List():
+    def Output_Alphabet_List():
         if Correct_Encrypt_Key == True:
             st.write("The key is ", Encrypt_Key)
             st.write("The alphabet list is shifted to the right by ", Encrypt_Key)
