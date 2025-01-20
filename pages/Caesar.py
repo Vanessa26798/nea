@@ -22,9 +22,9 @@ with tab2:
     st.header("Encrypt a plaintext")
 
     def Input_Plaintext():
+        global Plaintext
         Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
         Plaintext = Plaintext.upper()
-        global Plaintext
 
     def Check_Plaintext_in_Alphabet():
         for x in Plaintext: 
