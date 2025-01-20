@@ -138,85 +138,120 @@ with tab2:
 with tab3:
     st.header("Decrypt a ciphertext")
 
-    Correct_Ciphertext_Range = False
-    Ciphertext = st.text_input("Please enter the ciphertext in upper case, within 10-30 characters: ", value="")    
-    Ciphertext = Ciphertext.upper()
-    for x in Ciphertext: 
-        if (x in Alphabet or x == " ") and Ciphertext[0] != " ":
-            Ciphertext_in_Alphabet = True
-        else:
-            Ciphertext_in_Alphabet = False
-        
+
+
+
+    def Input_Ciphertext():
+        global Ciphertext
+        Ciphertext = st.text_input("Please enter the ciphertext in upper case, within 10-30 characters: ", value="")
+        Ciphertext = Ciphertext.upper()
+
+    def Check_Ciphertext_in_Alphabet():
+        global Ciphertext_in_Alphabet
+        for x in Ciphertext: 
+            if (x in Alphabet or x == " ") and Ciphertext[0] != " ":
+                Ciphertext_in_Alphabet = True
+            else:
+                Ciphertext_in_Alphabet = False
+            return Ciphertext_in_Alphabet
+
+    def Check_Ciphertext_Range():
+        global Correct_Ciphertext_Range
         if Ciphertext_in_Alphabet == False and Ciphertext != "":
             st.error('Invalid ciphertext.', icon="🚨")
             Correct_Ciphertext_Range = False
-            break
         elif Ciphertext_in_Alphabet == True or Ciphertext == " ":
             Correct_Ciphertext_Range = True
+            
+    def Check_Ciphertext_Length():            
+        global Correct_Ciphertext_Length
+        if Correct_Ciphertext_Range == True:
+            if (len(Ciphertext) < 10 or len(Ciphertext) > 30) and Ciphertext != "": 
+                st.error('Ciphertext out of range.', icon="🚨")
+                Correct_Ciphertext_Length = False
+            elif len(Ciphertext) >= 10 and len(Ciphertext) <= 30 and len(Ciphertext) != 0 and Ciphertext != "":
+                Correct_Ciphertext_Length = True
 
-    Correct_Ciphertext_Length = False
-    if Correct_Ciphertext_Range == True:
-        if (len(Ciphertext) < 10 or len(Ciphertext) > 30) and Ciphertext != "": 
-            st.error('Ciphertext out of range.', icon="🚨")
-            Correct_Ciphertext_Length = False
-        elif len(Ciphertext) >= 10 and len(Ciphertext) <= 30 and len(Ciphertext) != 0 and Ciphertext != "":
-            Correct_Ciphertext_Length = True
+    def Input_Key_Choice():
+        global Decrypt_Choice
+        if Correct_Ciphertext_Length == True and Ciphertext != "":
+            Decrypt_Choice = st.text_input("Input your own key for Decryption (1) or generate a random key (2)? ", value="")
 
-    Correct_Decrypt_Key = False
-    if Correct_Ciphertext_Length == True and Ciphertext != "":
-        Decrypt_Choice = st.text_input("Input your own key for decryption (1) or generate a random key (2)? ", value="")
+    def Get_Decrypt_Key():
+        global Correct_Decrypt_Key
+        global Decrypt_Key
         if Decrypt_Choice == "1":
             Decrypt_Key = st.text_input("Please enter the key for decryption, within 1-25: ", value="")
+        elif Decrypt_Choice == "2": 
+            Decrypt_Key = random.randrange(1, 26)
+            Decrypt_Key = int(Decrypt_Key)
+            Correct_Decrypt_Key == True
+        elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "": 
+            st.error('Invalid input.', icon="🚨")
+
+    def Check_Decrypt_Key():
+        global Correct_Decrypt_Key
+        global Decrypt_Key
+        if Decrypt_Choice == "1":
             if Decrypt_Key.isdigit() == True:
-                Decrypt_Key = int(Decrypt_Key)  
+                Decrypt_Key = int(Decrypt_Key)
                 if Decrypt_Key < 1 or Decrypt_Key > 25: 
                     st.error('Invalid input.', icon="🚨")
                     Correct_Decrypt_Key = False
                 elif Decrypt_Key >= 1 and Decrypt_Key <= 25: 
-                    st.write("The key is ", Decrypt_Key)
                     Correct_Decrypt_Key = True
             elif Decrypt_Key.isdigit() == False and Decrypt_Key != "": 
                 st.error('Invalid input.', icon="🚨")
                 Correct_Decrypt_Key = False
-        elif Decrypt_Choice == "2": 
-            Decrypt_Key = random.randrange(1, 26)
-            Decrypt_Key = int(Decrypt_Key)            
+
+    def Output_Alphabet_List():
+        if Correct_Decrypt_Key == True:
             st.write("The key is ", Decrypt_Key)
-            Correct_Decrypt_Key = True
-        elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "": 
-            st.error('Invalid input.', icon="🚨")
-            Correct_Decrypt_Key = False
+            st.write("The alphabet list is shifted to the left by ", Decrypt_Key)
+            Alphabet_List = ' '.join(Alphabet)
+            Alphabet_List = Alphabet_List.split(" ")
+            Original_Alphabet = pd.DataFrame(columns = Alphabet_List)
+            st.write("Original alphabet list:")
+            Original_table = st.table(Original_Alphabet)
+            Decrypted_Alphabet_List_PartOne = Alphabet[Decrypt_Key:26]
+            Decrypted_Alphabet_List_PartTwo = Alphabet[0:Decrypt_Key]
+            Decrypted_Alphabet_List = Decrypted_Alphabet_List_PartOne + Decrypted_Alphabet_List_PartTwo
+            Decrypted_Alphabet_List = ' '.join(Decrypted_Alphabet_List)
+            Decrypted_Alphabet_List = Decrypted_Alphabet_List.split(" ")
+            Decrypted_Alphabet = pd.DataFrame(columns = Decrypted_Alphabet_List)
+            st.write("Decrypted alphabet list:")
+            Decrypted_table = st.table(Decrypted_Alphabet)
 
-    if Correct_Decrypt_Key == True:    
-        st.write("The alphabet list is shifted to the left by ", Decrypt_Key)
-        Alphabet_List = ' '.join(Alphabet)
-        Alphabet_List = Alphabet_List.split(" ")
-        Original_Alphabet = pd.DataFrame(columns = Alphabet_List)
-        st.write("Original alphabet list:")
-        Original_table = st.table(Original_Alphabet)
-        Decrypted_Alphabet_List_PartOne = Alphabet[(26-Decrypt_Key):26]
-        Decrypted_Alphabet_List_PartTwo = Alphabet[0:(26-Decrypt_Key)]
-        Decrypted_Alphabet_List = Decrypted_Alphabet_List_PartOne + Decrypted_Alphabet_List_PartTwo
-        Decrypted_Alphabet_List = ' '.join(Decrypted_Alphabet_List)
-        Decrypted_Alphabet_List = Decrypted_Alphabet_List.split(" ")
-        Decrypted_Alphabet = pd.DataFrame(columns = Decrypted_Alphabet_List)
-        st.write("Decryted alphabet list:")
-        Decrypted_table = st.table(Decrypted_Alphabet)
+    def Output_Plaintext():
+        if Correct_Ciphertext_Range == True and Correct_Decrypt_Key == True and Correct_Ciphertext_Length == True:
+           Plaintext = ["Therefore, the plaintext is "]
+           for x in Cipherext:
+             if x == " ":
+                 Plaintext.append(x)
+             else: 
+                 Letter_index = int(Alphabet.index(x))
+                 Letter_index += Decrypt_Key
+                 while Letter_index >= 25: 
+                     Letter_index -= 26
+                 Letter = Alphabet[Letter_index]
+                 Plaintext.append(Letter)
+           st.write("".join(Plaintext))
 
-    if Correct_Ciphertext_Range == True and Correct_Decrypt_Key == True and Correct_Ciphertext_Length == True:
-       Plaintext = ["Therefore, the plaintext is "]
-       for x in Ciphertext:
-         if x == " ":
-             Plaintext.append(x)
-         else: 
-             Letter_index = int(Alphabet.index(x))
-             Letter_index -= Decrypt_Key
-             while Letter_index >= 25: 
-                 Letter_index -= 26
-             Letter = Alphabet[Letter_index]
-             Plaintext.append(Letter)
-       st.write("".join(Plaintext))
+    
+    Ciphertext_in_Alphabet = False
+    Correct_Ciphertext_Range = False
+    Correct_Ciphertext_Length = False
+    Correct_Decrypt_Key = False 
 
+    Input_Ciphertext()
+    Check_Ciphertext_in_Alphabet()
+    Check_Ciphertext_Range()
+    Check_Ciphertext_Length()
+    Input_Key_Choice()
+    Get_Decrypt_Key()
+    Check_Decrypt_Key()
+    Output_Alphabet_List()
+    Output_Plaintext()
 
 
 with tab4: 
