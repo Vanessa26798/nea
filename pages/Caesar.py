@@ -97,7 +97,7 @@ with tab2:
             elif Encrypt_Key.isdigit() == False and Encrypt_Key != "": 
                 st.error('Invalid input.', icon="🚨")
                 Correct_Encrypt_Key = False
-         return Correct_Encrypt_Key
+        return Correct_Encrypt_Key
             
 
     
