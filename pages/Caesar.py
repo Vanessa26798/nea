@@ -24,7 +24,7 @@ with tab2:
     def Input_Plaintext():
         Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
         Plaintext = Plaintext.upper()
-        return Plaintext
+        global Plaintext
 
     def Check_Plaintext_in_Alphabet():
         for x in Plaintext: 
