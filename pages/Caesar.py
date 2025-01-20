@@ -98,11 +98,10 @@ with tab2:
     Input_Key_Choice()
     Get_Encrypt_Key()
     Check_Encrypt_Key()
+
+    
     if Correct_Encrypt_Key == True:
         st.write("The key is ", Encrypt_Key)
-
-
-    if Correct_Encrypt_Key == True:    
         st.write("The alphabet list is shifted to the right by ", Encrypt_Key)
         Alphabet_List = ' '.join(Alphabet)
         Alphabet_List = Alphabet_List.split(" ")
