@@ -21,31 +21,53 @@ with tab1:
 with tab2:
     st.header("Encrypt a plaintext")
 
+def my_function():
+  print("Hello from a function")
+
+my_function()
+    
+    Plaintext_in_Alphabet = False
     Correct_Plaintext_Range = False
-    Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
-    Plaintext = Plaintext.upper()
-    for x in Plaintext: 
-        if (x in Alphabet or x == " ") and Plaintext[0] != " ":
-            Plaintext_in_Alphabet = True
-        else:
-            Plaintext_in_Alphabet = False
-        
+    Correct_Plaintext_Length = False
+    Correct_Encrypt_Key = False 
+
+    Input_Plaintext()
+    Check_Plaintext_in_Alphabet()
+    Check_Plaintext_Range()
+    Check_Plaintext_Length()
+
+    def Input_Plaintext():
+        Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
+        Plaintext = Plaintext.upper()
+        return Plaintext
+
+    def Check_Plaintext_in_Alphabet():
+        for x in Plaintext: 
+            if (x in Alphabet or x == " ") and Plaintext[0] != " ":
+                Plaintext_in_Alphabet = True
+            else:
+                Plaintext_in_Alphabet = False
+            return Plaintext_in_Alphabet
+
+    def Check_Plaintext_Range():
         if Plaintext_in_Alphabet == False and Plaintext != "":
             st.error('Invalid plaintext.', icon="🚨")
             Correct_Plaintext_Range = False
             break
         elif Plaintext_in_Alphabet == True or Plaintext == " ":
             Correct_Plaintext_Range = True
+        return Correct_Plaintext_Range
             
-    Correct_Plaintext_Length = False
-    if Correct_Plaintext_Range == True:
-        if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
-            st.error('Plaintext out of range.', icon="🚨")
-            Correct_Plaintext_Length = False
-        elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
-            Correct_Plaintext_Length = True
+    def Check_Plaintext_Length():
+        if Correct_Plaintext_Range == True:
+            if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
+                st.error('Plaintext out of range.', icon="🚨")
+                Correct_Plaintext_Length = False
+            elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
+                Correct_Plaintext_Length = True
+            return Correct_Plaintext_Length
 
-    Correct_Encrypt_Key = False 
+    def Check_Encrypt_Choice():
     if Correct_Plaintext_Length == True and Plaintext != "":
         Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
         if Encrypt_Choice == "1":
