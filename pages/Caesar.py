@@ -51,7 +51,7 @@ with tab2:
             elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
                 Correct_Plaintext_Length = True
 
-    def Input_Key_Choice():
+    def Input_Encrypt_Key_Choice():
         global Encrypt_Choice
         if Correct_Plaintext_Length == True and Plaintext != "":
             Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
@@ -126,7 +126,7 @@ with tab2:
     Check_Plaintext_in_Alphabet()
     Check_Plaintext_Range()
     Check_Plaintext_Length()
-    Input_Key_Choice()
+    Input_Encrypt_Key_Choice()
     Get_Encrypt_Key()
     Check_Encrypt_Key()
     Output_Alphabet_List()
@@ -136,9 +136,6 @@ with tab2:
 
 with tab3:
     st.header("Decrypt a ciphertext")
-
-
-
 
     def Input_Ciphertext():
         global Ciphertext
@@ -171,7 +168,7 @@ with tab3:
             elif len(Ciphertext) >= 10 and len(Ciphertext) <= 30 and len(Ciphertext) != 0 and Ciphertext != "":
                 Correct_Ciphertext_Length = True
 
-    def Input_Key_Choice():
+    def Input_Decrypt_Key_Choice():
         global Decrypt_Choice
         if Correct_Ciphertext_Length == True and Ciphertext != "":
             Decrypt_Choice = st.text_input("Input your own key for Decryption (1) or generate a random key (2)? ", value="")
@@ -246,7 +243,7 @@ with tab3:
     Check_Ciphertext_in_Alphabet()
     Check_Ciphertext_Range()
     Check_Ciphertext_Length()
-    Input_Key_Choice()
+    Input_Decrypt_Key_Choice()
     Get_Decrypt_Key()
     Check_Decrypt_Key()
     Output_Alphabet_List()
