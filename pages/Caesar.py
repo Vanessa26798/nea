@@ -72,6 +72,7 @@ with tab2:
 
     def Check_Encrypt_Key():
         global Correct_Encrypt_Key
+        global Encrypt_Key
         if Encrypt_Choice == "1":
             if Encrypt_Key.isdigit() == True:
                 Encrypt_Key = int(Encrypt_Key)
