@@ -60,6 +60,7 @@ with tab2:
 
     def Get_Encrypt_Key():
         global Encrypt_Key
+        st.write(Encrypt_Choice)
         if Encrypt_Choice == "1":
             Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
         elif Encrypt_Choice == "2": 
