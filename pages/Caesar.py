@@ -35,28 +35,31 @@ with tab2:
             return Plaintext_in_Alphabet
 
     def Check_Plaintext_Range():
+        global Correct_Plaintext_Range
         if Plaintext_in_Alphabet == False and Plaintext != "":
             st.error('Invalid plaintext.', icon="🚨")
             Correct_Plaintext_Range = False
         elif Plaintext_in_Alphabet == True or Plaintext == " ":
             Correct_Plaintext_Range = True
-        return Correct_Plaintext_Range
             
-    def Check_Plaintext_Length():
+    def Check_Plaintext_Length():            
+        global Correct_Plaintext_Length
         if Correct_Plaintext_Range == True:
             if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
                 st.error('Plaintext out of range.', icon="🚨")
                 Correct_Plaintext_Length = False
             elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
                 Correct_Plaintext_Length = True
-            return Correct_Plaintext_Length
+
 
     def Input_Key_Choice():
+        global Encrypt_Choice
         if Correct_Plaintext_Length == True and Plaintext != "":
             Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
-        return Encrypt_Choice
+        
 
     def Get_Encrypt_Key():
+        global Encrypt_Key
         if Encrypt_Choice == "1":
             Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
         elif Encrypt_Choice == "2": 
@@ -64,9 +67,10 @@ with tab2:
             Encrypt_Key = int(Encrypt_Key)
         elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
-        return Encrypt_Key
+
 
     def Check_Encrypt_Key():
+        global Correct_Encrypt_Key
         if Encrypt_Choice == "1":
             if Encrypt_Key.isdigit() == True:
                 Encrypt_Key = int(Encrypt_Key)
@@ -79,7 +83,6 @@ with tab2:
             elif Encrypt_Key.isdigit() == False and Encrypt_Key != "": 
                 st.error('Invalid input.', icon="🚨")
                 Correct_Encrypt_Key = False
-        return Correct_Encrypt_Key
             
 
         
