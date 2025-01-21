@@ -20,6 +20,7 @@ with tab1:
 
 with tab2:
     st.header("Encrypt a plaintext")
+    global Encrypt_Choice
 
     def Input_Plaintext():
         global Plaintext
@@ -53,7 +54,6 @@ with tab2:
                 Correct_Plaintext_Length = True
 
     def Input_Key_Choice():
-        global Encrypt_Choice
         if Correct_Plaintext_Length == True and Plaintext != "":
             Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
 
