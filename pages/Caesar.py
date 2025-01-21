@@ -177,6 +177,7 @@ with tab3:
 
     def Input_Key_Choice():
         global Decrypt_Choice
+        Decrypt_Choice=""
         if Correct_Ciphertext_Length == True and Ciphertext != "":
             Decrypt_Choice = st.text_input("Input your own key for Decryption (1) or generate a random key (2)? ", value="")
 
