@@ -20,10 +20,10 @@ with tab1:
 
 with tab2:
     st.header("Encrypt a plaintext")
+    global Plaintext
     global Encrypt_Choice
 
-    def Input_Plaintext():
-        #global Plaintext
+    def Input_Plaintext():        
         Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
         Plaintext = Plaintext.upper()
         st.write("input plaintext")
