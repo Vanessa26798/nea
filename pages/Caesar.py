@@ -25,7 +25,6 @@ with tab2:
         global Plaintext
         Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
         Plaintext = Plaintext.upper()
-        st.write("input plaintext")
 
     def Check_Plaintext_in_Alphabet():        
         global Plaintext_in_Alphabet
@@ -55,7 +54,7 @@ with tab2:
 
     def Input_Key_Choice():
         global Encrypt_Choice
-        Encrypt_Choice=""
+        Encrypt_Choice = ""
         if Correct_Plaintext_Length == True and Plaintext != "":
             Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
 
@@ -137,12 +136,8 @@ with tab2:
     Output_Ciphertext()
 
 
-
 with tab3:
     st.header("Decrypt a ciphertext")
-
-
-
 
     def Input_Ciphertext():
         global Ciphertext
@@ -177,7 +172,7 @@ with tab3:
 
     def Input_Key_Choice():
         global Decrypt_Choice
-        Decrypt_Choice=""
+        Decrypt_Choice = ""
         if Correct_Ciphertext_Length == True and Ciphertext != "":
             Decrypt_Choice = st.text_input("Input your own key for Decryption (1) or generate a random key (2)? ", value="")
 
