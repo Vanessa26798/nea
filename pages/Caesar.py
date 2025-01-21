@@ -23,7 +23,7 @@ with tab2:
     global Encrypt_Choice
 
     def Input_Plaintext():
-        global Plaintext
+        #global Plaintext
         Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
         Plaintext = Plaintext.upper()
         st.write("input plaintext")
@@ -129,10 +129,10 @@ with tab2:
     Check_Plaintext_Range()
     Check_Plaintext_Length()
     Input_Key_Choice()
-    #Get_Encrypt_Key()
-    #Check_Encrypt_Key()
-    #Output_Alphabet_List()
-    #Output_Ciphertext()
+    Get_Encrypt_Key()
+    Check_Encrypt_Key()
+    Output_Alphabet_List()
+    Output_Ciphertext()
 
 
 
