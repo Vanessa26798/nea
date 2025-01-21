@@ -55,6 +55,7 @@ with tab2:
 
     def Input_Key_Choice():
         global Encrypt_Choice
+        Encrypt_Choice=""
         if Correct_Plaintext_Length == True and Plaintext != "":
             Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
 
@@ -130,7 +131,7 @@ with tab2:
     Check_Plaintext_Range()
     Check_Plaintext_Length()
     Input_Key_Choice()
-    #Get_Encrypt_Key()
+    Get_Encrypt_Key()
     Check_Encrypt_Key()
     Output_Alphabet_List()
     Output_Ciphertext()
