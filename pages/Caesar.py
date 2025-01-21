@@ -19,16 +19,15 @@ with tab1:
 
 
 with tab2:
-    st.header("Encrypt a plaintext")
-    global Plaintext
-    global Encrypt_Choice
+    st.header("Encrypt a plaintext")        
 
-    def Input_Plaintext():        
+    def Input_Plaintext():
+        global Plaintext
         Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")
         Plaintext = Plaintext.upper()
         st.write("input plaintext")
 
-    def Check_Plaintext_in_Alphabet():
+    def Check_Plaintext_in_Alphabet():        
         global Plaintext_in_Alphabet
         for x in Plaintext: 
             if (x in Alphabet or x == " ") and Plaintext[0] != " ":
@@ -55,12 +54,14 @@ with tab2:
                 Correct_Plaintext_Length = True
 
     def Input_Key_Choice():
+        global Encrypt_Choice
         if Correct_Plaintext_Length == True and Plaintext != "":
             Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
 
     def Get_Encrypt_Key():
         global Correct_Encrypt_Key
         global Encrypt_Key
+        global Encrypt_Choice
         if Encrypt_Choice == "1":
             Encrypt_Key = st.text_input("Please enter the key for encryption, within 1-25: ", value="")
         elif Encrypt_Choice == "2": 
