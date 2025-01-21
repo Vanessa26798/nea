@@ -130,7 +130,7 @@ with tab2:
     Check_Plaintext_Range()
     Check_Plaintext_Length()
     Input_Key_Choice()
-    Get_Encrypt_Key()
+    #Get_Encrypt_Key()
     Check_Encrypt_Key()
     Output_Alphabet_List()
     Output_Ciphertext()
