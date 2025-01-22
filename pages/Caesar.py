@@ -227,7 +227,7 @@ with tab3:
             Decrypted_table = st.table(Decrypted_Alphabet)
 
     def Output_Plaintext():
-        if Correct_Ciphertext_Range == True and Correct_Decrypt_Key == True and Correct_Ciphertext_Length == True:
+        if Correct_Ciphertext_Range == True and Correct_Decrypt_Key == True and Correct_Ciphertext_Length == True and (Decrypt_Key == 1 or 2):
            Plaintext = ["Therefore, the plaintext is "]
            for x in Ciphertext:
              if x == " ":
