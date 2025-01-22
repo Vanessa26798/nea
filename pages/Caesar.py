@@ -212,29 +212,29 @@ with tab3:
             Original_Alphabet = pd.DataFrame(columns = Alphabet_List)
             st.write("Original alphabet list:")
             Original_table = st.table(Original_Alphabet)
-            Decrypted_Alphabet_List_PartOne = Alphabet[Decrypt_Key:26]
-            Decrypted_Alphabet_List_PartTwo = Alphabet[0:Decrypt_Key]
+            Decrypted_Alphabet_List_PartOne = Alphabet[(26-Decrypt_Key):26]
+            Decrypted_Alphabet_List_PartTwo = Alphabet[0:(26-Decrypt_Key)]
             Decrypted_Alphabet_List = Decrypted_Alphabet_List_PartOne + Decrypted_Alphabet_List_PartTwo
             Decrypted_Alphabet_List = ' '.join(Decrypted_Alphabet_List)
             Decrypted_Alphabet_List = Decrypted_Alphabet_List.split(" ")
             Decrypted_Alphabet = pd.DataFrame(columns = Decrypted_Alphabet_List)
-            st.write("Decrypted alphabet list:")
+            st.write("Decryted alphabet list:")
             Decrypted_table = st.table(Decrypted_Alphabet)
 
     def Output_Plaintext():
         if Correct_Ciphertext_Range == True and Correct_Decrypt_Key == True and Correct_Ciphertext_Length == True:
-           Plaintext = ["Therefore, the plaintext is "]
-           for x in Ciphertext:
-             if x == " ":
-                 Plaintext.append(x)
-             else: 
-                 Letter_index = int(Alphabet.index(x))
-                 Letter_index += Decrypt_Key
-                 while Letter_index >= 25: 
-                     Letter_index -= 26
-                 Letter = Alphabet[Letter_index]
-                 Plaintext.append(Letter)
-           st.write("".join(Plaintext))
+            Plaintext = ["Therefore, the plaintext is "]
+                   for x in Ciphertext:
+                     if x == " ":
+                         Plaintext.append(x)
+                     else: 
+                         Letter_index = int(Alphabet.index(x))
+                         Letter_index -= Decrypt_Key
+                         while Letter_index >= 25: 
+                             Letter_index -= 26
+                         Letter = Alphabet[Letter_index]
+                         Plaintext.append(Letter)
+                   st.write("".join(Plaintext))
 
 
     Ciphertext_in_Alphabet = False
