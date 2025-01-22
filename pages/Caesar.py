@@ -174,7 +174,7 @@ with tab3:
         global Decrypt_Choice
         Decrypt_Choice = ""
         if Correct_Ciphertext_Length == True and Ciphertext != "":
-            Decrypt_Choice = st.text_input("Input your own key for Decryption (1) or generate a random key (2)? ", value="")
+            Decrypt_Choice = st.text_input("Input your own key for decryption (1) or generate a random key (2)? ", value="")
 
     def Get_Decrypt_Key():
         global Correct_Decrypt_Key
@@ -182,6 +182,7 @@ with tab3:
         if Decrypt_Choice == "1":
             Decrypt_Key = st.text_input("Please enter the key for decryption, within 1-25: ", value="")
         elif Decrypt_Choice == "2": 
+            st.write("hi")
             Decrypt_Key = random.randrange(1, 26)
             Decrypt_Key = int(Decrypt_Key)
             Correct_Decrypt_Key == True
