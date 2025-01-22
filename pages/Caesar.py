@@ -67,7 +67,7 @@ with tab2:
         elif Encrypt_Choice == "2": 
             Encrypt_Key = random.randrange(1, 26)
             Encrypt_Key = int(Encrypt_Key)
-            Correct_Encrypt_Key == True
+            Correct_Encrypt_Key = True
         elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
 
@@ -182,13 +182,9 @@ with tab3:
         if Decrypt_Choice == "1":
             Decrypt_Key = st.text_input("Please enter the key for decryption, within 1-25: ", value="")
         elif Decrypt_Choice == "2": 
-            st.write("hi")
             Decrypt_Key = random.randrange(1, 26)
-            st.write("hi0")
             Decrypt_Key = int(Decrypt_Key)
-            st.write("hi1")
-            # Correct_Decrypt_Key == True
-            st.write("hi2")
+            Correct_Decrypt_Key = True
         elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
 
