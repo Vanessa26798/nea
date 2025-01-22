@@ -187,7 +187,7 @@ with tab3:
             st.write("hi0")
             Decrypt_Key = int(Decrypt_Key)
             st.write("hi1")
-            Correct_Decrypt_Key == True
+            # Correct_Decrypt_Key == True
             st.write("hi2")
         elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
@@ -206,7 +206,6 @@ with tab3:
             elif Decrypt_Key.isdigit() == False and Decrypt_Key != "": 
                 st.error('Invalid input.', icon="🚨")
                 Correct_Decrypt_Key = False
-        st.write("hi3")
 
     def Output_Alphabet_List():
         if Correct_Decrypt_Key == True:
@@ -227,7 +226,7 @@ with tab3:
             Decrypted_table = st.table(Decrypted_Alphabet)
 
     def Output_Plaintext():
-        if Correct_Ciphertext_Range == True and Correct_Decrypt_Key == True and Correct_Ciphertext_Length == True and (Decrypt_Key == "1" or "2"):
+        if Correct_Ciphertext_Range == True and Correct_Decrypt_Key == True and Correct_Ciphertext_Length == True:
            Plaintext = ["Therefore, the plaintext is "]
            for x in Ciphertext:
              if x == " ":
