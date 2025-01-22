@@ -184,7 +184,9 @@ with tab3:
         elif Decrypt_Choice == "2": 
             st.write("hi")
             Decrypt_Key = random.randrange(1, 26)
+            st.write("hi0")
             Decrypt_Key = int(Decrypt_Key)
+            st.write("hi1")
             Correct_Decrypt_Key == True
             st.write("hi2")
         elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "": 
