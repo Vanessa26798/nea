@@ -186,6 +186,7 @@ with tab3:
             Decrypt_Key = random.randrange(1, 26)
             Decrypt_Key = int(Decrypt_Key)
             Correct_Decrypt_Key == True
+            st.write("hi2")
         elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
 
@@ -203,6 +204,7 @@ with tab3:
             elif Decrypt_Key.isdigit() == False and Decrypt_Key != "": 
                 st.error('Invalid input.', icon="🚨")
                 Correct_Decrypt_Key = False
+        st.write("hi3")
 
     def Output_Alphabet_List():
         if Correct_Decrypt_Key == True:
