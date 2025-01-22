@@ -224,17 +224,17 @@ with tab3:
     def Output_Plaintext():
         if Correct_Ciphertext_Range == True and Correct_Decrypt_Key == True and Correct_Ciphertext_Length == True:
             Plaintext = ["Therefore, the plaintext is "]
-                   for x in Ciphertext:
-                     if x == " ":
-                         Plaintext.append(x)
-                     else: 
-                         Letter_index = int(Alphabet.index(x))
-                         Letter_index -= Decrypt_Key
-                         while Letter_index >= 25: 
-                             Letter_index -= 26
-                         Letter = Alphabet[Letter_index]
-                         Plaintext.append(Letter)
-                   st.write("".join(Plaintext))
+            for x in Ciphertext:
+             if x == " ":
+                 Plaintext.append(x)
+             else: 
+                 Letter_index = int(Alphabet.index(x))
+                 Letter_index -= Decrypt_Key
+                 while Letter_index >= 25: 
+                     Letter_index -= 26
+                 Letter = Alphabet[Letter_index]
+                 Plaintext.append(Letter)
+            st.write("".join(Plaintext))
 
 
     Ciphertext_in_Alphabet = False
