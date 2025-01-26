@@ -62,28 +62,37 @@ with tab2:
     st.header("Encrypt a plaintext")
 
     Correct_Plaintext_Range = False
-    Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")    
-    Plaintext = Plaintext.upper()
-    for x in Plaintext: 
-        if (x in Alphabet or x == " ") and Plaintext[0] != " ":
-            Plaintext_in_Alphabet = True
-        else:
-            Plaintext_in_Alphabet = False
-        
+    Correct_Plaintext_Length = False
+
+    def Input_Plaintext():
+        global Plaintext    
+        Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")    
+        Plaintext = Plaintext.upper()
+
+    def Check_Plaintext_in_Alphabet():        
+        global Plaintext_in_Alphabet
+        for x in Plaintext: 
+            if (x in Alphabet or x == " ") and Plaintext[0] != " ":
+                Plaintext_in_Alphabet = True
+            else:
+                Plaintext_in_Alphabet = False
+
+   def Check_Plaintext_Range():
+        global Correct_Plaintext_Range
         if Plaintext_in_Alphabet == False and Plaintext != "":
             st.error('Invalid plaintext.', icon="🚨")
             Correct_Plaintext_Range = False
-            break
         elif Plaintext_in_Alphabet == True or Plaintext == " ":
             Correct_Plaintext_Range = True
 
-    Correct_Plaintext_Length = False
-    if Correct_Plaintext_Range == True:
-        if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
-            st.error('Plaintext out of range.', icon="🚨")
-            Correct_Plaintext_Length = False
-        elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
-            Correct_Plaintext_Length = True
+    def Check_Plaintext_Length():            
+        global Correct_Plaintext_Length
+        if Correct_Plaintext_Range == True:
+            if (len(Plaintext) < 10 or len(Plaintext) > 30) and Plaintext != "": 
+                st.error('Plaintext out of range.', icon="🚨")
+                Correct_Plaintext_Length = False
+            elif len(Plaintext) >= 10 and len(Plaintext) <= 30 and len(Plaintext) != 0 and Plaintext != "":
+                Correct_Plaintext_Length = True
     
     if Correct_Plaintext_Range == True and Correct_Plaintext_Length == True:
          Plaintext_Baudot = []
