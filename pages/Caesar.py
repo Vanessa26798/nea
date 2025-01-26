@@ -150,7 +150,6 @@ with tab3:
                 Ciphertext_in_Alphabet = True
             else:
                 Ciphertext_in_Alphabet = False
-            return Ciphertext_in_Alphabet
 
     def Check_Ciphertext_Range():
         global Correct_Ciphertext_Range
