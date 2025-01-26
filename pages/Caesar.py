@@ -33,7 +33,6 @@ with tab2:
                 Plaintext_in_Alphabet = True
             else:
                 Plaintext_in_Alphabet = False
-            return Plaintext_in_Alphabet
 
     def Check_Plaintext_Range():
         global Correct_Plaintext_Range
