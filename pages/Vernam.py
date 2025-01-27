@@ -166,6 +166,9 @@ Output_Ciphertext()
 
 
     def Output_Ciphertext():
+        global Encrypt_Key_Baudot
+        global Ciphertext_Baudot
+        global Ciphertext
         if Correct_Encrypt_Key_Range == True and Correct_Encrypt_Key_Length == True:
          Encrypt_Key_Baudot = []
          Encrypt_Key_Index = 0
@@ -268,6 +271,7 @@ Output_Ciphertext()
                 st.write("The key is ", "".join(Encrypt_Key))
                 st.write("The plaintext and key of each character are converted to Baudot, and XOR is carried out:") 
                 st.write("".join(Spaced_Plaintext_Baudot), " - Plaintext")
+                
                 Spaced_Encrypt_Key_Baudot = []
                 for x in Encrypt_Key_Baudot:
                     if x == " ": 
@@ -276,6 +280,7 @@ Output_Ciphertext()
                         Spaced_Encrypt_Key_Baudot.append(x)
                         Spaced_Encrypt_Key_Baudot.append(" | ")
                 st.write("".join(Spaced_Encrypt_Key_Baudot), " - Key")
+                
                 st.write("".join(Ciphertext_Baudot), " - Ciphertext")
                 st.write("Therefore, the ciphertext is ", "".join(Ciphertext))   
 
