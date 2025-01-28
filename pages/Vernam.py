@@ -253,24 +253,24 @@ with tab2:
                 st.write("".join(Ciphertext_Baudot), " - Ciphertext")
                 st.write("Therefore, the ciphertext is ", "".join(Ciphertext))   
 
-Plaintext_in_Alphabet = False
-Correct_Plaintext_Range = False
-Correct_Plaintext_Length = False
-Correct_Encrypt_Key_Range = False
-Correct_Encrypt_Key_Length = False
-Correct_Encrypt_Key = False
-
-Input_Plaintext()
-Check_Plaintext_in_Alphabet()
-Check_Plaintext_Range()
-Check_Plaintext_Length()
-Plaintext_Baudot()
-Input_Key_Choice()
-Get_Encrypt_Key()
-Check_Encrypt_Key_Range()
-Check_Encrypt_Key_Length()
-Encryption()
-Output_Baudot()
+    Plaintext_in_Alphabet = False
+    Correct_Plaintext_Range = False
+    Correct_Plaintext_Length = False
+    Correct_Encrypt_Key_Range = False
+    Correct_Encrypt_Key_Length = False
+    Correct_Encrypt_Key = False
+    
+    Input_Plaintext()
+    Check_Plaintext_in_Alphabet()
+    Check_Plaintext_Range()
+    Check_Plaintext_Length()
+    Plaintext_Baudot()
+    Input_Key_Choice()
+    Get_Encrypt_Key()
+    Check_Encrypt_Key_Range()
+    Check_Encrypt_Key_Length()
+    Encryption()
+    Output_Baudot()
 
 
 with tab3:
