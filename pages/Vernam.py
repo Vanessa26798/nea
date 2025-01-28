@@ -134,7 +134,7 @@ with tab2:
              Correct_Encrypt_Key_Range = False
     
     def Check_Encrypt_Key_Length():
-        global Check_Encrypt_Key_Length
+        global Correct_Encrypt_Key_Length
         if Correct_Encrypt_Key_Range == True:
          if len(Encrypt_Key) != len(Plaintext) and Encrypt_Key_Input != "": 
              st.error('Key out of range.', icon="🚨")
