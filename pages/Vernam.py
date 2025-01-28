@@ -252,7 +252,9 @@ with tab2:
                 st.write("".join(Ciphertext_Baudot), " - Ciphertext")
                 st.write("Therefore, the ciphertext is ", "".join(Ciphertext))   
 
-
+Plaintext_in_Alphabet = False
+Correct_Plaintext_Range = False
+Correct_Plaintext_Length = False
 Correct_Encrypt_Key_Range = False
 Correct_Encrypt_Key_Length = False
 Correct_Encrypt_Key = False
