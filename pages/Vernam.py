@@ -112,6 +112,7 @@ with tab2:
 
     def Get_Encrypt_Key(): 
         global Encrypt_Key_Input
+        Encrypt_Key_Input = ""
         if Encrypt_Choice == "1":
             Encrypt_Key_Input = st.text_input("Please input the key for encryption, with the same length as the plaintext: ", value="")
             Encrypt_Key_Input = Encrypt_Key_Input.upper()
