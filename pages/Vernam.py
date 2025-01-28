@@ -77,7 +77,7 @@ with tab2:
             else:
                 Plaintext_in_Alphabet = False
 
-   def Check_Plaintext_Range():
+    def Check_Plaintext_Range():
         global Correct_Plaintext_Range
         if Plaintext_in_Alphabet == False and Plaintext != "":
             st.error('Invalid plaintext.', icon="🚨")
