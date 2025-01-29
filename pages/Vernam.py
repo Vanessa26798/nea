@@ -229,30 +229,30 @@ with tab2:
                 Correct_Encrypt_Key_Length = True
         elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "":
             st.error('Invalid input.', icon="🚨")
-        
-        def Output_Baudot():
-         if (Encrypt_Choice == "1" or "2") and Correct_Encrypt_Key == True and Correct_Encrypt_Key_Range == True and Correct_Encrypt_Key_Length == True:
-            if len(Ciphertext) == len(Plaintext):
-                Spaced_Plaintext_Baudot = []
-                for x in Plaintext_Baudot:
-                    if x == " ": 
-                        Spaced_Plaintext_Baudot.append(" | ")
-                    elif x != " ":
-                        Spaced_Plaintext_Baudot.append(x)
-                        Spaced_Plaintext_Baudot.append(" | ")
-                st.write("The key is ", "".join(Encrypt_Key))
-                st.write("The plaintext and key of each character are converted to Baudot, and XOR is carried out:") 
-                st.write("".join(Spaced_Plaintext_Baudot), " - Plaintext")
-                Spaced_Encrypt_Key_Baudot = []
-                for x in Encrypt_Key_Baudot:
-                    if x == " ": 
-                        Spaced_Encrypt_Key_Baudot.append(" | ")
-                    elif x != " ":
-                        Spaced_Encrypt_Key_Baudot.append(x)
-                        Spaced_Encrypt_Key_Baudot.append(" | ")
-                st.write("".join(Spaced_Encrypt_Key_Baudot), " - Key")
-                st.write("".join(Ciphertext_Baudot), " - Ciphertext")
-                st.write("Therefore, the ciphertext is ", "".join(Ciphertext))   
+
+    def Output_Baudot():
+     if (Encrypt_Choice == "1" or "2") and Correct_Encrypt_Key == True and Correct_Encrypt_Key_Range == True and Correct_Encrypt_Key_Length == True:
+        if len(Ciphertext) == len(Plaintext):
+            Spaced_Plaintext_Baudot = []
+            for x in Plaintext_Baudot:
+                if x == " ": 
+                    Spaced_Plaintext_Baudot.append(" | ")
+                elif x != " ":
+                    Spaced_Plaintext_Baudot.append(x)
+                    Spaced_Plaintext_Baudot.append(" | ")
+            st.write("The key is ", "".join(Encrypt_Key))
+            st.write("The plaintext and key of each character are converted to Baudot, and XOR is carried out:") 
+            st.write("".join(Spaced_Plaintext_Baudot), " - Plaintext")
+            Spaced_Encrypt_Key_Baudot = []
+            for x in Encrypt_Key_Baudot:
+                if x == " ": 
+                    Spaced_Encrypt_Key_Baudot.append(" | ")
+                elif x != " ":
+                    Spaced_Encrypt_Key_Baudot.append(x)
+                    Spaced_Encrypt_Key_Baudot.append(" | ")
+            st.write("".join(Spaced_Encrypt_Key_Baudot), " - Key")
+            st.write("".join(Ciphertext_Baudot), " - Ciphertext")
+            st.write("Therefore, the ciphertext is ", "".join(Ciphertext))   
 
     Plaintext_in_Alphabet = False
     Correct_Plaintext_Range = False
