@@ -133,13 +133,13 @@ with tab2:
     
     def Check_Encrypt_Key_Length():
         global Correct_Encrypt_Key_Length
-        global Correct_Encrypt_Key_Range
         if Correct_Encrypt_Key_Range == True:
          if len(Encrypt_Key) != len(Plaintext) and Encrypt_Key_Input != "": 
              st.error('Key out of range.', icon="🚨")
              Correct_Encrypt_Key_Length = False
          elif len(Encrypt_Key) == len(Plaintext) and len(Encrypt_Key) != 0 and Encrypt_Key != "":
              Correct_Encrypt_Key_Length = True
+        st.write(Correct_Encrypt_Key_Range)
 
     def Encryption():
         global Encrypt_Key_Baudot
@@ -266,8 +266,8 @@ with tab2:
     Plaintext_Baudot()
     Input_Key_Choice()
     Get_Encrypt_Key()
-    Check_Encrypt_Key_Length()
     Check_Encrypt_Key_Range()
+    Check_Encrypt_Key_Length()
     Encryption()
     Output_Baudot()
 
