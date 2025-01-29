@@ -142,6 +142,7 @@ with tab2:
         global Encrypt_Key_Baudot
         global Ciphertext_Baudot
         global Ciphertext
+        global Correct_Encrypt_Key
         global Correct_Encrypt_Key_Range
         global Correct_Encrypt_Key_Length
         global Encrypt_Key
