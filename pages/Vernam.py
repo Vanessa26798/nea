@@ -61,9 +61,6 @@ with tab1:
 with tab2:
     st.header("Encrypt a plaintext")
 
-    Correct_Plaintext_Range = False
-    Correct_Plaintext_Length = False
-
     def Input_Plaintext():
         global Plaintext    
         Plaintext = st.text_input("Please enter the plaintext in upper case, within 10-30 characters: ", value="")    
