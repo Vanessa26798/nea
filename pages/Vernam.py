@@ -60,6 +60,7 @@ with tab1:
 
 with tab2:
     st.header("Encrypt a plaintext")
+    Correct_Encrypt_Key_Range = False
 
     def Input_Plaintext():
         global Plaintext    
@@ -266,7 +267,7 @@ with tab2:
     Get_Encrypt_Key()
     Check_Encrypt_Key_Range()
     Check_Encrypt_Key_Length()
-    #Encryption()
+    Encryption()
     Output_Baudot()
 
 
