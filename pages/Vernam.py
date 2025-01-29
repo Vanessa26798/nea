@@ -171,7 +171,7 @@ with tab2:
                      XOR_Result = str(XOR_Result)
                      Ciphertext_Letter = Get_Letter(XOR_Result) 
                      if Ciphertext_Letter == "Key doesn't exist":
-                         st.error('Invalid key A.', icon="🚨")
+                         st.error('Invalid key.', icon="🚨")
                          Correct_Encrypt_Key = False
                          break
                      elif Ciphertext_Letter != "Key doesn't exist" and " ":
