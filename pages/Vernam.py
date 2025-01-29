@@ -35,7 +35,7 @@ Baudot = {
     Alphabet[25]: '10001'
     }     
 
-def get_key(val):
+def Get_Letter(val):
     for key, value in Baudot.items():
         if val == value:
             return key
@@ -163,7 +163,7 @@ with tab2:
                      XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
                      XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
                      XOR_Result = str(XOR_Result)
-                     Ciphertext_Letter = get_key(XOR_Result) 
+                     Ciphertext_Letter = Get_Letter(XOR_Result) 
                      if Ciphertext_Letter == "Key doesn't exist":
                          st.error('Invalid key.', icon="🚨")
                          Correct_Encrypt_Key = False
@@ -198,7 +198,7 @@ with tab2:
                         XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
                         XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
                         XOR_Result = str(XOR_Result)
-                        Ciphertext_Letter = get_key(XOR_Result) 
+                        Ciphertext_Letter = Get_Letter(XOR_Result) 
                         while Ciphertext_Letter == "Key doesn't exist":
                             Encrypt_Key_Letter = random.choice(Alphabet)
                             Encrypt_Key[Encrypt_Key_Index] = Encrypt_Key_Letter
@@ -209,7 +209,7 @@ with tab2:
                             XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
                             XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
                             XOR_Result = str(XOR_Result)
-                            Ciphertext_Letter = get_key(XOR_Result)
+                            Ciphertext_Letter = Get_Letter(XOR_Result)
                             if Ciphertext_Letter != "Key doesn't exist" and " ":
                                 Ciphertext.append(Ciphertext_Letter)
                                 Encrypt_Key_Index = Encrypt_Key_Index + 1   
@@ -348,7 +348,7 @@ with tab3:
                      XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
                      XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
                      XOR_Result = str(XOR_Result)
-                     Plaintext_Letter = get_key(XOR_Result) 
+                     Plaintext_Letter = Get_Letter(XOR_Result) 
                      if Plaintext_Letter == "Key doesn't exist":
                          st.error('Invalid key.', icon="🚨")
                          Correct_Decrypt_Key = False
@@ -389,7 +389,7 @@ with tab3:
                         XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
                         XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
                         XOR_Result = str(XOR_Result)
-                        Plaintext_Letter = get_key(XOR_Result) 
+                        Plaintext_Letter = Get_Letter(XOR_Result) 
                         while Plaintext_Letter == "Key doesn't exist":
                             Decrypt_Key_Letter = random.choice(Alphabet)
                             Decrypt_Key[Decrypt_Key_Index] = Decrypt_Key_Letter
@@ -400,7 +400,7 @@ with tab3:
                             XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
                             XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
                             XOR_Result = str(XOR_Result)
-                            Plaintext_Letter = get_key(XOR_Result)
+                            Plaintext_Letter = Get_Letter(XOR_Result)
                             if Plaintext_Letter != "Key doesn't exist" and " ":
                                 Plaintext.append(Plaintext_Letter)
                                 Decrypt_Key_Index = Decrypt_Key_Index + 1   
@@ -472,7 +472,7 @@ with tab4:
             XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
             XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
             XOR_Result = str(XOR_Result)
-            Ciphertext_Letter = get_key(XOR_Result) 
+            Ciphertext_Letter = Get_Letter(XOR_Result) 
             Ciphertext.append(Ciphertext_Letter)
             Key_Index = Key_Index + 1 
     st.write("If the plaintext is " + Plaintext + ", the key is " + "".join(Key) + ", the ciphertext is " + "".join(Ciphertext) + ":")
