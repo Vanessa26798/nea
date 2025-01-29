@@ -146,7 +146,8 @@ with tab2:
         global Ciphertext_Baudot
         global Ciphertext
         st.write(Correct_Encrypt_Key_Range)
-        if Correct_Encrypt_Key_Range == True and Correct_Encrypt_Key_Length == True:
+        if Correct_Encrypt_Key_Length == True:
+        # if Correct_Encrypt_Key_Range == True and Correct_Encrypt_Key_Length == True:
             if Encrypt_Choice == "1":
                 Encrypt_Key_Baudot = []
                 Encrypt_Key_Index = 0
