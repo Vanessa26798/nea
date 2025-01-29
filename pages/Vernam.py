@@ -126,7 +126,7 @@ with tab2:
              Encrypt_Key.append(x)
              Correct_Encrypt_Key_Range = True    
          elif (x not in Alphabet and Encrypt_Key_Input != "") or (Encrypt_Key_Input == " " or Encrypt_Key_Input[0] == " " or type(x) != type(Plaintext_Baudot[Encrypt_Key_Index])):
-             st.error('Invalid input A.', icon="🚨")
+             st.error('Invalid input.', icon="🚨")
              Correct_Encrypt_Key_Range = False
     
     def Check_Encrypt_Key_Length():
@@ -171,7 +171,7 @@ with tab2:
                      XOR_Result = str(XOR_Result)
                      Ciphertext_Letter = Get_Letter(XOR_Result) 
                      if Ciphertext_Letter == "Key doesn't exist":
-                         st.error('Invalid key.', icon="🚨")
+                         st.error('Invalid key A.', icon="🚨")
                          Correct_Encrypt_Key = False
                          break
                      elif Ciphertext_Letter != "Key doesn't exist" and " ":
