@@ -266,8 +266,8 @@ with tab2:
     Plaintext_Baudot()
     Input_Key_Choice()
     Get_Encrypt_Key()
-    Check_Encrypt_Key_Range()
     Check_Encrypt_Key_Length()
+    Check_Encrypt_Key_Range()
     Encryption()
     Output_Baudot()
 
