@@ -145,9 +145,6 @@ with tab2:
         global Correct_Encrypt_Key_Range
         global Correct_Encrypt_Key_Length
         global Encrypt_Key
-        st.error(Correct_Encrypt_Key_Range, icon="🚨")
-        st.error(Correct_Encrypt_Key_Length, icon="🚨")
-        st.error(Encrypt_Key, icon="🚨")
         if Correct_Encrypt_Key_Range == True and Correct_Encrypt_Key_Length == True:
             if Encrypt_Choice == "1":
                 Encrypt_Key_Baudot = []
