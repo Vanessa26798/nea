@@ -116,7 +116,6 @@ with tab2:
         elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
 
-
     def Check_Encrypt_Key_Range():
         global Correct_Encrypt_Key_Range
         global Encrypt_Key
@@ -132,7 +131,6 @@ with tab2:
     
     def Check_Encrypt_Key_Length():
         global Correct_Encrypt_Key_Length
-        global Correct_Encrypt_Key_Range
         if Correct_Encrypt_Key_Range == True:
          if len(Encrypt_Key) != len(Plaintext) and Encrypt_Key_Input != "": 
              st.error('Key out of range.', icon="🚨")
@@ -144,90 +142,88 @@ with tab2:
         global Encrypt_Key_Baudot
         global Ciphertext_Baudot
         global Ciphertext
-        st.write(Correct_Encrypt_Key_Range)
-        # if Correct_Encrypt_Key_Length == True:
-        # if Correct_Encrypt_Key_Range == True and Correct_Encrypt_Key_Length == True:
-        if Encrypt_Choice == "1":
-            Encrypt_Key_Baudot = []
-            Encrypt_Key_Index = 0
-            Ciphertext_Baudot = []
-            Ciphertext = []
-            for x in Plaintext_Baudot:
-             if x == " ": 
-                 Encrypt_Key.append(" ") 
-                 Encrypt_Key_Baudot.append(" ") 
-                 Encrypt_Key_Index = Encrypt_Key_Index + 1
-                 Ciphertext_Baudot.append(" | ")
-                 Ciphertext.append(" ")    
-             elif x != " ":
-                 Encrypt_Key_Letter = Encrypt_Key[Encrypt_Key_Index]
-                 Encrypt_Key_Baudot.append(Baudot[Encrypt_Key_Letter])
-                 XOR = [x]
-                 XOR.append(Encrypt_Key_Baudot[Encrypt_Key_Index])
-                 XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
-                 XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
-                 XOR_Result = str(XOR_Result)
-                 Ciphertext_Letter = get_key(XOR_Result) 
-                 if Ciphertext_Letter == "Key doesn't exist":
-                     st.error('Invalid key.', icon="🚨")
-                     Correct_Encrypt_Key = False
-                     break
-                 elif Ciphertext_Letter != "Key doesn't exist" and " ":
-                     Ciphertext.append(Ciphertext_Letter)
+        if Correct_Encrypt_Key_Range == True and Correct_Encrypt_Key_Length == True:
+            if Encrypt_Choice == "1":
+                Encrypt_Key_Baudot = []
+                Encrypt_Key_Index = 0
+                Ciphertext_Baudot = []
+                Ciphertext = []
+                for x in Plaintext_Baudot:
+                 if x == " ": 
+                     Encrypt_Key.append(" ") 
+                     Encrypt_Key_Baudot.append(" ") 
                      Encrypt_Key_Index = Encrypt_Key_Index + 1
-                 Ciphertext_Baudot.append(XOR_Result)
-                 Ciphertext_Baudot.append(" | ")
-            Correct_Encrypt_Key = True
-            Correct_Encrypt_Key_Range = True
-            Correct_Encrypt_Key_Length = True
-        elif Encrypt_Choice == "2":
-            Encrypt_Key = []
-            Encrypt_Key_Baudot = []
-            Encrypt_Key_Index = 0
-            Ciphertext_Baudot = []
-            Ciphertext = []
-            for x in Plaintext_Baudot:
-                if x == " ": 
-                    Encrypt_Key.append(" ") 
-                    Encrypt_Key_Baudot.append(" ") 
-                    Encrypt_Key_Index = Encrypt_Key_Index + 1
-                    Ciphertext_Baudot.append(" | ")
-                    Ciphertext.append(" ")    
-                elif x != " ":
-                    Encrypt_Key_Letter = random.choice(Alphabet)
-                    Encrypt_Key.append(Encrypt_Key_Letter)
-                    Encrypt_Key_Baudot.append(Baudot[Encrypt_Key_Letter])
-                    XOR = [x]
-                    XOR.append(Encrypt_Key_Baudot[Encrypt_Key_Index])
-                    XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
-                    XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
-                    XOR_Result = str(XOR_Result)
-                    Ciphertext_Letter = get_key(XOR_Result) 
-                    while Ciphertext_Letter == "Key doesn't exist":
-                        Encrypt_Key_Letter = random.choice(Alphabet)
-                        Encrypt_Key[Encrypt_Key_Index] = Encrypt_Key_Letter
-                        Encrypt_Key_Baudot[Encrypt_Key_Index] = Baudot[Encrypt_Key_Letter]
-                        Encrypt_Key_LetterBaudot = Encrypt_Key_Baudot[Encrypt_Key_Index]
-                        XOR = [x]
-                        XOR.append(Encrypt_Key_LetterBaudot)
-                        XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
-                        XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
-                        XOR_Result = str(XOR_Result)
-                        Ciphertext_Letter = get_key(XOR_Result)
-                        if Ciphertext_Letter != "Key doesn't exist" and " ":
-                            Ciphertext.append(Ciphertext_Letter)
-                            Encrypt_Key_Index = Encrypt_Key_Index + 1   
-                            break
-                    else:
-                        Ciphertext.append(Ciphertext_Letter)
-                        Encrypt_Key_Index = Encrypt_Key_Index + 1 
-                    Ciphertext_Baudot.append(XOR_Result)
-                    Ciphertext_Baudot.append(" | ")
+                     Ciphertext_Baudot.append(" | ")
+                     Ciphertext.append(" ")    
+                 elif x != " ":
+                     Encrypt_Key_Letter = Encrypt_Key[Encrypt_Key_Index]
+                     Encrypt_Key_Baudot.append(Baudot[Encrypt_Key_Letter])
+                     XOR = [x]
+                     XOR.append(Encrypt_Key_Baudot[Encrypt_Key_Index])
+                     XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+                     XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
+                     XOR_Result = str(XOR_Result)
+                     Ciphertext_Letter = get_key(XOR_Result) 
+                     if Ciphertext_Letter == "Key doesn't exist":
+                         st.error('Invalid key.', icon="🚨")
+                         Correct_Encrypt_Key = False
+                         break
+                     elif Ciphertext_Letter != "Key doesn't exist" and " ":
+                         Ciphertext.append(Ciphertext_Letter)
+                         Encrypt_Key_Index = Encrypt_Key_Index + 1
+                     Ciphertext_Baudot.append(XOR_Result)
+                     Ciphertext_Baudot.append(" | ")
                 Correct_Encrypt_Key = True
                 Correct_Encrypt_Key_Range = True
                 Correct_Encrypt_Key_Length = True
-        elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "":
-            st.error('Invalid input.', icon="🚨")
+            elif Encrypt_Choice == "2":
+                Encrypt_Key = []
+                Encrypt_Key_Baudot = []
+                Encrypt_Key_Index = 0
+                Ciphertext_Baudot = []
+                Ciphertext = []
+                for x in Plaintext_Baudot:
+                    if x == " ": 
+                        Encrypt_Key.append(" ") 
+                        Encrypt_Key_Baudot.append(" ") 
+                        Encrypt_Key_Index = Encrypt_Key_Index + 1
+                        Ciphertext_Baudot.append(" | ")
+                        Ciphertext.append(" ")    
+                    elif x != " ":
+                        Encrypt_Key_Letter = random.choice(Alphabet)
+                        Encrypt_Key.append(Encrypt_Key_Letter)
+                        Encrypt_Key_Baudot.append(Baudot[Encrypt_Key_Letter])
+                        XOR = [x]
+                        XOR.append(Encrypt_Key_Baudot[Encrypt_Key_Index])
+                        XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+                        XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
+                        XOR_Result = str(XOR_Result)
+                        Ciphertext_Letter = get_key(XOR_Result) 
+                        while Ciphertext_Letter == "Key doesn't exist":
+                            Encrypt_Key_Letter = random.choice(Alphabet)
+                            Encrypt_Key[Encrypt_Key_Index] = Encrypt_Key_Letter
+                            Encrypt_Key_Baudot[Encrypt_Key_Index] = Baudot[Encrypt_Key_Letter]
+                            Encrypt_Key_LetterBaudot = Encrypt_Key_Baudot[Encrypt_Key_Index]
+                            XOR = [x]
+                            XOR.append(Encrypt_Key_LetterBaudot)
+                            XOR_Result = int(XOR[0], 2) ^ int(XOR[1], 2)
+                            XOR_Result = bin(XOR_Result)[2:].zfill(len(XOR[0]))
+                            XOR_Result = str(XOR_Result)
+                            Ciphertext_Letter = get_key(XOR_Result)
+                            if Ciphertext_Letter != "Key doesn't exist" and " ":
+                                Ciphertext.append(Ciphertext_Letter)
+                                Encrypt_Key_Index = Encrypt_Key_Index + 1   
+                                break
+                        else:
+                            Ciphertext.append(Ciphertext_Letter)
+                            Encrypt_Key_Index = Encrypt_Key_Index + 1 
+                        Ciphertext_Baudot.append(XOR_Result)
+                        Ciphertext_Baudot.append(" | ")
+                    Correct_Encrypt_Key = True
+                    Correct_Encrypt_Key_Range = True
+                    Correct_Encrypt_Key_Length = True
+            elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "":
+                st.error('Invalid input.', icon="🚨")
 
     def Output_Baudot():
      if (Encrypt_Choice == "1" or "2") and Correct_Encrypt_Key == True and Correct_Encrypt_Key_Range == True and Correct_Encrypt_Key_Length == True:
