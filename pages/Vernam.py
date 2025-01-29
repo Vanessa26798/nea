@@ -142,9 +142,6 @@ with tab2:
         global Encrypt_Key_Baudot
         global Ciphertext_Baudot
         global Ciphertext
-        global Correct_Encrypt_Key_Range
-        global Correct_Encrypt_Key_Length
-        global Encrypt_Key
         if Correct_Encrypt_Key_Range == True and Correct_Encrypt_Key_Length == True:
             if Encrypt_Choice == "1":
                 Encrypt_Key_Baudot = []
