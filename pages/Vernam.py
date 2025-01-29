@@ -141,6 +141,7 @@ with tab2:
              Correct_Encrypt_Key_Length = False
          elif len(Encrypt_Key) == len(Plaintext) and len(Encrypt_Key) != 0 and Encrypt_Key != "":
              Correct_Encrypt_Key_Length = True
+         st.write(Correct_Encrypt_Key_Range)
 
     def Encryption():
         global Encrypt_Key_Baudot
