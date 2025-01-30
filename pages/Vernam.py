@@ -124,6 +124,7 @@ with tab2:
     def Check_Encrypt_Key_Range():
         global Correct_Encrypt_Key_Range
         global Encrypt_Key
+        Encrypt_Key = []
         Encrypt_Key_Index = 0
         if Encrypt_Choice == "1":
             for x in Encrypt_Key_Input: 
