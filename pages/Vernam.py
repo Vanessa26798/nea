@@ -457,7 +457,7 @@ with tab3:
 
     def Output_Ciphertext_Baudot():
      if (Decrypt_Choice == "1" or "2") and Correct_Decrypt_Key == True and Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
-        if len(Ciphertext) == len(Ciphertext):
+        if len(Ciphertext) == len(Plaintext):
             Spaced_Ciphertext_Baudot = []
             for x in Ciphertext_Baudot:
                 if x == " ": 
@@ -476,8 +476,8 @@ with tab3:
                     Spaced_Decrypt_Key_Baudot.append(x)
                     Spaced_Decrypt_Key_Baudot.append(" | ")
             st.write("".join(Spaced_Decrypt_Key_Baudot), " ? Key")
-            st.write("".join(Ciphertext_Baudot), " - Ciphertext")
-            st.write("Therefore, the ciphertext is ", "".join(Ciphertext))   
+            st.write("".join(Plaintext_Baudot), " - Plaintext")
+            st.write("Therefore, the plaintext is ", "".join(Plaintext))   
 
     
     Ciphertext_in_Alphabet = False
