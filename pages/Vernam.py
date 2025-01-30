@@ -274,7 +274,7 @@ with tab2:
     Get_Encrypt_Key()
     Check_Encrypt_Key_Range()
     Check_Encrypt_Key_Length()
-    Encryption()
+    # Encryption()
     Output_Baudot()
 
 
