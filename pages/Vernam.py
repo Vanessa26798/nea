@@ -116,7 +116,6 @@ with tab2:
         elif Encrypt_Choice == "2":
             Correct_Encrypt_Key_Range = True
             Correct_Encrypt_Key_Length = True
-            st.write("hi1")
         elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
 
@@ -124,7 +123,7 @@ with tab2:
         global Correct_Encrypt_Key_Range
         global Encrypt_Key
         Encrypt_Key_Index = 0
-        Encrypt_Key = []
+        E`
         for x in Encrypt_Key_Input: 
          if (x in Alphabet or x == " ") and Encrypt_Key_Input[0] != " " and type(x) == type(Plaintext_Baudot[Encrypt_Key_Index]):
              Encrypt_Key.append(x)
@@ -196,7 +195,8 @@ with tab2:
                         Encrypt_Key_Baudot.append(" ") 
                         Encrypt_Key_Index = Encrypt_Key_Index + 1
                         Ciphertext_Baudot.append(" | ")
-                        Ciphertext.append(" ")    
+                        Ciphertext.append(" ")
+                    st.write("hi1")
                     elif x != " ":
                         Encrypt_Key_Letter = random.choice(Alphabet)
                         Encrypt_Key.append(Encrypt_Key_Letter)
