@@ -144,13 +144,13 @@ with tab2:
              Correct_Encrypt_Key_Length = True
 
     # def Encryption():
-    #     global Correct_Encrypt_Key
-    #     global Correct_Encrypt_Key_Range
-    #     global Correct_Encrypt_Key_Length
-    #     global Encrypt_Key
-    #     global Encrypt_Key_Baudot
-    #     global Ciphertext_Baudot
-    #     global Ciphertext
+        global Correct_Encrypt_Key
+        global Correct_Encrypt_Key_Range
+        global Correct_Encrypt_Key_Length
+        global Encrypt_Key
+        global Encrypt_Key_Baudot
+        global Ciphertext_Baudot
+        global Ciphertext
         if Correct_Encrypt_Key_Range == True and Correct_Encrypt_Key_Length == True:
             st.write("hi1")
             if Encrypt_Choice == "1":
