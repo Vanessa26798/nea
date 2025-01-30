@@ -116,6 +116,7 @@ with tab2:
         elif Encrypt_Choice == "2":
             Correct_Encrypt_Key_Range = True
             Correct_Encrypt_Key_Length = True
+            st.write("hi1")
         elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "": 
             st.error('Invalid input.', icon="🚨")
 
