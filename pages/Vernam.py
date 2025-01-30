@@ -195,7 +195,7 @@ with tab2:
                         Encrypt_Key_Index = Encrypt_Key_Index + 1
                         Ciphertext_Baudot.append(" | ")
                         Ciphertext.append(" ")
-                    st.write("hi1")
+                        st.write("hi1")
                     elif x != " ":
                         Encrypt_Key_Letter = random.choice(Alphabet)
                         Encrypt_Key.append(Encrypt_Key_Letter)
