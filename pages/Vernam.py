@@ -141,14 +141,14 @@ with tab2:
          elif len(Encrypt_Key) == len(Plaintext) and len(Encrypt_Key) != 0 and Encrypt_Key != "":
              Correct_Encrypt_Key_Length = True
 
-    def Encryption():
-        global Correct_Encrypt_Key
-        global Correct_Encrypt_Key_Range
-        global Correct_Encrypt_Key_Length
-        global Encrypt_Key
-        global Encrypt_Key_Baudot
-        global Ciphertext_Baudot
-        global Ciphertext
+    # def Encryption():
+    #     global Correct_Encrypt_Key
+    #     global Correct_Encrypt_Key_Range
+    #     global Correct_Encrypt_Key_Length
+    #     global Encrypt_Key
+    #     global Encrypt_Key_Baudot
+    #     global Ciphertext_Baudot
+    #     global Ciphertext
         if Correct_Encrypt_Key_Range == True and Correct_Encrypt_Key_Length == True:
             st.write("hi1")
             if Encrypt_Choice == "1":
@@ -185,7 +185,6 @@ with tab2:
                 Correct_Encrypt_Key_Range = True
                 Correct_Encrypt_Key_Length = True
             elif Encrypt_Choice == "2":
-                st.write("hi1")
                 Encrypt_Key = []
                 Encrypt_Key_Baudot = []
                 Encrypt_Key_Index = 0
@@ -229,8 +228,6 @@ with tab2:
                         Ciphertext_Baudot.append(XOR_Result)
                         Ciphertext_Baudot.append(" | ")
                     Correct_Encrypt_Key = True
-                    Correct_Encrypt_Key_Range = True
-                    Correct_Encrypt_Key_Length = True
             elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "":
                 st.error('Invalid input.', icon="🚨")
 
