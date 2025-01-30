@@ -497,7 +497,7 @@ with tab3:
     Check_Decrypt_Key_Range()
     Check_Decrypt_Key_Length()
     Decryption()
-    Output_Ciphertext_Baudot()
+    Output_Plaintext_Baudot()
          
 
 with tab4: 
