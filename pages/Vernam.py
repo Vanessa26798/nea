@@ -183,6 +183,7 @@ with tab2:
                 Correct_Encrypt_Key_Range = True
                 Correct_Encrypt_Key_Length = True
             elif Encrypt_Choice == "2":
+                st.write("hi1")
                 Encrypt_Key = []
                 Encrypt_Key_Baudot = []
                 Encrypt_Key_Index = 0
@@ -195,7 +196,6 @@ with tab2:
                         Encrypt_Key_Index = Encrypt_Key_Index + 1
                         Ciphertext_Baudot.append(" | ")
                         Ciphertext.append(" ")
-                        st.write("hi1")
                     elif x != " ":
                         Encrypt_Key_Letter = random.choice(Alphabet)
                         Encrypt_Key.append(Encrypt_Key_Letter)
