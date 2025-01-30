@@ -255,7 +255,7 @@ with tab2:
                     Spaced_Encrypt_Key_Baudot.append(x)
                     Spaced_Encrypt_Key_Baudot.append(" | ")
             st.write("".join(Spaced_Encrypt_Key_Baudot), " - Key")
-            st.write("".join(Ciphertext_Baudot), " ? Ciphertext")
+            st.write("".join(Ciphertext_Baudot), " - Ciphertext")
             st.write("Therefore, the ciphertext is ", "".join(Ciphertext))   
 
     
@@ -475,7 +475,7 @@ with tab3:
                 elif x != " ":
                     Spaced_Decrypt_Key_Baudot.append(x)
                     Spaced_Decrypt_Key_Baudot.append(" | ")
-            st.write("".join(Spaced_Decrypt_Key_Baudot), " - Key")
+            st.write("".join(Spaced_Decrypt_Key_Baudot), " ? Key")
             st.write("".join(Ciphertext_Baudot), " - Ciphertext")
             st.write("Therefore, the ciphertext is ", "".join(Ciphertext))   
 
