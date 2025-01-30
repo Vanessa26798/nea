@@ -234,7 +234,7 @@ with tab2:
             elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "":
                 st.error('Invalid input.', icon="🚨")
 
-    def Output_Baudot():
+    def Output_Plaintext_Baudot():
      if (Encrypt_Choice == "1" or "2") and Correct_Encrypt_Key == True and Correct_Encrypt_Key_Range == True and Correct_Encrypt_Key_Length == True:
         if len(Ciphertext) == len(Plaintext):
             Spaced_Plaintext_Baudot = []
@@ -276,7 +276,7 @@ with tab2:
     Check_Encrypt_Key_Range()
     Check_Encrypt_Key_Length()
     Encryption()
-    Output_Baudot()
+    Output_Plaintext_Baudot()
 
 
 with tab3:
@@ -455,7 +455,7 @@ with tab3:
             elif Decrypt_Choice != "1" and Decrypt_Choice != "2" and Decrypt_Choice != "":
                 st.error('Invalid input.', icon="🚨")
 
-    def Output_Baudot():
+    def Output_Ciphertext_Baudot():
      if (Decrypt_Choice == "1" or "2") and Correct_Decrypt_Key == True and Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
         if len(Ciphertext) == len(Ciphertext):
             Spaced_Ciphertext_Baudot = []
@@ -497,7 +497,7 @@ with tab3:
     Check_Decrypt_Key_Range()
     Check_Decrypt_Key_Length()
     Decryption()
-    Output_Baudot()
+    Output_Ciphertext_Baudot()
          
 
 with tab4: 
