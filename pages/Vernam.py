@@ -132,7 +132,7 @@ with tab2:
                  Encrypt_Key.append(x)
                  Correct_Encrypt_Key_Range = True    
              elif (x not in Alphabet and Encrypt_Key_Input != "") or (Encrypt_Key_Input == " " or Encrypt_Key_Input[0] == " " or type(x) != type(Plaintext_Baudot[Encrypt_Key_Index])):
-                 st.error('Invalid input2.', icon="🚨")
+                 st.error('Invalid input.', icon="🚨")
                  Correct_Encrypt_Key_Range = False
                  break
     
