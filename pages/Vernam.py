@@ -113,7 +113,7 @@ with tab2:
         if Encrypt_Choice == "1":
             Encrypt_Key_Input = st.text_input("Please input the key for encryption, with the same length as the plaintext: ", value="")
             Encrypt_Key_Input = Encrypt_Key_Input.upper()
-        elif Encrypt_Choice = "2":
+        elif Encrypt_Choice == "2":
             Correct_Encrypt_Key_Range = True
             Correct_Encrypt_Key_Length = True
         elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "": 
