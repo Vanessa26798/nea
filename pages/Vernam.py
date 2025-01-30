@@ -108,7 +108,9 @@ with tab2:
             Encrypt_Choice = st.text_input("Input your own key for encryption (1) or generate a random key (2)? ", value="")
 
     def Get_Encrypt_Key(): 
-        global Encrypt_Key_Input        
+        global Encrypt_Key_Input  
+        global Correct_Encrypt_Key_Range
+        global Correct_Encrypt_Key_Length
         Encrypt_Key_Input = ""
         if Encrypt_Choice == "1":
             Encrypt_Key_Input = st.text_input("Please input the key for encryption, with the same length as the plaintext: ", value="")
