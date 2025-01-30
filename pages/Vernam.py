@@ -123,7 +123,6 @@ with tab2:
         global Correct_Encrypt_Key_Range
         global Encrypt_Key
         Encrypt_Key_Index = 0
-        E`
         for x in Encrypt_Key_Input: 
          if (x in Alphabet or x == " ") and Encrypt_Key_Input[0] != " " and type(x) == type(Plaintext_Baudot[Encrypt_Key_Index]):
              Encrypt_Key.append(x)
