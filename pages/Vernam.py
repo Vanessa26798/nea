@@ -119,7 +119,7 @@ with tab2:
             Correct_Encrypt_Key_Range = True
             Correct_Encrypt_Key_Length = True
         elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "": 
-            st.error('Invalid input1.', icon="🚨")
+            st.error('Invalid input.', icon="🚨")
 
     def Check_Encrypt_Key_Range():
         global Correct_Encrypt_Key_Range
@@ -134,6 +134,7 @@ with tab2:
              elif (x not in Alphabet and Encrypt_Key_Input != "") or (Encrypt_Key_Input == " " or Encrypt_Key_Input[0] == " " or type(x) != type(Plaintext_Baudot[Encrypt_Key_Index])):
                  st.error('Invalid input2.', icon="🚨")
                  Correct_Encrypt_Key_Range = False
+                 break
     
     def Check_Encrypt_Key_Length():
         global Correct_Encrypt_Key_Length
@@ -231,7 +232,7 @@ with tab2:
                         Ciphertext_Baudot.append(" | ")
                     Correct_Encrypt_Key = True
             elif Encrypt_Choice != "1" and Encrypt_Choice != "2" and Encrypt_Choice != "":
-                st.error('Invalid input3.', icon="🚨")
+                st.error('Invalid input.', icon="🚨")
 
     def Output_Baudot():
      if (Encrypt_Choice == "1" or "2") and Correct_Encrypt_Key == True and Correct_Encrypt_Key_Range == True and Correct_Encrypt_Key_Length == True:
