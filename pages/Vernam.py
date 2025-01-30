@@ -456,6 +456,9 @@ with tab3:
                 st.error('Invalid input.', icon="🚨")
 
     def Output_Ciphertext_Baudot():
+     st.write(Ciphertext_Baudot)
+     st.write(Decrypt_Key_Baudot)
+     st.write(Plaintext)
      if (Decrypt_Choice == "1" or "2") and Correct_Decrypt_Key == True and Correct_Decrypt_Key_Range == True and Correct_Decrypt_Key_Length == True:
         if len(Ciphertext) == len(Plaintext):
             Spaced_Ciphertext_Baudot = []
